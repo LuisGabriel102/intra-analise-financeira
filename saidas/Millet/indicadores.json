@@ -1,0 +1,417 @@
+{
+ "documento": "Millet.pdf",
+ "empresa": "Millet Participações S.A.",
+ "periodo_atual": "31/12/2022",
+ "periodo_anterior": "31/12/2021",
+ "receita_liquida": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "462.127",
+   "valor_reais": 462127000.0,
+   "unidade": "R$ mil",
+   "numero": 462127.0,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "199.259",
+   "valor_reais": 199259000.0,
+   "unidade": "R$ mil",
+   "numero": 199259.0,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259"
+    }
+   ]
+  },
+  "variacao": 1.3192277387721507,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "ebitda": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 43,5 milhões (calculado pela solução)",
+   "valor_reais": 43546000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Resultado antes do resultado\n14.750 | 5.374 | 25.298 | 4.482\nfinanceiro"
+    },
+    {
+     "pagina": 10,
+     "trecho": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975"
+    }
+   ]
+  },
+  "calculado_anterior": {
+   "texto": "R$ 7,5 milhões (calculado pela solução)",
+   "valor_reais": 7457000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Resultado antes do resultado\n14.750 | 5.374 | 25.298 | 4.482\nfinanceiro"
+    },
+    {
+     "pagina": 10,
+     "trecho": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975"
+    }
+   ]
+  },
+  "formula": "lucro antes do resultado financeiro e dos impostos + depreciação e amortização da DFC (método da CVM)",
+  "observacao": "O documento não informa EBITDA. O valor calculado aparece à parte."
+ },
+ "margem_ebitda": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "9,4% (calculado pela solução)",
+   "valor_reais": null,
+   "unidade": "%",
+   "numero": 0.09422950833861687,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "EBITDA calculado ÷ receita líquida",
+  "observacao": null
+ },
+ "lucro_liquido": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "18.891",
+   "valor_reais": 18891000.0,
+   "unidade": "R$ mil",
+   "numero": 18891.0,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "6.470",
+   "valor_reais": 6470000.0,
+   "unidade": "R$ mil",
+   "numero": 6470.0,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470"
+    }
+   ]
+  },
+  "variacao": 1.9197836166924265,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "lucro_controladores": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "14.743",
+   "valor_reais": 14743000.0,
+   "unidade": "R$ mil",
+   "numero": 14743.0,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)\nLucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "5.371",
+   "valor_reais": 5371000.0,
+   "unidade": "R$ mil",
+   "numero": 5371.0,
+   "fontes": [
+    {
+     "pagina": 7,
+     "trecho": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)\nLucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371"
+    }
+   ]
+  },
+  "variacao": 1.7449264568981568,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "divida_liquida": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "13.520",
+   "valor_reais": 13520000.0,
+   "unidade": "R$ mil",
+   "numero": 13520.0,
+   "fontes": [
+    {
+     "pagina": 42,
+     "trecho": "(=) Dívida líquida (a) | 13.520 | 16.877"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "16.877",
+   "valor_reais": 16877000.0,
+   "unidade": "R$ mil",
+   "numero": 16877.0,
+   "fontes": [
+    {
+     "pagina": 42,
+     "trecho": "(=) Dívida líquida (a) | 13.520 | 16.877"
+    }
+   ]
+  },
+  "variacao": -0.19890975884339634,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 13,5 milhões (calculado pela solução)",
+   "valor_reais": 13520000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 42,
+     "trecho": "Total dos empréstimos com terceiros | 24.176 | 25.072"
+    },
+    {
+     "pagina": 6,
+     "trecho": "Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "empréstimos e debêntures + derivativos da dívida − caixa − aplicações financeiras",
+  "observacao": null
+ },
+ "alavancagem": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "0,31x (calculado pela solução)",
+   "valor_reais": null,
+   "unidade": "x",
+   "numero": 0.31047627795893995,
+   "fontes": []
+  },
+  "calculado_anterior": null,
+  "formula": "dívida líquida ÷ EBITDA calculado",
+  "observacao": null
+ },
+ "fluxo_caixa_operacional": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "24.799",
+   "valor_reais": 24799000.0,
+   "unidade": "R$ mil",
+   "numero": 24799.0,
+   "fontes": [
+    {
+     "pagina": 10,
+     "trecho": "Caixa liquido gerado pelas (consumido nas) | 24.799"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "(14.293)",
+   "valor_reais": -14293000.0,
+   "unidade": "R$ mil",
+   "numero": -14293.0,
+   "fontes": [
+    {
+     "pagina": 10,
+     "trecho": "(317) | (860) | (14.293)"
+    }
+   ]
+  },
+  "variacao": null,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "capex": {
+  "status": "encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 17,7 milhões (calculado pela solução)",
+   "valor_reais": 17732000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 10,
+     "trecho": "Aquisição de imobilizado | - | - | (6.263) | (3.803)"
+    },
+    {
+     "pagina": 10,
+     "trecho": "Aquisição de intangível | - | - | (11.469) | (12)"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "aquisições de imobilizado + intangível, nas atividades de investimento da DFC",
+  "observacao": null
+ },
+ "alertas": [
+  {
+   "regra": "V13",
+   "severidade": "erro",
+   "origem": "codigo",
+   "mensagem": "Lucro líquido (DRE × DMPL), em R$ mil: valores diferentes no mesmo documento: 18.891 (p. [7]); 19.021 (p. [9]).",
+   "paginas": [
+    7,
+    9
+   ]
+  },
+  {
+   "regra": "V13",
+   "severidade": "erro",
+   "origem": "codigo",
+   "mensagem": "Patrimônio líquido (balanço × notas), em R$ mil: valores diferentes no mesmo documento: 185.321 (p. [6]); 167.233 (p. [42]).",
+   "paginas": [
+    6,
+    42
+   ]
+  },
+  {
+   "regra": "V15",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Aprovação em 14/03/2022, antes do fim do exercício (31/12/2022). Provável ano errado.",
+   "paginas": [
+    12
+   ]
+  },
+  {
+   "regra": "V16",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Cabeçalho com 2021 repetido no lugar de 2022: '31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021'. Confira de qual ano é cada coluna.",
+   "paginas": [
+    42
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "Na DFC, o texto da linha do caixa operacional está quebrado. O valor 24.799 aparece separado dos demais (Caixa liquido gerado pelas (consumido nas) | 24.799 / (317) | (860) | (14.293)). Atribuí 24.799 ao consolidado de 2022 e (14.293) ao consolidado de 2021 pela ordem das colunas. Vale conferir no PDF original. As linhas de investimento e de financiamento têm o mesmo deslocamento.",
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O lucro líquido total na DMPL difere da DRE. A DMPL mostra Lucro líquido do exercício | - | - | - | - | 14.743 | 14.743 | 4.278 | 19.021. A DRE mostra Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470 e Participação acionistas de minoritários | - | - | (4.148) | (1.099).",
+   "paginas": [
+    7,
+    9
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O patrimônio líquido da nota de gestão de capital não bate com o balanço. A nota traz Total do patrimônio líquido (b) | 167.233 | 152.689. O balanço traz Patrimônio líquido | 163.931 | 152.689 | 163.931 | 152.689 e Patrimônio líquido consolidado | 163.931 | 152.689 | 185.321 | 171.106. A nota se apresenta como consolidado, mas o valor de 2021 coincide com o PL da controladora.",
+   "paginas": [
+    6,
+    42
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O caixa final da DFC difere do balanço por 1. A DFC mostra Saldo final de caixa e equivalentes de caixa | 354 | 871 | 10.655 | 8.195. O balanço mostra Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195.",
+   "paginas": [
+    6,
+    10
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "A equivalência patrimonial tem tratamento incoerente entre DRE e DFC. Na DRE consolidada ela é receita positiva: Resultado de equivalência patrimonial | 7 | 28.355 | 6.231 | 4.115 | -. Na DFC o consolidado soma o mesmo valor positivo, e a controladora usa valor diferente da DRE: Resultado de equivalência patrimonial | (27.247) | (6.231) | 4.115 | -.",
+   "paginas": [
+    7,
+    10
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "Na nota 22.3, o cabeçalho repete o ano nas colunas da controladora: 31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021. O total de ativos financeiros consolidado de 2022 também parece incoerente com os itens listados: Total | 358 | 871 | 10.352 | 78.755.",
+   "paginas": [
+    42
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "Os empréstimos de 2021 aparecem com valores diferentes na mesma nota: Total dos empréstimos com terceiros | 24.176 | 25.072 e Empréstimos e Financiamentos | - | - | 24.176 | 25.075.",
+   "paginas": [
+    42
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O único índice de endividamento informado não usa EBITDA, por isso não o usei como alavancagem: Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11.",
+   "paginas": [
+    42
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O lucro dos controladores não aparece com esse nome. Usei a segunda linha \"Lucro líquido do exercício\", que vem depois da dedução da Participação acionistas de minoritários.",
+   "paginas": [
+    7
+   ]
+  }
+ ]
+}

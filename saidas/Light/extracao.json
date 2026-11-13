@@ -302,8 +302,8 @@
    "principal": {
     "texto": "9.032.236",
     "numero": 9032236.0,
-    "unidade": "",
-    "valor_reais": 9032236.0,
+    "unidade": "R$ mil",
+    "valor_reais": 9032236000.0,
     "fonte": "outros",
     "evidencias": [
      {
@@ -331,8 +331,8 @@
     {
      "texto": "9.032.236",
      "numero": 9032236.0,
-     "unidade": "",
-     "valor_reais": 9032236.0,
+     "unidade": "R$ mil",
+     "valor_reais": 9032236000.0,
      "fonte": "outros",
      "evidencias": [
       {
@@ -557,8 +557,8 @@
    "principal": {
     "texto": "7.352.919",
     "numero": 7352919.0,
-    "unidade": "",
-    "valor_reais": 7352919.0,
+    "unidade": "R$ mil",
+    "valor_reais": 7352919000.0,
     "fonte": "outros",
     "evidencias": [
      {
@@ -586,8 +586,8 @@
     {
      "texto": "7.352.919",
      "numero": 7352919.0,
-     "unidade": "",
-     "valor_reais": 7352919.0,
+     "unidade": "R$ mil",
+     "valor_reais": 7352919000.0,
      "fonte": "outros",
      "evidencias": [
       {
@@ -906,8 +906,8 @@
    "principal": {
     "texto": "10.688.690",
     "numero": 10688690.0,
-    "unidade": "",
-    "valor_reais": 10688690.0,
+    "unidade": "R$ mil",
+    "valor_reais": 10688690000.0,
     "fonte": "outros",
     "evidencias": [
      {
@@ -921,8 +921,8 @@
     {
      "texto": "10.688.690",
      "numero": 10688690.0,
-     "unidade": "",
-     "valor_reais": 10688690.0,
+     "unidade": "R$ mil",
+     "valor_reais": 10688690000.0,
      "fonte": "outros",
      "evidencias": [
       {
@@ -939,8 +939,8 @@
    "principal": {
     "texto": "427.097",
     "numero": 427097.0,
-    "unidade": "",
-    "valor_reais": 427097.0,
+    "unidade": "R$ mil",
+    "valor_reais": 427097000.0,
     "fonte": "outros",
     "evidencias": [
      {
@@ -954,8 +954,8 @@
     {
      "texto": "427.097",
      "numero": 427097.0,
-     "unidade": "",
-     "valor_reais": 427097.0,
+     "unidade": "R$ mil",
+     "valor_reais": 427097000.0,
      "fonte": "outros",
      "evidencias": [
       {
@@ -1038,8 +1038,8 @@
    "principal": {
     "texto": "2.844.757",
     "numero": 2844757.0,
-    "unidade": "",
-    "valor_reais": 2844757.0,
+    "unidade": "R$ mil",
+    "valor_reais": 2844757000.0,
     "fonte": "outros",
     "evidencias": [
      {
@@ -1053,8 +1053,8 @@
     {
      "texto": "2.844.757",
      "numero": 2844757.0,
-     "unidade": "",
-     "valor_reais": 2844757.0,
+     "unidade": "R$ mil",
+     "valor_reais": 2844757000.0,
      "fonte": "outros",
      "evidencias": [
       {

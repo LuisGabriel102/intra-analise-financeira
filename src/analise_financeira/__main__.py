@@ -17,13 +17,25 @@ from analise_financeira.llm import ClienteLLM, SemGravacao
 from analise_financeira.orquestrador import processar_extracao
 
 
-def _resumo(nome, extracao) -> str:
+def _resumo(nome, resultado) -> str:
+    extracao, analise = resultado
+    codigo = [a for a in analise.alertas if a.origem == "codigo"]
+    ia = len(analise.alertas) - len(codigo)
+    erros = sum(1 for a in codigo if a.severidade == "erro")
+    return (f"{_resumo_extracao(nome, extracao)}\n    alertas: {len(codigo)} conferidos em código "
+            f"({erros} de erro) e {ia} observações da IA")
+
+
+def _resumo_extracao(nome, extracao) -> str:
     status = [c.status for c in extracao.campos.values()]
     uso = extracao.uso
-    origem = "resposta gravada" if uso.gravada else "chamada nova"
+    if uso.gravada:
+        custo = f"US$ 0 agora (resposta gravada; a chamada original custou US$ {uso.custo_usd:.4f} e levou {uso.segundos:.1f} s)"
+    else:
+        custo = f"US$ {uso.custo_usd:.4f} | {uso.segundos:.1f} s"
     return (f"{nome}: {status.count('encontrado')} campos encontrados, {status.count('nao_encontrado')} não encontrados, "
             f"{status.count('sem_evidencia')} sem evidência | {len(extracao.paginas_enviadas)} páginas | "
-            f"{uso.tokens_entrada} + {uso.tokens_saida} tokens | US$ {uso.custo_usd:.4f} | {uso.segundos:.1f} s ({origem})")
+            f"{uso.tokens_entrada} + {uso.tokens_saida} tokens | {custo}")
 
 
 def main() -> int:
@@ -58,8 +70,8 @@ def main() -> int:
     except (SemGravacao, RuntimeError, FileNotFoundError) as erro:
         print(f"Erro: {erro}")
         return 1
-    for nome, extracao in resultados.items():
-        print(_resumo(nome, extracao))
+    for nome, resultado in resultados.items():
+        print(_resumo(nome, resultado))
     print(f"Total: {time.perf_counter() - inicio:.1f} s. Resultados em saidas/.")
     return 0
 

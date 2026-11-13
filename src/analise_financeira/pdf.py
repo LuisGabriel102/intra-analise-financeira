@@ -15,6 +15,7 @@ Em produção, o lugar dele é do Azure Document Intelligence (veja o README).
 
 from __future__ import annotations
 
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -44,9 +45,14 @@ class Pagina:
 class Documento:
     nome: str                       # "Light.pdf"
     paginas: list[Pagina] = field(default_factory=list)
+    escala_padrao: str = ""         # a escala mais comum entre as páginas que avisam a escala
 
     def pagina(self, numero: int) -> Pagina:
         return self.paginas[numero - 1]
+
+    def escala_de(self, numero: int) -> str:
+        """A escala da página. Página de nota sem o aviso "(Em milhares de reais)" usa a do documento."""
+        return self.pagina(numero).escala or self.escala_padrao
 
 
 def _juntar_em_linhas(palavras: list[tuple]) -> list[str]:
@@ -100,4 +106,10 @@ def ler_pdf(caminho: str | Path) -> Documento:
                 vazia=not linhas and not tem_imagem,
                 precisa_ocr=not linhas and tem_imagem,
             ))
+    # Nas notas explicativas, o aviso de escala costuma vir só na primeira página.
+    # A escala mais comum do documento vale para as páginas que não avisam.
+    # (Usar "a última página com aviso" seria pior: uma tabela em milhões no meio
+    # das notas contaminaria todas as páginas seguintes.)
+    escalas = Counter(p.escala for p in documento.paginas if p.escala)
+    documento.escala_padrao = escalas.most_common(1)[0][0] if escalas else ""
     return documento

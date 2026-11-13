@@ -116,7 +116,8 @@ class ClienteLLM:
             "gen_ai.request.model": r.modelo,
             "gen_ai.usage.input_tokens": r.tokens_entrada,
             "gen_ai.usage.output_tokens": r.tokens_saida,
-            "custo_usd": round(r.custo_usd, 6),
+            "custo_usd": 0.0 if r.gravada else round(r.custo_usd, 6),  # quanto esta execução gastou
+            "custo_original_usd": round(r.custo_usd, 6),                # quanto a chamada custou quando foi feita
             "duracao_s": r.segundos,
             "gravada": r.gravada,
         }

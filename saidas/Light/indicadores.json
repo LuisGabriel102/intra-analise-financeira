@@ -1,0 +1,439 @@
+{
+ "documento": "Light.pdf",
+ "empresa": "LIGHT S.A.",
+ "periodo_atual": "2022",
+ "periodo_anterior": "2021",
+ "receita_liquida": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "13.253.286",
+   "valor_reais": 13253286000.0,
+   "unidade": "R$ mil",
+   "numero": 13253286.0,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "14.897.920",
+   "valor_reais": 14897920000.0,
+   "unidade": "R$ mil",
+   "numero": 14897920.0,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+    }
+   ]
+  },
+  "variacao": -0.11039353144600052,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "ebitda": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "R$1.180 milhões",
+   "valor_reais": 1180000000.0,
+   "unidade": "R$ milhões",
+   "numero": 1180.0,
+   "fontes": [
+    {
+     "pagina": 9,
+     "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+    }
+   ]
+  },
+  "anterior": null,
+  "variacao": null,
+  "definicao": "EBITDA CVM",
+  "calculado": {
+   "texto": "-R$ 1.179,6 milhões (calculado pela solução)",
+   "valor_reais": -1179644000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+    },
+    {
+     "pagina": 23,
+     "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+    }
+   ]
+  },
+  "calculado_anterior": {
+   "texto": "R$ 1.821,4 milhões (calculado pela solução)",
+   "valor_reais": 1821411000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+    },
+    {
+     "pagina": 23,
+     "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+    }
+   ]
+  },
+  "formula": "lucro antes do resultado financeiro e dos impostos + depreciação e amortização da DFC (método da CVM)",
+  "observacao": null
+ },
+ "margem_ebitda": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "-8,9% (calculado pela solução)",
+   "valor_reais": null,
+   "unidade": "%",
+   "numero": -0.08900766194889327,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "EBITDA calculado ÷ receita líquida",
+  "observacao": null
+ },
+ "lucro_liquido": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "(5.672.203)",
+   "valor_reais": -5672203000.0,
+   "unidade": "R$ mil",
+   "numero": -5672203.0,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "397.945",
+   "valor_reais": 397945000.0,
+   "unidade": "R$ mil",
+   "numero": 397945.0,
+   "fontes": [
+    {
+     "pagina": 20,
+     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+    }
+   ]
+  },
+  "variacao": null,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "lucro_controladores": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "divida_liquida": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "9.032.236",
+   "valor_reais": 9032236000.0,
+   "unidade": "R$ mil",
+   "numero": 9032236.0,
+   "fontes": [
+    {
+     "pagina": 105,
+     "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "7.352.919",
+   "valor_reais": 7352919000.0,
+   "unidade": "R$ mil",
+   "numero": 7352919.0,
+   "fontes": [
+    {
+     "pagina": 105,
+     "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+    }
+   ]
+  },
+  "variacao": 0.22838780081760726,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 9.032,2 milhões (calculado pela solução)",
+   "valor_reais": 9032236000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 105,
+     "trecho": "Dívida de financiamentos, empréstimos e debêntures | 10.688.690 | 11.144.326"
+    },
+    {
+     "pagina": 105,
+     "trecho": "Instrumentos financeiros derivativos swaps | 427.097 | (186.434)"
+    },
+    {
+     "pagina": 18,
+     "trecho": "Caixa e equivalentes de caixa | 6 | 2.693 | 9 | 43.886 | 396.777"
+    },
+    {
+     "pagina": 18,
+     "trecho": "Títulos e valores mobiliários | 7 | 720.172 | 62.647 | 2.039.665 | 3.208.196"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "empréstimos e debêntures + derivativos da dívida − caixa − aplicações financeiras",
+  "observacao": null
+ },
+ "alavancagem": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "3,32x",
+   "valor_reais": null,
+   "unidade": "x",
+   "numero": 3.32,
+   "fontes": [
+    {
+     "pagina": 10,
+     "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "3,48x",
+   "valor_reais": null,
+   "unidade": "x",
+   "numero": 3.48,
+   "fontes": [
+    {
+     "pagina": 10,
+     "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+    }
+   ]
+  },
+  "variacao": null,
+  "definicao": "EBITDA ajustado para fins de covenants",
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": "dívida líquida ÷ EBITDA calculado",
+  "observacao": "Com EBITDA calculado zero ou negativo, a alavancagem calculada não é significativa."
+ },
+ "fluxo_caixa_operacional": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "200.763",
+   "valor_reais": 200763000.0,
+   "unidade": "R$ mil",
+   "numero": 200763.0,
+   "fontes": [
+    {
+     "pagina": 23,
+     "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "(42.045)",
+   "valor_reais": -42045000.0,
+   "unidade": "R$ mil",
+   "numero": -42045.0,
+   "fontes": [
+    {
+     "pagina": 23,
+     "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+    }
+   ]
+  },
+  "variacao": null,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "capex": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "R$1.506 milhões",
+   "valor_reais": 1506000000.0,
+   "unidade": "R$ milhões",
+   "numero": 1506.0,
+   "fontes": [
+    {
+     "pagina": 10,
+     "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se"
+    }
+   ]
+  },
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 1.470,3 milhões (calculado pela solução)",
+   "valor_reais": 1470292000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 23,
+     "trecho": "Aquisições de bens do ativo imobilizado | - | - | (307.759) | (219.601)"
+    },
+    {
+     "pagina": 23,
+     "trecho": "Aquisições de bens do ativo intangível e do ativo de contrato | (234) | - | (1.162.533) | (1.029.744)"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "aquisições de imobilizado + intangível, nas atividades de investimento da DFC",
+  "observacao": null
+ },
+ "alertas": [
+  {
+   "regra": "V7",
+   "severidade": "erro",
+   "origem": "codigo",
+   "mensagem": "EBITDA informado de R$ 1.180,0 mi, mas EBIT + depreciação dá R$ -1.179,6 mi: o mesmo valor com o sinal trocado. Provável sinal de menos perdido no texto.",
+   "paginas": [
+    9,
+    20,
+    23
+   ]
+  },
+  {
+   "regra": "V9",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Com EBITDA de R$ -1.179,6 mi, dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.",
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "regra": "V10",
+   "severidade": "info",
+   "origem": "codigo",
+   "mensagem": "Diferença pequena: R$ -5.673,0 mi no texto e R$ -5.672,2 mi na tabela. É maior do que o arredondamento explica.",
+   "paginas": [
+    10,
+    20
+   ]
+  },
+  {
+   "regra": "V11",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto.",
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "regra": "V16",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Cabeçalho com 2021 repetido no lugar de 2022: '2022 | 2021 | 2021 | 2021'. Confira de qual ano é cada coluna.",
+   "paginas": [
+    21
+   ]
+  },
+  {
+   "regra": "V16",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Cabeçalho com ano malformado (20212): '31.12.20212 | 31.12.2021'.",
+   "paginas": [
+    65
+   ]
+  },
+  {
+   "regra": "V16",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Cabeçalho só com 2021, numa demonstração de 2022: '31.12.2021 | 31.12.2021'. Confira se a tabela é do ano certo.",
+   "paginas": [
+    98
+   ]
+  },
+  {
+   "regra": "V16",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Cabeçalho só com 2021, numa demonstração de 2022: '31.12.2021 | 31.12.2021 | 31.12.2021'. Confira se a tabela é do ano certo.",
+   "paginas": [
+    98
+   ]
+  },
+  {
+   "regra": "V16",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "Cabeçalho só com 2021, numa demonstração de 2022: '31.12.2021 | 31.12.2021 | 31.12.2021'. Confira se a tabela é do ano certo.",
+   "paginas": [
+    99
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O texto sobre a alavancagem atribui os dois múltiplos ao ano de 2021: O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O parágrafo trata da posição em 31/12/2022, por isso usei 3,32x como atual e 3,48x como anterior. Essa atribuição deve ser confirmada.",
+   "paginas": [
+    10
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O EBITDA da distribuidora é incoerente. O texto diz que o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1.179 milhões apurados em 2021. O valor de 2022 aparece maior que o de 2021, embora o texto fale em redução. Os números parecem trocados.",
+   "paginas": [
+    8
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O resultado líquido do relatório da administração (-R$5.673 milhões) não bate com o arredondamento do valor da DRE, que é (5.672.203) em milhares de reais.",
+   "paginas": [
+    10,
+    20
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "A unidade de energia da Light Energia é inconsistente. A tabela está em MWm, mas o texto diz que o volume de venda no ACL foi de 459 MWh, +0,9% se comparado a 2021 e a compra no ACL foi de 35 MWh.",
+   "paginas": [
+    8
+   ]
+  }
+ ]
+}

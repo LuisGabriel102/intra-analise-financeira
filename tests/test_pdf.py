@@ -44,3 +44,11 @@ def test_escala_e_pagina_impressa(docs):
 def test_recusa_arquivo_que_nao_existe():
     with pytest.raises(FileNotFoundError):
         ler_pdf(f"{PASTA}/nao_existe.pdf")
+
+
+def test_pagina_de_nota_sem_aviso_usa_a_escala_do_documento(docs):
+    light = docs["Light"]
+    assert light.pagina(105).escala == ""      # a p. 105 não repete "(Em milhares de reais)"
+    assert light.escala_padrao == "mil"
+    assert light.escala_de(105) == "mil"
+    assert light.escala_de(20) == "mil"

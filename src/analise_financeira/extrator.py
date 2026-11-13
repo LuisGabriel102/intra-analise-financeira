@@ -147,7 +147,7 @@ def _ocorrencia(nome: str, texto: str, evidencias: list[Evidencia], documento: D
     if numero.unidade in ("%", "x"):
         unidade, reais = numero.unidade, None
     else:
-        escala = numero.unidade or (documento.pagina(evidencias[0].pagina).escala if evidencias else "")
+        escala = numero.unidade or (documento.escala_de(evidencias[0].pagina) if evidencias else "")
         unidade = f"R$ {escala}" if escala else ""
         reais = em_reais(numero, escala)
     return Ocorrencia(

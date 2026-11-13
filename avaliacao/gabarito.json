@@ -2,75 +2,466 @@
   "_sobre": "Valores esperados, do jeito que aparecem no PDF (com sinal e unidade). 'paginas' lista as páginas em que o valor certo aparece. Conferido por código no PDF original: tests/test_gabarito_no_pdf.py. Fonte: seção 4 do plano, lida página por página.",
   "Brasal.pdf": {
     "campos": {
-      "receita_liquida_atual": {"valor": "1.325.059", "paginas": [8]},
-      "receita_liquida_anterior": {"valor": "1.061.410", "paginas": [8]},
-      "ebitda_atual": {"status": "nao_encontrado"},
-      "margem_ebitda_atual": {"status": "nao_encontrado"},
-      "lucro_liquido_atual": {"valor": "174.602", "paginas": [8]},
-      "lucro_liquido_anterior": {"valor": "275.560", "paginas": [8]},
-      "divida_liquida_atual": {"status": "nao_encontrado"},
-      "alavancagem_atual": {"status": "nao_encontrado"},
-      "fco_atual": {"valor": "258.248", "paginas": [11]},
-      "fco_anterior": {"valor": "121.462", "paginas": [11]},
-      "ebit_atual": {"valor": "192.840", "paginas": [8]},
-      "depreciacao_atual": {"valor": "29.014", "paginas": [11]},
-      "capex_imobilizado_atual": {"valor": "(45.761)", "paginas": [11]},
-      "caixa_atual": {"valor": "96.453", "paginas": [6]},
-      "aplicacoes_financeiras_atual": {"valor": "78.569", "paginas": [6]},
-      "emprestimos_total_atual": {"valor": "3.417", "paginas": [38, 48]}
+      "receita_liquida_atual": {
+        "valor": "1.325.059",
+        "paginas": [
+          8
+        ]
+      },
+      "receita_liquida_anterior": {
+        "valor": "1.061.410",
+        "paginas": [
+          8
+        ]
+      },
+      "ebitda_atual": {
+        "status": "nao_encontrado"
+      },
+      "margem_ebitda_atual": {
+        "status": "nao_encontrado"
+      },
+      "lucro_liquido_atual": {
+        "valor": "174.602",
+        "paginas": [
+          8
+        ]
+      },
+      "lucro_liquido_anterior": {
+        "valor": "275.560",
+        "paginas": [
+          8
+        ]
+      },
+      "divida_liquida_atual": {
+        "status": "nao_encontrado"
+      },
+      "alavancagem_atual": {
+        "status": "nao_encontrado"
+      },
+      "fco_atual": {
+        "valor": "258.248",
+        "paginas": [
+          11
+        ]
+      },
+      "fco_anterior": {
+        "valor": "121.462",
+        "paginas": [
+          11
+        ]
+      },
+      "ebit_atual": {
+        "valor": "192.840",
+        "paginas": [
+          8
+        ]
+      },
+      "depreciacao_atual": {
+        "valor": "29.014",
+        "paginas": [
+          11
+        ]
+      },
+      "capex_imobilizado_atual": {
+        "valor": "(45.761)",
+        "paginas": [
+          11
+        ]
+      },
+      "caixa_atual": {
+        "valor": "96.453",
+        "paginas": [
+          6
+        ]
+      },
+      "aplicacoes_financeiras_atual": {
+        "valor": "78.569",
+        "paginas": [
+          6
+        ]
+      },
+      "emprestimos_total_atual": {
+        "valor": "3.417",
+        "paginas": [
+          38,
+          48
+        ]
+      }
     },
-    "alertas_esperados": ["B1", "B2"]
+    "alertas_esperados": [
+      {
+        "id": "B1",
+        "regra": "V14",
+        "paginas": [
+          3
+        ]
+      },
+      {
+        "id": "B2",
+        "regra": "IA",
+        "paginas": [
+          8,
+          11
+        ]
+      },
+      {
+        "id": "B6",
+        "regra": "V13",
+        "paginas": [
+          32
+        ]
+      },
+      {
+        "id": "B7",
+        "regra": "V13",
+        "paginas": [
+          28
+        ]
+      },
+      {
+        "id": "B8",
+        "regra": "V13",
+        "paginas": [
+          40
+        ]
+      }
+    ]
   },
   "Millet.pdf": {
     "campos": {
-      "receita_liquida_atual": {"valor": "462.127", "paginas": [7]},
-      "receita_liquida_anterior": {"valor": "199.259", "paginas": [7]},
-      "ebitda_atual": {"status": "nao_encontrado"},
-      "margem_ebitda_atual": {"status": "nao_encontrado"},
-      "lucro_liquido_atual": {"valor": "18.891", "paginas": [7]},
-      "lucro_liquido_anterior": {"valor": "6.470", "paginas": [7]},
-      "lucro_controladores_atual": {"valor": "14.743", "paginas": [7]},
-      "lucro_controladores_anterior": {"valor": "5.371", "paginas": [7]},
-      "divida_liquida_atual": {"valor": "13.520", "paginas": [42]},
-      "divida_liquida_anterior": {"valor": "16.877", "paginas": [42]},
-      "alavancagem_atual": {"status": "nao_encontrado"},
-      "fco_atual": {"valor": "24.799", "paginas": [10]},
-      "fco_anterior": {"valor": "(14.293)", "paginas": [10]},
-      "ebit_atual": {"valor": "25.298", "paginas": [7]},
-      "depreciacao_atual": {"valor": "18.248", "paginas": [10]},
-      "capex_imobilizado_atual": {"valor": "(6.263)", "paginas": [10]},
-      "capex_intangivel_atual": {"valor": "(11.469)", "paginas": [10]},
-      "caixa_atual": {"valor": "10.656", "paginas": [6, 42]},
-      "emprestimos_total_atual": {"valor": "24.176", "paginas": [42]}
+      "receita_liquida_atual": {
+        "valor": "462.127",
+        "paginas": [
+          7
+        ]
+      },
+      "receita_liquida_anterior": {
+        "valor": "199.259",
+        "paginas": [
+          7
+        ]
+      },
+      "ebitda_atual": {
+        "status": "nao_encontrado"
+      },
+      "margem_ebitda_atual": {
+        "status": "nao_encontrado"
+      },
+      "lucro_liquido_atual": {
+        "valor": "18.891",
+        "paginas": [
+          7
+        ]
+      },
+      "lucro_liquido_anterior": {
+        "valor": "6.470",
+        "paginas": [
+          7
+        ]
+      },
+      "lucro_controladores_atual": {
+        "valor": "14.743",
+        "paginas": [
+          7
+        ]
+      },
+      "lucro_controladores_anterior": {
+        "valor": "5.371",
+        "paginas": [
+          7
+        ]
+      },
+      "divida_liquida_atual": {
+        "valor": "13.520",
+        "paginas": [
+          42
+        ]
+      },
+      "divida_liquida_anterior": {
+        "valor": "16.877",
+        "paginas": [
+          42
+        ]
+      },
+      "alavancagem_atual": {
+        "status": "nao_encontrado"
+      },
+      "fco_atual": {
+        "valor": "24.799",
+        "paginas": [
+          10
+        ]
+      },
+      "fco_anterior": {
+        "valor": "(14.293)",
+        "paginas": [
+          10
+        ]
+      },
+      "ebit_atual": {
+        "valor": "25.298",
+        "paginas": [
+          7
+        ]
+      },
+      "depreciacao_atual": {
+        "valor": "18.248",
+        "paginas": [
+          10
+        ]
+      },
+      "capex_imobilizado_atual": {
+        "valor": "(6.263)",
+        "paginas": [
+          10
+        ]
+      },
+      "capex_intangivel_atual": {
+        "valor": "(11.469)",
+        "paginas": [
+          10
+        ]
+      },
+      "caixa_atual": {
+        "valor": "10.656",
+        "paginas": [
+          6,
+          42
+        ]
+      },
+      "emprestimos_total_atual": {
+        "valor": "24.176",
+        "paginas": [
+          42
+        ]
+      }
     },
-    "alertas_esperados": ["M1", "M2", "M3", "M4", "M5", "M8"]
+    "alertas_esperados": [
+      {
+        "id": "M1",
+        "regra": "V13",
+        "paginas": [
+          42
+        ]
+      },
+      {
+        "id": "M2",
+        "regra": "V13",
+        "paginas": [
+          9
+        ]
+      },
+      {
+        "id": "M3",
+        "regra": "IA",
+        "paginas": [
+          7,
+          10
+        ]
+      },
+      {
+        "id": "M4",
+        "regra": "V16",
+        "paginas": [
+          42
+        ]
+      },
+      {
+        "id": "M5",
+        "regra": "V15",
+        "paginas": [
+          12
+        ]
+      },
+      {
+        "id": "M8",
+        "regra": "V12",
+        "paginas": [
+          29
+        ]
+      }
+    ]
   },
   "Light.pdf": {
     "campos": {
-      "receita_liquida_atual": {"valor": "13.253.286", "paginas": [20]},
-      "receita_liquida_anterior": {"valor": "14.897.920", "paginas": [20]},
-      "ebitda_atual": {"valor": "R$1.180 milhões", "paginas": [9]},
-      "margem_ebitda_atual": {"status": "nao_encontrado"},
-      "lucro_liquido_atual": {"valor": "(5.672.203)", "paginas": [20]},
-      "lucro_liquido_anterior": {"valor": "397.945", "paginas": [20]},
-      "divida_liquida_atual": {"valor": "9.032.236", "paginas": [105], "tambem": {"valor": "R$9.032 milhões", "paginas": [10]}},
-      "divida_liquida_anterior": {"valor": "7.352.919", "paginas": [105], "tambem": {"valor": "R$7.353 milhões", "paginas": [10]}},
-      "alavancagem_atual": {"valor": "3,32x", "paginas": [10]},
-      "alavancagem_anterior": {"valor": "3,48x", "paginas": [10]},
-      "fco_atual": {"valor": "200.763", "paginas": [23]},
-      "fco_anterior": {"valor": "(42.045)", "paginas": [23]},
-      "ebit_atual": {"valor": "(1.910.411)", "paginas": [20]},
-      "ebit_anterior": {"valor": "1.143.301", "paginas": [20]},
-      "depreciacao_atual": {"valor": "730.767", "paginas": [23]},
-      "depreciacao_anterior": {"valor": "678.110", "paginas": [23]},
-      "capex_imobilizado_atual": {"valor": "(307.759)", "paginas": [23]},
-      "capex_intangivel_atual": {"valor": "(1.162.533)", "paginas": [23]},
-      "investimentos_informados_atual": {"valor": "R$1.506 milhões", "paginas": [10]},
-      "caixa_atual": {"valor": "43.886", "paginas": [18]},
-      "aplicacoes_financeiras_atual": {"valor": "2.039.665", "paginas": [18]},
-      "emprestimos_total_atual": {"valor": "10.688.690", "paginas": [105]},
-      "derivativos_divida_atual": {"valor": "427.097", "paginas": [105]}
+      "receita_liquida_atual": {
+        "valor": "13.253.286",
+        "paginas": [
+          20
+        ]
+      },
+      "receita_liquida_anterior": {
+        "valor": "14.897.920",
+        "paginas": [
+          20
+        ]
+      },
+      "ebitda_atual": {
+        "valor": "R$1.180 milhões",
+        "paginas": [
+          9
+        ]
+      },
+      "margem_ebitda_atual": {
+        "status": "nao_encontrado"
+      },
+      "lucro_liquido_atual": {
+        "valor": "(5.672.203)",
+        "paginas": [
+          20
+        ]
+      },
+      "lucro_liquido_anterior": {
+        "valor": "397.945",
+        "paginas": [
+          20
+        ]
+      },
+      "divida_liquida_atual": {
+        "valor": "9.032.236",
+        "paginas": [
+          105
+        ],
+        "tambem": {
+          "valor": "R$9.032 milhões",
+          "paginas": [
+            10
+          ]
+        }
+      },
+      "divida_liquida_anterior": {
+        "valor": "7.352.919",
+        "paginas": [
+          105
+        ],
+        "tambem": {
+          "valor": "R$7.353 milhões",
+          "paginas": [
+            10
+          ]
+        }
+      },
+      "alavancagem_atual": {
+        "valor": "3,32x",
+        "paginas": [
+          10
+        ]
+      },
+      "alavancagem_anterior": {
+        "valor": "3,48x",
+        "paginas": [
+          10
+        ]
+      },
+      "fco_atual": {
+        "valor": "200.763",
+        "paginas": [
+          23
+        ]
+      },
+      "fco_anterior": {
+        "valor": "(42.045)",
+        "paginas": [
+          23
+        ]
+      },
+      "ebit_atual": {
+        "valor": "(1.910.411)",
+        "paginas": [
+          20
+        ]
+      },
+      "ebit_anterior": {
+        "valor": "1.143.301",
+        "paginas": [
+          20
+        ]
+      },
+      "depreciacao_atual": {
+        "valor": "730.767",
+        "paginas": [
+          23
+        ]
+      },
+      "depreciacao_anterior": {
+        "valor": "678.110",
+        "paginas": [
+          23
+        ]
+      },
+      "capex_imobilizado_atual": {
+        "valor": "(307.759)",
+        "paginas": [
+          23
+        ]
+      },
+      "capex_intangivel_atual": {
+        "valor": "(1.162.533)",
+        "paginas": [
+          23
+        ]
+      },
+      "investimentos_informados_atual": {
+        "valor": "R$1.506 milhões",
+        "paginas": [
+          10
+        ]
+      },
+      "caixa_atual": {
+        "valor": "43.886",
+        "paginas": [
+          18
+        ]
+      },
+      "aplicacoes_financeiras_atual": {
+        "valor": "2.039.665",
+        "paginas": [
+          18
+        ]
+      },
+      "emprestimos_total_atual": {
+        "valor": "10.688.690",
+        "paginas": [
+          105
+        ]
+      },
+      "derivativos_divida_atual": {
+        "valor": "427.097",
+        "paginas": [
+          105
+        ]
+      }
     },
-    "alertas_esperados": ["L1", "L2", "L3", "L5", "L6", "L9", "L10"]
-  }
+    "alertas_esperados": [
+      {
+        "id": "L1",
+        "regra": "V7",
+        "paginas": [
+          9
+        ]
+      },
+      {
+        "id": "L2",
+        "regra": "IA",
+        "paginas": [
+          8
+        ]
+      },
+      {
+        "id": "L3",
+        "regra": "V11",
+        "paginas": [
+          10
+        ]
+      },
+      {
+        "id": "L10",
+        "regra": "V6",
+        "paginas": [
+          9
+        ]
+      }
+    ]
+  },
+  "_alertas": "Armadilhas principais da seção 3.5 do plano (15). 'regra' é a regra de validacao.py que deve pegar a armadilha, ou 'IA' quando ela só aparece como observação da IA, com citação. Detectada = um alerta com essa regra numa dessas páginas."
 }

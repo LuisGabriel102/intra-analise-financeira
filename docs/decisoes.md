@@ -37,3 +37,11 @@ As regras valem para qualquer demonstração brasileira. Os casos dos três PDFs
 ## 9. Respostas da IA gravadas
 
 Toda resposta real da IA fica gravada em `gravacoes/`, com a pergunta inteira como chave. A mesma pergunta não é paga duas vezes, e o modo `--replay` roda a solução inteira só com as gravações, sem chave e sem custo. É assim que o avaliador consegue rodar tudo, e é assim que os testes nunca chamam a IA de verdade.
+
+## 10. Dois tipos de alerta: o que o código confere e o que a IA aponta
+
+Os alertas de regra (V3 a V16) são conferidos em Python, com os dois valores e as páginas. As observações da IA também entram no relatório, porque ela vê coisas que nenhuma regra previu, mas com outro rótulo: vêm com citação, e não foram conferidas em código. Na rodada real de 13/11/2026, a IA apontou sozinha 19 incoerências nos três documentos. Mas ela não apontou a mais grave, o EBITDA da Light publicado sem o sinal de menos: quem pegou foi a regra V7, em código. É o argumento central da solução.
+
+## 11. Escala da página e escala do documento
+
+Nas notas explicativas, o aviso "(Em milhares de reais)" costuma aparecer só na primeira página. A página que não avisa usa a escala mais comum do documento. Usar a escala da última página que avisou seria pior: uma tabela em milhões no meio das notas contaminaria todas as páginas seguintes. O erro apareceu na primeira rodada real (a dívida líquida da Light saía em reais, e não em milhares) e virou teste.

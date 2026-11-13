@@ -1,0 +1,315 @@
+{
+ "documento": "Brasal.pdf",
+ "empresa": "Brasal Brasília Holding S.A.",
+ "periodo_atual": "31/12/2022",
+ "periodo_anterior": "31/12/2021",
+ "receita_liquida": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "1.325.059",
+   "valor_reais": 1325059000.0,
+   "unidade": "R$ mil",
+   "numero": 1325059.0,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "1.061.410",
+   "valor_reais": 1061410000.0,
+   "unidade": "R$ mil",
+   "numero": 1061410.0,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+    }
+   ]
+  },
+  "variacao": 0.24839505940211606,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "ebitda": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 221,9 milhões (calculado pela solução)",
+   "valor_reais": 221854000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+    },
+    {
+     "pagina": 11,
+     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+    }
+   ]
+  },
+  "calculado_anterior": {
+   "texto": "R$ 261,1 milhões (calculado pela solução)",
+   "valor_reais": 261061000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+    },
+    {
+     "pagina": 11,
+     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+    }
+   ]
+  },
+  "formula": "lucro antes do resultado financeiro e dos impostos + depreciação e amortização da DFC (método da CVM)",
+  "observacao": "O documento não informa EBITDA. O valor calculado aparece à parte."
+ },
+ "margem_ebitda": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "16,7% (calculado pela solução)",
+   "valor_reais": null,
+   "unidade": "%",
+   "numero": 0.1674295257796068,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "EBITDA calculado ÷ receita líquida",
+  "observacao": null
+ },
+ "lucro_liquido": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "174.602",
+   "valor_reais": 174602000.0,
+   "unidade": "R$ mil",
+   "numero": 174602.0,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "275.560",
+   "valor_reais": 275560000.0,
+   "unidade": "R$ mil",
+   "numero": 275560.0,
+   "fontes": [
+    {
+     "pagina": 8,
+     "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+    }
+   ]
+  },
+  "variacao": -0.36637392945275077,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "lucro_controladores": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "divida_liquida": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "-R$ 171,6 milhões (calculado pela solução)",
+   "valor_reais": -171605000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 48,
+     "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417"
+    },
+    {
+     "pagina": 6,
+     "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+    },
+    {
+     "pagina": 6,
+     "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "empréstimos e debêntures + derivativos da dívida − caixa − aplicações financeiras",
+  "observacao": "Dívida líquida negativa: a empresa tem caixa líquido."
+ },
+ "alavancagem": {
+  "status": "nao_encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": "dívida líquida ÷ EBITDA calculado",
+  "observacao": "Caixa líquido: a empresa não está alavancada."
+ },
+ "fluxo_caixa_operacional": {
+  "status": "encontrado",
+  "atual": {
+   "texto": "258.248",
+   "valor_reais": 258248000.0,
+   "unidade": "R$ mil",
+   "numero": 258248.0,
+   "fontes": [
+    {
+     "pagina": 11,
+     "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+    }
+   ]
+  },
+  "anterior": {
+   "texto": "121.462",
+   "valor_reais": 121462000.0,
+   "unidade": "R$ mil",
+   "numero": 121462.0,
+   "fontes": [
+    {
+     "pagina": 11,
+     "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+    }
+   ]
+  },
+  "variacao": 1.1261629151504173,
+  "definicao": null,
+  "calculado": null,
+  "calculado_anterior": null,
+  "formula": null,
+  "observacao": null
+ },
+ "capex": {
+  "status": "encontrado",
+  "atual": null,
+  "anterior": null,
+  "variacao": null,
+  "definicao": null,
+  "calculado": {
+   "texto": "R$ 45,8 milhões (calculado pela solução)",
+   "valor_reais": 45761000.0,
+   "unidade": "R$",
+   "numero": null,
+   "fontes": [
+    {
+     "pagina": 11,
+     "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)"
+    }
+   ]
+  },
+  "calculado_anterior": null,
+  "formula": "aquisições de imobilizado + intangível, nas atividades de investimento da DFC",
+  "observacao": null
+ },
+ "alertas": [
+  {
+   "regra": "V14",
+   "severidade": "aviso",
+   "origem": "codigo",
+   "mensagem": "O período comparativo (2021) não foi auditado (p. 3, 6, 7, 8, 11). As variações contra 2021 usam números não auditados.",
+   "paginas": [
+    3,
+    6,
+    7,
+    8,
+    11
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O valor de empréstimos_total_atual (3.417) vem da tabela de instrumentos financeiros da nota 25. Não é uma linha de total do balanço, que separa o circulante (Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902) do não circulante (Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576).",
+   "paginas": [
+    7
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O período comparativo de 2021 está marcado como não auditado no balanço (Passivo | (não auditado) | (não auditado)) e na DFC (Fluxo de caixa das atividades operacionais: | (não auditado) | (não auditado)).",
+   "paginas": [
+    7,
+    11
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "Na controladora, o caixa no fim de 2021 aparece na DFC como No fim do exercício | 3.714 | 1.145. No balanço, o mesmo saldo é Caixa e equivalentes de caixa | 4 | 3.714 | 1.146.",
+   "paginas": [
+    6,
+    11
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O balanço remete o capital social à Capital social | 25. Porém, a nota 25 trata de outro assunto: 25. Gestão de riscos dos instrumentos financeiros.",
+   "paginas": [
+    7,
+    48
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "A linha de depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275). Na DFC aparece Depreciações e amortizações | 507 | 465 | 29.014 | 22.837. A controladora de 2021 também diverge (316 na DRE e 465 na DFC).",
+   "paginas": [
+    8,
+    11
+   ]
+  },
+  {
+   "regra": "IA",
+   "severidade": "aviso",
+   "origem": "ia",
+   "mensagem": "O título da linha de investimentos diz \"aplicado\", mas os valores do consolidado de 2021 e da controladora são positivos: Caixa líquido aplicado nas atividades de investimentos | 236.478 | 88.754 | (15.764) | 13.161.",
+   "paginas": [
+    11
+   ]
+  }
+ ]
+}

@@ -292,6 +292,10 @@ def conferir_anos_do_cabecalho(cabecalho: str, periodo: str, anterior: str) -> A
         return Alerta("V16", "aviso", f"Cabeçalho com ano malformado ({', '.join(malformados)}): '{cabecalho}'.",
                       {"cabecalho": cabecalho})
     anos = _ANO.findall(cabecalho)
+    if anos and set(anos) == {anterior}:
+        return Alerta("V16", "aviso",
+                      f"Cabeçalho só com {anterior}, numa demonstração de {periodo}: '{cabecalho}'. "
+                      f"Confira se a tabela é do ano certo.", {"cabecalho": cabecalho})
     if anos and anos.count(periodo) < anos.count(anterior):
         return Alerta("V16", "aviso",
                       f"Cabeçalho com {anterior} repetido no lugar de {periodo}: '{cabecalho}'. "

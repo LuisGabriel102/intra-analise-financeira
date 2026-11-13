@@ -169,3 +169,27 @@ def test_trace_registra_modelo_tokens_e_custo(tmp_path, documento, rotas):
 def test_sem_chave_avisa_antes_de_chamar(tmp_path, documento, rotas):
     with pytest.raises(RuntimeError, match="ANTHROPIC_API_KEY"):
         extrair(documento, rotas, ClienteLLM(pasta_gravacoes=tmp_path, arquivo_traces=tmp_path / "t.jsonl"))
+
+
+def test_pagina_sem_aviso_de_escala_usa_a_do_documento(rotas):
+    # Erro achado na primeira rodada real: a p. 105 da Light não repete a escala no topo,
+    # e a dívida líquida saía em reais, e não em milhares (R$ 9 milhões em vez de R$ 9 bilhões).
+    p105 = ["Dívida líquida (A) | 9.032.236 | 7.352.919"]
+    paginas = [Pagina(numero=n, linhas=[]) for n in range(1, 21)]
+    paginas[19] = Pagina(numero=20, linhas=p105)  # sem escala na página
+    documento = Documento(nome="Light.pdf", paginas=paginas, escala_padrao="mil")
+    blocos = [{"type": "text", "text": "divida_liquida_atual: "},
+              {"type": "text", "text": "9.032.236", "citations": [cita(1, 0, p105)]}]
+    campo = ler_resposta(resposta(blocos), documento, [9, 20], rotas).campos["divida_liquida_atual"]
+    assert campo.principal.unidade == "R$ mil"
+    assert campo.principal.valor_reais == 9_032_236_000
+
+
+def test_replay_registra_custo_zero_e_guarda_o_original(tmp_path, documento, rotas):
+    traces = tmp_path / "t.jsonl"
+    cliente = ClienteLLM(sdk=SdkFalso(BLOCOS), pasta_gravacoes=tmp_path / "g", arquivo_traces=traces)
+    extrair(documento, rotas, cliente)
+    extrair(documento, rotas, ClienteLLM(replay=True, pasta_gravacoes=tmp_path / "g", arquivo_traces=traces))
+    nova, gravada = (json.loads(linha) for linha in traces.read_text(encoding="utf-8").splitlines())
+    assert nova["custo_usd"] > 0 and not nova["gravada"]
+    assert gravada["custo_usd"] == 0 and gravada["custo_original_usd"] == nova["custo_usd"]

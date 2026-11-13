@@ -8,6 +8,9 @@ Mede quatro coisas, campo a campo:
 
 Inventar um número onde o documento não tem nada é o pior erro, e aparece na
 coluna "inventou".
+
+Mede também quantas das 15 armadilhas principais viraram alerta: pela regra em
+código ou pela observação da IA (que vem com citação, mas não é conferida em código).
 """
 
 from __future__ import annotations
@@ -17,6 +20,7 @@ from datetime import date
 from pathlib import Path
 
 from analise_financeira.esquemas import Campo, Extracao
+from analise_financeira.indicadores import DocumentoAnalisado
 from analise_financeira.numeros import em_reais, ler_numero
 
 
@@ -26,6 +30,16 @@ def _valor_esperado(item: dict) -> tuple[float, float | None]:
     if n.unidade in ("%", "x"):
         return n.valor, None
     return n.valor, em_reais(n, "" if n.unidade else "mil")
+
+
+def _reais(v: float | None) -> str:
+    """9032236000 -> 'R$ 9,03 bi' (para o erro mostrar a escala)."""
+    if v is None:
+        return ""
+    for limite, nome in ((1e9, "bi"), (1e6, "mi"), (1e3, "mil")):
+        if abs(v) >= limite:
+            return f" = R$ {v / limite:.2f} {nome}".replace(".", ",")
+    return f" = R$ {v:.2f}".replace(".", ",")
 
 
 def _bate(campo: Campo, item: dict) -> tuple[bool, bool]:
@@ -62,12 +76,26 @@ def avaliar_documento(extracao: Extracao, esperado: dict) -> dict:
             valor_ok, pagina_ok = _bate(campo, item)
             contagem["valor_ok"] += valor_ok
             contagem["pagina_ok"] += pagina_ok
-            obtido = campo.principal.texto if campo.principal else campo.status
-            linhas.append({"campo": nome, "esperado": item["valor"], "obtido": obtido, "ok": valor_ok and pagina_ok})
+            p = campo.principal
+            obtido = f"{p.texto} ({p.unidade or 'sem escala'}){_reais(p.valor_reais)}" if p else campo.status
+            esperado_txt = f"{item['valor']}{_reais(_valor_esperado(item)[1])}"
+            linhas.append({"campo": nome, "esperado": esperado_txt, "obtido": obtido, "ok": valor_ok and pagina_ok})
     encontrados = [c for c in extracao.campos.values() if c.status in ("encontrado", "sem_evidencia")]
     conferidos = sum(1 for c in encontrados if c.principal and c.principal.conferido)
     return {"documento": extracao.documento, "contagem": contagem, "linhas": linhas,
             "evidencia_conferida": (conferidos, len(encontrados))}
+
+
+def armadilhas_detectadas(analise: DocumentoAnalisado, esperadas: list[dict]) -> list[dict]:
+    """Para cada armadilha esperada: foi detectada? por código ou pela IA?"""
+    resultado = []
+    for esperada in esperadas:
+        paginas = set(esperada["paginas"])
+        achou = [a for a in analise.alertas if paginas & set(a.paginas)
+                 and (a.regra == esperada["regra"] or (esperada["regra"] == "IA" and a.origem == "ia"))]
+        resultado.append({"id": esperada["id"], "detectada": bool(achou),
+                          "por": ("código" if any(a.origem == "codigo" for a in achou) else "IA") if achou else None})
+    return resultado
 
 
 def _pct(a: int, b: int) -> str:
@@ -81,9 +109,14 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
     for doc, esperado in dados.items():
         if doc.startswith("_"):
             continue
-        arquivo = Path(pasta_saidas) / Path(doc).stem / "extracao.json"
-        extracao = Extracao.model_validate_json(arquivo.read_text(encoding="utf-8"))
-        resultados.append((extracao, avaliar_documento(extracao, esperado)))
+        pasta = Path(pasta_saidas) / Path(doc).stem
+        extracao = Extracao.model_validate_json((pasta / "extracao.json").read_text(encoding="utf-8"))
+        r = avaliar_documento(extracao, esperado)
+        analise_json = pasta / "indicadores.json"
+        if analise_json.exists() and esperado.get("alertas_esperados"):
+            analise = DocumentoAnalisado.model_validate_json(analise_json.read_text(encoding="utf-8"))
+            r["armadilhas"] = armadilhas_detectadas(analise, esperado["alertas_esperados"])
+        resultados.append((extracao, r))
 
     modelo = resultados[0][0].uso.modelo if resultados else "-"
     md = [f"# Avaliação da extração ({date.today():%d/%m/%Y}, modelo `{modelo}`)", "",
@@ -101,6 +134,13 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
                   f"{_pct(c['nao_enc_ok'], c['nao_enc'])} | {c['inventou']} | {_pct(*r['evidencia_conferida'])} |")
     md.append(f"| **Total** | **{_pct(total['valor_ok'], total['valores'])}** | **{_pct(total['pagina_ok'], total['valores'])}** | "
               f"**{_pct(total['nao_enc_ok'], total['nao_enc'])}** | **{total['inventou']}** | **{_pct(*conf)}** |")
+    armadilhas = [a for _, r in resultados for a in r.get("armadilhas", [])]
+    if armadilhas:
+        detectadas = [a for a in armadilhas if a["detectada"]]
+        por_codigo = sum(1 for a in detectadas if a["por"] == "código")
+        md += ["", f"**Armadilhas principais detectadas: {len(detectadas)} de {len(armadilhas)}** "
+               f"({por_codigo} conferidas em código e {len(detectadas) - por_codigo} apontadas pela IA, com citação).", ""]
+        md += [f"- {a['id']}: " + (f"detectada ({a['por']})" if a["detectada"] else "não detectada") for a in armadilhas]
     md += ["", "Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. "
            "Serve para achar erro, e não para prometer acerto em produção.", "", "## Campos com erro", ""]
     erros = [f"- {r['documento']} · `{linha['campo']}`: esperado {linha['esperado']}, obtido {linha['obtido']}"
