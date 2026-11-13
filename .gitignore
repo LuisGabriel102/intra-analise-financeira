@@ -1,0 +1,13 @@
+# Segredos: o .env nunca vai para o Git
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
