@@ -1,0 +1,53 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQS9gYKEAgTGAI4AUIIdGhpbmtpbmcSDLNRRhzlCiDCQtQteRoMoTZIuOOCmGrj673kIjDFEQPJYGT/PcmfbyuimYTkrMrk0uMDVt7+s2QrjFHJyZHHsKrgApNnZdZND8o7fVQqkwaKst6QhNc2a8jftbAEkUHmZyj5mFD5NpaLHOFjMr9DGxQ1e29BfFodJmuw8lJU1EiXmXR91qrF9Y8UG4g9ze9lr27+5xFIQFbz84HeXUI/IRDXboY38Ff6Gl8KCRHwBVB0u7HDQePpJMm73lvyjABoB+cEwWx+EwHxLPlsvwBKNNPha2yW7MY/gpUOFp0pFFSO++c3UcEat+TJuoOdN1EZZzN5CC4OutvOaS4ddgDu1nXc1C+53KSme1gQFy11KDeNfS0ho2jo8cLlXq9Qhk0+9Rv0Eb274WjVTgO4pedYCyO93+YY9W2OJjODWUGg+E46zzIy/CHKnO5IgF/VRdA+ucwQRqPmLXRl+IVbWrepS1CWIm3M5fXdo12KqkYybs+m4nnN6U/pE0ccQ7UeaFDbfqCS3qofo4CuHho9ISVFu4eFDvpeE6yR4tAG8+fy0hik+dt4G//OMEHSYHJDTShlbxG5SEolKU5zKUIqlqVf5dpZLiF/vHJZxPSdtAQ7T2oUu1r//PYxERCJ7brt8en9y6+6TYDXLe9hVCfL8KDWEbec0ouLpgTV/qmTbKl88k2xKfgIVpTyqSZW86aspzzMTEqaWNac9MWs4LFAV5gqm1v5zDY29XKotjSB0JSbWxD8Ec7/xN+3x1oGSy4gMxY45Mi0FzvMya6fdljQqgup2RVufD692Dgez+c/U7KaZNCFKikCBulSwT3KScUId+JZ3QeiWtxHKQrILGT+3HUpNLoIZJIdYo8iKiqB0bqeUqQPcKPZSvyDCM815mN2/0i5lPqV42hsu1KAwpv9W4pHrtj8nxC9nViQHneRHYCq2m7ny8b+2AwNmOQEdkYVQ3R0AALgz5dpKOwhqcz3V5Ip655rzSIlXbYIN0fS28dBpURx+AkJ20Zp2IKC1q27ddN+0Tem+7/YtZYBih9/hCk6xE7/aGOjnFniGrhzZFOQ/cU1k859wIC9wIQ63LffrDJBfUzBRkfzZg5r1l5dOG5U2uhcXXwiNIQ16MipR9fauIzN/nZbvcARs795RgJyMCBzzIVOGAE=",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_01Bsi8HeSVDifwZUuJNFpnhp",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "receita líquida redução estornos de faturamento bandeiras tarifárias CVA",
+    "empresa": "Light"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01TQkX2ytwMQSamhswb2oB5M",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "aumento da receita vendas volume preço relatório da administração",
+    "empresa": "Brasal"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01VErxRWGNQzHKSEYbzcUWNF",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "receita operacional líquida aumento vendas Alibra",
+    "empresa": "Millet"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 376,
+ "tokens_cache": 0,
+ "segundos": 3.48,
+ "gravada": false,
+ "tokens_cache_escrita": 27667,
+ "parada": "tool_use"
+}

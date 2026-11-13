@@ -38,33 +38,51 @@
  "paginas_administracao": [],
  "motivos": [
   {
-   "texto": "A receita de 2022 inclui a Alibra no ano inteiro. Em 2021, a Alibra entrou só no meio do ano: a empresa permaneceu em processo pré-operacional realizando avaliações e negociações de investimentos até junho de 2021 quando a Companhia adquiriu 85% de participação na Alibra Ingredientes S.A. A receita líquida consolidada foi de 462.127 | 199.259. As notas não dizem isso como causa da alta; é uma leitura minha a partir das notas explicativas.",
+   "texto": "A melhora da receita e do lucro vem sobretudo da consolidação de um ano inteiro da Alibra. A explicação é inferida das notas explicativas: em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A, e o resultado de 2021 cobre só o Resultado do Período (jun-dez) | 7.330 | 6.231.",
+   "evidencias": [
+    {
+     "pagina": 27,
+     "trecho": "Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (“Alibra”),"
+    },
+    {
+     "pagina": 28,
+     "trecho": "Resultado do Período (jun-dez) | 7.330 | 6.231 | - | - | 6.231"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo as notas explicativas (nota 1.1), as vendas cumpriram o previsto. Porém o custo dos lácteos subiu e a margem não voltou ao nível de antes da pandemia: A performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem antes da pandemia.",
    "evidencias": [
     {
      "pagina": 11,
-     "trecho": "Permaneceu em processo pré-operacional realizando avaliações e negociações de investimentos até junho\nde 2021 quando a Companhia adquiriu 85% de participação na Alibra Ingredientes S.A. (“Alibra”)."
+     "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que\nera previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de\nvenda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Pelas notas explicativas, as despesas com vendas cresceram muito, puxadas por fretes e marketing: Fretes sobre vendas | - | (20.129) | (7.555), Marketing | - | (4.449) | (832) e Despesas com vendas | - | - | (51.142) | (21.370).",
+   "evidencias": [
+    {
+     "pagina": 38,
+     "trecho": "Fretes sobre vendas | - | (20.129) | (7.555)\nMarketing | - | (4.449) | (832)"
     },
     {
      "pagina": 38,
-     "trecho": "Receita operacional liquida | 462.127 | 199.259"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "A operação da própria Alibra também cresceu. A receita da investida foi de 462.127 | 318.317 e o lucro líquido foi de 28.518 | 17.241. A fonte são as notas explicativas.",
-   "evidencias": [
-    {
-     "pagina": 29,
-     "trecho": "Receita operacional líquida | 462.127 | 318.317"
+     "trecho": "Marketing | - | (4.449) | (832)"
     },
     {
-     "pagina": 29,
-     "trecho": "Lucro líquido do exercício | 28.518 | 17.241"
+     "pagina": 38,
+     "trecho": "Despesas com vendas | - | - | (51.142) | (21.370)"
     }
    ],
    "fontes": [
@@ -74,11 +92,11 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A empresa repassou ao preço de venda a alta de custos. As notas citam a continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda. A fonte são as notas explicativas.",
+   "texto": "Pelas notas explicativas, a alocação do preço de compra gerou amortização de mais-valia em 2022. Isso pesa no resultado da controladora: Amortização da Mais-Valia | - | - | (13.295) | (13.295).",
    "evidencias": [
     {
-     "pagina": 11,
-     "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de\nvenda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem"
+     "pagina": 28,
+     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)"
     }
    ],
    "fontes": [
@@ -88,35 +106,7 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "As vendas ficaram dentro do esperado, mesmo com demanda menor. A performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano. A fonte são as notas explicativas.",
-   "evidencias": [
-    {
-     "pagina": 11,
-     "trecho": "No ano de 2022 não fomos impactados por nenhum efeito direto decorrente da pandemia do COVID. A\nperformance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que\nera previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "A margem pesou contra o resultado. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem antes da pandemia. A fonte são as notas explicativas.",
-   "evidencias": [
-    {
-     "pagina": 11,
-     "trecho": "venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem\nantes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "A PCLD virou despesa em 2022, depois de uma reversão em 2021. Na movimentação aparece Adições (reversões) no exercício | (1.021) | 473. A fonte são as notas explicativas.",
+   "texto": "Pelas notas explicativas, a provisão para devedores duvidosos passou de reversão para despesa: Adições (reversões) no exercício | (1.021) | 473.",
    "evidencias": [
     {
      "pagina": 25,
@@ -128,15 +118,13 @@
    ],
    "conferido": true,
    "numeros_sem_fonte": []
-  }
- ],
- "riscos": [
+  },
   {
-   "texto": "O custo dos derivados lácteos pressiona a margem. A empresa não conseguiu recompor a margem de antes da pandemia: continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos (...) não foi possível recuperar o mesmo nível de margem antes da pandemia.",
+   "texto": "Pelas notas explicativas, a revisão de créditos tributários reduziu os valores reconhecidos em outras receitas e no resultado financeiro: as reclassificações efetuadas a título de reconhecimento do crédito a respectiva obrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e receitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos para R$3.103 e R$167, respectivamente.",
    "evidencias": [
     {
-     "pagina": 11,
-     "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de\nvenda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem\nantes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da"
+     "pagina": 36,
+     "trecho": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectiva\nobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e\nreceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos\npara R$3.103 e R$167, respectivamente."
     }
    ],
    "fontes": [
@@ -144,10 +132,16 @@
    ],
    "conferido": true,
    "numeros_sem_fonte": []
-  },
+  }
+ ],
+ "riscos": [
   {
-   "texto": "Há recebíveis muito vencidos e sem garantia. Os títulos vencidos há mais de um ano somam Acima de 361 dias | 7.628 | 6.727. Além disso, a Companhia não mantém qualquer garantia para os títulos em atraso.",
+   "texto": "Risco de crédito. A empresa pode incorrer em perdas decorrentes de um cliente ou de uma contraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações contratuais. Há títulos muito vencidos: Acima de 361 dias | 7.628 | 6.727. E a Companhia não mantém qualquer garantia para os títulos em atraso.",
    "evidencias": [
+    {
+     "pagina": 40,
+     "trecho": "Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma\ncontraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações\ncontratuais."
+    },
     {
      "pagina": 25,
      "trecho": "Acima de 361 dias | 7.628 | 6.727"
@@ -164,8 +158,12 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A maior parte dos passivos financeiros vence no curto prazo. O total é 73.154 | 73.154 | 64.377 | 8.658 | 118, e a terceira coluna é o valor que vence em até 12 meses.",
+   "texto": "Risco de liquidez. É o risco de a Companhia irá encontrar dificuldades em cumprir com as obrigações associadas com seus passivos financeiros. A maior parte dos passivos vence em até 12 meses: Total | 73.154 | 73.154 | 64.377 | 8.658 | 118.",
    "evidencias": [
+    {
+     "pagina": 41,
+     "trecho": "Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações\nassociadas com seus passivos financeiros que são liquidados com pagamentos à vista ou com outro ativo"
+    },
     {
      "pagina": 41,
      "trecho": "Total | 73.154 | 73.154 | 64.377 | 8.658 | 118"
@@ -178,15 +176,19 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "Ainda há uma parcela da aquisição a pagar, corrigida pela Selic. É uma parcela a prazo, no valor de até R$ 40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do contrato. As parcelas estão corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do pagamento.",
+   "texto": "Parcela a prazo da aquisição da Alibra, a pagar pela Millet. Ela vale até R$ 40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do contrato, e é corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do pagamento. O caixa da controladora é pequeno: Total | 355 | 871 | 10.656 | 8.194.",
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "é dividido em uma parcela fixa, no valor de R$ 138.843.004,78, e uma parcela a prazo, no valor de até R$\n40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do"
+     "trecho": "é dividido em uma parcela fixa, no valor de R$ 138.843.004,78, e uma parcela a prazo, no valor de até R$\n40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do\ncontrato, e representou 22,6% do preço pago."
     },
     {
      "pagina": 27,
-     "trecho": "um ajuste de preço de R$ 6.640.585, que, por sua vez, assim como as outras parcelas, estão a valor justo,\ncorrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do\npagamento."
+     "trecho": "corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do\npagamento."
+    },
+    {
+     "pagina": 25,
+     "trecho": "Total | 355 | 871 | 10.656 | 8.194"
     }
    ],
    "fontes": [
@@ -196,33 +198,89 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "As provisões para contingências subiram, sobretudo as trabalhistas: Trabalhistas | 722 | 91, com total de 3.284 | 2.355.",
+   "texto": "Risco de taxa de juros. A empresa pode vir a sofrer perdas ou auferir ganhos) por conta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado. A dívida é prefixada: Empréstimos e Financiamentos (Taxas Pré-fixadas) | 24.176 | 25.075.",
    "evidencias": [
     {
-     "pagina": 36,
-     "trecho": "Trabalhistas | 722 | 91"
-    },
-    {
-     "pagina": 36,
-     "trecho": "Total | 3.284 | 2.355"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "Existe risco de câmbio. A empresa vende ao exterior, com Mercado externo | 50.064 | 21.084. O risco cambial está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa financeira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira.",
-   "evidencias": [
-    {
-     "pagina": 38,
-     "trecho": "Mercado externo | 50.064 | 21.084"
+     "pagina": 41,
+     "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por\nconta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado."
     },
     {
      "pagina": 41,
+     "trecho": "Empréstimos e Financiamentos (Taxas Pré-fixadas) | 24.176 | 25.075"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Risco de câmbio. Ele está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa financeira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira. Há vendas ao exterior: Mercado externo | 50.064 | 21.084.",
+   "evidencias": [
+    {
+     "pagina": 41,
      "trecho": "Risco de taxa de câmbio: está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa\nfinanceira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira."
+    },
+    {
+     "pagina": 38,
+     "trecho": "Mercado externo | 50.064 | 21.084"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Preço de insumos. Houve aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda.",
+   "evidencias": [
+    {
+     "pagina": 11,
+     "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Contingências trabalhistas e previdenciárias em alta: Trabalhistas | 722 | 91 Risco Previdenciário | 2.562 | 2.264 Total | 3.284 | 2.355.",
+   "evidencias": [
+    {
+     "pagina": 36,
+     "trecho": "Trabalhistas | 722 | 91\nRisco Previdenciário | 2.562 | 2.264\nTotal | 3.284 | 2.355"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O ágio e os intangíveis da aquisição dependem de projeções. O teste de impairment considerou o desempenho histórico da Companhia e suas projeções de crescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia.",
+   "evidencias": [
+    {
+     "pagina": 30,
+     "trecho": "metodologia e premissas utilizadas pela Administração para teste de impairment do ágio considerou o desempenho histórico da Companhia e suas projeções de\ncrescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Estoques passaram a ter provisão para perdas: Provisão para perdas na realização dos estoques | (198) | -.",
+   "evidencias": [
+    {
+     "pagina": 26,
+     "trecho": "Provisão para perdas na realização dos estoques | (198) | -"
     }
    ],
    "fontes": [
@@ -236,7 +294,7 @@
  "guidance_status": "nao_encontrado",
  "perspectivas": [
   {
-   "texto": "A empresa diz que guarda recursos para investimentos e capital de giro, mas não dá meta. A Companhia vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos.",
+   "texto": "A empresa diz que guarda recursos para investimentos e capital de giro futuros: A Companhia vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos.",
    "evidencias": [
     {
      "pagina": 42,
@@ -250,7 +308,7 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "Há obras de ampliação em andamento na unidade do Paraná. O saldo se refere a ampliações que vem sendo efetuadas na unidade de Marechal Cândido Rondon/PR, referentes: \"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367).",
+   "texto": "Há obras de ampliação na fábrica do Paraná: ampliações que vem sendo efetuadas na unidade de Marechal Cândido Rondon/PR, referentes: \"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367).",
    "evidencias": [
     {
      "pagina": 31,
@@ -264,7 +322,25 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A empresa diz que vai acompanhar os efeitos da crise. A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas demonstrações financeiras.",
+   "texto": "A administração vê benefícios estratégicos na aquisição: A Empresa possui um portfólio diversificado (mais de 500 SKUs), além de ter uma base com mais de mil clientes e oferece acesso imediato a uma relevante fatia de mercado.",
+   "evidencias": [
+    {
+     "pagina": 27,
+     "trecho": "✓ A Empresa possui um portfólio diversificado (mais de 500 SKUs), além de ter uma base com mais\nde mil clientes;"
+    },
+    {
+     "pagina": 27,
+     "trecho": "✓ Aquisição de um participante bem inserido no mercado, proporcionando acesso imediato a uma\nrelevante fatia de mercado."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A empresa seguirá acompanhando a crise: A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas demonstrações financeiras.",
    "evidencias": [
     {
      "pagina": 11,
@@ -280,31 +356,15 @@
  ],
  "eventos": [
   {
-   "texto": "Houve a aquisição de 85% da Alibra em junho de 2021. O preço foi de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo conforme cronograma de pagamentos acordado entre as partes.",
+   "texto": "A aquisição da Alibra foi concluída no exercício anterior: A Transação foi concluída em 18 de junho de 2021. O preço foi de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo.",
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "pelo valor total de aquisição de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo\nconforme cronograma de pagamentos acordado entre as partes."
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": [
-    "85%"
-   ]
-  },
-  {
-   "texto": "Em 2022 saiu o laudo de alocação do preço de compra. Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos assumidos relacionado à aquisição da Alibra. Com ele, parte do ágio foi reclassificada para mais-valia, e houve Amortização da Mais-Valia | - | - | (13.295) | (13.295).",
-   "evidencias": [
-    {
-     "pagina": 27,
-     "trecho": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos\nassumidos relacionado à aquisição da Alibra Ingredientes LTDA, para fins contábeis e fiscais, à luz do CPC"
+     "trecho": "Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de"
     },
     {
-     "pagina": 28,
-     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)"
+     "pagina": 27,
+     "trecho": "pelo valor total de aquisição de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo"
     }
    ],
    "fontes": [
@@ -314,7 +374,25 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "O preço da aquisição teve um ajuste em 2022: Ajuste de preço de aquisição | - | 6.640 | - | - | 6.640.",
+   "texto": "Em 2022 saiu o laudo de alocação do preço de compra: Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos assumidos relacionado à aquisição da Alibra. Com isso os valores de Good-Will e Mais-Valia foram alocados, conforme mensuração do valor justo.",
+   "evidencias": [
+    {
+     "pagina": 27,
+     "trecho": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos\nassumidos relacionado à aquisição da Alibra Ingredientes LTDA, para fins contábeis e fiscais, à luz do CPC"
+    },
+    {
+     "pagina": 28,
+     "trecho": "Após emissão do relatório citado acima, os valores de Good-Will e Mais-Valia foram alocados, conforme\nmensuração do valor justo. O Good-Will refere-se ao valor pago a mais sobre o valor justo do Patrimônio"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Houve ajuste no preço de aquisição em 2022: Ajuste de preço de aquisição | - | 6.640 | - | - | 6.640.",
    "evidencias": [
     {
      "pagina": 28,
@@ -328,7 +406,7 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "Créditos tributários de uma ação antiga foram revistos para baixo. Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusão dos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditos tributários, que perfaziam o montante total de R$ 5.385 (em 31 de dezembro de 2021), incluindo R$ 2.282 de atualização monetária e juros, foram reduzidos para R$ 3.270 e R$1.157, respectivamente.",
+   "texto": "A empresa revisou créditos tributários de uma ação judicial: Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusão dos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditos tributários, que perfaziam o montante total de R$ 5.385 (em 31 de dezembro de 2021), incluindo R$ 2.282 de atualização monetária e juros, foram reduzidos para R$ 3.270 e R$1.157, respectivamente.",
    "evidencias": [
     {
      "pagina": 36,
@@ -342,11 +420,15 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A Alibra provisionou juros sobre capital próprio, que vão para a holding e para os minoritários. a Alibra provisionou Juros sobre Capital Próprio no valor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392 (R$ 6.284 líquido de retenção de impostos) equivalente à sua participação, sendo os demais R$ 1.305 (R$ 1.109 líquido de retenção de impostos) devido a sócios minoritários.",
+   "texto": "A Alibra provisionou juros sobre capital próprio, e nada foi pago em 2022. No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio no valor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392. O saldo a receber subiu para Saldo em 31 de dezembro de 2022 | 9.931.",
    "evidencias": [
     {
      "pagina": 29,
-     "trecho": "(a) No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio no\nvalor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392 (R$ 6.284 líquido de\nretenção de impostos) equivalente à sua participação, sendo os demais R$ 1.305 (R$ 1.109 líquido\nde retenção de impostos) devido a sócios minoritários. A conciliação de juros sobre capital próprio e"
+     "trecho": "(a) No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio no\nvalor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392 (R$ 6.284 líquido de"
+    },
+    {
+     "pagina": 29,
+     "trecho": "Saldo em 31 de dezembro de 2022 | 9.931"
     }
    ],
    "fontes": [
@@ -356,7 +438,21 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "Não há evento subsequente. Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administração da Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras.",
+   "texto": "Houve nova provisão para contingências no ano: Provisão no período | 929 | 416.",
+   "evidencias": [
+    {
+     "pagina": 36,
+     "trecho": "Provisão no período | 929 | 416"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Não houve eventos subsequentes a divulgar: Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administração da Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras.",
    "evidencias": [
     {
      "pagina": 43,
@@ -372,12 +468,8 @@
  ],
  "comparabilidade": [
   {
-   "texto": "O ano de 2021 inclui a Alibra só a partir de junho. O resultado da investida em 2021 é parcial: Resultado do Período (jun-dez) | 7.330. A receita consolidada de 2021 (199.259) fica abaixo da receita anual da própria Alibra (318.317).",
+   "texto": "O ano de 2021 tem só cerca de seis meses da Alibra. A receita consolidada de 2021 foi Receita operacional liquida | 462.127 | 199.259. A receita da Alibra no ano inteiro de 2021 foi Receita operacional líquida | 462.127 | 318.317.",
    "evidencias": [
-    {
-     "pagina": 28,
-     "trecho": "Resultado do Período (jun-dez) | 7.330 | 6.231 | - | - | 6.231"
-    },
     {
      "pagina": 38,
      "trecho": "Receita operacional liquida | 462.127 | 199.259"
@@ -394,11 +486,11 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A amortização da mais-valia só aparece em 2022, depois do laudo de alocação do preço: Reclassificação - Valor Justo | (6.640) | (72.740) | 83.495 | 4.115 Amortização da Mais-Valia | - | - | (13.295) | (13.295).",
+   "texto": "A amortização da mais-valia só começa em 2022, depois do laudo. Isso não existe em 2021: Amortização da Mais-Valia | - | - | (13.295) | (13.295).",
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "Reclassificação - Valor Justo | (6.640) | (72.740) | 83.495 | 4.115\nAmortização da Mais-Valia | - | - | (13.295) | (13.295)"
+     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)"
     }
    ],
    "fontes": [
@@ -408,7 +500,7 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A revisão dos créditos tributários mudou valores lançados no resultado. Os valores contabilizados nas linhas de outras receitas e/ou despesas operacionais e receitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos para R$3.103 e R$167, respectivamente.",
+   "texto": "A revisão dos créditos tributários é um item não recorrente. Ela afeta outras receitas e o resultado financeiro: as reclassificações efetuadas a título de reconhecimento do crédito a respectiva obrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e receitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos para R$3.103 e R$167, respectivamente.",
    "evidencias": [
     {
      "pagina": 36,
@@ -422,11 +514,11 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "A PCLD foi revertida em 2021 e virou adição em 2022, o que distorce a comparação das despesas: Adições (reversões) no exercício | (1.021) | 473.",
+   "texto": "A provisão para devedores duvidosos teve sinal oposto nos dois anos: PCLD | - | (1.021) | 473.",
    "evidencias": [
     {
-     "pagina": 25,
-     "trecho": "Adições (reversões) no exercício | (1.021) | 473"
+     "pagina": 38,
+     "trecho": "PCLD | - | (1.021) | 473"
     }
    ],
    "fontes": [
@@ -438,49 +530,30 @@
  ],
  "tom": "nao_aplicavel",
  "justificativa_tom": {
-  "texto": "O documento não tem relatório da administração. O índice lista só Relatório dos auditores independentes sobre as demonstrações financeiras individuais | e consolidadas (...) Demonstrações financeiras individuais e consolidadas auditadas Balanços patrimoniais (...) Demonstrações do resultado (...) Demonstrações do resultado abrangente (...) Demonstrações das mutações do patrimônio líquido (...) Demonstrações dos fluxos de caixa (...) Notas explicativas às demonstrações financeiras individuais e consolidadas.",
+  "texto": "O documento não tem texto da administração comentando o resultado. O comentário mais próximo está na nota 1.1 e é misto: A performance das vendas atendeu às projeções e expectativas, mas não foi possível recuperar o mesmo nível de margem antes da pandemia.",
   "evidencias": [
    {
-    "pagina": 2,
-    "trecho": "Relatório dos auditores independentes sobre as demonstrações financeiras individuais | e\nconsolidadas .................................................................................................................................. 1\nDemonstrações financeiras individuais e consolidadas auditadas\nBalanços patrimoniais ................................................................................................................... 4\nDemonstrações do resultado ........................................................................................................ 5\nDemonstrações do resultado abrangente ..................................................................................... 6\nDemonstrações das mutações do patrimônio líquido ................................................................... 7\nDemonstrações dos fluxos de caixa .............................................................................................. 8\nNotas explicativas às demonstrações financeiras individuais e consolidadas ............................. 9"
+    "pagina": 11,
+    "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que"
+   },
+   {
+    "pagina": 11,
+    "trecho": "venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem\nantes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da"
    }
   ],
   "fontes": [
-   "auditor"
+   "notas"
   ],
   "conferido": true,
   "numeros_sem_fonte": []
  },
  "observacoes": [
   {
-   "texto": "A data de aprovação vem antes do fim do exercício auditado. As notas dizem que A apresentação das demonstrações financeiras foi aprovada e pela administração em 14 de março de 2022. O parecer do auditor é datado de Rio de Janeiro, 15 de maio de 2023.",
-   "evidencias": [
-    {
-     "pagina": 12,
-     "trecho": "A apresentação das demonstrações financeiras foi aprovada e pela administração em 14 de março de 2022."
-    },
-    {
-     "pagina": 5,
-     "trecho": "Rio de Janeiro, 15 de maio de 2023."
-    }
-   ],
-   "fontes": [
-    "notas",
-    "outros"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "A DRE resumida da Alibra mostra lucro antes dos impostos negativo, mas lucro líquido positivo: Lucro antes dos impostos | (65.750) | 15.412 contra Lucro líquido do exercício | 28.518 | 17.241.",
+   "texto": "Na tabela resumida da Alibra, o lucro antes dos impostos aparece negativo, embora o lucro bruto e o lucro líquido sejam positivos: Lucro bruto | 98.338 | 70.682 Despesas operacionais | (63.419) | (53.655) Resultado financeiro | (2.331) | (1.615) Lucro antes dos impostos | (65.750) | 15.412 Impostos sobre o lucro | (4.070) | 1.820 Lucro líquido do exercício | 28.518 | 17.241.",
    "evidencias": [
     {
      "pagina": 29,
-     "trecho": "Lucro antes dos impostos | (65.750) | 15.412"
-    },
-    {
-     "pagina": 29,
-     "trecho": "Lucro líquido do exercício | 28.518 | 17.241"
+     "trecho": "Lucro bruto | 98.338 | 70.682\nDespesas operacionais | (63.419) | (53.655)\nResultado financeiro | (2.331) | (1.615)\nLucro antes dos impostos | (65.750) | 15.412\nImpostos sobre o lucro | (4.070) | 1.820\nLucro líquido do exercício | 28.518 | 17.241"
     }
    ],
    "fontes": [
@@ -490,7 +563,83 @@
    "numeros_sem_fonte": []
   },
   {
-   "texto": "O texto do quadro de liquidez fala em fluxo financeiro da Companhia e suas controladas em 31 de dezembro de 2021. O cabeçalho da tabela, porém, indica 2022.",
+   "texto": "A nota 8 cita uma incorporação de 2015. Mas a Millet foi constituída em 2018. O texto parece copiado das demonstrações da Alibra: Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda. versus A foi constituída em 14 de novembro de 2018.",
+   "evidencias": [
+    {
+     "pagina": 30,
+     "trecho": "Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda., cujas participações societárias foram adquiridas em 2014 e 2015. O ágio decorrente"
+    },
+    {
+     "pagina": 11,
+     "trecho": "A foi constituída em 14 de novembro de 2018 sob a denominação Metheora Empreendimentos e Participações"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "As datas do teste de impairment não batem. A política diz que Os testes anuais de perda no valor recuperável são realizados no final do mês de março. Outro trecho diz Em 31 de dezembro de 2022, a Companhia realizou a avaliação do valor recuperável. E a nota 8 fala do teste de impairment realizado em 31 de dezembro de 2021.",
+   "evidencias": [
+    {
+     "pagina": 16,
+     "trecho": "de valor. Os testes anuais de perda no valor recuperável são realizados no final do mês de março. A fim de"
+    },
+    {
+     "pagina": 16,
+     "trecho": "Em 31 de dezembro de 2022, a Companhia realizou a avaliação do valor recuperável dos ativos de longo"
+    },
+    {
+     "pagina": 30,
+     "trecho": "Consequentemente, o teste de impairment deste ágio utilizou está UGC (Alibra) e a metodologia do valor em uso. O resultado do teste de impairment realizado em\n31 de dezembro de 2021 não indicou necessidade de provisão para perdas por impairment."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A provisão para contingências do ano difere entre as notas. A nota 16 traz Provisão no período | 929 | 416. A nota de despesas traz Provisões para contingencias | - | (948) | (416).",
+   "evidencias": [
+    {
+     "pagina": 36,
+     "trecho": "Provisão no período | 929 | 416"
+    },
+    {
+     "pagina": 38,
+     "trecho": "Provisões para contingencias | - | (948) | (416)"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Em 2021, o imposto diferido ativo sobre contingências é maior que a própria provisão. O diferido é Provisão para contingências | 1.116 | 6.825, e a provisão é Total | 3.284 | 2.355.",
+   "evidencias": [
+    {
+     "pagina": 36,
+     "trecho": "Provisão para contingências | 1.116 | 6.825"
+    },
+    {
+     "pagina": 36,
+     "trecho": "Total | 3.284 | 2.355"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O texto da tabela de liquidez fala em 2021, mas o cabeçalho da tabela traz 2022: refletem o fluxo financeiro da Companhia e suas controladas em 31 de dezembro de 2021 versus 2022 | contábil | projetado | meses | meses | meses.",
    "evidencias": [
     {
      "pagina": 41,
@@ -506,81 +655,18 @@
    ],
    "conferido": true,
    "numeros_sem_fonte": []
-  },
-  {
-   "texto": "O teste de impairment do ágio aparece com datas diferentes. A nota 8 cita o teste de impairment realizado em 31 de dezembro de 2021. A política diz que os testes anuais de perda no valor recuperável são realizados no final do mês de março.",
-   "evidencias": [
-    {
-     "pagina": 30,
-     "trecho": "Consequentemente, o teste de impairment deste ágio utilizou está UGC (Alibra) e a metodologia do valor em uso. O resultado do teste de impairment realizado em\n31 de dezembro de 2021 não indicou necessidade de provisão para perdas por impairment."
-    },
-    {
-     "pagina": 16,
-     "trecho": "de valor. Os testes anuais de perda no valor recuperável são realizados no final do mês de março. A fim de"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "A soma na tabela de instrumentos financeiros não fecha. Os componentes são Caixa e Equivalente de Caixa | 355 | 871 | 10.656 | 8.194 Contas a Receber de Clientes | - | - | 98.663 | 69.645 Outros Créditos | 3 | - | 1.033 | 916, mas o total informado é Total | 358 | 871 | 10.352 | 78.755. O cabeçalho da tabela também repete o ano: 31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021.",
-   "evidencias": [
-    {
-     "pagina": 42,
-     "trecho": "Caixa e Equivalente de Caixa | 355 | 871 | 10.656 | 8.194\nContas a Receber de Clientes | - | - | 98.663 | 69.645\nOutros Créditos | 3 | - | 1.033 | 916"
-    },
-    {
-     "pagina": 42,
-     "trecho": "Total | 358 | 871 | 10.352 | 78.755"
-    },
-    {
-     "pagina": 42,
-     "trecho": "31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
-  },
-  {
-   "texto": "O patrimônio líquido da nota de gestão de capital (Total do patrimônio líquido (b) | 167.233 | 152.689) difere do balanço, segundo a conferência da solução (185.321). A conferência também aponta diferença no lucro líquido entre a DRE e a DMPL. Além disso, a nota de intangível fala de uma incorporação feita antes da criação da holding: Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda. A Millet foi constituída em 14 de novembro de 2018, então o texto parece ter sido copiado das notas da Alibra.",
-   "evidencias": [
-    {
-     "pagina": 42,
-     "trecho": "Total do patrimônio líquido (b) | 167.233 | 152.689"
-    },
-    {
-     "pagina": 30,
-     "trecho": "Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda., cujas participações societárias foram adquiridas em 2014 e 2015. O ágio decorrente"
-    },
-    {
-     "pagina": 11,
-     "trecho": "A foi constituída em 14 de novembro de 2018 sob a denominação Metheora Empreendimentos e Participações"
-    }
-   ],
-   "fontes": [
-    "notas"
-   ],
-   "conferido": true,
-   "numeros_sem_fonte": []
   }
  ],
  "nao_encontrados": [
-  "guidance",
-  "evento"
+  "guidance"
  ],
  "completa": true,
  "uso": {
   "modelo": "claude-opus-5-5",
-  "tokens_entrada": 60812,
-  "tokens_saida": 7982,
-  "custo_usd": 0.402888,
-  "segundos": 67.14,
+  "tokens_entrada": 62498,
+  "tokens_saida": 9584,
+  "custo_usd": 0.441672,
+  "segundos": 78.34,
   "gravada": true,
   "tokens_cache_lidos": 0
  }

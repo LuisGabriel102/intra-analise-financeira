@@ -107,6 +107,8 @@ def montar_base(preparados: list[tuple[Path, Documento, Rotas]], resultados: lis
         numeros={r.chave: r.numeros for r in resultados},
         qualitativa={r.chave: r.qualitativa for r in resultados if r.qualitativa},
         indice=indexar([(documento, rotas) for _, documento, rotas in preparados]),
+        escalas={documento.nome: {p.numero: documento.escala_de(p.numero) for p in documento.paginas}
+                 for _, documento, _ in preparados},
     )
 
 

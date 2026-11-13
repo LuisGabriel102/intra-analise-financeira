@@ -6,8 +6,18 @@ A resposta da IA aqui é falsa, mas no formato real da API (citações content_b
 import pytest
 from falsos import SdkFalso
 
-from analise_financeira.analista import CAMPOS, analisar, ler_resposta, ler_tom, montar_conteudo, numeros_sem_fonte
-from analise_financeira.indicadores import Dado, DocumentoAnalisado, Indicador
+from analise_financeira.analista import (
+    CAMPOS,
+    DEFINICAO_GUIDANCE,
+    SISTEMA,
+    achados_conhecidos,
+    analisar,
+    ler_resposta,
+    ler_tom,
+    montar_conteudo,
+    numeros_sem_fonte,
+)
+from analise_financeira.indicadores import AlertaSaida, Dado, DocumentoAnalisado, Indicador
 from analise_financeira.llm import ClienteLLM, Resposta
 from analise_financeira.pdf import Documento, Pagina
 from analise_financeira.roteamento import Rotas
@@ -170,3 +180,27 @@ def test_aceita_titulo_com_lista_e_nome_no_plural(documento, rotas):
     assert [r.texto for r in a.riscos] == ["Incerteza sobre a continuidade.", "Provisões altas: R$ 2.513 milhões."]
     assert a.riscos[1].numeros_sem_fonte == [] and a.riscos[1].evidencias[0].pagina == 3
     assert len(a.perspectivas) == 1 and a.tom == "negativo" and a.justificativa_tom.conferido
+
+
+def test_guidance_tem_uma_definicao_so_e_ela_esta_no_sistema():
+    """Guidance é projeção financeira ou operacional. Meta social e prazo de compensação de crédito são perspectiva."""
+    assert DEFINICAO_GUIDANCE in SISTEMA and "{" not in SISTEMA
+    for palavra in ("meta social", "compensar um crédito tributário", "perspectiva"):
+        assert palavra in DEFINICAO_GUIDANCE
+    assert "regra 5" in CAMPOS["guidance"] and "meta social" in CAMPOS["perspectiva"]
+
+
+def test_pedido_leva_os_achados_ja_conhecidos_para_o_analista_nao_repetir(documento, rotas, numeros):
+    numeros.alertas = [
+        AlertaSaida(regra="V7", severidade="erro", origem="codigo", mensagem="sinal trocado", paginas=[9, 20]),
+        AlertaSaida(regra="V16", severidade="aviso", origem="codigo", mensagem="ano repetido", paginas=[21]),
+        AlertaSaida(regra="IA", severidade="aviso", origem="ia", mensagem="MWh no lugar de MWm", paginas=[8]),
+    ]
+    achados = achados_conhecidos(numeros)
+    assert achados.splitlines() == ["- V16 (p. 21): ano repetido", "- Observação da extração (p. 8): MWh no lugar de MWm"]
+    pedido = montar_conteudo(documento, rotas, numeros)[-1]["text"]
+    assert achados in pedido and "Não repita esses achados" in pedido
+    assert "sinal trocado" in pedido  # o erro continua no resumo de números
+    assert "No máximo 10 linhas para risco e para evento" in pedido
+    vazio_de_achados = numeros.model_copy(update={"alertas": []})
+    assert achados_conhecidos(vazio_de_achados) == "- nenhum"

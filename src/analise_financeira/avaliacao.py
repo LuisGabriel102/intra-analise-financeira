@@ -21,6 +21,7 @@ e as respostas com os termos esperados. É grosseira de propósito: pega o erro 
 from __future__ import annotations
 
 import json
+import re
 import unicodedata
 from datetime import date
 from pathlib import Path
@@ -157,8 +158,34 @@ def avaliar_qualitativa(q: AnaliseQualitativa, esperado: dict) -> dict:
             "com_numero_sem_fonte": sum(1 for i in itens if i.numeros_sem_fonte)}
 
 
+def paragrafo_da_empresa(texto: str, empresa: str) -> str:
+    """O parágrafo da resposta sobre uma empresa: o que começa com o nome dela ("**Brasal:** ...", "- Brasal: ...").
+
+    Se nenhum começar com o nome, valem os parágrafos que citam a empresa (e não a conclusão inteira).
+    """
+    paragrafos = re.split(r"\n\s*\n|\n(?=\s*[-*]\s)", texto)
+    padrao = re.compile(rf"^\s*(?:[-*]\s+)?(?:\*\*)?{re.escape(empresa)}\b", re.IGNORECASE)
+    proprios = [p for p in paragrafos if padrao.match(p)]
+    return "\n".join(proprios or [p for p in paragrafos[1:] if re.search(rf"\b{re.escape(empresa)}\b", p, re.I)])
+
+
+_NEGA = r"nao (?:encontr|cit|mencion|aparec|list)\w*"
+
+
+def menciona(trecho: str, termo: str) -> bool:
+    """O termo aparece de forma afirmativa? "não encontrei risco de juros" não conta como citar juros."""
+    for m in re.finditer(re.escape(termo), trecho):
+        antes = re.split(r"[.;!?]\s", trecho[max(0, m.start() - 80):m.start()])[-1]
+        if not re.search(_NEGA, antes):
+            return True
+    return False
+
+
 def avaliar_perguntas(respostas: list[RespostaPergunta], esperado: dict) -> list[dict]:
-    """Cada resposta tem os termos esperados? Tem fonte? Terminou?"""
+    """Cada resposta tem os termos esperados (no todo e no parágrafo de cada empresa)? Tem fonte? Terminou?
+
+    Um número sem trecho citado também reprova a resposta: é a mesma régua da análise qualitativa.
+    """
     linhas = []
     for r in sorted(respostas, key=lambda x: x.numero or 99):
         e = esperado.get(str(r.numero))
@@ -167,8 +194,13 @@ def avaliar_perguntas(respostas: list[RespostaPergunta], esperado: dict) -> list
         texto = _sem_acento(r.texto)
         faltam = [" ou ".join(alternativas) for alternativas in e["deve_conter"]
                   if not any(a in texto for a in alternativas)]
-        linhas.append({"numero": r.numero, "ok": not faltam and bool(r.fontes) and r.completa, "faltam": faltam,
-                       "fontes": len(r.fontes), "completa": r.completa})
+        for empresa, itens in e.get("por_empresa", {}).items():
+            trecho = _sem_acento(paragrafo_da_empresa(r.texto, empresa))
+            faltam += [f"{empresa}: {' ou '.join(alternativas)}" for alternativas in itens
+                       if not any(menciona(trecho, a) for a in alternativas)]
+        linhas.append({"numero": r.numero, "faltam": faltam, "fontes": len(r.fontes), "completa": r.completa,
+                       "numeros_sem_fonte": r.numeros_sem_fonte,
+                       "ok": not faltam and bool(r.fontes) and r.completa and not r.numeros_sem_fonte})
     return linhas
 
 
@@ -247,6 +279,7 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
         md += ["", f"## Perguntas (checagem aproximada, por palavras): {sum(x['ok'] for x in linhas)} de {len(linhas)}", ""]
         md += [f"- Pergunta {x['numero']}: " + ("ok" if x["ok"] else "FALHOU") + f" ({x['fontes']} fontes"
                + (f"; faltou: {'; '.join(x['faltam'])}" if x["faltam"] else "")
+               + (f"; número sem trecho citado: {', '.join(x['numeros_sem_fonte'])}" if x["numeros_sem_fonte"] else "")
                + ("" if x["completa"] else "; resposta incompleta") + ")" for x in linhas]
 
     md += ["", "Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. "

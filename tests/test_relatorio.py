@@ -1,8 +1,22 @@
 """O relatório: escape do texto que vem do PDF, faixas de página e o resumo executivo."""
 
-from analise_financeira.esquemas import AnaliseQualitativa, Evidencia, Extracao, Item, Uso
+from analise_financeira.esquemas import AnaliseQualitativa, Evidencia, Extracao, Fonte, Item, RespostaPergunta, Uso
 from analise_financeira.indicadores import AlertaSaida, Dado, DocumentoAnalisado, Indicador
-from analise_financeira.relatorio import ResultadoDocumento, _paginas, celula, resumo_executivo, tabela, texto
+from analise_financeira.relatorio import (
+    ResultadoDocumento,
+    _item,
+    _paginas,
+    _primeira_frase,
+    alertas,
+    celula,
+    pergunta,
+    qualitativa,
+    repete_achado,
+    resumo_executivo,
+    tabela,
+    texto,
+    valores_com_erro,
+)
 
 
 def test_texto_do_pdf_nao_vira_html_nem_quebra_tabela():
@@ -67,3 +81,53 @@ def test_tabela_marca_alerta_nao_encontrado_e_n_a():
     assert "| Alavancagem informada | ⚠️ 3,32x (p. 10) |" in md
     assert "| Alavancagem calculada | n/a (EBITDA negativo) |" in md
     assert "| Variação do lucro líquido | n/a (troca de sinal) |" in md
+
+
+def test_atencao_do_resumo_prefere_o_que_o_auditor_sustenta_e_fica_curta():
+    r = _light()
+    r.qualitativa.comparabilidade = [Item(texto="Provisões distorcem a comparação. São R$2.513 milhões.", conferido=True,
+                                          fontes=["relatorio_adm"], evidencias=[Evidencia(pagina=9, trecho="p")])]
+    r.qualitativa.riscos.insert(0, Item(texto="Há incerteza sobre a continuidade: Existe incerteza significativa.",
+                                        conferido=True, fontes=["notas", "auditor"],
+                                        evidencias=[Evidencia(pagina=28, trecho="i"), Evidencia(pagina=111, trecho="i")]))
+    assert resumo_executivo(r)[4] == ("Tom da administração: negativo. Atenção: há incerteza sobre a continuidade "
+                                      "(p. 28, 111).")
+    assert _primeira_frase("O ano anterior não foi auditado: As demonstrações de 2021 (p. 3).") == \
+        "O ano anterior não foi auditado"
+    assert _primeira_frase("Receita de R$ 1.325,1 milhões. Alta forte.") == "Receita de R$ 1.325,1 milhões"
+
+
+def test_item_que_cita_valor_com_erro_ganha_aviso():
+    r = _light()
+    suspeitos = valores_com_erro(r.numeros)
+    assert suspeitos == [(1.18e9, 1180.0, "V7")]
+    citou = Item(texto="O EBITDA CVM foi de R$1.180 milhões, com queda.", conferido=True)
+    assert "marcou com erro (V7" in _item(citou, suspeitos)
+    assert "marcou com erro" not in _item(Item(texto="A receita foi de R$ 13.253 milhões.", conferido=True), suspeitos)
+    r.qualitativa.motivos = [citou]
+    assert "marcou com erro (V7" in "\n".join(qualitativa(r))
+
+
+def test_observacao_da_analise_que_repete_um_alerta_nao_aparece_duas_vezes():
+    conhecido = [("O EBITDA da distribuidora: R$1.817 milhões, redução de R$2.996 milhões sobre R$1.179 milhões.", [8])]
+    assert repete_achado("Erro de sinal: 1.817, redução de 2.996 em relação a 1.179 em 2021.", [8], conhecido)
+    assert not repete_achado("Erro de sinal: 1.817, redução de 2.996 em relação a 1.179.", [9], conhecido)  # outra página
+    assert not repete_achado("Na p. 8, a venda foi de 459 MWh, e não 1.817.", [8], conhecido)  # número novo
+    assert not repete_achado("A tabela da página 8 tem a unidade errada.", [8], conhecido)  # sem número: fica
+
+    r = _light()
+    r.numeros.alertas.append(AlertaSaida(regra="IA", severidade="aviso", origem="ia", paginas=[10],
+                                         mensagem="O covenant encerrou 2021 em 3,32x, menor que 3,48x."))
+    r.qualitativa.observacoes = [
+        Item(texto="O ano do covenant está errado: 3,32x e 3,48x em 2021.", evidencias=[Evidencia(pagina=10, trecho="c")]),
+        Item(texto="A unidade é MWh e não MWm: 459 MWh.", evidencias=[Evidencia(pagina=8, trecho="m")])]
+    md = "\n".join(alertas([r]))
+    assert md.count("3,32x") == 1 and "459 MWh" in md
+
+
+def test_resposta_com_numero_sem_trecho_ganha_aviso():
+    r = RespostaPergunta(numero=5, pergunta="Guidance?", texto="O restante de 38,9% sai até julho.[1]",
+                         fontes=[Fonte(documento="Brasal.pdf", paginas=[28], titulo="t", trecho="31,4%")],
+                         numeros_sem_fonte=["38,9%"], uso=Uso(modelo="m"))
+    md = "\n".join(pergunta(r))
+    assert "⚠️ Números sem trecho citado nesta resposta: 38,9%." in md

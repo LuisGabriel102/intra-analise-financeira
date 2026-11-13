@@ -1,0 +1,1150 @@
+{
+ "blocos": [
+  {
+   "text": "motivo: Segundo as notas explicativas, a queda do lucro vem sobretudo da base alta de 2021. Naquele ano, a controlada reconheceu um crédito extraordinário de PIS e COFINS. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentesdo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia atese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,registrados nas rubricas de tributos a recuperar em contra partida às rubricas de outrasreceitas (despesas) operacionais, líquidas e resultado financeiro, líquido, nos montantesde R$ 100.875 e 67.844 respectivamente.",
+     "document_index": 21,
+     "document_title": "Brasal.pdf, página 28",
+     "end_block_index": 21,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes do trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a tese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719, registrados nas rubricas de tributos a recuperar em contra partida às rubricas de outras receitas (despesas) operacionais, líquidas e resultado financeiro, líquido, nos montantes de R$ 100.875 e 67.844 respectivamente.",
+   "type": "text"
+  },
+  {
+   "text": " Em 2022, os créditos extemporâneos foram quase nulos: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Créditos extemporâneos (i) | - | - | 231 | 105.633",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 15,
+     "start_block_index": 14,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Créditos extemporâneos (i) | - | - | 231 | 105.633",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: As notas explicativas mostram que o resultado financeiro também encolheu. A atualização monetária do crédito e o ajuste a valor presente do incentivo caíram muito: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Variação monetária ativa (i) | 9.392 | 67.851Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+     "document_index": 37,
+     "document_title": "Brasal.pdf, página 45",
+     "end_block_index": 36,
+     "start_block_index": 34,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Variação monetária ativa (i) | 9.392 | 67.851",
+   "type": "text"
+  },
+  {
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+     "document_index": 37,
+     "document_title": "Brasal.pdf, página 45",
+     "end_block_index": 36,
+     "start_block_index": 35,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+   "type": "text"
+  },
+  {
+   "text": ". Na controlada, o resultado financeiro foi de ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado financeiro líquido | 23.480 | 107.520",
+     "document_index": 18,
+     "document_title": "Brasal.pdf, página 25",
+     "end_block_index": 23,
+     "start_block_index": 22,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Resultado financeiro líquido | 23.480 | 107.520",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: A receita cresceu nas duas linhas principais, segundo as notas explicativas: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Venda de produtos | 1.036.873 | 859.621Revenda de mercadorias | 952.648 | 768.413",
+     "document_index": 35,
+     "document_title": "Brasal.pdf, página 43",
+     "end_block_index": 10,
+     "start_block_index": 8,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Venda de produtos | 1.036.873 | 859.621 Revenda de mercadorias | 952.648 | 768.413",
+   "type": "text"
+  },
+  {
+   "text": ". A subvenção de ICMS também aumentou: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(+ ) ICMS – Subvenção | 62.281 | 38.038",
+     "document_index": 35,
+     "document_title": "Brasal.pdf, página 43",
+     "end_block_index": 17,
+     "start_block_index": 16,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(+ ) ICMS – Subvenção | 62.281 | 38.038",
+   "type": "text"
+  },
+  {
+   "text": ". As notas não explicam se o ganho veio de preço ou de volume.\nmotivo: As despesas operacionais da controlada subiram e reduziram o lucro, segundo as notas explicativas: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Despesas operacionais | (288.807) | (148.665)",
+     "document_index": 18,
+     "document_title": "Brasal.pdf, página 25",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Despesas operacionais | (288.807) | (148.665)",
+   "type": "text"
+  },
+  {
+   "text": ". Pesaram o marketing comercial (",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Marketing | (48.260) | (35.897)",
+     "document_index": 36,
+     "document_title": "Brasal.pdf, página 44",
+     "end_block_index": 32,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Marketing | (48.260) | (35.897)",
+   "type": "text"
+  },
+  {
+   "text": ") e as despesas logísticas (",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(71.313) | (60.026)",
+     "document_index": 36,
+     "document_title": "Brasal.pdf, página 44",
+     "end_block_index": 50,
+     "start_block_index": 49,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(71.313) | (60.026)",
+   "type": "text"
+  },
+  {
+   "text": ").\nmotivo: As notas explicativas registram uma perda maior por impairment de investimentos: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 31,
+     "start_block_index": 30,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+   "type": "text"
+  },
+  {
+   "text": ". Um ganho maior na venda de ativos compensou parte dela: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro na venda de permanente | - | - | 10.712 | 3.408",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 17,
+     "start_block_index": 16,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Lucro na venda de permanente | - | - | 10.712 | 3.408",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: Para o caixa, as notas explicativas indicam que boa parte do crédito tributário foi usada em 2022: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Semestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu umacompensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de",
+     "document_index": 21,
+     "document_title": "Brasal.pdf, página 28",
+     "end_block_index": 37,
+     "start_block_index": 35,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "ocorreu uma compensação no exercício de 2022 de aproximadamente 61,1%",
+   "type": "text"
+  },
+  {
+   "text": ". O saldo a recuperar caiu: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "PIS e COFINS (excluisão ICMS da base) (i) | - | - | 65.713 | 126.262",
+     "document_index": 21,
+     "document_title": "Brasal.pdf, página 28",
+     "end_block_index": 13,
+     "start_block_index": 12,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "PIS e COFINS (excluisão ICMS da base) (i) | - | - | 65.713 | 126.262",
+   "type": "text"
+  },
+  {
+   "text": ". O documento não liga essa compensação ao fluxo de caixa de forma explícita.\nrisco: Risco de crédito com clientes. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.",
+     "document_index": 40,
+     "document_title": "Brasal.pdf, página 49",
+     "end_block_index": 11,
+     "start_block_index": 10,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.",
+   "type": "text"
+  },
+  {
+   "text": " A empresa diz que ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "monitoramento dos saldos a receber. Também deve ser destacado que as vendas, pelascaracterísticas dos produtos comercializados e pela dispersão de clientes, não apresentamconcentrações relevantes, existindo natural diluição de riscos de realização de contas a receber",
+     "document_index": 40,
+     "document_title": "Brasal.pdf, página 49",
+     "end_block_index": 16,
+     "start_block_index": 13,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "as vendas, pelas características dos produtos comercializados e pela dispersão de clientes, não apresentam concentrações relevantes",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: A inadimplência piorou. Os títulos vencidos subiram (",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "15.668 | 12.185",
+     "document_index": 20,
+     "document_title": "Brasal.pdf, página 27",
+     "end_block_index": 20,
+     "start_block_index": 19,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "15.668 | 12.185",
+   "type": "text"
+  },
+  {
+   "text": "), e a perda registrada também: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$3.604 (R$1.631 em 31 de dezembro de 2021).",
+     "document_index": 20,
+     "document_title": "Brasal.pdf, página 27",
+     "end_block_index": 23,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$ 3.604 (R$1.631 em 31 de dezembro de 2021).",
+   "type": "text"
+  },
+  {
+   "text": "\nrisco: Risco de preço de insumos. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra dematéria-prima. Para mitigar os riscos, a Companhia monitora permanentemente os preçosbuscando antecipar-se a movimentos de preços.",
+     "document_index": 40,
+     "document_title": "Brasal.pdf, página 49",
+     "end_block_index": 21,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima. Para mitigar os riscos, a Companhia monitora permanentemente os preços buscando antecipar-se a movimentos de preços.",
+   "type": "text"
+  },
+  {
+   "text": " No açúcar, ela usa ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõede uma política de uso de operações com futuros para minimizar a exposição líquida deestoque de commodities.",
+     "document_index": 10,
+     "document_title": "Brasal.pdf, página 17",
+     "end_block_index": 36,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: Risco de juros. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações detaxas de juros incidentes sobre seus ativos e passivos financeiros. Visando à mitigação deste tipo",
+     "document_index": 40,
+     "document_title": "Brasal.pdf, página 49",
+     "end_block_index": 24,
+     "start_block_index": 22,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos e passivos financeiros.",
+   "type": "text"
+  },
+  {
+   "text": " A receita das aplicações depende do CDI: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Aplicações – CDI | 173.676 | 173.676 | 173.676Taxa sujeita à variação | 12,40% | 9,30% | 6,20%Receita financeira projetada | 21.536 | 16.152 | 10.768",
+     "document_index": 41,
+     "document_title": "Brasal.pdf, página 50",
+     "end_block_index": 34,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Aplicações – CDI | 173.676 | 173.676 | 173.676 Taxa sujeita à variação | 12,40% | 9,30% | 6,20% Receita financeira projetada | 21.536 | 16.152 | 10.768",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: O negócio depende de contratos com as donas das marcas, e esses contratos têm prazo. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com aCervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF,",
+     "document_index": 5,
+     "document_title": "Brasal.pdf, página 12",
+     "end_block_index": 16,
+     "start_block_index": 14,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: O incentivo fiscal tem condições a cumprir. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "o ICMS apurado das saídas de produtos de fabricação própria. A Controlada condiciona-se aocumprimento de obrigações como manutenção de empregos e regularidade fiscal, além dopagamento de 3% sobre a base de cálculo do ICMS apurado aos Fundo da Receita Tributária do",
+     "document_index": 5,
+     "document_title": "Brasal.pdf, página 12",
+     "end_block_index": 42,
+     "start_block_index": 39,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Controlada condiciona-se ao cumprimento de obrigações como manutenção de empregos e regularidade fiscal, além do pagamento de 3% sobre a base de cálculo do ICMS apurado aos Fundo da Receita Tributária do DF",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: A empresa empresta dinheiro a uma parte relacionada ligada ao controlador: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Mútuos diversos – Participações S.A | - | - | 20.542 | 50.285",
+     "document_index": 23,
+     "document_title": "Brasal.pdf, página 30",
+     "end_block_index": 13,
+     "start_block_index": 12,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Mútuos diversos – Participações S.A | - | - | 20.542 | 50.285",
+   "type": "text"
+  },
+  {
+   "text": ". Esses mútuos rendem ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Financeira (IOF) e juros a taxa de 100% a 103,5%% CDI, com datas de vencimento até 2023.",
+     "document_index": 23,
+     "document_title": "Brasal.pdf, página 30",
+     "end_block_index": 26,
+     "start_block_index": 25,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "juros a taxa de 100% a 103,5%% CDI, com datas de vencimento até 2023",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: A compensação do crédito de PIS e COFINS atrasou em relação ao plano. O motivo citado foi ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "de PIS e COFINS, em função de uma retração no crescimento esperado para o 4º.Semestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma",
+     "document_index": 21,
+     "document_title": "Brasal.pdf, página 28",
+     "end_block_index": 36,
+     "start_block_index": 34,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "uma retração no crescimento esperado para o 4º. Semestre de 2022, ficando abaixo um pouco das metas estabelecidas",
+   "type": "text"
+  },
+  {
+   "text": ".\nguidance: não encontrado\nperspectiva: A empresa espera compensar o restante do crédito de PIS e COFINS até meados de 2023: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de38,9% deverá acontecer até julho de 2023.",
+     "document_index": 21,
+     "document_title": "Brasal.pdf, página 28",
+     "end_block_index": 38,
+     "start_block_index": 36,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "sendo que o restante de 38,9% deverá acontecer até julho de 2023",
+   "type": "text"
+  },
+  {
+   "text": ".\nperspectiva: A empresa pode mudar a estrutura de capital, mas não dá números. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "acumulados e reservas de lucros), baseada em políticas internas e benchmarks. A Companhiapode alterar sua estrutura de capital, conforme condições econômico-financeiras, visandoaperfeiçoar sua alavancagem financeira e sua gestão de dívida.",
+     "document_index": 39,
+     "document_title": "Brasal.pdf, página 48",
+     "end_block_index": 52,
+     "start_block_index": 49,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Companhia pode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando aperfeiçoar sua alavancagem financeira e sua gestão de dívida.",
+   "type": "text"
+  },
+  {
+   "text": "\nperspectiva: A empresa avalia o efeito da mudança contábil sobre a dívida. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "ser aplicadas retrospectivamente. Atualmente, a Companhia avalia o impacto que asalterações terão na prática atual e se os contratos de empréstimo existentes podem exigirrenegociação.",
+     "document_index": 16,
+     "document_title": "Brasal.pdf, página 23",
+     "end_block_index": 13,
+     "start_block_index": 10,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Atualmente, a Companhia avalia o impacto que as alterações terão na prática atual e se os contratos de empréstimo existentes podem exigir renegociação.",
+   "type": "text"
+  },
+  {
+   "text": "\nperspectiva: O lucro não distribuído vai para uma reserva, que depende de aprovação. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "O lucro excedente não distribuído foi destinado à constituição da reserva de rentençao de lucro, aqual será enviada para aprovação da Assembleia Geral Ordinária (AGO), em conformidade com as",
+     "document_index": 34,
+     "document_title": "Brasal.pdf, página 42",
+     "end_block_index": 38,
+     "start_block_index": 36,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "O lucro excedente não distribuído foi destinado à constituição da reserva de rentençao de lucro, a qual será enviada para aprovação da Assembleia Geral Ordinária (AGO)",
+   "type": "text"
+  },
+  {
+   "text": ".\nperspectiva: A empresa vai acompanhar seus processos depois da decisão do STF. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "impactos para estas demonstrações financeiras. No entanto manterá o monitoramentopermanente de todos os seus processos, considerando a referida decisão.",
+     "document_index": 42,
+     "document_title": "Brasal.pdf, página 51",
+     "end_block_index": 31,
+     "start_block_index": 29,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "No entanto manterá o monitoramento permanente de todos os seus processos, considerando a referida decisão.",
+   "type": "text"
+  },
+  {
+   "text": "\nevento: Houve aumento de capital com reservas, sem entrada de caixa. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado umaumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sememissão de novas ações, ficando o capital social da Companhia totalmente subscrito e",
+     "document_index": 34,
+     "document_title": "Brasal.pdf, página 42",
+     "end_block_index": 12,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado um aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem emissão de novas ações",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: A distribuição aos acionistas foi alta no ano: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Dividendos pagos no exercício | (206.000) | -Juros sobre capital próprio | (17.636) | (11.822)",
+     "document_index": 34,
+     "document_title": "Brasal.pdf, página 42",
+     "end_block_index": 33,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Dividendos pagos no exercício | (206.000) | - Juros sobre capital próprio | (17.636) | (11.822)",
+   "type": "text"
+  },
+  {
+   "text": ". A controlada também distribuiu lucros à holding: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099",
+     "document_index": 25,
+     "document_title": "Brasal.pdf, página 32",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: O investimento na Leão Alimentos e Bebidas perdeu valor no ano: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Leão Alimentos e Bebidas Ltda. (i) | - | - | 13.910 | 22.834",
+     "document_index": 24,
+     "document_title": "Brasal.pdf, página 31",
+     "end_block_index": 10,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Leão Alimentos e Bebidas Ltda. (i) | - | - | 13.910 | 22.834",
+   "type": "text"
+  },
+  {
+   "text": ". O valor de impairment registrado foi ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 31,
+     "start_block_index": 30,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(9.593)",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: A empresa baixou um volume grande de vasilhames e garrafeiras: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Vasilhames e garrafeiras | 78.808 | 14.021 | (41.987) | - | 50.842",
+     "document_index": 27,
+     "document_title": "Brasal.pdf, página 34",
+     "end_block_index": 17,
+     "start_block_index": 16,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Vasilhames e garrafeiras | 78.808 | 14.021 | (41.987) | - | 50.842",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: A empresa pagou parcelas do financiamento incentivado PRÓ/DF e resgatou o CDB vinculado: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Pagamento de parcelas do Incentivo | (6.020) | -",
+     "document_index": 30,
+     "document_title": "Brasal.pdf, página 37",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Pagamento de parcelas do Incentivo | (6.020) | -",
+   "type": "text"
+  },
+  {
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resgates CDB ref..as liberações | 6.197 | -",
+     "document_index": 30,
+     "document_title": "Brasal.pdf, página 37",
+     "end_block_index": 27,
+     "start_block_index": 26,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Resgates CDB ref..as liberações | 6.197 | -",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: A reserva de incentivos fiscais cresceu muito. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "fechamento do balanço anual. Em 2022 foi reconhecido o total de R$103.940 a título de reservade incentivos fiscais e o saldo da conta em 31 de dezembro de 2022 foi o total de R$143.978(R$38.038 em 31 de dezembro de 2021).",
+     "document_index": 5,
+     "document_title": "Brasal.pdf, página 12",
+     "end_block_index": 47,
+     "start_block_index": 44,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em 2022 foi reconhecido o total de R$103.940 a título de reserva de incentivos fiscais e o saldo da conta em 31 de dezembro de 2022 foi o total de R$143.978 (R$38.038 em 31 de dezembro de 2021).",
+   "type": "text"
+  },
+  {
+   "text": "\nevento: Evento subsequente: o STF decidiu sobre a coisa julgada em tributos. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do SupremoTribunal Federal (STF) considerou que uma decisão definitiva, a chamada “coisa julgada”,sobre tributos recolhidos de forma continuada, perde seus efeitos caso a corte se pronuncieem sentido contrário. Isso porque, de acordo com a legislação e a jurisprudência, uma",
+     "document_index": 42,
+     "document_title": "Brasal.pdf, página 51",
+     "end_block_index": 21,
+     "start_block_index": 17,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo Tribunal Federal (STF) considerou que uma decisão definitiva, a chamada \"coisa julgada\", sobre tributos recolhidos de forma continuada, perde seus efeitos caso a corte se pronuncie em sentido contrário.",
+   "type": "text"
+  },
+  {
+   "text": " A empresa diz que ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Administração em conjunto com os assessores jurídicos da Companhia não identificouimpactos para estas demonstrações financeiras. No entanto manterá o monitoramento",
+     "document_index": 42,
+     "document_title": "Brasal.pdf, página 51",
+     "end_block_index": 30,
+     "start_block_index": 28,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "não identificou impactos para estas demonstrações financeiras",
+   "type": "text"
+  },
+  {
+   "text": ".\ncomparabilidade: Em 2021, o resultado inclui o crédito extraordinário de PIS e COFINS. Por isso, a queda do lucro em 2022 exagera a piora operacional: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentesdo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia atese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,",
+     "document_index": 21,
+     "document_title": "Brasal.pdf, página 28",
+     "end_block_index": 18,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes do trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a tese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719",
+   "type": "text"
+  },
+  {
+   "text": ".\ncomparabilidade: Em 2021, a receita financeira teve um ganho alto e não recorrente de ajuste a valor presente do incentivo: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+     "document_index": 37,
+     "document_title": "Brasal.pdf, página 45",
+     "end_block_index": 36,
+     "start_block_index": 35,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+   "type": "text"
+  },
+  {
+   "text": ".\ncomparabilidade: Em 2022, há itens não recorrentes nos dois sentidos: impairment de investimentos (",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 31,
+     "start_block_index": 30,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(9.593)",
+   "type": "text"
+  },
+  {
+   "text": ") e lucro na venda de ativos (",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro na venda de permanente | - | - | 10.712 | 3.408",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 17,
+     "start_block_index": 16,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "10.712",
+   "type": "text"
+  },
+  {
+   "text": ").\ncomparabilidade: Os números de 2021 não foram auditados: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31de dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou poroutro auditor independente.",
+     "document_index": 2,
+     "document_title": "Brasal.pdf, página 3",
+     "end_block_index": 37,
+     "start_block_index": 34,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31 de dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por outro auditor independente.",
+   "type": "text"
+  },
+  {
+   "text": "\ntom: nao_aplicavel\njustificativa_tom: O documento só tem o parecer, as demonstrações e as notas. O índice lista apenas ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Relatório do auditor independente sobre as demonstrações financeiras individuais e consolidadas .... 1",
+     "document_index": 1,
+     "document_title": "Brasal.pdf, página 2",
+     "end_block_index": 5,
+     "start_block_index": 4,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Relatório do auditor independente sobre as demonstrações financeiras individuais e consolidadas",
+   "type": "text"
+  },
+  {
+   "text": " e as ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Demonstrações financeiras individuais e consolidadas auditadas",
+     "document_index": 1,
+     "document_title": "Brasal.pdf, página 2",
+     "end_block_index": 6,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Demonstrações financeiras individuais e consolidadas auditadas",
+   "type": "text"
+  },
+  {
+   "text": ", sem texto da administração comentando o resultado.\nobservacao: O resumo das provisões não bate com a movimentação. O resumo mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Ações tributárias | 337 | 35Ações trabalhistas | 2.485 | 1.036",
+     "document_index": 33,
+     "document_title": "Brasal.pdf, página 40",
+     "end_block_index": 12,
+     "start_block_index": 10,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Ações tributárias | 337 | 35 Ações trabalhistas | 2.485 | 1.036",
+   "type": "text"
+  },
+  {
+   "text": ". A movimentação mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Tributárias | 35 | 719 | (130) | 608Trabalhistas | 1.036 | 2.423 | (959) | 2.214",
+     "document_index": 33,
+     "document_title": "Brasal.pdf, página 40",
+     "end_block_index": 20,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Tributárias | 35 | 719 | (130) | 608 Trabalhistas | 1.036 | 2.423 | (959) | 2.214",
+   "type": "text"
+  },
+  {
+   "text": ". O total é o mesmo nos dois quadros.\nobservacao: O número de ações muda sem explicação. Em 2021 o capital aparece ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "31 de dezembro de 2021 era de R$94.000 divididos em 3.256.699 ações ordinárias,",
+     "document_index": 34,
+     "document_title": "Brasal.pdf, página 42",
+     "end_block_index": 8,
+     "start_block_index": 7,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "divididos em 3.256.699 ações ordinárias",
+   "type": "text"
+  },
+  {
+   "text": ". Depois de um aumento feito ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sememissão de novas ações, ficando o capital social da Companhia totalmente subscrito e",
+     "document_index": 34,
+     "document_title": "Brasal.pdf, página 42",
+     "end_block_index": 12,
+     "start_block_index": 10,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "sem emissão de novas ações",
+   "type": "text"
+  },
+  {
+   "text": ", o total passa a ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "integralizado ao valor de R$154.000 correspondente ao total de 1.374.240 ações ordinárias,",
+     "document_index": 34,
+     "document_title": "Brasal.pdf, página 42",
+     "end_block_index": 13,
+     "start_block_index": 12,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "1.374.240 ações ordinárias",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: A perda com clientes diverge entre as notas. A nota 6 diz que a empresa ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$3.604 (R$1.631 em 31 de dezembro de 2021).",
+     "document_index": 20,
+     "document_title": "Brasal.pdf, página 27",
+     "end_block_index": 23,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "registrou perda com créditos no exercício de 2022 no valor de R$ 3.604",
+   "type": "text"
+  },
+  {
+   "text": ". A nota 23 mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Perda no recebimento de clientes | - | - | - | (1.631)",
+     "document_index": 38,
+     "document_title": "Brasal.pdf, página 46",
+     "end_block_index": 29,
+     "start_block_index": 28,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Perda no recebimento de clientes | - | - | - | (1.631)",
+   "type": "text"
+  },
+  {
+   "text": ", sem valor em 2022.\nobservacao: A análise de sensibilidade da dívida é incoerente. Os cenários adversos reduzem a taxa e a despesa: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Taxa sujeita à variação | 12,40% | 9,30% | 6,20%Despesa financeira projetada | (424) | (318) | (212)",
+     "document_index": 41,
+     "document_title": "Brasal.pdf, página 50",
+     "end_block_index": 11,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Taxa sujeita à variação | 12,40% | 9,30% | 6,20% Despesa financeira projetada | (424) | (318) | (212)",
+   "type": "text"
+  },
+  {
+   "text": ". Além disso, o cenário provável é ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "de 2022, definimos o Cenário Provável para os 12 meses de 2020 (Cenário I). A partir do Cenário",
+     "document_index": 40,
+     "document_title": "Brasal.pdf, página 49",
+     "end_block_index": 36,
+     "start_block_index": 35,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "para os 12 meses de 2020",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: Os encargos do incentivo governamental divergem entre notas. A nota 1 fala em financiamento ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "sem correção monetária, incidindo, exclusivamente, juros de 1,2% ao ano (0,1% a.m.).",
+     "document_index": 5,
+     "document_title": "Brasal.pdf, página 12",
+     "end_block_index": 36,
+     "start_block_index": 35,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "sem correção monetária, incidindo, exclusivamente, juros de 1,2% ao ano (0,1% a.m.)",
+   "type": "text"
+  },
+  {
+   "text": ". A nota 16 informa ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Incentivo governamental | 0,1% a.m. + 25% var.da UFIR | 513 | 7.555",
+     "document_index": 30,
+     "document_title": "Brasal.pdf, página 37",
+     "end_block_index": 10,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "0,1% a.m. + 25% var.da UFIR",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: As participações nas coligadas divergem entre notas. A nota 3.3 traz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Leão Alimentos e Bebidas Ltda. | Coligada | 2,24% | 2,24%Trop Frutas do Brasil Ltda. | Coligada | 1,82% | 1,82%",
+     "document_index": 17,
+     "document_title": "Brasal.pdf, página 24",
+     "end_block_index": 28,
+     "start_block_index": 26,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Leão Alimentos e Bebidas Ltda. | Coligada | 2,24% | 2,24% Trop Frutas do Brasil Ltda. | Coligada | 1,82% | 1,82%",
+   "type": "text"
+  },
+  {
+   "text": ". A nota 12 traz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Leão Alimentos e Bebidas Ltda. (i) | 2,25% | 13.910 | 22.834Trop Frutas do Brasil Ltda. (ii) | 1,83% | 3.464 | 4.132",
+     "document_index": 24,
+     "document_title": "Brasal.pdf, página 31",
+     "end_block_index": 21,
+     "start_block_index": 19,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Leão Alimentos e Bebidas Ltda. (i) | 2,25% | 13.910 | 22.834 Trop Frutas do Brasil Ltda. (ii) | 1,83%",
+   "type": "text"
+  },
+  {
+   "text": ".",
+   "type": "text"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 71129,
+ "tokens_saida": 9926,
+ "tokens_cache": 0,
+ "segundos": 82.35,
+ "gravada": false,
+ "tokens_cache_escrita": 0,
+ "parada": "end_turn"
+}

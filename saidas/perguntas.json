@@ -2,7 +2,7 @@
  {
   "numero": 1,
   "pergunta": "Qual empresa teve a maior margem EBITDA no período?",
-  "texto": "**A Brasal teve a maior margem EBITDA em 2022, com 16,7%. Nenhuma das três empresas informa margem EBITDA: os três números foram calculados pela solução.**\n\n- **Brasal:** a empresa não informa a margem EBITDA.[1] A margem calculada pela solução para o período atual é de 16,7%. A fórmula é EBITDA calculado ÷ receita líquida.[2] O EBITDA calculado é de R$ 221,9 milhões. A fórmula soma o lucro antes do resultado financeiro e dos impostos à depreciação e amortização da DFC (método da CVM).[3] Há um alerta sobre a depreciação. Os valores na DRE e na DFC são diferentes. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275). Na DFC aparece Depreciações e amortizações | 507 | 465 | 29.014 | 22.837.[4] O cálculo usou a DFC.\n\n- **Millet:** a margem calculada pela solução para o período atual é de 9,4%.[5] O EBITDA calculado é de R$ 43,5 milhões.[6] O documento não informa EBITDA.[7]\n\n- **Light:** a margem calculada pela solução para o período atual é de -8,9%.[8] Há um alerta de erro. O EBITDA informado é de R$ 1.180,0 milhões. Mas EBIT + depreciação dá R$ -1.179,6 milhões, o mesmo valor com o sinal trocado. Provavelmente o sinal de menos se perdeu no texto.[9] O próprio relatório aponta nessa direção. Ele diz que, em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001[10]. Em 2021, o EBITDA calculado foi de R$ 1.821,4 milhões[11]. A Light também informa uma alavancagem de 3,32x. Esse múltiplo usa outra definição de EBITDA, o EBITDA ajustado para covenants.[12] Ele não serve para comparar margens.",
+  "texto": "**A Brasal teve a maior margem EBITDA em 2022, com 16,7%. Nenhuma das três empresas informa a margem: os três valores foram calculados pela solução, pelo mesmo método (EBIT + depreciação e amortização, dividido pela receita líquida).**\n\n- **Brasal (16,7%):** A empresa não informa a margem EBITDA.[1] A solução calculou 16,7% para o período atual (EBITDA calculado ÷ receita líquida).[2] O EBITDA calculado foi de R$ 221,9 milhões.[3] A receita líquida foi de R$ 1.325,1 milhões.[4] Há um alerta sobre um componente do cálculo: a depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece (20.347) e na DFC aparece 29.014.[5] O cálculo usa o valor da DFC.\n\n- **Millet (9,4%):** A empresa não informa a margem EBITDA.[6] A solução calculou 9,4% para o período atual.[7] O EBITDA calculado foi de R$ 43,5 milhões.[8] A receita líquida foi de R$ 462,1 milhões.[9]\n\n- **Light (-8,9%):** A empresa não informa a margem EBITDA.[10] A solução calculou -8,9% para o período atual.[11] Esse número tem um alerta de erro. A empresa informa um EBITDA de R$ 1.180 milhões no período atual.[12] Mas há um alerta de validação V7 (erro): o EBITDA informado é de R$ 1.180,0 mi, enquanto o EBIT + depreciação dá R$ -1.179,6 mi. É o mesmo valor com o sinal trocado, e o provável é que um sinal de menos tenha se perdido no texto.[13] Ou seja, a margem pode ter o mesmo tamanho com o sinal oposto. Mesmo assim, 8,9% fica abaixo da margem da Brasal, e a conclusão não muda.",
   "fontes": [
    {
     "documento": "Brasal.pdf",
@@ -35,15 +35,29 @@
    {
     "documento": "Brasal.pdf",
     "paginas": [
-     3,
-     6,
-     7,
-     8,
-     11,
-     48
+     8
     ],
-    "titulo": "Brasal: outros alertas de validação",
-    "trecho": "IA (aviso, apontado pela IA): A linha de depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275). Na DFC aparece Depreciações e amortizações | 507 | 465 | 29.014 | 22.837. A controladora de 2021 também diverge (316 na DRE e 465 na DFC).",
+    "titulo": "Brasal: Receita líquida",
+    "trecho": "Receita líquida, valor informado pela empresa no período atual: 1.325.059 (R$ mil), ou R$ 1.325,1 milhões.",
+    "calculado": false
+   },
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [
+     8,
+     11
+    ],
+    "titulo": "Brasal: alerta IA (não ligado a um indicador)",
+    "trecho": "Alerta IA (aviso, apontado pela IA na leitura, não conferido em código): A linha de depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275). Na DFC aparece Depreciações e amortizações | 507 | 465 | 29.014 | 22.837. A controladora de 2021 também diverge (316 na DRE e 465 na DFC).",
+    "calculado": false
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
+     7
+    ],
+    "titulo": "Millet: Margem EBITDA",
+    "trecho": "Margem EBITDA: não encontrado no documento (a empresa não informa este valor).",
     "calculado": false
    },
    {
@@ -68,12 +82,20 @@
    {
     "documento": "Millet.pdf",
     "paginas": [
-     7,
-     10
+     7
     ],
-    "titulo": "Millet: EBITDA",
-    "trecho": "Observação: O documento não informa EBITDA. O valor calculado aparece à parte.",
-    "calculado": true
+    "titulo": "Millet: Receita líquida",
+    "trecho": "Receita líquida, valor informado pela empresa no período atual: 462.127 (R$ mil), ou R$ 462,1 milhões.",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     20
+    ],
+    "titulo": "Light: Margem EBITDA",
+    "trecho": "Margem EBITDA: não encontrado no documento (a empresa não informa este valor).",
+    "calculado": false
    },
    {
     "documento": "Light.pdf",
@@ -92,41 +114,22 @@
      23
     ],
     "titulo": "Light: EBITDA",
+    "trecho": "EBITDA, valor informado pela empresa no período atual: R$1.180 milhões (R$ milhões), ou R$ 1.180,0 milhões.",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     9,
+     20,
+     23
+    ],
+    "titulo": "Light: EBITDA",
     "trecho": "Alerta de validação V7 (erro): EBITDA informado de R$ 1.180,0 mi, mas EBIT + depreciação dá R$ -1.179,6 mi: o mesmo valor com o sinal trocado. Provável sinal de menos perdido no texto.",
-    "calculado": false
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     9,
-     20,
-     23
-    ],
-    "titulo": "Light: EBITDA",
-    "trecho": "Trecho do PDF, página 9: Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001",
-    "calculado": false
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     9,
-     20,
-     23
-    ],
-    "titulo": "Light: EBITDA",
-    "trecho": "Valor calculado pela solução para EBITDA (período anterior), não informado pela empresa: R$ 1.821,4 milhões. Fórmula: lucro antes do resultado financeiro e dos impostos + depreciação e amortização da DFC (método da CVM).",
-    "calculado": true
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     10
-    ],
-    "titulo": "Light: Alavancagem (dívida líquida / EBITDA)",
-    "trecho": "Alerta de validação V9 (aviso): Com EBITDA de R$ -1.179,6 mi, dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.",
     "calculado": false
    }
   ],
+  "numeros_sem_fonte": [],
   "ferramentas": [
    "indicadores(todas)"
   ],
@@ -134,10 +137,10 @@
   "rodadas": 2,
   "uso": {
    "modelo": "claude-opus-5-5",
-   "tokens_entrada": 18498,
-   "tokens_saida": 1417,
-   "custo_usd": 0.120824,
-   "segundos": 13.24,
+   "tokens_entrada": 22031,
+   "tokens_saida": 1598,
+   "custo_usd": 0.142109,
+   "segundos": 16.32,
    "gravada": true,
    "tokens_cache_lidos": 0
   }
@@ -145,26 +148,8 @@
  {
   "numero": 2,
   "pergunta": "O que a administração de cada empresa apontou como principal motivo da variação da receita?",
-  "texto": "Só a Light diz de forma explícita por que a receita mudou. Brasal e Millet mostram o tamanho da variação, mas os documentos não trazem um motivo declarado pela administração.\n\n**Light:** A receita caiu. Segundo a administração, a receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA[1]. Também contribuiu o mercado faturado, que apresentou uma queda de 0,4%[2], em especial, do menor consumo médio de residências[2] e da menor atividade do setor siderúrgico. Os 13% são da própria empresa e excluem a receita de construção. A receita líquida total foi de R$ 13.253,3 milhões[3]. A queda de 11,0% nesse total foi calculada pela solução[4], não informada pela empresa. Há alertas de validação de que algumas tabelas trazem 2021 no cabeçalho em vez de 2022. Por isso, confira de qual ano é cada coluna[5].\n\n**Brasal:** A receita líquida subiu de R$ 1.061,4 milhões[6] para R$ 1.325,1 milhões[7]. A alta de 24,8% foi calculada pela solução[8]. As notas mostram crescimento nas duas linhas principais: Venda de produtos | 1.036.873 | 859.621 / Revenda de mercadorias | 952.648 | 768.413[9]. A subvenção de ICMS também aumentou: (+ ) ICMS – Subvenção | 62.281 | 38.038[10]. Mas as notas não explicam se a alta veio de preço ou de volume.[11] Há um alerta importante: o período comparativo (2021) não foi auditado. As variações contra 2021 usam números não auditados.[12]\n\n**Millet:** A receita consolidada passou de 199.259 para 462.127 (R$ mil). A alta de 131,9% foi calculada pela solução[13]. As notas não apontam um motivo. Um fator provável é de comparabilidade. A Millet permaneceu em processo pré-operacional realizando avaliações e negociações de investimentos até junho de 2021 quando a Companhia adquiriu 85% de participação na Alibra Ingredientes S.A.[14] Portanto, a base de 2021 não tem a Alibra no ano inteiro. Mas isso é uma leitura da análise, não da empresa: as notas não dizem isso como causa da alta[15]. A Alibra é investida, não a própria Millet. A receita da Alibra também cresceu: Receita operacional líquida | 462.127 | 318.317[16]. As notas ainda citam o aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda[17]. E dizem que a performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano[18]. Há alerta de cabeçalho com 2021 repetido no lugar de 2022[19] em uma das tabelas.",
+  "texto": "Só a Light diz de forma explícita o motivo da variação da receita: foi uma queda, explicada por estornos de faturamento, ausência de bandeiras tarifárias e a conta CVA. Na Brasal e na Millet, os documentos que encontrei mostram de onde veio a alta da receita, mas não trazem uma explicação da administração. No caso da Millet, a explicação é deduzida das notas.\n\n**Light:** A receita líquida foi de R$ 13.253,3 milhões[1] em 2022, contra R$ 14.897,9 milhões[2] em 2021. A variação de -11,0%[3] foi calculada pela solução. Sem a receita de construção, a administração informa que a receita totalizou em 2022 R$12.107 milhões, 13% abaixo da registrada em 2021[4]. Essa redução foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA, que é uma compensação para cobertura dos custos com a Parcela A.[5]\n\n**Brasal:** A receita líquida subiu para R$ 1.325,1 milhões[6], de R$ 1.061,4 milhões[7]. A variação de +24,8%[8] foi calculada pela solução. As notas mostram alta nas duas linhas principais: Venda de produtos | 1.036.873 | 859.621 / Revenda de mercadorias | 952.648 | 768.413[9]. A subvenção de ICMS também cresceu: (+ ) ICMS – Subvenção | 62.281 | 38.038[10]. Mas as notas não explicam se o ganho veio de preço ou de volume.[11] Na busca nas páginas da Brasal, não achei um comentário da administração sobre a receita. Um alerta: o período comparativo (2021) não foi auditado. As variações contra 2021 usam números não auditados.[12]\n\n**Millet:** A receita líquida passou de R$ 199,3 milhões[13] para R$ 462,1 milhões[14]. A variação de +131,9%[15] foi calculada pela solução. O principal motivo é a consolidação da controlada Alibra pelo ano inteiro. A administração não diz isso com essas palavras: a explicação é deduzida das notas. Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (\"Alibra\")[16]. Por isso, o resultado de 2021 inclui só o Resultado do Período (jun-dez)[17]. Nas notas, a receita da própria Alibra no ano todo aparece como Receita operacional líquida | 462.127 | 318.317[18]. Sobre o negócio, a nota 1.1 afirma que a performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano[19]. Diz também que houve aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda[19].",
   "fontes": [
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     9
-    ],
-    "titulo": "Light: motivo do resultado",
-    "trecho": "Trecho do PDF, página 9: A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 / R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos / estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e / pela variação negativa na conta CVA, que é uma compensação para cobertura dos custos / com a Parcela A.",
-    "calculado": false
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     5
-    ],
-    "titulo": "Light: motivo do resultado",
-    "trecho": "Trecho do PDF, página 5: Em 2022, o mercado faturado total apresentou uma queda de 0,4% em relação ao mesmo / período do ano anterior. Essa retração é decorrente, em especial, do menor consumo médio / de residências, com a retomada de atividades externas após o período mais crítico da / Pandemia, e da atividade do setor siderúrgico, que passa por um momento de menor / demanda global. Por outro lado, o crescimento da classe de concessionárias é consequência",
-    "calculado": false
-   },
    {
     "documento": "Light.pdf",
     "paginas": [
@@ -180,31 +165,34 @@
      20
     ],
     "titulo": "Light: Receita líquida",
+    "trecho": "Receita líquida, valor informado no período anterior: 14.897.920 (R$ mil), ou R$ 14.897,9 milhões.",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     20
+    ],
+    "titulo": "Light: Receita líquida",
     "trecho": "Variação calculada pela solução: -11,0%.",
     "calculado": true
    },
    {
     "documento": "Light.pdf",
     "paginas": [
-     8,
-     10,
-     20,
-     21,
-     65,
-     98,
-     99
+     9
     ],
-    "titulo": "Light: outros alertas de validação",
-    "trecho": "V16 (aviso, conferido em código): Cabeçalho com 2021 repetido no lugar de 2022: '2022 | 2021 | 2021 | 2021'. Confira de qual ano é cada coluna.",
+    "titulo": "Light.pdf, página 9 (relatório da administração)",
+    "trecho": "A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos",
     "calculado": false
    },
    {
-    "documento": "Brasal.pdf",
+    "documento": "Light.pdf",
     "paginas": [
-     8
+     9
     ],
-    "titulo": "Brasal: Receita líquida",
-    "trecho": "Receita líquida, valor informado no período anterior: 1.061.410 (R$ mil), ou R$ 1.061,4 milhões.",
+    "titulo": "Light.pdf, página 9 (relatório da administração)",
+    "trecho": "R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelosestornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias epela variação negativa na conta CVA, que é uma compensação para cobertura dos custoscom a Parcela A.",
     "calculado": false
    },
    {
@@ -214,6 +202,15 @@
     ],
     "titulo": "Brasal: Receita líquida",
     "trecho": "Receita líquida, valor informado pela empresa no período atual: 1.325.059 (R$ mil), ou R$ 1.325,1 milhões.",
+    "calculado": false
+   },
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [
+     8
+    ],
+    "titulo": "Brasal: Receita líquida",
+    "trecho": "Receita líquida, valor informado no período anterior: 1.061.410 (R$ mil), ou R$ 1.061,4 milhões.",
     "calculado": false
    },
    {
@@ -249,7 +246,7 @@
      43
     ],
     "titulo": "Brasal: motivo do resultado",
-    "trecho": "Motivo do resultado (análise qualitativa): As notas explicativas mostram que a receita subiu nas duas linhas principais, fabricação própria e revenda: Venda de produtos | 1.036.873 | 859.621 Revenda de mercadorias | 952.648 | 768.413. A subvenção de ICMS também ajudou a receita líquida: (+ ) ICMS – Subvenção | 62.281 | 38.038. As notas não explicam se a alta veio de preço ou de volume.",
+    "trecho": "Motivo do resultado (análise qualitativa): A receita cresceu nas duas linhas principais, segundo as notas explicativas: Venda de produtos | 1.036.873 | 859.621 Revenda de mercadorias | 952.648 | 768.413. A subvenção de ICMS também aumentou: (+ ) ICMS – Subvenção | 62.281 | 38.038. As notas não explicam se o ganho veio de preço ou de volume.",
     "calculado": false
    },
    {
@@ -259,11 +256,28 @@
      6,
      7,
      8,
-     11,
-     48
+     11
     ],
-    "titulo": "Brasal: outros alertas de validação",
-    "trecho": "V14 (aviso, conferido em código): O período comparativo (2021) não foi auditado (p. 3, 6, 7, 8, 11). As variações contra 2021 usam números não auditados.",
+    "titulo": "Brasal: alerta V14 (não ligado a um indicador)",
+    "trecho": "Alerta V14 (aviso, conferido em código): O período comparativo (2021) não foi auditado (p. 3, 6, 7, 8, 11). As variações contra 2021 usam números não auditados.",
+    "calculado": false
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
+     7
+    ],
+    "titulo": "Millet: Receita líquida",
+    "trecho": "Receita líquida, valor informado no período anterior: 199.259 (R$ mil), ou R$ 199,3 milhões.",
+    "calculado": false
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
+     7
+    ],
+    "titulo": "Millet: Receita líquida",
+    "trecho": "Receita líquida, valor informado pela empresa no período atual: 462.127 (R$ mil), ou R$ 462,1 milhões.",
     "calculado": false
    },
    {
@@ -278,21 +292,21 @@
    {
     "documento": "Millet.pdf",
     "paginas": [
-     11,
-     38
+     27,
+     28
     ],
     "titulo": "Millet: motivo do resultado",
-    "trecho": "Trecho do PDF, página 11: Permaneceu em processo pré-operacional realizando avaliações e negociações de investimentos até junho / de 2021 quando a Companhia adquiriu 85% de participação na Alibra Ingredientes S.A. (“Alibra”).",
+    "trecho": "Trecho do PDF, página 27: Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (“Alibra”),",
     "calculado": false
    },
    {
     "documento": "Millet.pdf",
     "paginas": [
-     11,
-     38
+     27,
+     28
     ],
     "titulo": "Millet: motivo do resultado",
-    "trecho": "Motivo do resultado (análise qualitativa): A receita de 2022 inclui a Alibra no ano inteiro. Em 2021, a Alibra entrou só no meio do ano: a empresa permaneceu em processo pré-operacional realizando avaliações e negociações de investimentos até junho de 2021 quando a Companhia adquiriu 85% de participação na Alibra Ingredientes S.A. A receita líquida consolidada foi de 462.127 | 199.259. As notas não dizem isso como causa da alta; é uma leitura minha a partir das notas explicativas.",
+    "trecho": "Trecho do PDF, página 28: Resultado do Período (jun-dez) | 7.330 | 6.231 | - | - | 6.231",
     "calculado": false
    },
    {
@@ -300,8 +314,8 @@
     "paginas": [
      29
     ],
-    "titulo": "Millet: motivo do resultado",
-    "trecho": "Trecho do PDF, página 29: Receita operacional líquida | 462.127 | 318.317",
+    "titulo": "Millet.pdf, página 29 (notas explicativas)",
+    "trecho": "Receita operacional líquida | 462.127 | 318.317",
     "calculado": false
    },
    {
@@ -310,53 +324,34 @@
      11
     ],
     "titulo": "Millet: motivo do resultado",
-    "trecho": "Trecho do PDF, página 11: era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no / custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de / venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem",
-    "calculado": false
-   },
-   {
-    "documento": "Millet.pdf",
-    "paginas": [
-     11
-    ],
-    "titulo": "Millet: motivo do resultado",
-    "trecho": "Trecho do PDF, página 11: No ano de 2022 não fomos impactados por nenhum efeito direto decorrente da pandemia do COVID. A / performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que / era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no",
-    "calculado": false
-   },
-   {
-    "documento": "Millet.pdf",
-    "paginas": [
-     6,
-     7,
-     9,
-     10,
-     12,
-     42
-    ],
-    "titulo": "Millet: outros alertas de validação",
-    "trecho": "V16 (aviso, conferido em código): Cabeçalho com 2021 repetido no lugar de 2022: '31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021'. Confira de qual ano é cada coluna.",
+    "trecho": "Trecho do PDF, página 11: performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que / era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no / custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de / venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem",
     "calculado": false
    }
   ],
+  "numeros_sem_fonte": [],
   "ferramentas": [
    "analise_qualitativa(todas, motivos)",
-   "indicadores(todas)"
+   "indicadores(todas)",
+   "buscar_paginas(receita líquida redução estornos de faturamento bandeiras tarifárias CVA, Light)",
+   "buscar_paginas(aumento da receita vendas volume preço relatório da administração, Brasal)",
+   "buscar_paginas(receita operacional líquida aumento vendas Alibra, Millet)"
   ],
   "completa": true,
-  "rodadas": 2,
+  "rodadas": 3,
   "uso": {
    "modelo": "claude-opus-5-5",
-   "tokens_entrada": 26222,
-   "tokens_saida": 1849,
-   "custo_usd": 0.168084,
-   "segundos": 16.48,
+   "tokens_entrada": 74793,
+   "tokens_saida": 2115,
+   "custo_usd": 0.283455,
+   "segundos": 19.23,
    "gravada": true,
-   "tokens_cache_lidos": 0
+   "tokens_cache_lidos": 27667
   }
  },
  {
   "numero": 3,
   "pergunta": "Alguma das empresas está com alavancagem acima de 3x? Qual?",
-  "texto": "**Sim. Só a Light passa de 3x: a própria empresa informa 3,32x em 2022. Esse número usa um EBITDA ajustado para covenants, e a conta direta pelo EBITDA CVM nem faz sentido, porque esse EBITDA calculado sai negativo.**\n\n**Light:** a alavancagem informada pela empresa é 3,32x no período atual[1], contra 3,48x no período anterior[2]. A base é o EBITDA ajustado para fins de covenants[3]. A dívida líquida informada é de R$ 9.032,2 milhões[4]. Houve alta de 22,8%[5] (variação calculada pela solução).\n\nHá três alertas sobre esse número:\n- **O texto aponta o ano errado.** O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto.[6] A solução tratou 3,32x como o dado de 2022, mas essa atribuição deve ser confirmada.[7]\n- **O múltiplo não fecha com o EBITDA CVM.** Com EBITDA de R$ -1.179,6 mi, dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.[8]\n- **O sinal do EBITDA está trocado.** O EBITDA informado é de R$ 1.180,0 mi, mas EBIT + depreciação dá R$ -1.179,6 mi: o mesmo valor com o sinal trocado. Provável sinal de menos perdido no texto.[9]\n\n**Brasal:** a empresa não informa alavancagem. A solução calculou dívida líquida de -R$ 171,6 milhões[10], ou seja, a empresa tem caixa líquido[11] e não está alavancada[12]. Esse cálculo tem um alerta: o valor de empréstimos vem da tabela de instrumentos financeiros da nota 25[13], e não de uma linha de total do balanço.\n\n**Millet:** a empresa também não informa alavancagem. A solução calculou 0,31x, pela fórmula dívida líquida ÷ EBITDA calculado[14]. O EBITDA usado também foi calculado pela solução. O único índice de endividamento que a empresa publica é a Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11[15]. Esse índice não usa EBITDA.",
+  "texto": "**Sim, só a Light.** O múltiplo informado pela empresa é de 3,32x em 2022. Ele usa um EBITDA ajustado para covenants. Pelo EBITDA CVM calculado pela solução, o múltiplo não tem sentido.\n\n**Light:** a alavancagem (dívida líquida / EBITDA) informada pela empresa no período atual é de 3,32x[1]. No ano anterior era 3,48x[2]. A definição usada pela empresa é o EBITDA ajustado para fins de covenants.[3] A dívida líquida informada é de R$ 9.032,2 milhões[4], com variação de +22,8%[5] calculada pela solução. Há três alertas sobre esse número:\n- O primeiro é sobre o EBITDA. Calculado pela solução, ele dá R$ -1.179,6 mi, e com esse valor dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.[6]\n- O segundo é sobre o ano. O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto.[7] Por isso, a leitura de 3,32x como 2022 e 3,48x como 2021 deve ser confirmada[8].\n- O terceiro é sobre o EBITDA CVM. A empresa informa R$ 1.180 milhões, e há um alerta de erro: EBIT + depreciação dá R$ -1.179,6 mi, o mesmo valor com o sinal trocado. Provável sinal de menos perdido no texto.[9]\n\n**Brasal:** não está alavancada. A dívida líquida calculada pela solução, não informada pela empresa, é de -R$ 171,6 milhões[10]. Ou seja, a empresa tem caixa líquido[11]. Há um alerta sobre a dívida usada: o valor dos empréstimos (3.417) vem da tabela de instrumentos financeiros da nota 25, e não de uma linha de total do balanço[12].\n\n**Millet:** está bem abaixo de 3x. A empresa não informa o múltiplo. O valor calculado pela solução é de 0,31x, pela fórmula dívida líquida ÷ EBITDA calculado.[13] O EBITDA usado também é calculado pela solução: R$ 43,5 milhões[14]. O único índice de endividamento que a empresa informa não usa EBITDA. É a relação dívida líquida sobre capital ajustado, de 0,08 contra 0,11[15].",
   "fontes": [
    {
     "documento": "Light.pdf",
@@ -411,22 +406,7 @@
      10
     ],
     "titulo": "Light: Alavancagem (dívida líquida / EBITDA)",
-    "trecho": "Alerta de validação V11 (aviso): O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto.",
-    "calculado": false
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     8,
-     10,
-     20,
-     21,
-     65,
-     98,
-     99
-    ],
-    "titulo": "Light: outros alertas de validação",
-    "trecho": "IA (aviso, apontado pela IA): O texto sobre a alavancagem atribui os dois múltiplos ao ano de 2021: O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O parágrafo trata da posição em 31/12/2022, por isso usei 3,32x como atual e 3,48x como anterior. Essa atribuição deve ser confirmada.",
+    "trecho": "Alerta de validação V9 (aviso): Com EBITDA de R$ -1.179,6 mi, dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.",
     "calculado": false
    },
    {
@@ -435,7 +415,16 @@
      10
     ],
     "titulo": "Light: Alavancagem (dívida líquida / EBITDA)",
-    "trecho": "Alerta de validação V9 (aviso): Com EBITDA de R$ -1.179,6 mi, dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.",
+    "trecho": "Alerta de validação V11 (aviso): O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto.",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     10
+    ],
+    "titulo": "Light: alerta IA (não ligado a um indicador)",
+    "trecho": "Alerta IA (aviso, apontado pela IA na leitura, não conferido em código): O texto sobre a alavancagem atribui os dois múltiplos ao ano de 2021: O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O parágrafo trata da posição em 31/12/2022, por isso usei 3,32x como atual e 3,48x como anterior. Essa atribuição deve ser confirmada.",
     "calculado": false
    },
    {
@@ -471,23 +460,11 @@
    },
    {
     "documento": "Brasal.pdf",
-    "paginas": [],
-    "titulo": "Brasal: Alavancagem (dívida líquida / EBITDA)",
-    "trecho": "Observação: Caixa líquido: a empresa não está alavancada.",
-    "calculado": false
-   },
-   {
-    "documento": "Brasal.pdf",
     "paginas": [
-     3,
-     6,
-     7,
-     8,
-     11,
-     48
+     7
     ],
-    "titulo": "Brasal: outros alertas de validação",
-    "trecho": "IA (aviso, apontado pela IA): O valor de empréstimos_total_atual (3.417) vem da tabela de instrumentos financeiros da nota 25. Não é uma linha de total do balanço, que separa o circulante (Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902) do não circulante (Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576).",
+    "titulo": "Brasal: alerta IA (não ligado a um indicador)",
+    "trecho": "Alerta IA (aviso, apontado pela IA na leitura, não conferido em código): O valor de empréstimos_total_atual (3.417) vem da tabela de instrumentos financeiros da nota 25. Não é uma linha de total do balanço, que separa o circulante (Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902) do não circulante (Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576).",
     "calculado": false
    },
    {
@@ -500,18 +477,24 @@
    {
     "documento": "Millet.pdf",
     "paginas": [
-     6,
      7,
-     9,
-     10,
-     12,
+     10
+    ],
+    "titulo": "Millet: EBITDA",
+    "trecho": "Valor calculado pela solução para EBITDA (período atual), não informado pela empresa: R$ 43,5 milhões. Fórmula: lucro antes do resultado financeiro e dos impostos + depreciação e amortização da DFC (método da CVM).",
+    "calculado": true
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
      42
     ],
-    "titulo": "Millet: outros alertas de validação",
-    "trecho": "IA (aviso, apontado pela IA): O único índice de endividamento informado não usa EBITDA, por isso não o usei como alavancagem: Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11.",
+    "titulo": "Millet: alerta IA (não ligado a um indicador)",
+    "trecho": "Alerta IA (aviso, apontado pela IA na leitura, não conferido em código): O único índice de endividamento informado não usa EBITDA, por isso não o usei como alavancagem: Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11.",
     "calculado": false
    }
   ],
+  "numeros_sem_fonte": [],
   "ferramentas": [
    "indicadores(todas)"
   ],
@@ -519,10 +502,10 @@
   "rodadas": 2,
   "uso": {
    "modelo": "claude-opus-5-5",
-   "tokens_entrada": 18508,
-   "tokens_saida": 1185,
-   "custo_usd": 0.116234,
-   "segundos": 11.64,
+   "tokens_entrada": 22041,
+   "tokens_saida": 1383,
+   "custo_usd": 0.137859,
+   "segundos": 13.43,
    "gravada": true,
    "tokens_cache_lidos": 0
   }
@@ -530,33 +513,30 @@
  {
   "numero": 4,
   "pergunta": "Quais riscos são citados por mais de uma empresa?",
-  "texto": "**Conclusão:** o risco de crédito de clientes é o único que aparece nas três empresas. Liquidez e juros/Selic aparecem na Light e na Millet. O custo de matéria-prima aparece na Brasal e na Millet.\n\n**Brasal:** o principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.[1] Os títulos vencidos subiram para 15.668 | 12.185[2]. A empresa registrou perda com créditos no exercício de 2022 no valor de R$ 3.604 (R$1.631 em 31 de dezembro de 2021).[3] O preço da matéria-prima também é um risco. Para isso, a empresa dispõe de uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities[4], principalmente relacionado ao açúcar[4]. Nas buscas que fiz, não encontrei risco de liquidez ou de juros listado pela Brasal.\n\n**Light:** o risco de crédito decorre da possibilidade da Companhia sofrer perdas decorrentes de inadimplência dos seus[5] consumidores. As notas também citam elevado índice de perdas não técnicas (furto de energia) e inadimplência[6]. Na liquidez, a empresa não possui linhas de créditos contratadas e disponíveis para utilização em 31 de dezembro de 2022[7]. Ela tem capital circulante líquido negativo de R$871.574[8]. Sobre juros, as notas apontam o aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022[9]. A própria administração reconhece incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional[10].\n\n**Millet:** o risco de crédito também aparece. Os títulos vencidos há mais de um ano somam Acima de 361 dias | 7.628 | 6.727[11]. Além disso, a Companhia não mantém qualquer garantia para os títulos em atraso.[12] Na liquidez, a maior parte dos passivos financeiros vence em até 12 meses: Total | 73.154 | 73.154 | 64.377 | 8.658 | 118[13]. O título dessa tabela fala em 31 de dezembro de 2021[14], mas a coluna indica 2022. Confira no PDF antes de usar esse número. Sobre juros, há uma parcela da aquisição ainda a pagar, corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do pagamento[15]. Na matéria-prima, houve aumento no custo de matérias primas principalmente dos derivados lácteos[16], e não foi possível recuperar o mesmo nível de margem antes da pandemia[16].\n\nNenhum dos números acima veio com alerta de validação.",
+  "texto": "**Conclusão:** as três empresas citam risco de crédito com clientes e risco de taxa de juros. Risco de liquidez e risco de câmbio aparecem na Light e na Millet. Risco de preço de insumos aparece na Brasal e na Millet.\n\n**Brasal:** Ela diz que está exposta a riscos que envolvem, principalmente, a possibilidade da realização de contas a receber de clientes, de oscilações dos preços dos produtos e de taxas de juros[1]. No crédito, o principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.[2] E a Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$ 3.604 (R$1.631 em 31 de dezembro de 2021).[3] Nos insumos, os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima.[4] Nos juros, o risco decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos e passivos financeiros.[5] Sobre câmbio, há só uma menção curta: ela acompanha e analisa somente as variações nos preços de commodities, variação cambial e variação nas taxas de juros como fatores principais de risco.[6] Não achei, na nota de gestão de riscos, um item próprio de risco de liquidez.\n\n**Light:** O risco de crédito decorre da possibilidade da Companhia sofrer perdas decorrentes de inadimplência dos seus consumidores ou de instituições financeiras depositárias de recursos ou de investimentos financeiros[7]. A empresa também cita elevado índice de perdas não técnicas (furto de energia) e inadimplência[8]. O risco de juros deriva do impacto das oscilações nas taxas de juros não só sobre a despesa financeira associada aos empréstimos, financiamentos e debêntures da Companhia, como também sobre as receitas financeiras oriundas de suas aplicações financeiras.[9] A situação foi agravada pelo aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022[10]. A nota tem um item de Risco de liquidez[7]. A empresa ainda não possui linhas de créditos contratadas e disponíveis para utilização em 31 de dezembro de 2022[11]. Há também um item de Risco de taxa de câmbio[12]. Mas, considerando os swaps, a exposição cambial da Companhia relacionada à dívida, em 31 de dezembro de 2022, é de 0,2% do total da dívida em moeda estrangeira[13].\n\n**Millet:** Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma contraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações contratuais.[14] Além disso, a Companhia não mantém qualquer garantia para os títulos em atraso.[15] O risco de juros é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por conta de flutuações nas taxas de juros[16]. O de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações associadas com seus passivos financeiros[17]. O de câmbio está atrelado a possibilidade de alteração nas taxas de câmbio[18]. Nos insumos, ela relata aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de[19] venda.\n\nOs demais riscos aparecem em uma empresa só. Na Light: incerteza sobre a continuidade operacional, concessão que vence em 2026, rebaixamentos de rating e risco hidrológico. O risco hidrológico veio da análise sem trecho citado do PDF. Na Brasal: dependência de contratos com as donas das marcas e condições do incentivo fiscal. Na Millet: parcela a prazo da aquisição da Alibra e contingências trabalhistas.",
   "fontes": [
    {
     "documento": "Brasal.pdf",
     "paginas": [
-     27,
      49
     ],
-    "titulo": "Brasal: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 49: O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.",
+    "titulo": "Brasal.pdf, página 49 (notas explicativas)",
+    "trecho": "envolvem, principalmente, a possibilidade da realização de contas a receber de clientes, deoscilações dos preços dos produtos e de taxas de juros, que podem impactar os resultados",
     "calculado": false
    },
    {
     "documento": "Brasal.pdf",
     "paginas": [
-     27,
      49
     ],
-    "titulo": "Brasal: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 27: 15.668 | 12.185",
+    "titulo": "Brasal.pdf, página 49 (notas explicativas)",
+    "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.",
     "calculado": false
    },
    {
     "documento": "Brasal.pdf",
     "paginas": [
-     27,
-     49
+     27
     ],
     "titulo": "Brasal: risco ou ponto de atenção",
     "trecho": "Trecho do PDF, página 27: A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$ / 3.604 (R$1.631 em 31 de dezembro de 2021).",
@@ -565,10 +545,28 @@
    {
     "documento": "Brasal.pdf",
     "paginas": [
-     17
+     49
     ],
-    "titulo": "Brasal: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 17: localização atuais. Para mitigar os riscos de preços causados pelas oscilações do mercado / dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe / de uma política de uso de operações com futuros para minimizar a exposição líquida de / estoque de commodities.",
+    "titulo": "Brasal.pdf, página 49 (notas explicativas)",
+    "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de",
+    "calculado": false
+   },
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [
+     49
+    ],
+    "titulo": "Brasal.pdf, página 49 (notas explicativas)",
+    "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações detaxas de juros incidentes sobre seus ativos e passivos financeiros. Visando à mitigação deste tipo",
+    "calculado": false
+   },
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [
+     49
+    ],
+    "titulo": "Brasal.pdf, página 49 (notas explicativas)",
+    "trecho": "A Companhia acompanha e analisa somente as variações nos preços de commodities, variaçãocambial e variação nas taxas de juros como fatores principais de risco.",
     "calculado": false
    },
    {
@@ -576,18 +574,8 @@
     "paginas": [
      101
     ],
-    "titulo": "Light.pdf, página 101 (notas explicativas)",
-    "trecho": "Decorre da possibilidade da Companhia sofrer perdas decorrentes de inadimplência dos seus",
-    "calculado": false
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     25,
-     26
-    ],
     "titulo": "Light: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 26: (i) elevado nível de endividamento; / (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos; / (iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; / (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional.",
+    "trecho": "Trecho do PDF, página 101: Decorre da possibilidade da Companhia sofrer perdas decorrentes de inadimplência dos seus / consumidores ou de instituições financeiras depositárias de recursos ou de investimentos / financeiros. Para mitigar esses riscos, a Companhia utiliza de todas as ferramentas de cobrança / permitidas pelo órgão regulador, tais como corte por inadimplência, negativação de clientes / inadimplentes em empresas de proteção ao crédito e cobrança judicial. O risco de crédito das contas / a receber encontra-se pulverizado considerando a base de clientes da Companhia. Uma análise de / redução ao valor recuperável é efetuada a cada data de reporte usando uma matriz de provisão / para avaliar as perdas de crédito esperadas. A exposição máxima ao risco de crédito em 31 de / dezembro de 2022 é o valor contábil de cada classe de ativos financeiros divulgada na Nota 8. O / Grupo não possui ou mantém ativos que tenham sido dados em garantia por terceiros. / No que tange às instituições financeiras, a Companhia somente realiza operações de baixo risco, / avaliadas por agências de rating. A Companhia possui uma política de não manter a carteira / concentrada em uma determinada instituição financeira. Desta forma, a política tem como princípio / controlar a concentração da carteira através de limites impostos aos Grupos e acompanhar as / instituições financeiras através do seu patrimônio líquido e de seus ratings. / Por meio de sua política a Companhia poderá aplicar os recursos em produtos de renda fixa, pós- / fixados indexados ao CDI e Títulos públicos pós-fixados. / 34.2.5 Risco de liquidez / O risco de liquidez evidencia a capacidade financeira em cumprir adequadamente os compromissos / assumidos, os fluxos de vencimentos dos recursos captados e de outras obrigações que fazem parte / das divulgações. Informações com maior detalhamento sobre os recursos captados são / apresentadas nas Notas 20 e 21. / A Companhia tem obtido recursos a partir da sua atividade comercial, do mercado financeiro e de / empresas ligadas, destinando-os principalmente ao seu programa de investimentos e à / administração de seu caixa para capital de giro e compromissos financeiros. / Conforme divulgado na Nota 1.1, a Administração da Companhia está acompanhando atentamente",
     "calculado": false
    },
    {
@@ -596,52 +584,69 @@
      26
     ],
     "titulo": "Light: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 26: A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis / para utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a / estrutura de capital da Companhia.",
+    "trecho": "Trecho do PDF, página 26: (iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; / (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional. / Esta situação foi agravada pelo(a): / (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022; / (ii) efeito da determinação de devolução de cerca de R$2.8 bilhões de créditos decorrentes da / exclusão do ICMS das bases de cálculo do PIS e da COFINS, como explicitado em mais detalhes / nas Notas Explicativas 1.2, 9.1 e 38.1; / (iii) deterioração macroeconômica da área de concessão desde 2015 e mais recentemente / agravada pela pandemia de COVID-19. / A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis / para utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a / estrutura de capital da Companhia. / A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em / junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro / do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
     "calculado": false
    },
    {
     "documento": "Light.pdf",
     "paginas": [
-     25,
+     99
+    ],
+    "titulo": "Light.pdf, página 99 (notas explicativas)",
+    "trecho": "Este risco deriva do impacto das oscilações nas taxas de juros não só sobre a despesa financeiraassociada aos empréstimos, financiamentos e debêntures da Companhia, como também sobre asreceitas financeiras oriundas de suas aplicações financeiras. A política para utilização de derivativos",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
      26
     ],
     "titulo": "Light: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 25: 2021), capital circulante líquido negativo de R$871.574 (capital circulante líquido positivo de",
+    "trecho": "Trecho do PDF, página 26: A Administração da Companhia entende que o Grupo Light e sua controlada Light SESA apresentam / situação operacional e financeira complexa, com: / (i) elevado nível de endividamento; / (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos; / (iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; / (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional. / Esta situação foi agravada pelo(a): / (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022; / (ii) efeito da determinação de devolução de cerca de R$2.8 bilhões de créditos decorrentes da / exclusão do ICMS das bases de cálculo do PIS e da COFINS, como explicitado em mais detalhes / nas Notas Explicativas 1.2, 9.1 e 38.1; / (iii) deterioração macroeconômica da área de concessão desde 2015 e mais recentemente / agravada pela pandemia de COVID-19. / A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis / para utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a / estrutura de capital da Companhia. / A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em / junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro / do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
     "calculado": false
    },
    {
     "documento": "Light.pdf",
     "paginas": [
-     6,
      26
     ],
     "titulo": "Light: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 26: (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;",
+    "trecho": "Trecho do PDF, página 26: A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis / para utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a / estrutura de capital da Companhia. / A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em / junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro / do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
     "calculado": false
    },
    {
     "documento": "Light.pdf",
     "paginas": [
-     28,
-     111
+     98
     ],
-    "titulo": "Light: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 28: anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da / Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida / significativa quanto à capacidade de continuidade operacional do Grupo Light e da Light SESA, / controlada da Companhia.",
+    "titulo": "Light.pdf, página 98 (notas explicativas)",
+    "trecho": "34.2.2 Risco de taxa de câmbio",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     97
+    ],
+    "titulo": "Light.pdf, página 97 (notas explicativas)",
+    "trecho": "derivativos aprovada pelo Conselho de Administração. Dessa forma, considerando os swaps, aexposição cambial da Companhia relacionada à dívida, em 31 de dezembro de 2022, é de 0,2% dototal da dívida em moeda estrangeira (0,2% em 31 de dezembro de 2021).",
     "calculado": false
    },
    {
     "documento": "Millet.pdf",
     "paginas": [
-     25
+     25,
+     40
     ],
     "titulo": "Millet: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 25: Acima de 361 dias | 7.628 | 6.727",
+    "trecho": "Trecho do PDF, página 40: Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma / contraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações / contratuais.",
     "calculado": false
    },
    {
     "documento": "Millet.pdf",
     "paginas": [
-     25
+     25,
+     40
     ],
     "titulo": "Millet: risco ou ponto de atenção",
     "trecho": "Trecho do PDF, página 25: A Companhia não mantém qualquer garantia para os títulos em atraso.",
@@ -652,8 +657,8 @@
     "paginas": [
      41
     ],
-    "titulo": "Millet.pdf, página 41 (notas explicativas)",
-    "trecho": "Total | 73.154 | 73.154 | 64.377 | 8.658 | 118",
+    "titulo": "Millet: risco ou ponto de atenção",
+    "trecho": "Trecho do PDF, página 41: Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por / conta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado.",
     "calculado": false
    },
    {
@@ -661,17 +666,18 @@
     "paginas": [
      41
     ],
-    "titulo": "Millet.pdf, página 41 (notas explicativas)",
-    "trecho": "Companhia e suas controladas em 31 de dezembro de 2021:",
+    "titulo": "Millet: risco ou ponto de atenção",
+    "trecho": "Trecho do PDF, página 41: Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações / associadas com seus passivos financeiros que são liquidados com pagamentos à vista ou com outro ativo",
     "calculado": false
    },
    {
     "documento": "Millet.pdf",
     "paginas": [
-     27
+     38,
+     41
     ],
     "titulo": "Millet: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 27: um ajuste de preço de R$ 6.640.585, que, por sua vez, assim como as outras parcelas, estão a valor justo, / corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do / pagamento.",
+    "trecho": "Trecho do PDF, página 41: Risco de taxa de câmbio: está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa / financeira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira.",
     "calculado": false
    },
    {
@@ -680,38 +686,110 @@
      11
     ],
     "titulo": "Millet: risco ou ponto de atenção",
-    "trecho": "Trecho do PDF, página 11: era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no / custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de / venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem / antes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da",
+    "trecho": "Trecho do PDF, página 11: era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no / custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de",
     "calculado": false
    }
   ],
+  "numeros_sem_fonte": [],
   "ferramentas": [
    "analise_qualitativa(todas, riscos)",
-   "buscar_paginas(risco de taxa de juros risco de liquidez risco de crédito, todas)"
+   "buscar_paginas(risco de liquidez, Brasal)",
+   "buscar_paginas(risco de taxa de juros, Light)",
+   "buscar_paginas(risco de taxa de câmbio moeda estrangeira, Brasal)",
+   "buscar_paginas(risco de câmbio moeda estrangeira dólar, Light)"
   ],
   "completa": true,
   "rodadas": 3,
   "uso": {
    "modelo": "claude-opus-5-5",
-   "tokens_entrada": 26913,
-   "tokens_saida": 1909,
-   "custo_usd": 0.125054,
-   "segundos": 18.63,
+   "tokens_entrada": 57295,
+   "tokens_saida": 2791,
+   "custo_usd": 0.267052,
+   "segundos": 24.15,
    "gravada": true,
-   "tokens_cache_lidos": 9934
+   "tokens_cache_lidos": 15674
   }
  },
  {
   "numero": 5,
   "pergunta": "Qual é o guidance de cada empresa para o próximo ano?",
-  "texto": "Nenhuma das três empresas dá guidance financeiro para 2023, como receita, EBITDA, alavancagem ou capex. Os documentos têm só metas e expectativas pontuais. No caso da Millet, não encontrei nenhuma.\n\n**Brasal:** a única projeção é a compensação de créditos fiscais de PIS e COFINS. Como a compensação ficou abaixo da meta em 2022, ocorreu uma compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de 38,9% deverá acontecer até julho de 2023. O motivo foi uma retração no crescimento esperado para o 4º. Semestre de 2022. Antes, a expectativa era concluir até fevereiro de 2023[1], ou seja, o prazo já foi adiado uma vez. Esses créditos são da controlada, não da holding.\n\n**Light:** as metas para 2023 estão no balanço social e não são financeiras. Uma é reduzir reclamações de consumidores na empresa, no Procon e na Justiça: Reduzir 10% | Reduzir 10% | Reduzir 10%[2]. A outra é zerar os acidentes de trabalho, que foram 56 | 0[3]. Há também uma expectativa ligada à Axxiom, controlada em conjunto. A Light vai comprar os 49% da CEMIG e ficar com 100% das ações. Para fechar a compra, existem algumas condições precedentes a serem cumpridas e a Companhia tem expectativa para conclusão da operação no segundo trimestre de 2023. Como contexto, há uma decisão do regulador, que não é projeção da empresa. Em 15 de março de 2023, foi aprovado pela ANEEL o processo de reajuste das tarifas da Companhia. O resultado representa um reajuste tarifário médio para o consumidor de 7,0%.\n\n**Millet:** não encontrei guidance. A análise não achou meta ou projeção explícita para o próximo período.[4]",
+  "texto": "Nenhuma das três empresas divulga guidance para o próximo ano. Não há projeção com número, faixa ou direção explícita para receita, volume, margem, EBITDA, lucro, investimentos, dívida ou alavancagem. O que existe são perspectivas, resumidas abaixo, e elas não são guidance. Confirmei a ausência na análise de cada documento e também nas páginas dos PDFs.\n\n**Brasal:** não há guidance. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período.[1] A principal perspectiva é um prazo para compensar crédito tributário. Em 2022 houve compensação de aproximadamente 61,1%, sendo que o restante de 38,9% deverá acontecer até julho de 2023.[2] A própria empresa reconhece que ficou abaixo um pouco das metas estabelecidas[3], por causa de uma retração no crescimento esperado. A administração também diz que pode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando aperfeiçoar sua alavancagem financeira e sua gestão de dívida[4], mas não dá números.\n\n**Light:** não há guidance. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período.[5] A perspectiva central é a concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo.[6] Nos investimentos, a direção é qualitativa. A empresa diz que concentra seus investimentos naqueles estritamente necessários para a sustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar o fluxo de caixa nos próximos 36 meses[7]. O plano de liquidez prevê, entre outros pontos, venda de ativos[8], extensão de prazos de pagamento junto a fornecedores e credores[8] e aumento de capital, cujo êxito não está sob o controle da Administração do Grupo Light[8]. Para crédito, este é o ponto mais relevante: a administração vê incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA[9]. O balanço social traz metas para 2023, mas são metas sociais e não contam como guidance. Por exemplo, para as reclamações de consumidores, a meta é Reduzir 10%[10].\n\n**Millet:** não há guidance. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período.[11] A empresa diz apenas que vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos[12], sem valores para esses investimentos. Há obras em andamento na unidade de Marechal Cândido Rondon/PR. Entre elas estão o \"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367)[13]. Esses valores são saldos de obras ainda em andamento, não uma projeção. O teste de impairment usa projeções de crescimento até 2025[14], mas essas projeções não são divulgadas. Por isso não podem ser tratadas como guidance.",
   "fontes": [
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [],
+    "titulo": "Brasal: guidance",
+    "trecho": "Guidance: não encontrado. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período. Planos e metas sem número estão na seção perspectivas.",
+    "calculado": false
+   },
    {
     "documento": "Brasal.pdf",
     "paginas": [
      28
     ],
     "titulo": "Brasal.pdf, página 28 (notas explicativas)",
-    "trecho": "restante de 31,4% acontecerá até fevereiro de 2023.",
+    "trecho": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de38,9% deverá acontecer até julho de 2023.",
+    "calculado": false
+   },
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [
+     28
+    ],
+    "titulo": "Brasal.pdf, página 28 (notas explicativas)",
+    "trecho": "de PIS e COFINS, em função de uma retração no crescimento esperado para o 4º.Semestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma",
+    "calculado": false
+   },
+   {
+    "documento": "Brasal.pdf",
+    "paginas": [
+     48
+    ],
+    "titulo": "Brasal: perspectiva",
+    "trecho": "Perspectiva (análise qualitativa): A empresa pode mudar a estrutura de capital, mas não dá números. A Companhia pode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando aperfeiçoar sua alavancagem financeira e sua gestão de dívida.",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [],
+    "titulo": "Light: guidance",
+    "trecho": "Guidance: não encontrado. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período. Planos e metas sem número estão na seção perspectivas.",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     2
+    ],
+    "titulo": "Light.pdf, página 2 (relatório da administração)",
+    "trecho": "Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026.Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     3
+    ],
+    "titulo": "Light.pdf, página 3 (relatório da administração)",
+    "trecho": "Concentramos | nossos | investimentos | naqueles | estritamente | necessários | para | asustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar ofluxo de caixa nos próximos 36 meses, período que será crucial para o Grupo. Tudo isso,",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     28
+    ],
+    "titulo": "Light: perspectiva",
+    "trecho": "Trecho do PDF, página 28: utilização de recursos oriundos da venda de ativos, cuja venda possui elementos que não estão / totalmente sob o controle da Administração do Grupo Light, (iii) utilização de recursos oriundos do / fluxo de caixa operacional, cuja estabilidade é razoavelmente previsível pela existência de base / sólida de clientes cativos, volume de energia relativamente previsível, tarifas estabelecidas pela / ANEEL e concessão de distribuição de energia elétrica válida até Junho de 2026, (iv) obtenção de / extensão de prazos de pagamento junto a fornecedores e credores, cuja extensão não está sob o / controle da Administração do Grupo Light e pode implicar em custos financeiros adicionais em / decorrência de multas, custos para obtenção de waivers, novos encargos financeiros ou na / declaração de vencimentos antecipados, (v) utilização de recursos oriundos de captação junto a / instituições financeiras ou mercado de capitais, cujo cenário apresenta restrições, tendo em vista / que os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podem / implicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos / credores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização de / recursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do / Grupo Light, (vii) redução dos investimentos em infraestrutura que não implique em prejuízo na / prestação do serviço de distribuição de energia elétrica e indicadores de qualidade exigidos pelo / contrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimento / adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no",
+    "calculado": false
+   },
+   {
+    "documento": "Light.pdf",
+    "paginas": [
+     3
+    ],
+    "titulo": "Light.pdf, página 3 (relatório da administração)",
+    "trecho": "ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência deincerteza significativa que pode levantar dúvida significativa quanto à capacidade decontinuidade operacional da Light e da Light SESA, controlada da Companhia.",
     "calculado": false
    },
    {
@@ -719,41 +797,65 @@
     "paginas": [
      15
     ],
-    "titulo": "Light: guidance",
-    "trecho": "Guidance (análise qualitativa): O balanço social traz uma meta para 2023 de reduzir reclamações de consumidores na empresa, no Procon e na Justiça: Reduzir 10% | Reduzir 10% | Reduzir 10%.",
-    "calculado": false
-   },
-   {
-    "documento": "Light.pdf",
-    "paginas": [
-     15
-    ],
-    "titulo": "Light: guidance",
-    "trecho": "Guidance (análise qualitativa): O balanço social traz uma meta de acidentes de trabalho para 2023: Número total de acidentes de trabalho | 56 | 0.",
+    "titulo": "Light: perspectiva",
+    "trecho": "Perspectiva (análise qualitativa): O balanço social traz metas para 2023. Para o Número total de acidentes de trabalho | 56 | 0, a meta é zero. Para as reclamações de consumidores, a meta é Reduzir 10% | Reduzir 10% | Reduzir 10%.",
     "calculado": false
    },
    {
     "documento": "Millet.pdf",
     "paginas": [],
     "titulo": "Millet: guidance",
-    "trecho": "Guidance: não encontrado. A análise não achou meta ou projeção explícita para o próximo período.",
+    "trecho": "Guidance: não encontrado. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período. Planos e metas sem número estão na seção perspectivas.",
+    "calculado": false
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
+     42
+    ],
+    "titulo": "Millet: perspectiva",
+    "trecho": "Perspectiva (análise qualitativa): A empresa diz que guarda recursos para investimentos e capital de giro futuros: A Companhia vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos.",
+    "calculado": false
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
+     31
+    ],
+    "titulo": "Millet: perspectiva",
+    "trecho": "Perspectiva (análise qualitativa): Há obras de ampliação na fábrica do Paraná: ampliações que vem sendo efetuadas na unidade de Marechal Cândido Rondon/PR, referentes: \"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367).",
+    "calculado": false
+   },
+   {
+    "documento": "Millet.pdf",
+    "paginas": [
+     30
+    ],
+    "titulo": "Millet.pdf, página 30 (notas explicativas)",
+    "trecho": "metodologia e premissas utilizadas pela Administração para teste de impairment do ágio considerou o desempenho histórico da Companhia e suas projeções decrescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia.",
     "calculado": false
    }
   ],
+  "numeros_sem_fonte": [
+   "38,9%"
+  ],
   "ferramentas": [
    "analise_qualitativa(todas, guidance)",
-   "buscar_paginas(projeção orçamento expectativa próximo exercício 2023, todas)"
+   "analise_qualitativa(todas, perspectivas)",
+   "buscar_paginas(projeção expectativa 2023 meta crescimento receita investimentos, Brasal)",
+   "buscar_paginas(renovação antecipada concessão investimentos fluxo de caixa próximos 36 meses, Light)",
+   "buscar_paginas(projeção expectativa 2023 meta crescimento receita investimentos, Millet)"
   ],
   "completa": true,
   "rodadas": 3,
   "uso": {
    "modelo": "claude-opus-5-5",
-   "tokens_entrada": 14040,
-   "tokens_saida": 1220,
-   "custo_usd": 0.078334,
-   "segundos": 13.76,
+   "tokens_entrada": 38511,
+   "tokens_saida": 2330,
+   "custo_usd": 0.192443,
+   "segundos": 21.08,
    "gravada": true,
-   "tokens_cache_lidos": 3387
+   "tokens_cache_lidos": 9730
   }
  }
 ]

@@ -126,22 +126,22 @@
     },
     {
      "o_que": "guidance",
-     "ok": false,
-     "detalhe": "encontrado"
+     "ok": true,
+     "detalhe": "nao_encontrado"
     },
     {
      "o_que": "2021 não auditado (B1)",
      "ok": true,
-     "detalhe": "O ano anterior não foi auditado: As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31 de dezemb"
+     "detalhe": "Os números de 2021 não foram auditados: As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31 de"
     },
     {
      "o_que": "créditos tributários não recorrentes em 2021 (B3)",
      "ok": true,
-     "detalhe": "Segundo as notas explicativas, o lucro caiu principalmente pela base forte de 2021. Naquele ano, a controlada registrou um crédito de PIS e "
+     "detalhe": "Segundo as notas explicativas, a queda do lucro vem sobretudo da base alta de 2021. Naquele ano, a controlada reconheceu um crédito extraord"
     }
    ],
-   "itens": 31,
-   "com_trecho": 31,
+   "itens": 36,
+   "com_trecho": 36,
    "com_numero_sem_fonte": 0
   },
   "armadilhas": [
@@ -159,9 +159,9 @@
    },
    {
     "id": "B6",
-    "detectada": true,
-    "por": "IA",
-    "mensagem": "A equivalência patrimonial de 2022 diverge entre tabelas. Uma traz Brasal Refrigerantes S/A | 100,00% | 411.101 | 177.244 | 411.099 | 177.244. A movimentação mo"
+    "detectada": false,
+    "por": null,
+    "mensagem": null
    },
    {
     "id": "B7",
@@ -173,7 +173,7 @@
     "id": "B8",
     "detectada": true,
     "por": "IA",
-    "mensagem": "As provisões judiciais por natureza não batem entre o resumo e a movimentação. O resumo traz Ações tributárias | 337 | 35 Ações trabalhistas | 2.485 | 1.036. A "
+    "mensagem": "O resumo das provisões não bate com a movimentação. O resumo mostra Ações tributárias | 337 | 35 Ações trabalhistas | 2.485 | 1.036. A movimentação mostra Tribu"
    }
   ]
  },
@@ -328,17 +328,17 @@
     {
      "o_que": "Alibra só de junho a dezembro em 2021 (M6)",
      "ok": true,
-     "detalhe": "O ano de 2021 inclui a Alibra só a partir de junho. O resultado da investida em 2021 é parcial: Resultado do Período (jun-dez) | 7.330. A re"
+     "detalhe": "O ano de 2021 tem só cerca de seis meses da Alibra. A receita consolidada de 2021 foi Receita operacional liquida | 462.127 | 199.259. A rec"
     },
     {
      "o_que": "repasse de preço dos derivados lácteos",
      "ok": true,
-     "detalhe": "A empresa repassou ao preço de venda a alta de custos. As notas citam a continuidade de aumento no custo de matérias primas principalmente d"
+     "detalhe": "Segundo as notas explicativas (nota 1.1), as vendas cumpriram o previsto. Porém o custo dos lácteos subiu e a margem não voltou ao nível de "
     }
    ],
-   "itens": 31,
-   "com_trecho": 31,
-   "com_numero_sem_fonte": 1
+   "itens": 36,
+   "com_trecho": 36,
+   "com_numero_sem_fonte": 0
   },
   "armadilhas": [
    {
@@ -375,7 +375,7 @@
     "id": "M8",
     "detectada": true,
     "por": "IA",
-    "mensagem": "A DRE resumida da Alibra mostra lucro antes dos impostos negativo, mas lucro líquido positivo: Lucro antes dos impostos | (65.750) | 15.412 contra Lucro líquido"
+    "mensagem": "Na tabela resumida da Alibra, o lucro antes dos impostos aparece negativo, embora o lucro bruto e o lucro líquido sejam positivos: Lucro bruto | 98.338 | 70.682"
    }
   ]
  },
@@ -548,13 +548,13 @@
     },
     {
      "o_que": "guidance",
-     "ok": false,
-     "detalhe": "encontrado"
+     "ok": true,
+     "detalhe": "nao_encontrado"
     },
     {
      "o_que": "incerteza sobre a continuidade operacional",
      "ok": true,
-     "detalhe": "Há incerteza sobre a continuidade operacional, reconhecida pela administração nas notas. Ela indica a existência de incerteza significativa "
+     "detalhe": "A própria administração e o auditor apontam dúvida sobre a continuidade. Os eventos e condições, anteriormente mencionados, individual ou co"
     },
     {
      "o_que": "provisões (PIS/COFINS, PECLD, contingências) no prejuízo",
@@ -564,7 +564,7 @@
     {
      "o_que": "renovação da concessão",
      "ok": true,
-     "detalhe": "A gestão quer antecipar a renovação da concessão. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Ministé"
+     "detalhe": "A empresa quer antecipar a renovação da concessão. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Minist"
     },
     {
      "o_que": "não errar: recuperação judicial atribuída à Light, e não à cliente SuperVia (L7)",
@@ -572,9 +572,9 @@
      "detalhe": "ok"
     }
    ],
-   "itens": 35,
-   "com_trecho": 35,
-   "com_numero_sem_fonte": 0
+   "itens": 41,
+   "com_trecho": 29,
+   "com_numero_sem_fonte": 13
   },
   "armadilhas": [
    {

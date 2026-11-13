@@ -1,0 +1,29 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQSlwUKEAgTGAI4AUIIdGhpbmtpbmcSDIvVfzhrs4TbsL1LjhoMuJmVNH3j6x8TnGj+IjCvpl79XntG+kJWgkrbIdbyjHg4B0KiwO4gh4+tb6Cenk+BPiVTvykhNe7LPaurizYqtARR9dQdVWnfriOfSsApQcegONl5NQTskFpBc97UuskMK/KSPkUtWQgosCDVslntxiiqZuA8fv0uXcTUKw1R/71K9MHR//K5GNTZIBdphhSLnzmb+hex+BpTZ584YZWRO9cnNTuG/wdCRdZiUeYsGJpCnAmGIko+q3E38BlvwOsL1Y/v9h0BrlTAFidr8ifXc2VQ4WnLDBneYnC+vJ4FPujVEQX+wbn6As4PxnXEMqQUnEMhx3kkdvW/Rpt7f9oQnvJ0rb9kN86o3JkqdkGBjdzHnCbR+2b1kV2zGJ/MiZx9zhiG7onHnGIXIsPCncSfoltyRdC/OvBA709em75Uo8uRuBk796plYpcQxwEgN/5fnQnyz1QNggbKF0IhpqJlw2m7P5/JHSRnyYbI4ml+gEaEes28Bc99FMCp0EET5+7ChpnZ+Muri9W6s1QWjbbJNItBkjv3aPCkSGBknHIxwXU0raP1LZ0ovTutlyQGCnZ4pM5io+MekUQ5MP+9cS+CKsi20vPD/RDcdMKaVSM+FWiaqTE+kvGMqsTpOP97hxsLy4oYS/VjOn0O7rs0RrbCDOtyMpWS7ofC4VeYToFqe4vRFkZo4luhJrnqZZQVP6ztFTrlxHbhXbtCoFznZE/BZX57lMfIMP0ZjVlHE3j5UO7gnI/K5JzpOg3AO+PnWtIpwQm4/0pc2WscIRA2QRtmv+nvHOXXd/7EKkE+t1h48PCwlWfMJBH3FRSv/u0ju+21Fyf/8NEYAQ==",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_01TfVNNaq12aByU6zjsECAvd",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "empresa": "todas",
+    "secao": "riscos"
+   },
+   "name": "analise_qualitativa",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 4,
+ "tokens_saida": 93,
+ "tokens_cache": 0,
+ "segundos": 1.7,
+ "gravada": false,
+ "tokens_cache_escrita": 2178,
+ "parada": "tool_use"
+}

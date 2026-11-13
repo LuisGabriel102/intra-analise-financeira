@@ -1,0 +1,325 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQSmwsKEAgTGAI4AUIIdGhpbmtpbmcSDAxkSPUT0tD70R861RoM/xAaYp0TzPmybnZEIjAywQbKX5cMB9KohyEP42qetPFWrqhgBAoxUerFw09ULhhVzoKIC+A39rzyzf6WwOUquApByKibzg0H6Cpn76jq6woeIuH2q2VanQM9zXI3G5bENsEflxK1No6APyt05EkKh3pwjGADLKXj+YOOC7Q7NcPPQikR8vkB/W0C0tngNNrcMgH+aWajPcQVx0iDxDW54lp+y0t4lLaLOOSNlg5jGAbwEXMOgrKafGQVp1Knu8Wi3vJEpm3KzkxZKSa/BT094OPw/lCL3XXHHBohBT1kPRRrsPrm6a4Hiw5wzT2XsXzVZGJ3CedZ2ebS7NVT4uxCPv6L7OOJ9Ufmheik0Ls6H78Igbl1vMRNV+W7bLTwvCaIDBxMEW56R+nY3/451SG16/OivhiQmNroci9WQAcYPvqmFxuBwwpKTqllmPCw2AN7WA/PUy4M6kuomxvzc+duapU6LmRTvffWaOryDLXKLpm3h/e0oWP+OABUFS5B7j35kkZdT3cv6H8RdDD5utZTK68LltfUEvoVhIhmv38fa6HO7fP7TIRIraf95m/SCE8oxHUT9QEZGpAoOodJY8vzReEpzM0N71b9g16abDGqCyzEjdHUYe3vmBRlmwt1Dn2/4a9iviccvKkdM23Sd2DAJPDpmAcWm+jphq6mKw+F+fwQROGonnXyf/drUc1KUO0dEYyGlLFwd1PRvr2fG9/N0xlSgeg046XjJU5EXkEZfyUeabyB4UdVrQyA/1ouSDlagCmyYO4KbSoNTNPCNSfbK7+zPO+zFtbdHB74QFrW1rVCqw6gMY0JN2uP7ENGonWfPBTlcO9Npy7ueScuiKF112B5NPhUx5+YN2hcEyFZ1yslH6qijDUAscTDpWIDAWhqjyQbC7u4EhHeqf+sF2tLKZar9rrKkeEed1VPx/Vtoaue/E3jiN5w0W/24I6WMECUfTFG5vtUtpwcnSAsVgZX24AqUN/kaEQNgl4djigH5TsmcEicF5zN4JzrwD9xU4CjuAIm670uC1zInwfJdLl6JU+VHQXcCU6i3phTlspenweooQAaRgnHKK3ZI+JN78fzQQRmCFl2jhMUZUvHFL/tnog1gfaYlYJkviaDeiFOQVM+DbPedY0xy0H8pNx84YxPYaqRUUPMSz8AwDg3Tr0paudO8gC2szGUziuZdEtDwGxMDBtEHBLtIfvvsDnXJi4fuK8Sbrf7f4k/KX+QMGtDrpt75F9HfM4Fx5g5A50ZOwRNuOixNHbxezmLuQliklr78Sljr/dpPMiRkAv3adfiY0M2ZMRlo/zMPYy1p2ZhWIAuYdVQT7OVuSBK+h+jx0X7SBS9VtRloN625LC08Nb5fenOgNUJlN1kh8UB6C0MlziSpPyYgeRDEZ8C8ZRY3BfLTNThuXw6erQzqGecjfaeEWZgJN8iXyzwo87N0OvcjXDTpyow+CUNTLh4UUYU2txsIp47TABEHCAYMvC5cBy0AODrq4Hzp8QTy0+sI1I0vv6cDCsRAEYR12SQa0MTzaFD3uOjVYikzAQA6COIhx4hvMry86SrCbGXvu5YfQZHhOFZFLZrCHzDS4qFJz1oiCdUgnvRSwRQKUBd3VTb5x1DCVdeC7Lwi7nE8XKzcCo7/Ngh2ktnk2X6ehlpNWuPGyUBw30ok+Ew2KcZcvECNBUl4etC97ibTA3BFWe+fqxEdr1dhsP7paHnunaGPDk4U8zY9bnLTpZU2iGgm32F/+JU3qnhPHMc+g4U2QzWCyZM7ect7tXfgdu1fGgwQzMzQzafJuL0h6p8bez0btlu88sf73pC8ZSQFIm0wKoRFi08NyDRWL+cXBhoGXr67Om4/AYBjKIfUmeZ2PtHGAE=",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "text": "Nenhuma das três empresas divulga guidance para o próximo ano. Não há projeção com número, faixa ou direção explícita para receita, volume, margem, EBITDA, lucro, investimentos, dívida ou alavancagem. O que existe são perspectivas, resumidas abaixo, e elas não são guidance. Confirmei a ausência na análise de cada documento e também nas páginas dos PDFs.\n\n**Brasal:** não há guidance. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Guidance: não encontrado. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período. Planos e metas sem número estão na seção perspectivas.",
+     "end_block_index": 1,
+     "search_result_index": 0,
+     "source": "Brasal.pdf",
+     "start_block_index": 0,
+     "title": "Brasal: guidance",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período.",
+   "type": "text"
+  },
+  {
+   "text": " A principal perspectiva é um prazo para compensar crédito tributário. Em 2022 houve ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de38,9% deverá acontecer até julho de 2023.",
+     "end_block_index": 38,
+     "search_result_index": 18,
+     "source": "Brasal.pdf#p28",
+     "start_block_index": 36,
+     "title": "Brasal.pdf, página 28 (notas explicativas)",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "compensação de aproximadamente 61,1%, sendo que o restante de 38,9% deverá acontecer até julho de 2023.",
+   "type": "text"
+  },
+  {
+   "text": " A própria empresa reconhece que ficou ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "de PIS e COFINS, em função de uma retração no crescimento esperado para o 4º.Semestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma",
+     "end_block_index": 36,
+     "search_result_index": 18,
+     "source": "Brasal.pdf#p28",
+     "start_block_index": 34,
+     "title": "Brasal.pdf, página 28 (notas explicativas)",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "abaixo um pouco das metas estabelecidas",
+   "type": "text"
+  },
+  {
+   "text": ", por causa de uma retração no crescimento esperado. A administração também diz que ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Perspectiva (análise qualitativa): A empresa pode mudar a estrutura de capital, mas não dá números. A Companhia pode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando aperfeiçoar sua alavancagem financeira e sua gestão de dívida.",
+     "end_block_index": 1,
+     "search_result_index": 4,
+     "source": "Brasal.pdf#p48",
+     "start_block_index": 0,
+     "title": "Brasal: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "pode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando aperfeiçoar sua alavancagem financeira e sua gestão de dívida",
+   "type": "text"
+  },
+  {
+   "text": ", mas não dá números.\n\n**Light:** não há guidance. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Guidance: não encontrado. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período. Planos e metas sem número estão na seção perspectivas.",
+     "end_block_index": 1,
+     "search_result_index": 1,
+     "source": "Light.pdf",
+     "start_block_index": 0,
+     "title": "Light: guidance",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período.",
+   "type": "text"
+  },
+  {
+   "text": " A perspectiva central é a concessão da Light SESA, ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026.Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o",
+     "end_block_index": 22,
+     "search_result_index": 23,
+     "source": "Light.pdf#p2",
+     "start_block_index": 20,
+     "title": "Light.pdf, página 2 (relatório da administração)",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "que vence em 2026. Nosso objetivo é antecipar esse processo.",
+   "type": "text"
+  },
+  {
+   "text": " Nos investimentos, a direção é qualitativa. A empresa diz que concentra seus investimentos ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Concentramos | nossos | investimentos | naqueles | estritamente | necessários | para | asustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar ofluxo de caixa nos próximos 36 meses, período que será crucial para o Grupo. Tudo isso,",
+     "end_block_index": 11,
+     "search_result_index": 21,
+     "source": "Light.pdf#p3",
+     "start_block_index": 8,
+     "title": "Light.pdf, página 3 (relatório da administração)",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "naqueles estritamente necessários para a sustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar o fluxo de caixa nos próximos 36 meses",
+   "type": "text"
+  },
+  {
+   "text": ". O plano de liquidez prevê, entre outros pontos, ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Trecho do PDF, página 28: utilização de recursos oriundos da venda de ativos, cuja venda possui elementos que não estão / totalmente sob o controle da Administração do Grupo Light, (iii) utilização de recursos oriundos do / fluxo de caixa operacional, cuja estabilidade é razoavelmente previsível pela existência de base / sólida de clientes cativos, volume de energia relativamente previsível, tarifas estabelecidas pela / ANEEL e concessão de distribuição de energia elétrica válida até Junho de 2026, (iv) obtenção de / extensão de prazos de pagamento junto a fornecedores e credores, cuja extensão não está sob o / controle da Administração do Grupo Light e pode implicar em custos financeiros adicionais em / decorrência de multas, custos para obtenção de waivers, novos encargos financeiros ou na / declaração de vencimentos antecipados, (v) utilização de recursos oriundos de captação junto a / instituições financeiras ou mercado de capitais, cujo cenário apresenta restrições, tendo em vista / que os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podem / implicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos / credores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização de / recursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do / Grupo Light, (vii) redução dos investimentos em infraestrutura que não implique em prejuízo na / prestação do serviço de distribuição de energia elétrica e indicadores de qualidade exigidos pelo / contrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimento / adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no",
+     "end_block_index": 2,
+     "search_result_index": 10,
+     "source": "Light.pdf#p28",
+     "start_block_index": 1,
+     "title": "Light: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "venda de ativos",
+   "type": "text"
+  },
+  {
+   "text": ", ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Trecho do PDF, página 28: utilização de recursos oriundos da venda de ativos, cuja venda possui elementos que não estão / totalmente sob o controle da Administração do Grupo Light, (iii) utilização de recursos oriundos do / fluxo de caixa operacional, cuja estabilidade é razoavelmente previsível pela existência de base / sólida de clientes cativos, volume de energia relativamente previsível, tarifas estabelecidas pela / ANEEL e concessão de distribuição de energia elétrica válida até Junho de 2026, (iv) obtenção de / extensão de prazos de pagamento junto a fornecedores e credores, cuja extensão não está sob o / controle da Administração do Grupo Light e pode implicar em custos financeiros adicionais em / decorrência de multas, custos para obtenção de waivers, novos encargos financeiros ou na / declaração de vencimentos antecipados, (v) utilização de recursos oriundos de captação junto a / instituições financeiras ou mercado de capitais, cujo cenário apresenta restrições, tendo em vista / que os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podem / implicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos / credores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização de / recursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do / Grupo Light, (vii) redução dos investimentos em infraestrutura que não implique em prejuízo na / prestação do serviço de distribuição de energia elétrica e indicadores de qualidade exigidos pelo / contrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimento / adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no",
+     "end_block_index": 2,
+     "search_result_index": 10,
+     "source": "Light.pdf#p28",
+     "start_block_index": 1,
+     "title": "Light: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "extensão de prazos de pagamento junto a fornecedores e credores",
+   "type": "text"
+  },
+  {
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Trecho do PDF, página 28: utilização de recursos oriundos da venda de ativos, cuja venda possui elementos que não estão / totalmente sob o controle da Administração do Grupo Light, (iii) utilização de recursos oriundos do / fluxo de caixa operacional, cuja estabilidade é razoavelmente previsível pela existência de base / sólida de clientes cativos, volume de energia relativamente previsível, tarifas estabelecidas pela / ANEEL e concessão de distribuição de energia elétrica válida até Junho de 2026, (iv) obtenção de / extensão de prazos de pagamento junto a fornecedores e credores, cuja extensão não está sob o / controle da Administração do Grupo Light e pode implicar em custos financeiros adicionais em / decorrência de multas, custos para obtenção de waivers, novos encargos financeiros ou na / declaração de vencimentos antecipados, (v) utilização de recursos oriundos de captação junto a / instituições financeiras ou mercado de capitais, cujo cenário apresenta restrições, tendo em vista / que os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podem / implicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos / credores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização de / recursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do / Grupo Light, (vii) redução dos investimentos em infraestrutura que não implique em prejuízo na / prestação do serviço de distribuição de energia elétrica e indicadores de qualidade exigidos pelo / contrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimento / adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no",
+     "end_block_index": 2,
+     "search_result_index": 10,
+     "source": "Light.pdf#p28",
+     "start_block_index": 1,
+     "title": "Light: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "aumento de capital, cujo êxito não está sob o controle da Administração do Grupo Light",
+   "type": "text"
+  },
+  {
+   "text": ". Para crédito, este é o ponto mais relevante: a administração vê ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência deincerteza significativa que pode levantar dúvida significativa quanto à capacidade decontinuidade operacional da Light e da Light SESA, controlada da Companhia.",
+     "end_block_index": 36,
+     "search_result_index": 21,
+     "source": "Light.pdf#p3",
+     "start_block_index": 33,
+     "title": "Light.pdf, página 3 (relatório da administração)",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA",
+   "type": "text"
+  },
+  {
+   "text": ". O balanço social traz metas para 2023, mas são metas sociais e não contam como guidance. Por exemplo, ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Perspectiva (análise qualitativa): O balanço social traz metas para 2023. Para o Número total de acidentes de trabalho | 56 | 0, a meta é zero. Para as reclamações de consumidores, a meta é Reduzir 10% | Reduzir 10% | Reduzir 10%.",
+     "end_block_index": 1,
+     "search_result_index": 13,
+     "source": "Light.pdf#p15",
+     "start_block_index": 0,
+     "title": "Light: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "para as reclamações de consumidores, a meta é Reduzir 10%",
+   "type": "text"
+  },
+  {
+   "text": ".\n\n**Millet:** não há guidance. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Guidance: não encontrado. A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período. Planos e metas sem número estão na seção perspectivas.",
+     "end_block_index": 1,
+     "search_result_index": 2,
+     "source": "Millet.pdf",
+     "start_block_index": 0,
+     "title": "Millet: guidance",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "A análise não achou projeção ou meta da administração para o desempenho financeiro ou operacional do próximo período.",
+   "type": "text"
+  },
+  {
+   "text": " A empresa diz apenas que ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Perspectiva (análise qualitativa): A empresa diz que guarda recursos para investimentos e capital de giro futuros: A Companhia vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos.",
+     "end_block_index": 1,
+     "search_result_index": 14,
+     "source": "Millet.pdf#p42",
+     "start_block_index": 0,
+     "title": "Millet: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos",
+   "type": "text"
+  },
+  {
+   "text": ", sem valores para esses investimentos. Há obras em andamento na unidade de Marechal Cândido Rondon/PR. Entre elas estão o ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Perspectiva (análise qualitativa): Há obras de ampliação na fábrica do Paraná: ampliações que vem sendo efetuadas na unidade de Marechal Cândido Rondon/PR, referentes: \"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367).",
+     "end_block_index": 1,
+     "search_result_index": 15,
+     "source": "Millet.pdf#p31",
+     "start_block_index": 0,
+     "title": "Millet: perspectiva",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "\"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367)",
+   "type": "text"
+  },
+  {
+   "text": ". Esses valores são saldos de obras ainda em andamento, não uma projeção. O teste de impairment usa ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "metodologia e premissas utilizadas pela Administração para teste de impairment do ágio considerou o desempenho histórico da Companhia e suas projeções decrescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia.",
+     "end_block_index": 26,
+     "search_result_index": 24,
+     "source": "Millet.pdf#p30",
+     "start_block_index": 24,
+     "title": "Millet.pdf, página 30 (notas explicativas)",
+     "type": "search_result_location"
+    }
+   ],
+   "text": "projeções de crescimento até 2025",
+   "type": "text"
+  },
+  {
+   "text": ", mas essas projeções não são divulgadas. Por isso não podem ser tratadas como guidance.",
+   "type": "text"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 1720,
+ "tokens_cache": 9730,
+ "segundos": 14.47,
+ "gravada": false,
+ "tokens_cache_escrita": 16862,
+ "parada": "end_turn"
+}

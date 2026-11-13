@@ -1,0 +1,1078 @@
+{
+ "blocos": [
+  {
+   "text": "motivo: A melhora da receita e do lucro vem sobretudo da consolidação de um ano inteiro da Alibra. A explicação é inferida das notas explicativas: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (“Alibra”),",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 6,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A",
+   "type": "text"
+  },
+  {
+   "text": ", e o resultado de 2021 cobre só o ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado do Período (jun-dez) | 7.330 | 6.231 | - | - | 6.231",
+     "document_index": 22,
+     "document_title": "Millet.pdf, página 28",
+     "end_block_index": 30,
+     "start_block_index": 29,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Resultado do Período (jun-dez) | 7.330 | 6.231",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: Segundo as notas explicativas (nota 1.1), as vendas cumpriram o previsto. Porém o custo dos lácteos subiu e a margem não voltou ao nível de antes da pandemia: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do queera previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento nocusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço devenda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem",
+     "document_index": 5,
+     "document_title": "Millet.pdf, página 11",
+     "end_block_index": 40,
+     "start_block_index": 36,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem antes da pandemia.",
+   "type": "text"
+  },
+  {
+   "text": "\nmotivo: Pelas notas explicativas, as despesas com vendas cresceram muito, puxadas por fretes e marketing: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Fretes sobre vendas | - | (20.129) | (7.555)Marketing | - | (4.449) | (832)",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 27,
+     "start_block_index": 25,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Fretes sobre vendas | - | (20.129) | (7.555)",
+   "type": "text"
+  },
+  {
+   "text": ", ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Marketing | - | (4.449) | (832)",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 27,
+     "start_block_index": 26,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Marketing | - | (4.449) | (832)",
+   "type": "text"
+  },
+  {
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Despesas com vendas | - | - | (51.142) | (21.370)",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 37,
+     "start_block_index": 36,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Despesas com vendas | - | - | (51.142) | (21.370)",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: Pelas notas explicativas, a alocação do preço de compra gerou amortização de mais-valia em 2022. Isso pesa no resultado da controladora: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)",
+     "document_index": 22,
+     "document_title": "Millet.pdf, página 28",
+     "end_block_index": 35,
+     "start_block_index": 34,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: Pelas notas explicativas, a provisão para devedores duvidosos passou de reversão para despesa: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Adições (reversões) no exercício | (1.021) | 473",
+     "document_index": 19,
+     "document_title": "Millet.pdf, página 25",
+     "end_block_index": 39,
+     "start_block_index": 38,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Adições (reversões) no exercício | (1.021) | 473",
+   "type": "text"
+  },
+  {
+   "text": ".\nmotivo: Pelas notas explicativas, a revisão de créditos tributários reduziu os valores reconhecidos em outras receitas e no resultado financeiro: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectivaobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais ereceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidospara R$3.103 e R$167, respectivamente.",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 13,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "as reclassificações efetuadas a título de reconhecimento do crédito a respectiva obrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e receitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos para R$3.103 e R$167, respectivamente.",
+   "type": "text"
+  },
+  {
+   "text": "\nrisco: Risco de crédito. A empresa pode ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de umacontraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigaçõescontratuais.",
+     "document_index": 28,
+     "document_title": "Millet.pdf, página 40",
+     "end_block_index": 23,
+     "start_block_index": 20,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "incorrer em perdas decorrentes de um cliente ou de uma contraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações contratuais.",
+   "type": "text"
+  },
+  {
+   "text": " Há títulos muito vencidos: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Acima de 361 dias | 7.628 | 6.727",
+     "document_index": 19,
+     "document_title": "Millet.pdf, página 25",
+     "end_block_index": 33,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Acima de 361 dias | 7.628 | 6.727",
+   "type": "text"
+  },
+  {
+   "text": ". E ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Companhia não mantém qualquer garantia para os títulos em atraso.",
+     "document_index": 19,
+     "document_title": "Millet.pdf, página 25",
+     "end_block_index": 34,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "a Companhia não mantém qualquer garantia para os títulos em atraso.",
+   "type": "text"
+  },
+  {
+   "text": "\nrisco: Risco de liquidez. É o risco de ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigaçõesassociadas com seus passivos financeiros que são liquidados com pagamentos à vista ou com outro ativo",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 8,
+     "start_block_index": 6,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "a Companhia irá encontrar dificuldades em cumprir com as obrigações associadas com seus passivos financeiros",
+   "type": "text"
+  },
+  {
+   "text": ". A maior parte dos passivos vence em até 12 meses: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total | 73.154 | 73.154 | 64.377 | 8.658 | 118",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Total | 73.154 | 73.154 | 64.377 | 8.658 | 118",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: Parcela a prazo da aquisição da Alibra, a pagar pela Millet. Ela vale ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "é dividido em uma parcela fixa, no valor de R$ 138.843.004,78, e uma parcela a prazo, no valor de até R$40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento docontrato, e representou 22,6% do preço pago.",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 44,
+     "start_block_index": 41,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "até R$ 40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do contrato",
+   "type": "text"
+  },
+  {
+   "text": ", e é ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva dopagamento.",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 49,
+     "start_block_index": 47,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do pagamento.",
+   "type": "text"
+  },
+  {
+   "text": " O caixa da controladora é pequeno: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total | 355 | 871 | 10.656 | 8.194",
+     "document_index": 19,
+     "document_title": "Millet.pdf, página 25",
+     "end_block_index": 13,
+     "start_block_index": 12,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Total | 355 | 871 | 10.656 | 8.194",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: Risco de taxa de juros. A empresa pode ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) porconta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado.",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 25,
+     "start_block_index": 23,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "vir a sofrer perdas ou auferir ganhos) por conta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado.",
+   "type": "text"
+  },
+  {
+   "text": " A dívida é prefixada: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Empréstimos e Financiamentos (Taxas Pré-fixadas) | 24.176 | 25.075",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 32,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Empréstimos e Financiamentos (Taxas Pré-fixadas) | 24.176 | 25.075",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: Risco de câmbio. Ele ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Risco de taxa de câmbio: está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesafinanceira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira.",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 34,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa financeira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira.",
+   "type": "text"
+  },
+  {
+   "text": " Há vendas ao exterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Mercado externo | 50.064 | 21.084",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 10,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Mercado externo | 50.064 | 21.084",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: Preço de insumos. Houve ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento nocusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de",
+     "document_index": 5,
+     "document_title": "Millet.pdf, página 11",
+     "end_block_index": 39,
+     "start_block_index": 37,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda.",
+   "type": "text"
+  },
+  {
+   "text": "\nrisco: Contingências trabalhistas e previdenciárias em alta: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Trabalhistas | 722 | 91Risco Previdenciário | 2.562 | 2.264Total | 3.284 | 2.355",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 36,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Trabalhistas | 722 | 91 Risco Previdenciário | 2.562 | 2.264 Total | 3.284 | 2.355",
+   "type": "text"
+  },
+  {
+   "text": ".\nrisco: O ágio e os intangíveis da aquisição dependem de projeções. O teste de impairment ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "metodologia e premissas utilizadas pela Administração para teste de impairment do ágio considerou o desempenho histórico da Companhia e suas projeções decrescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia.",
+     "document_index": 24,
+     "document_title": "Millet.pdf, página 30",
+     "end_block_index": 26,
+     "start_block_index": 24,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "considerou o desempenho histórico da Companhia e suas projeções de crescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia.",
+   "type": "text"
+  },
+  {
+   "text": "\nrisco: Estoques passaram a ter provisão para perdas: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Provisão para perdas na realização dos estoques | (198) | -",
+     "document_index": 20,
+     "document_title": "Millet.pdf, página 26",
+     "end_block_index": 16,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Provisão para perdas na realização dos estoques | (198) | -",
+   "type": "text"
+  },
+  {
+   "text": ".\nguidance: não encontrado\nperspectiva: A empresa diz que guarda recursos para investimentos e capital de giro futuros: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "emitir novas ações ou vender ativos para reduzir, por exemplo, o nível de endividamento. A Companhia vemacumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendoprojetados com a necessidade de capital de giro necessária para os próximos anos. A gestão de capital da",
+     "document_index": 30,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 13,
+     "start_block_index": 10,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Companhia vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos.",
+   "type": "text"
+  },
+  {
+   "text": "\nperspectiva: Há obras de ampliação na fábrica do Paraná: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em 31 de dezembro de 2022, o saldo de imobilizado em andamento se refere basicamente a ampliações que vem sendo efetuadas na unidade de Marechal CândidoRondon/PR, referentes: “Projeto Melhoria Úmida” (R$ 3.801), “Restaurante” (R$ 2.107), “Melhorias no Aglomerador” (R$ 888) e outros projetos (R$ 1.367).",
+     "document_index": 25,
+     "document_title": "Millet.pdf, página 31",
+     "end_block_index": 25,
+     "start_block_index": 23,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "ampliações que vem sendo efetuadas na unidade de Marechal Cândido Rondon/PR, referentes: \"Projeto Melhoria Úmida\" (R$ 3.801), \"Restaurante\" (R$ 2.107), \"Melhorias no Aglomerador\" (R$ 888) e outros projetos (R$ 1.367).",
+   "type": "text"
+  },
+  {
+   "text": "\nperspectiva: A administração vê benefícios estratégicos na aquisição: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "✓ A Empresa possui um portfólio diversificado (mais de 500 SKUs), além de ter uma base com maisde mil clientes;",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 29,
+     "start_block_index": 27,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Empresa possui um portfólio diversificado (mais de 500 SKUs), além de ter uma base com mais de mil clientes",
+   "type": "text"
+  },
+  {
+   "text": " e oferece ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "✓ Aquisição de um participante bem inserido no mercado, proporcionando acesso imediato a umarelevante fatia de mercado.",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 33,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "acesso imediato a uma relevante fatia de mercado.",
+   "type": "text"
+  },
+  {
+   "text": "\nperspectiva: A empresa seguirá acompanhando a crise: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nasdemonstrações financeiras.",
+     "document_index": 5,
+     "document_title": "Millet.pdf, página 11",
+     "end_block_index": 44,
+     "start_block_index": 42,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas demonstrações financeiras.",
+   "type": "text"
+  },
+  {
+   "text": "\nevento: A aquisição da Alibra foi concluída no exercício anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 24,
+     "start_block_index": 23,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A Transação foi concluída em 18 de junho de 2021",
+   "type": "text"
+  },
+  {
+   "text": ". O preço foi de ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "pelo valor total de aquisição de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 16,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: Em 2022 saiu o laudo de alocação do preço de compra: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivosassumidos relacionado à aquisição da Alibra Ingredientes LTDA, para fins contábeis e fiscais, à luz do CPC",
+     "document_index": 21,
+     "document_title": "Millet.pdf, página 27",
+     "end_block_index": 19,
+     "start_block_index": 17,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos assumidos relacionado à aquisição da Alibra",
+   "type": "text"
+  },
+  {
+   "text": ". Com isso ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Após emissão do relatório citado acima, os valores de Good-Will e Mais-Valia foram alocados, conformemensuração do valor justo. O Good-Will refere-se ao valor pago a mais sobre o valor justo do Patrimônio",
+     "document_index": 22,
+     "document_title": "Millet.pdf, página 28",
+     "end_block_index": 22,
+     "start_block_index": 20,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "os valores de Good-Will e Mais-Valia foram alocados, conforme mensuração do valor justo.",
+   "type": "text"
+  },
+  {
+   "text": "\nevento: Houve ajuste no preço de aquisição em 2022: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Ajuste de preço de aquisição | - | 6.640 | - | - | 6.640",
+     "document_index": 22,
+     "document_title": "Millet.pdf, página 28",
+     "end_block_index": 33,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Ajuste de preço de aquisição | - | 6.640 | - | - | 6.640",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: A empresa revisou créditos tributários de uma ação judicial: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusãodos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditostributários, que perfaziam o montante total de R$ 5.385 (em 31 de dezembro de 2021), incluindo R$ 2.282 deatualização monetária e juros, foram reduzidos para R$ 3.270 e R$1.157, respectivamente.",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 9,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusão dos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditos tributários, que perfaziam o montante total de R$ 5.385 (em 31 de dezembro de 2021), incluindo R$ 2.282 de atualização monetária e juros, foram reduzidos para R$ 3.270 e R$1.157, respectivamente.",
+   "type": "text"
+  },
+  {
+   "text": "\nevento: A Alibra provisionou juros sobre capital próprio, e nada foi pago em 2022. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(a) No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio novalor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392 (R$ 6.284 líquido de",
+     "document_index": 23,
+     "document_title": "Millet.pdf, página 29",
+     "end_block_index": 7,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio no valor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392",
+   "type": "text"
+  },
+  {
+   "text": ". O saldo a receber subiu para ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Saldo em 31 de dezembro de 2022 | 9.931",
+     "document_index": 23,
+     "document_title": "Millet.pdf, página 29",
+     "end_block_index": 18,
+     "start_block_index": 17,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Saldo em 31 de dezembro de 2022 | 9.931",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: Houve nova provisão para contingências no ano: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Provisão no período | 929 | 416",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 41,
+     "start_block_index": 40,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Provisão no período | 929 | 416",
+   "type": "text"
+  },
+  {
+   "text": ".\nevento: Não houve eventos subsequentes a divulgar: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administraçãoda Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras.",
+     "document_index": 31,
+     "document_title": "Millet.pdf, página 43",
+     "end_block_index": 20,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administração da Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras.",
+   "type": "text"
+  },
+  {
+   "text": "\ncomparabilidade: O ano de 2021 tem só cerca de seis meses da Alibra. A receita consolidada de 2021 foi ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Receita operacional liquida | 462.127 | 199.259",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 16,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Receita operacional liquida | 462.127 | 199.259",
+   "type": "text"
+  },
+  {
+   "text": ". A receita da Alibra no ano inteiro de 2021 foi ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Receita operacional líquida | 462.127 | 318.317",
+     "document_index": 23,
+     "document_title": "Millet.pdf, página 29",
+     "end_block_index": 29,
+     "start_block_index": 28,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Receita operacional líquida | 462.127 | 318.317",
+   "type": "text"
+  },
+  {
+   "text": ".\ncomparabilidade: A amortização da mais-valia só começa em 2022, depois do laudo. Isso não existe em 2021: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)",
+     "document_index": 22,
+     "document_title": "Millet.pdf, página 28",
+     "end_block_index": 35,
+     "start_block_index": 34,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)",
+   "type": "text"
+  },
+  {
+   "text": ".\ncomparabilidade: A revisão dos créditos tributários é um item não recorrente. Ela afeta outras receitas e o resultado financeiro: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectivaobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais ereceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidospara R$3.103 e R$167, respectivamente.",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 13,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "as reclassificações efetuadas a título de reconhecimento do crédito a respectiva obrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e receitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos para R$3.103 e R$167, respectivamente.",
+   "type": "text"
+  },
+  {
+   "text": "\ncomparabilidade: A provisão para devedores duvidosos teve sinal oposto nos dois anos: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "PCLD | - | (1.021) | 473",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 32,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "PCLD | - | (1.021) | 473",
+   "type": "text"
+  },
+  {
+   "text": ".\ntom: nao_aplicavel\njustificativa_tom: O documento não tem texto da administração comentando o resultado. O comentário mais próximo está na nota 1.1 e é misto: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que",
+     "document_index": 5,
+     "document_title": "Millet.pdf, página 11",
+     "end_block_index": 37,
+     "start_block_index": 36,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A performance das vendas atendeu às projeções e expectativas",
+   "type": "text"
+  },
+  {
+   "text": ", mas ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margemantes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da",
+     "document_index": 5,
+     "document_title": "Millet.pdf, página 11",
+     "end_block_index": 41,
+     "start_block_index": 39,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "não foi possível recuperar o mesmo nível de margem antes da pandemia.",
+   "type": "text"
+  },
+  {
+   "text": "\nobservacao: Na tabela resumida da Alibra, o lucro antes dos impostos aparece negativo, embora o lucro bruto e o lucro líquido sejam positivos: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro bruto | 98.338 | 70.682Despesas operacionais | (63.419) | (53.655)Resultado financeiro | (2.331) | (1.615)Lucro antes dos impostos | (65.750) | 15.412Impostos sobre o lucro | (4.070) | 1.820Lucro líquido do exercício | 28.518 | 17.241",
+     "document_index": 23,
+     "document_title": "Millet.pdf, página 29",
+     "end_block_index": 36,
+     "start_block_index": 30,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Lucro bruto | 98.338 | 70.682 Despesas operacionais | (63.419) | (53.655) Resultado financeiro | (2.331) | (1.615) Lucro antes dos impostos | (65.750) | 15.412 Impostos sobre o lucro | (4.070) | 1.820 Lucro líquido do exercício | 28.518 | 17.241",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: A nota 8 cita uma incorporação de 2015. Mas a Millet foi constituída em 2018. O texto parece copiado das demonstrações da Alibra: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda., cujas participações societárias foram adquiridas em 2014 e 2015. O ágio decorrente",
+     "document_index": 24,
+     "document_title": "Millet.pdf, página 30",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda.",
+   "type": "text"
+  },
+  {
+   "text": " versus ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A foi constituída em 14 de novembro de 2018 sob a denominação Metheora Empreendimentos e Participações",
+     "document_index": 5,
+     "document_title": "Millet.pdf, página 11",
+     "end_block_index": 6,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "A foi constituída em 14 de novembro de 2018",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: As datas do teste de impairment não batem. A política diz que ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "de valor. Os testes anuais de perda no valor recuperável são realizados no final do mês de março. A fim de",
+     "document_index": 10,
+     "document_title": "Millet.pdf, página 16",
+     "end_block_index": 43,
+     "start_block_index": 42,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Os testes anuais de perda no valor recuperável são realizados no final do mês de março.",
+   "type": "text"
+  },
+  {
+   "text": " Outro trecho diz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em 31 de dezembro de 2022, a Companhia realizou a avaliação do valor recuperável dos ativos de longo",
+     "document_index": 10,
+     "document_title": "Millet.pdf, página 16",
+     "end_block_index": 47,
+     "start_block_index": 46,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em 31 de dezembro de 2022, a Companhia realizou a avaliação do valor recuperável",
+   "type": "text"
+  },
+  {
+   "text": ". E a nota 8 fala do ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Consequentemente, o teste de impairment deste ágio utilizou está UGC (Alibra) e a metodologia do valor em uso. O resultado do teste de impairment realizado em31 de dezembro de 2021 não indicou necessidade de provisão para perdas por impairment.",
+     "document_index": 24,
+     "document_title": "Millet.pdf, página 30",
+     "end_block_index": 30,
+     "start_block_index": 28,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "teste de impairment realizado em 31 de dezembro de 2021",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: A provisão para contingências do ano difere entre as notas. A nota 16 traz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Provisão no período | 929 | 416",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 41,
+     "start_block_index": 40,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Provisão no período | 929 | 416",
+   "type": "text"
+  },
+  {
+   "text": ". A nota de despesas traz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Provisões para contingencias | - | (948) | (416)",
+     "document_index": 27,
+     "document_title": "Millet.pdf, página 38",
+     "end_block_index": 33,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Provisões para contingencias | - | (948) | (416)",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: Em 2021, o imposto diferido ativo sobre contingências é maior que a própria provisão. O diferido é ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Provisão para contingências | 1.116 | 6.825",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Provisão para contingências | 1.116 | 6.825",
+   "type": "text"
+  },
+  {
+   "text": ", e a provisão é ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total | 3.284 | 2.355",
+     "document_index": 26,
+     "document_title": "Millet.pdf, página 36",
+     "end_block_index": 36,
+     "start_block_index": 35,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Total | 3.284 | 2.355",
+   "type": "text"
+  },
+  {
+   "text": ".\nobservacao: O texto da tabela de liquidez fala em 2021, mas o cabeçalho da tabela traz 2022: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "O quadro a seguir demonstra os riscos de liquidez por faixa de vencimento e refletem o fluxo financeiro daCompanhia e suas controladas em 31 de dezembro de 2021:",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 13,
+     "start_block_index": 11,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "refletem o fluxo financeiro da Companhia e suas controladas em 31 de dezembro de 2021",
+   "type": "text"
+  },
+  {
+   "text": " versus ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "2022 | contábil | projetado | meses | meses | meses",
+     "document_index": 29,
+     "document_title": "Millet.pdf, página 41",
+     "end_block_index": 16,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "2022 | contábil | projetado | meses | meses | meses",
+   "type": "text"
+  },
+  {
+   "text": ".",
+   "type": "text"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 62498,
+ "tokens_saida": 9584,
+ "tokens_cache": 0,
+ "segundos": 78.34,
+ "gravada": false,
+ "tokens_cache_escrita": 0,
+ "parada": "end_turn"
+}

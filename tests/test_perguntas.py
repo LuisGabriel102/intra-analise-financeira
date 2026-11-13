@@ -11,13 +11,17 @@ from analise_financeira.busca import IndiceBM25, Trecho
 from analise_financeira.esquemas import AnaliseQualitativa, Evidencia, Item, Uso
 from analise_financeira.indicadores import AlertaSaida, Dado, DocumentoAnalisado, Indicador
 from analise_financeira.llm import ClienteLLM, SemGravacao
+from analise_financeira.analista import DEFINICAO_GUIDANCE
+from analise_financeira.esquemas import Fonte
 from analise_financeira.perguntas import (
     Base,
     executor,
     ferramentas,
     ler_final,
     ler_fonte,
+    numeros_da_resposta_sem_fonte,
     responder,
+    resultados_busca,
     resultados_indicadores,
     resultados_qualitativos,
 )
@@ -75,8 +79,10 @@ def test_indicadores_viram_resultados_citaveis_com_alerta_e_pagina(base):
     assert any("R$1.180 milhões (R$ milhões), ou R$ 1.180,0 milhões" in t for t in textos)
     assert any(t.startswith("Valor calculado pela solução para EBITDA") for t in textos)
     assert any("Alerta de validação V7 (erro)" in t for t in textos)
-    outros = next(r for r in resultados if r["title"] == "Light: outros alertas de validação")
-    assert [b["text"] for b in outros["content"]] == ["V16 (aviso, conferido em código): ano repetido"]  # info fica de fora
+    # Alerta sem indicador vira um resultado próprio, com as páginas só dele; o "info" fica de fora.
+    gerais = [r for r in resultados if "não ligado a um indicador" in r["title"]]
+    assert [(r["source"], [b["text"] for b in r["content"]]) for r in gerais] == [
+        ("Light.pdf#p21", ["Alerta V16 (aviso, conferido em código): ano repetido"])]
     # Regra da API: citações ligadas em todos os resultados, e nenhum bloco de texto vazio.
     assert all(r["citations"] == {"enabled": True} and all(b["text"].strip() for b in r["content"]) for r in resultados)
 
@@ -190,3 +196,50 @@ def test_erro_numa_pergunta_nao_derruba_as_outras(tmp_path, base):
     respostas = responder_obrigatorias(base, cliente, paralelo=1)
     assert len(respostas) == 5 and respostas[0].texto.startswith("Erro ao responder: ConnectionError")
     assert not respostas[0].completa and all(r.completa for r in respostas[1:])
+
+
+def _base_duas_empresas(base: Base) -> Base:
+    """A Light do fixture e uma Brasal que perde em todas as páginas para a Light na busca."""
+    trechos = [Trecho("Light.pdf", n, "notas", ("Risco de taxa de juros", "Risco de liquidez e risco de juros",
+                                                  "juros juros juros")) for n in (97, 98, 99, 100)]
+    trechos.append(Trecho("Brasal.pdf", 49, "notas", ("Análise do Risco de oscilação das taxas de juros",)))
+    trechos.append(Trecho("Brasal.pdf", 12, "notas", ("Contexto operacional",)))
+    return Base(documentos={"Brasal": "Brasal.pdf", "Light": "Light.pdf"},
+                numeros={"Brasal": base.numeros["Light"], "Light": base.numeros["Light"]},
+                qualitativa={"Light": base.qualitativa["Light"]}, indice=IndiceBM25(trechos))
+
+
+def test_busca_com_todas_traz_paginas_de_cada_empresa(base):
+    """Sem isso, a pergunta 4 dizia "a Brasal não cita juros": a busca geral só trazia páginas da Light."""
+    duas = _base_duas_empresas(base)
+    so_light = duas.indice.buscar("risco de taxa de juros", k=3)
+    assert {a.trecho.documento for a in so_light} == {"Light.pdf"}  # a busca geral, sozinha, esquece a Brasal
+    achados = resultados_busca(duas, "risco de taxa de juros", None)
+    assert [ler_fonte(r["source"]) for r in achados] == [
+        ("Brasal.pdf", [49]), ("Light.pdf", [97]), ("Light.pdf", [98])]
+    assert len(resultados_busca(duas, "risco de taxa de juros", "Light")) == 3
+
+
+def test_numeros_da_resposta_sem_trecho_citado_sao_apontados(base):
+    fontes = [Fonte(documento="Brasal.pdf", paginas=[28], titulo="Brasal: guidance",
+                    trecho="restante de 31,4% acontecerá até fevereiro de 2023."),
+              Fonte(documento="Light.pdf", paginas=[25], titulo="Light: riscos",
+                    trecho="capital circulante líquido negativo de R$871.574")]
+    duas = _base_duas_empresas(base)
+    duas.escalas = {"Light.pdf": {25: "mil"}}
+    texto = ("Ficou abaixo da meta: 61,1% em 2022 e o restante de 38,9% até julho de 2023. Antes, 31,4% até "
+             "fevereiro[1]. A Light tem capital de giro negativo de R$ 871,6 milhões[2]. Só a Light passa de 3x.[12]")
+    faltam = numeros_da_resposta_sem_fonte(texto, fontes, duas, "Alguma empresa está acima de 3x?")
+    assert faltam == ["61,1%", "38,9%"]  # 31,4% e 871,6 milhões têm trecho; 3x veio da pergunta; [12] é marca
+    referencias = "A nota 26 (p. 49 e 50) cita juros; as páginas 98–99 citam câmbio, e a Nota 32 também.[3]"
+    assert numeros_da_resposta_sem_fonte(referencias, fontes, duas) == []
+
+
+def test_o_sistema_do_agente_usa_a_mesma_definicao_de_guidance(tmp_path, base):
+    sdk = SdkRoteiro([RESPONDE])
+    cliente = ClienteLLM(sdk=sdk, pasta_gravacoes=tmp_path / "g", arquivo_traces=tmp_path / "t.jsonl")
+    r = responder("Qual é o guidance?", base, cliente, numero=5)
+    sistema = sdk.pedidos[0]["system"]
+    sistema = sistema if isinstance(sistema, str) else " ".join(b["text"] for b in sistema)
+    assert DEFINICAO_GUIDANCE in sistema and "{" not in sistema
+    assert r.numeros_sem_fonte == []  # R$1.180 milhões está no trecho citado

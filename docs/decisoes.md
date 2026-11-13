@@ -52,7 +52,7 @@ O analista não lê o PDF inteiro. O roteamento dá uma prioridade a cada págin
 
 ## 13. O analista escreve com as palavras dele, e o código confere
 
-Na análise qualitativa, a IA precisa escrever frases, e não copiar números. Por isso o código confere duas coisas em cada frase. A primeira é o trecho: toda frase vem com a citação da API, e a frase sem trecho aparece marcada no relatório. A segunda são os números: cada número da frase precisa estar no trecho citado ou no resumo de números já conferidos pela solução, com 1% de folga para arredondamento ("R$ 5,7 bilhões" bate com "5.672.203" em milhares). O número que não bate fica marcado como "sem fonte conferida". Três regras de leitura vão no pedido, porque são os erros mais prováveis: guidance é meta explícita, e plano sem meta é perspectiva; problema de um cliente não é problema da empresa (na Light, a recuperação judicial citada é da SuperVia); texto padrão do parecer não é fato da empresa. Se há relatório da administração quem decide é o código, pelo roteamento, e não a IA.
+Na análise qualitativa, a IA precisa escrever frases, e não copiar números. Por isso o código confere duas coisas em cada frase. A primeira é o trecho: toda frase vem com a citação da API, e a frase sem trecho aparece marcada no relatório. A segunda são os números: cada número da frase precisa estar no trecho citado ou no resumo de números já conferidos pela solução, com 1% de folga para arredondamento ("R$ 5,7 bilhões" bate com "5.672.203" em milhares). O número que não bate fica marcado como "sem fonte conferida". Três regras de leitura vão no pedido, porque são os erros mais prováveis: guidance segue a definição da decisão 19; problema de um cliente não é problema da empresa (na Light, a recuperação judicial citada é da SuperVia); texto padrão do parecer não é fato da empresa. Se há relatório da administração quem decide é o código, pelo roteamento, e não a IA.
 
 ## 14. O agente de perguntas usa ferramentas, e a fonte vem da API
 
@@ -60,7 +60,7 @@ A autonomia de agente fica nas perguntas livres, como diz a decisão 1. O agente
 
 ## 15. Cache automático nas perguntas
 
-Cada rodada do agente reenvia a conversa anterior inteira. Com o cache automático da API, o começo da conversa é lido do cache a US$ 0,20 por milhão de tokens, em vez de US$ 4. Se a plataforma não aceitar o cache automático, a conversa segue sem ele, só mais cara. O mesmo vale para o limite de taxa: o cliente tenta de novo até 6 vezes, e o que já deu certo fica gravado, então rodar de novo continua de onde parou.
+Cada rodada do agente reenvia a conversa anterior inteira. Com o cache automático da API, o começo da conversa é lido do cache a US$ 0,20 por milhão de tokens, em vez de US$ 4. Se a plataforma não aceitar o cache automático, a conversa segue sem ele, só mais cara. Medido na rodada real de 13/11: a 3ª rodada leu do cache o que a 2ª gravou (9.934 tokens na pergunta 4), mas a 2ª rodada nunca leu a 1ª. Nas perguntas de 2 rodadas, o cache só custou a gravação, 25% mais cara que a entrada comum. No saldo daquela rodada, o cache custou cerca de US$ 0,04 a mais do que economizou. Continua ligado porque as perguntas livres e as comparações entre empresas passam de 2 rodadas, e aí ele compensa. Os traces guardam os tokens lidos e gravados de cada rodada, então essa conta fica medida, e não suposta. O mesmo vale para o limite de taxa: o cliente tenta de novo até 6 vezes, e o que já deu certo fica gravado, então rodar de novo continua de onde parou.
 
 ## 16. Busca por palavra, sem banco de vetores
 
@@ -73,3 +73,19 @@ A IA não escreve o relatório. A tabela, os números, os alertas e o resumo exe
 ## 18. A avaliação também confere a análise e as respostas
 
 A extração é avaliada número a número contra o gabarito. A análise qualitativa e as 5 respostas não têm um valor exato, então a checagem é aproximada, por palavras: o tom certo, o guidance "não encontrado", os fatos que precisam aparecer (como a compra da Alibra no meio de 2021) e o erro que não pode aparecer (a recuperação judicial da cliente atribuída à Light). É grosseira de propósito: pega o erro grande, e não dá nota de redação. Nas armadilhas, uma observação da IA só conta se falar do assunto da armadilha, e não só por cair na mesma página.
+
+## 19. Uma definição de guidance, a mesma para os dois agentes
+
+Na primeira rodada real, a análise marcou como guidance a compensação de crédito fiscal da Brasal ("o restante de 38,9% deverá acontecer até julho de 2023") e as metas do balanço social da Light (reduzir reclamações em 10%, zerar acidentes). Ao mesmo tempo, a resposta da pergunta 5 dizia que nenhuma empresa dá guidance financeiro. O relatório se contradizia. A causa era a regra antiga: "compromisso com prazo" deixava passar qualquer prazo. Agora guidance é a projeção ou a meta da administração para o desempenho financeiro ou operacional do próximo período, como receita, margem, EBITDA, investimentos ou alavancagem. Meta social, prazo de uma operação ou de uma compensação de crédito e decisão de regulador entram como perspectiva. A mesma frase vai no pedido do analista e no do agente de perguntas, para os dois não discordarem.
+
+## 20. A busca em todas as empresas traz páginas de cada uma
+
+Na pergunta 4, o agente buscou "risco de taxa de juros" em todas as empresas e recebeu as 3 melhores páginas do conjunto, nenhuma da Brasal. Concluiu que a Brasal não cita juros, mas a nota 26 da Brasal (p. 49) cita. A busca com "todas" agora devolve as 2 melhores páginas de cada empresa. O agente também ganhou uma regra: só diz que uma empresa não cita um tema depois de buscar nas páginas dela. No analista, risco e evento passaram de 6 para até 10 linhas, porque as três empresas tinham batido no limite de 6, e a pergunta 4 depende da lista completa.
+
+## 21. Os números das respostas também são conferidos
+
+A régua da análise qualitativa passou a valer para as respostas: cada número precisa estar num trecho citado pela própria resposta, ou na pergunta. Na rodada real, a resposta da pergunta 5 trazia "61,1%" e "38,9%" sem citação. Os dois números estão na p. 28 da Brasal, mas o leitor não tinha como saber. Agora o relatório marca a resposta, e a avaliação a reprova. Pelo mesmo motivo, o item da análise que cita um valor que a conferência em código marcou com erro ganha um aviso: na Light, a frase da administração com o EBITDA de R$ 1.180 milhões aparece com o alerta do sinal trocado.
+
+## 22. O analista recebe o que já foi achado, e só aponta o que é novo
+
+A seção de alertas da primeira rodada repetia achados. O EBITDA da distribuidora, a troca de MWm por MWh e o ano do covenant da Light apareciam uma vez pela extração e outra pela análise, porque o analista não sabia o que a extração já tinha apontado. Agora o pedido do analista leva essa lista, com os avisos da conferência em código e as observações da extração, e pede só o que for novo. No relatório, uma rede de segurança esconde a observação da análise que fala de uma página já apontada e não traz nenhum número novo. Observação sem número fica, porque aí não dá para saber se repete.

@@ -103,3 +103,38 @@ def test_perguntas_conferem_termos_alternativos_e_fonte():
                  RespostaPergunta(numero=5, pergunta="?", texto="A Brasal projeta crescer.", uso=uso)]
     r = {x["numero"]: x for x in avaliar_perguntas(respostas, esperado)}
     assert r[3]["ok"] and not r[5]["ok"] and r[5]["faltam"] == ["nenhuma ou nao divulg"]
+
+
+def test_perguntas_conferem_o_paragrafo_de_cada_empresa_e_negacao_nao_conta():
+    from analise_financeira.avaliacao import menciona, paragrafo_da_empresa
+
+    texto = ("**Conclusão:** crédito aparece nas três.\n\n"
+             "**Brasal:** o risco de crédito é o principal. Nas buscas, não encontrei risco de liquidez ou de juros.\n\n"
+             "**Light:** crédito, juros (Selic) e câmbio, com swap.\n\n"
+             "- **Millet:** crédito e juros.")
+    assert paragrafo_da_empresa(texto, "Light") == "**Light:** crédito, juros (Selic) e câmbio, com swap."
+    assert paragrafo_da_empresa(texto, "Millet").startswith("- **Millet:**")
+    solto = "Crédito nas três.\n\nNa Brasal, o risco de juros está na nota 26.\n\nNa Light, câmbio."
+    assert paragrafo_da_empresa(solto, "Brasal") == "Na Brasal, o risco de juros está na nota 26."
+    assert not menciona("nao encontrei risco de liquidez ou de juros", "juros")
+    assert menciona("a light nao apresenta guidance, mas busca a renovacao da concessao", "concess")
+
+    esperado = {"4": {"deve_conter": [["credito"]], "por_empresa": {"Brasal": [["juros"]], "Light": [["cambi"]],
+                                                                     "Millet": [["cambi"]]}}}
+    r = avaliar_perguntas([RespostaPergunta(numero=4, pergunta="?", texto=texto, fontes=[_fonte()],
+                                            uso=Uso(modelo="m"))], esperado)[0]
+    assert not r["ok"] and r["faltam"] == ["Brasal: juros", "Millet: cambi"]
+
+
+def test_resposta_com_numero_sem_trecho_reprova():
+    esperado = {"5": {"deve_conter": [["nenhuma"]]}}
+    r = avaliar_perguntas([RespostaPergunta(numero=5, pergunta="?", texto="Nenhuma. O restante de 38,9% sai em julho.",
+                                            fontes=[_fonte()], numeros_sem_fonte=["38,9%"], uso=Uso(modelo="m"))],
+                          esperado)[0]
+    assert not r["ok"] and r["faltam"] == [] and r["numeros_sem_fonte"] == ["38,9%"]
+
+
+def _fonte():
+    from analise_financeira.esquemas import Fonte
+
+    return Fonte(documento="Light.pdf", paginas=[9], titulo="t", trecho="x")

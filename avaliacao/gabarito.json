@@ -622,7 +622,7 @@
   }
  },
  "_perguntas": {
-  "_sobre": "Cada item de 'deve_conter' é uma lista de alternativas: a resposta precisa ter pelo menos uma delas.",
+  "_sobre": "Cada item de 'deve_conter' é uma lista de alternativas: a resposta precisa ter pelo menos uma delas. 'por_empresa' faz a mesma conferência só no parágrafo daquela empresa (a linha que começa com o nome dela). Resposta com número sem trecho citado também falha.",
   "1": {
    "deve_conter": [
     [
@@ -677,8 +677,43 @@
     ],
     [
      "juros"
+    ],
+    [
+     "liquidez"
+    ],
+    [
+     "cambi"
     ]
-   ]
+   ],
+   "por_empresa": {
+    "Brasal": [
+     [
+      "juros"
+     ],
+     [
+      "credito",
+      "inadimpl"
+     ]
+    ],
+    "Light": [
+     [
+      "juros",
+      "selic"
+     ],
+     [
+      "cambi"
+     ]
+    ],
+    "Millet": [
+     [
+      "juros",
+      "selic"
+     ],
+     [
+      "cambi"
+     ]
+    ]
+   }
   },
   "5": {
    "deve_conter": [
@@ -690,7 +725,15 @@
      "nao apresent",
      "nao inform"
     ]
-   ]
+   ],
+   "por_empresa": {
+    "Light": [
+     [
+      "concess",
+      "renova"
+     ]
+    ]
+   }
   }
  }
 }

@@ -1,0 +1,35 @@
+{
+ "blocos": [
+  {
+   "id": "toolu_01Xg9zZkiRzeNHFKubcivSDr",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "empresa": "todas",
+    "secao": "motivos"
+   },
+   "name": "analise_qualitativa",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01WTNAi7B66rUEQRvQ693Qq5",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "empresa": "todas"
+   },
+   "name": "indicadores",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 4,
+ "tokens_saida": 127,
+ "tokens_cache": 0,
+ "segundos": 1.77,
+ "gravada": false,
+ "tokens_cache_escrita": 2186,
+ "parada": "tool_use"
+}

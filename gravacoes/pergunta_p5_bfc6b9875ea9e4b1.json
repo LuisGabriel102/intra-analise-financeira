@@ -1,0 +1,53 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQS7gcKEAgTGAI4AUIIdGhpbmtpbmcSDPyY6z3RZRAEKjruPxoMB0X3RH8p++SFxJsgIjCbH/wnkCf/q4oHs+J3o2P3P7AqeudQn//Sbm+d5OnFdDGvBUdpq99dzSS9wO0csYUqiweeTImEYdsdK+sVu/6VG1nbOxdVlFPkqbwfP1tDzXwOXs2tOB7HBcCw+yzoCYGL1HQ73QHcccFixBUzj5vsGYU3rIq6PSDk+3jHObtW9Xl625ldkxm21Sx8LbBEovmmPv1mLiYdBfmfk5fvDm3YFiBpw8W2VuPgQsm6O9Okbn9o0YJSINMQYg0Vz2cjNlfzMjdlY80Hn9l3BT+Iev5vIwPodhJ0+jPI8yuYKHJrrFQwtTfRvFOSuP+PmeHQtc/Y8IfDpwbCzQ/KhnthgpVw7CE2Yjx4RkZ5ghaeRkAzIBVseqqhCkex7r4c4WC7kJyKcJx4jv/IK26yHpPG0erWbKa4NjKt/36LKaETaF17g0QMWn6ghYsO8igD5r0khIlYsX1bI7U0BIryW6HCpFhcOIHlZLMYMDHRtZtn9D7E7gx7jZ9PoMI263oADGN8Pn4onpP8gG0MHeZCN/n3hbB87Cy3eceBWybFPipbT4amvxc4/0vdnq3wjzB7hOdxKbQg7vwnLic+fdCSJN7nagLF9BROzjrnb6EV760HLKaP79cYeEIetu8AVnNdRgn3OeTNQnu7MZgT4Sz+xnMhEkmM/BZCx5ECCr7zNUefzpcgIEdsTMy2FRAuZIgO5S0MBzpPnXMHd5IcN1bOs+QLNpLC36bYm3WyzxJAnIORsK7RXwDA/3P0Xv0Roth5hk7n4ugmdS1TkwgRh/+9K+b3z1rAsvk+cIISmN+IBpMsjN0dOx+r2TDUEk9LQ8LQOGBg06bnAt+hwZcp31fhtjLBdGOXzOabGL8B7QrQuSAnAhKNIjU5gGB5IeOzzETzj842zEVblXz2LLREFu/w6asBsn3skxZqXS0ZoTPN45vImu7GwoOfqpXPMBqQfPkDmeJy6+59u8kBnTffeIEuYtXGPF1fPgTuhKfhEtVjC+uysEP9zfVVqAqoiRlxAkxcltFGFu5iw9V8rP9LfEwvPjgIReZ34Z0P6XTLS2gy8X3QA7rL9cjU/UloZEBLZ/xSoVO7phLIJAi4GeqmFvKy/KRpidII2u1vFy1YI6aoJ6vWSIXKRAKPmwSJJJMSwAdS68wtB7ugW8flLiv53qBDSDI9MSVuqqH4uGZ+kbOGlyjPe5xUxnZSAQn5vZPRnL1biQJh4WTayaVEx95CaXO3CWbcy9eEYzolvy+Aj2TFRIYG6cyHrVH9pl5jr42B4Wq10Z1ZGAE=",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_01964S83UVbQ7CpbKyyYW9PH",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "projeção expectativa 2023 meta crescimento receita investimentos",
+    "empresa": "Brasal"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01S5pvbXuJm46oUWnKNHe4EZ",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "renovação antecipada concessão investimentos fluxo de caixa próximos 36 meses",
+    "empresa": "Light"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01NGN8wLi53KT1dwUYSqFwjG",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "projeção expectativa 2023 meta crescimento receita investimentos",
+    "empresa": "Millet"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 407,
+ "tokens_cache": 0,
+ "segundos": 4.08,
+ "gravada": false,
+ "tokens_cache_escrita": 9730,
+ "parada": "tool_use"
+}

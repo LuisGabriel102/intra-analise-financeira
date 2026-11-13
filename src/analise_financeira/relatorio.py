@@ -10,12 +10,14 @@ Todo texto que veio do PDF ou da IA passa por um escape: "<" e ">" viram entidad
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from datetime import datetime
 
 from analise_financeira.esquemas import AnaliseQualitativa, Extracao, Item, RespostaPergunta
 from analise_financeira.formato import milhoes, multiplo, numero_br, percentual
 from analise_financeira.indicadores import AlertaSaida, Dado, DocumentoAnalisado, Indicador
+from analise_financeira.numeros import ESCALAS, achar_numeros
 
 INFORMADO, CALCULADO, ALERTA, NAO_ENCONTRADO = "✅", "🧮", "⚠️", "⛔"
 TOM = {"positivo": "positivo", "neutro": "neutro", "negativo": "negativo", "nao_aplicavel": "não aplicável"}
@@ -233,18 +235,56 @@ def resumo_executivo(r: ResultadoDocumento) -> list[str]:
         frase = f"Tom da administração: {TOM.get(q.tom, 'sem resposta')}"
         if not q.tem_relatorio_administracao:
             frase += " (o documento não tem relatório da administração)"
-        destaque = next(iter(q.comparabilidade or q.riscos), None)
+        # O ponto que o parecer do auditor também sustenta vem primeiro (incerteza, ano não auditado...).
+        candidatos = [*q.comparabilidade, *q.riscos]
+        destaque = next((i for i in candidatos if "auditor" in i.fontes), None) or next(iter(candidatos), None)
         if destaque is not None:
             onde = _paginas([e.pagina for e in destaque.evidencias]) or "sem trecho citado"
-            frase += f". Atenção: {texto(_minuscula(destaque.texto.rstrip('.')))} ({onde})"
+            frase += f". Atenção: {texto(_minuscula(_primeira_frase(destaque.texto)))} ({onde})"
         linhas.append(frase + ".")
     return linhas[:5]
+
+
+def _primeira_frase(t: str) -> str:
+    """Até o primeiro ':', ';' ou '.' seguido de maiúscula: 'O ano não foi auditado: As...' -> 'O ano não foi auditado'."""
+    m = re.search(r"[:.;](?=\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ(])", t)
+    return (t[:m.start()] if m else t).rstrip(" .")
 
 
 # ------------------------------------------------------------------ análise qualitativa
 
 
-def _item(i: Item) -> str:
+Suspeito = tuple[float | None, float | None, str]  # (valor em reais, número como escrito, regra)
+
+
+def valores_com_erro(n: DocumentoAnalisado) -> list[Suspeito]:
+    """Os valores informados que a conferência em código marcou com erro (ex.: EBITDA da Light, V7)."""
+    saida = []
+    for a in n.alertas:
+        if a.origem != "codigo" or a.severidade != "erro" or not a.campo or not hasattr(n, a.campo):
+            continue
+        ind: Indicador = getattr(n, a.campo)
+        for d in (ind.atual, ind.anterior):
+            if d is not None:
+                lidos = achar_numeros(d.texto)
+                saida.append((d.valor_reais, abs(lidos[0].valor) if lidos else None, a.regra))
+    return saida
+
+
+def _cita_valor_com_erro(i: Item, suspeitos: list[Suspeito]) -> str | None:
+    for n in achar_numeros(i.texto):
+        if n.unidade in ("%", "x"):
+            continue
+        reais = n.valor * ESCALAS[n.unidade] if n.unidade else None
+        for valor_reais, escrito, regra in suspeitos:
+            if reais is not None and valor_reais and abs(abs(reais) - abs(valor_reais)) <= 0.001 * abs(valor_reais):
+                return regra
+            if not n.unidade and escrito is not None and abs(n.valor) == escrito and escrito >= 1000:
+                return regra
+    return None
+
+
+def _item(i: Item, suspeitos: list[Suspeito] | None = None) -> str:
     tipos = ", ".join(FONTE.get(f, f) for f in i.fontes)
     onde = f"{tipos}, {_paginas([e.pagina for e in i.evidencias])}" if i.evidencias else ""
     linha = f"- {texto(i.texto)}" + (f" ({onde})" if onde else "")
@@ -252,6 +292,9 @@ def _item(i: Item) -> str:
         linha += f" {ALERTA} sem trecho citado"
     if i.numeros_sem_fonte:
         linha += f" {ALERTA} número sem fonte conferida: {', '.join(texto(x) for x in i.numeros_sem_fonte)}"
+    regra = _cita_valor_com_erro(i, suspeitos or [])
+    if regra:
+        linha += f" {ALERTA} cita um valor que a conferência marcou com erro ({regra}; ver a seção 5)"
     return linha
 
 
@@ -263,19 +306,21 @@ def qualitativa(r: ResultadoDocumento) -> list[str]:
         "sim" if q.tem_relatorio_administracao else "não; só demonstrações, notas e parecer")
     md = [f"{ALERTA} A resposta da IA foi cortada no limite de tamanho: a análise pode estar incompleta.", ""] \
         if not q.completa else []
+    suspeitos = valores_com_erro(r.numeros)
     md += [f"**Relatório da administração:** {adm}.",
-          f"**Tom:** {TOM.get(q.tom, 'sem resposta')}." + (f" {_item(q.justificativa_tom)[2:]}" if q.justificativa_tom else ""),
+          f"**Tom:** {TOM.get(q.tom, 'sem resposta')}."
+          + (f" {_item(q.justificativa_tom, suspeitos)[2:]}" if q.justificativa_tom else ""),
           ""]
     secoes = [("Motivos do resultado", q.motivos), ("Riscos e pontos de atenção", q.riscos),
               ("Perspectivas", q.perspectivas), ("Eventos relevantes", q.eventos), ("Comparabilidade", q.comparabilidade)]
     guidance = "não encontrado (nenhuma meta ou projeção explícita para o próximo período)"
     if q.guidance_status == "encontrado":
-        md += ["**Guidance**", "", *[_item(i) for i in q.guidance], ""]
+        md += ["**Guidance**", "", *[_item(i, suspeitos) for i in q.guidance], ""]
     else:
         md += [f"**Guidance:** {guidance}.", ""]
     for titulo, itens in secoes:
         md += [f"**{titulo}**", ""]
-        md += [_item(i) for i in itens] if itens else ["- Não encontrado no documento."]
+        md += [_item(i, suspeitos) for i in itens] if itens else ["- Não encontrado no documento."]
         md.append("")
     return md
 
@@ -285,6 +330,9 @@ def qualitativa(r: ResultadoDocumento) -> list[str]:
 
 def pergunta(r: RespostaPergunta) -> list[str]:
     md = [f"### {r.numero}. {texto(r.pergunta)}" if r.numero else f"### {texto(r.pergunta)}", "", texto(r.texto), ""]
+    if r.numeros_sem_fonte:
+        md += [f"{ALERTA} Números sem trecho citado nesta resposta: {', '.join(texto(x) for x in r.numeros_sem_fonte)}. "
+               "Confira no PDF antes de usar.", ""]
     if not r.completa:
         md += [f"{ALERTA} O agente não terminou a resposta (limite de rodadas ou de tamanho).", ""]
     if r.fontes:
@@ -312,14 +360,16 @@ def alertas(resultados: list[ResultadoDocumento]) -> list[str]:
            for r, a in codigo] or ["| — | — | — | — | Nenhuma. |"]
     info = [(r, a) for r in resultados for a in r.numeros.alertas if a.origem == "codigo" and a.severidade == "info"]
     if info:
-        md += ["", "Diferenças pequenas (só informativas):", ""]
+        md += ["", "Diferenças pequenas entre texto e tabela (informativas):", ""]
         md += [f"- {texto(r.chave)} ({a.regra}, {_paginas(a.paginas)}): {texto(a.mensagem)}" for r, a in info]
 
     md += ["", "### Observações da IA, com citação", "",
            "Apontadas pela IA durante a leitura, com o trecho citado. Não foram conferidas em código: são pistas para o analista.", ""]
     ia = [(r, a.mensagem, a.paginas) for r in resultados for a in r.numeros.alertas if a.origem == "ia"]
-    ia += [(r, o.texto, [e.pagina for e in o.evidencias]) for r in resultados if r.qualitativa
-           for o in r.qualitativa.observacoes]
+    for r in resultados:
+        conhecidos = [(a.mensagem, a.paginas) for a in r.numeros.alertas if a.severidade != "info"]
+        ia += [(r, o.texto, paginas) for o in (r.qualitativa.observacoes if r.qualitativa else [])
+               if not repete_achado(o.texto, paginas := [e.pagina for e in o.evidencias], conhecidos)]
     md += [f"- **{texto(r.chave)}** ({_paginas(p) or 'sem página'}): {texto(m)}" for r, m, p in ia] or ["- Nenhuma."]
 
     md += ["", "### Informações não encontradas", "",
@@ -337,6 +387,29 @@ def alertas(resultados: list[ResultadoDocumento]) -> list[str]:
             faltam.append("relatório da administração")
         md.append(f"- **{texto(r.chave)}:** " + (", ".join(faltam) if faltam else "nada") + ".")
     return md
+
+
+def _numeros_do_achado(t: str) -> set[tuple[str, float]]:
+    """Os números que identificam um achado. Anos e números pequenos (páginas, notas) ficam de fora."""
+    saida = set()
+    for n in achar_numeros(t):
+        if n.unidade in ("%", "x"):
+            saida.add((n.unidade, round(abs(n.valor), 6)))
+        elif not (n.valor.is_integer() and (abs(n.valor) <= 31 or 1900 <= abs(n.valor) <= 2100)):
+            saida.add(("", abs(n.valor)))
+    return saida
+
+
+def repete_achado(observacao: str, paginas: list[int], conhecidos: list[tuple[str, list[int]]]) -> bool:
+    """Rede de segurança: a observação da análise repete um alerta já listado?
+
+    Repete quando fala de uma página em comum e todos os números dela já estão naquele alerta.
+    Sem número, não dá para saber: a observação fica.
+    """
+    numeros = _numeros_do_achado(observacao)
+    if not numeros:
+        return False
+    return any(set(paginas) & set(p) and numeros <= _numeros_do_achado(m) for m, p in conhecidos)
 
 
 GLOSSARIO = [
