@@ -130,7 +130,13 @@ def test_resposta_com_numero_sem_trecho_ganha_aviso():
                          fontes=[Fonte(documento="Brasal.pdf", paginas=[28], titulo="t", trecho="31,4%")],
                          numeros_sem_fonte=["38,9%"], uso=Uso(modelo="m"))
     md = "\n".join(pergunta(r))
-    assert "⚠️ Números sem trecho citado nesta resposta: 38,9%." in md
+    assert "⚠️ Números que não estão em nenhum dado consultado pelo agente: 38,9%." in md
+    assert "sem citação" not in md
+
+    nos_dados = r.model_copy(update={"numeros_sem_fonte": [], "numeros_sem_citacao": ["38,9% (Brasal.pdf, p. 28)"]})
+    md = "\n".join(pergunta(nos_dados))
+    assert "⚠️ Números sem citação nesta resposta: 38,9% (Brasal.pdf, p. 28)." in md
+    assert "não estão em nenhum dado" not in md
 
 
 def test_item_com_trecho_achado_pelo_codigo_fica_marcado():

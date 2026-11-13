@@ -115,7 +115,8 @@ class RespostaPergunta(BaseModel):
     pergunta: str
     texto: str                   # a resposta, com as marcas [1], [2] que levam às fontes
     fontes: list[Fonte] = []
-    numeros_sem_fonte: list[str] = []  # números da resposta que não estão em nenhum trecho citado
+    numeros_sem_fonte: list[str] = []    # números que não estão em nenhum dado que o agente consultou
+    numeros_sem_citacao: list[str] = []  # nos dados consultados, mas sem citação na frase: "61,1% (Brasal.pdf, p. 28)"
     ferramentas: list[str] = []  # as ferramentas que o agente usou, na ordem
     completa: bool = True        # False se o agente parou no limite de rodadas
     rodadas: int = 0

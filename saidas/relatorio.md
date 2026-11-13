@@ -1,6 +1,6 @@
 # Análise das demonstrações financeiras
 
-Gerado em 13/11/2026 às 12:06. Documentos: Brasal.pdf, Light.pdf, Millet.pdf. Modelo: claude-opus-5-5.
+Gerado em 13/11/2026 às 12:38. Documentos: Brasal.pdf, Light.pdf, Millet.pdf. Modelo: claude-opus-5-5.
 Custo das chamadas à IA: US$ 2,80 (nesta execução: US$ 0,00; o resto veio de respostas gravadas). Tempo total: 3 s.
 
 > **Como ler:** ✅ informado pela empresa e conferido no trecho do PDF · 🧮 calculado pela solução (não informado pela empresa) · ⚠️ há alerta de validação · ⛔ não encontrado no documento. Valores em R$ milhões. Cada número tem a página do PDF de onde veio.
@@ -374,7 +374,7 @@ Nenhuma das três empresas divulga guidance para o próximo ano. Não há proje�
 
 **Millet:** a empresa diz que vem acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos[10], mas não divulga o valor desses investimentos. Há obras em andamento na unidade de Marechal Cândido Rondon/PR[11], como o "Projeto Melhoria Úmida" (R$ 3.801)[11]. Esse é o saldo de obras em andamento em 2022, não uma projeção. Além disso, a Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas demonstrações financeiras[12].
 
-⚠️ Números sem trecho citado nesta resposta: 61,1%, 38,9%. Confira no PDF antes de usar.
+⚠️ Números sem citação nesta resposta: 61,1% (Brasal.pdf, p. 28), 38,9% (Brasal.pdf, p. 28). Eles estão nos dados que o agente consultou, mas a frase saiu sem a citação.
 
 **Fontes**
 

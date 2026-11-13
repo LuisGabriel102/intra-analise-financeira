@@ -159,15 +159,43 @@ def avaliar_qualitativa(q: AnaliseQualitativa, esperado: dict) -> dict:
             "com_numero_sem_fonte": sum(1 for i in itens if i.numeros_sem_fonte)}
 
 
-def paragrafo_da_empresa(texto: str, empresa: str) -> str:
-    """O parágrafo da resposta sobre uma empresa: o que começa com o nome dela ("**Brasal:** ...", "- Brasal: ...").
+def paragrafo_da_empresa(texto: str, empresa: str, empresas: list[str] | None = None) -> str:
+    """O trecho da resposta sobre uma empresa.
 
-    Se nenhum começar com o nome, valem os parágrafos que citam a empresa (e não a conclusão inteira).
+    Começa na linha que abre com o nome dela ("**Brasal:** ...", "- **Brasal:** ..." ou "**Brasal:**" sozinho,
+    seguido de uma lista) e vai até a linha que abre com outra empresa, ou até um parágrafo novo que não
+    continue a lista. Se nenhuma linha abrir com o nome, valem os parágrafos que citam a empresa, fora o primeiro
+    (a conclusão, que fala de todas).
     """
-    paragrafos = re.split(r"\n\s*\n|\n(?=\s*[-*]\s)", texto)
-    padrao = re.compile(rf"^\s*(?:[-*]\s+)?(?:\*\*)?{re.escape(empresa)}\b", re.IGNORECASE)
-    proprios = [p for p in paragrafos if padrao.match(p)]
-    return "\n".join(proprios or [p for p in paragrafos[1:] if re.search(rf"\b{re.escape(empresa)}\b", p, re.I)])
+    nomes = list(dict.fromkeys([empresa, *(empresas or [])]))
+
+    def abre(linha: str) -> str | None:
+        return next((n for n in nomes if re.match(rf"^\s*(?:[-*]\s+)?(?:\*\*)?{re.escape(n)}\b", linha, re.I)), None)
+
+    def item(linha: str) -> bool:
+        return bool(re.match(r"^\s*[-*]\s", linha))
+
+    secoes: dict[str, list[str]] = {}
+    atual, depois_de_branco = None, False
+    for linha in texto.splitlines():
+        dona = abre(linha)
+        if dona:
+            atual, depois_de_branco = dona, False
+            secoes.setdefault(dona, []).append(linha)
+        elif atual is None:
+            continue
+        elif not linha.strip():
+            depois_de_branco = True
+        elif depois_de_branco and not (item(linha) and (item(ultima := secoes[atual][-1])
+                                                         or ultima.replace("*", "").rstrip().endswith(":"))):
+            atual = None  # depois da linha em branco, só continua uma lista que já estava aberta
+        else:
+            depois_de_branco = False
+            secoes[atual].append(linha)
+    if empresa in secoes:
+        return "\n".join(secoes[empresa])
+    paragrafos = re.split(r"\n\s*\n", texto)
+    return "\n".join(p for p in paragrafos[1:] if re.search(rf"\b{re.escape(empresa)}\b", p, re.I))
 
 
 _NEGA = r"nao (?:encontr|cit|mencion|aparec|list)\w*"
@@ -182,10 +210,12 @@ def menciona(trecho: str, termo: str) -> bool:
     return False
 
 
-def avaliar_perguntas(respostas: list[RespostaPergunta], esperado: dict) -> list[dict]:
+def avaliar_perguntas(respostas: list[RespostaPergunta], esperado: dict,
+                      empresas: list[str] | None = None) -> list[dict]:
     """Cada resposta tem os termos esperados (no todo e no parágrafo de cada empresa)? Tem fonte? Terminou?
 
-    Um número sem trecho citado também reprova a resposta: é a mesma régua da análise qualitativa.
+    Número que não está em nenhum dado consultado pelo agente reprova a resposta (pode ser invenção).
+    Número que está nos dados, mas saiu sem citação na frase, fica como ressalva (falta de rastreio).
     """
     linhas = []
     for r in sorted(respostas, key=lambda x: x.numero or 99):
@@ -196,11 +226,11 @@ def avaliar_perguntas(respostas: list[RespostaPergunta], esperado: dict) -> list
         faltam = [" ou ".join(alternativas) for alternativas in e["deve_conter"]
                   if not any(a in texto for a in alternativas)]
         for empresa, itens in e.get("por_empresa", {}).items():
-            trecho = _sem_acento(paragrafo_da_empresa(r.texto, empresa))
+            trecho = _sem_acento(paragrafo_da_empresa(r.texto, empresa, list(e["por_empresa"]) + (empresas or [])))
             faltam += [f"{empresa}: {' ou '.join(alternativas)}" for alternativas in itens
                        if not any(menciona(trecho, a) for a in alternativas)]
         linhas.append({"numero": r.numero, "faltam": faltam, "fontes": len(r.fontes), "completa": r.completa,
-                       "numeros_sem_fonte": r.numeros_sem_fonte,
+                       "numeros_sem_fonte": r.numeros_sem_fonte, "numeros_sem_citacao": r.numeros_sem_citacao,
                        "ok": not faltam and bool(r.fontes) and r.completa and not r.numeros_sem_fonte})
     return linhas
 
@@ -278,11 +308,14 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
     if arquivo_perguntas.exists() and "_perguntas" in dados:
         respostas = [RespostaPergunta.model_validate(x)
                      for x in json.loads(arquivo_perguntas.read_text(encoding="utf-8"))]
-        linhas = avaliar_perguntas(respostas, dados["_perguntas"])
+        empresas = [Path(doc).stem for doc in dados if not doc.startswith("_")]
+        linhas = avaliar_perguntas(respostas, dados["_perguntas"], empresas)
         md += ["", f"## Perguntas (checagem aproximada, por palavras): {sum(x['ok'] for x in linhas)} de {len(linhas)}", ""]
         md += [f"- Pergunta {x['numero']}: " + ("ok" if x["ok"] else "FALHOU") + f" ({x['fontes']} fontes"
                + (f"; faltou: {'; '.join(x['faltam'])}" if x["faltam"] else "")
-               + (f"; número sem trecho citado: {', '.join(x['numeros_sem_fonte'])}" if x["numeros_sem_fonte"] else "")
+               + (f"; número fora dos dados consultados: {', '.join(x['numeros_sem_fonte'])}" if x["numeros_sem_fonte"] else "")
+               + (f"; ressalva, sem citação na frase (mas nos dados consultados): {', '.join(x['numeros_sem_citacao'])}"
+                  if x.get("numeros_sem_citacao") else "")
                + ("" if x["completa"] else "; resposta incompleta") + ")" for x in linhas]
 
     md += ["", "Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. "

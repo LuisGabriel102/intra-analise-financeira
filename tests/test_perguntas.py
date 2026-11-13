@@ -20,6 +20,7 @@ from analise_financeira.perguntas import (
     ler_final,
     ler_fonte,
     numeros_da_resposta_sem_fonte,
+    separar_sem_citacao,
     responder,
     resultados_busca,
     resultados_indicadores,
@@ -269,3 +270,17 @@ def test_numero_da_linha_vizinha_nao_vira_aviso_na_resposta(base):
     assert numeros_da_resposta_sem_fonte("Restam 38,9% até julho.[1]", [fonte], base) == []
     assert numeros_da_resposta_sem_fonte("Restam 38,9% até julho.[1]", [fonte.model_copy(update={"contexto": ""})],
                                          base) == ["38,9%"]
+
+
+def test_numero_sem_citacao_e_separado_do_numero_fora_dos_dados(base):
+    """Pergunta 5 do commit c79aae7: 61,1% e 38,9% saíram sem citação, mas estavam no resultado da p. 28."""
+    resultados = [
+        {"type": "search_result", "source": "Light.pdf#p9", "title": "a", "content": [{"type": "text", "text": "3,32x"}]},
+        {"type": "search_result", "source": "Brasal.pdf#p28", "title": "b", "content": [
+            {"type": "text", "text": "compensação de aproximadamente 61,1%, sendo que o restante de"},
+            {"type": "text", "text": "38,9% deverá acontecer até julho de 2023."}]},
+    ]
+    fora, sem_citacao = separar_sem_citacao(["61,1%", "38,9%", "47,5%"], resultados, base)
+    assert fora == ["47,5%"]  # não está em nada que o agente leu: pode ser invenção
+    assert sem_citacao == ["61,1% (Brasal.pdf, p. 28)", "38,9% (Brasal.pdf, p. 28)"]
+    assert separar_sem_citacao(["61,1%"], [], base) == (["61,1%"], [])

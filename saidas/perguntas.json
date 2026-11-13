@@ -143,6 +143,7 @@
    }
   ],
   "numeros_sem_fonte": [],
+  "numeros_sem_citacao": [],
   "ferramentas": [
    "indicadores(todas)"
   ],
@@ -350,6 +351,7 @@
    }
   ],
   "numeros_sem_fonte": [],
+  "numeros_sem_citacao": [],
   "ferramentas": [
    "analise_qualitativa(todas, motivos)",
    "indicadores(todas)",
@@ -530,6 +532,7 @@
    }
   ],
   "numeros_sem_fonte": [],
+  "numeros_sem_citacao": [],
   "ferramentas": [
    "indicadores(todas)"
   ],
@@ -718,6 +721,7 @@
    }
   ],
   "numeros_sem_fonte": [],
+  "numeros_sem_citacao": [],
   "ferramentas": [
    "analise_qualitativa(todas, riscos)",
    "buscar_paginas(risco de liquidez, Brasal)",
@@ -855,9 +859,10 @@
     "contexto": "Perspectiva (análise qualitativa): A empresa seguirá acompanhando a crise: A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas demonstrações financeiras.\nTrecho do PDF, página 11: A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas / demonstrações financeiras."
    }
   ],
-  "numeros_sem_fonte": [
-   "61,1%",
-   "38,9%"
+  "numeros_sem_fonte": [],
+  "numeros_sem_citacao": [
+   "61,1% (Brasal.pdf, p. 28)",
+   "38,9% (Brasal.pdf, p. 28)"
   ],
   "ferramentas": [
    "analise_qualitativa(todas, guidance)",

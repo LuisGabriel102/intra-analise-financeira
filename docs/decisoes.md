@@ -84,7 +84,11 @@ Na pergunta 4, o agente buscou "risco de taxa de juros" em todas as empresas e r
 
 ## 21. Os números das respostas também são conferidos
 
-A régua da análise qualitativa passou a valer para as respostas: cada número precisa estar num trecho citado pela própria resposta, ou na pergunta. Na rodada real, a resposta da pergunta 5 trazia "61,1%" e "38,9%" sem citação. Os dois números estão na p. 28 da Brasal, mas o leitor não tinha como saber. Agora o relatório marca a resposta, e a avaliação a reprova. Pelo mesmo motivo, o item da análise que cita um valor que a conferência em código marcou com erro ganha um aviso: na Light, a frase da administração com o EBITDA de R$ 1.180 milhões aparece com o alerta do sinal trocado.
+A régua da análise qualitativa passou a valer para as respostas: cada número precisa estar num trecho citado pela própria resposta, ou na pergunta. Na rodada real, a resposta da pergunta 5 trazia "61,1%" e "38,9%" sem citação. Os dois números estão na p. 28 da Brasal, mas o leitor não tinha como saber.
+
+O número sem citação cai em um de dois casos, e eles são tratados de forma diferente. Se o número não está em nenhum resultado de ferramenta que o agente leu na conversa, ele pode ter sido inventado: o relatório avisa que ele pode estar errado, e a avaliação reprova a resposta. Se o número está num desses resultados, ele veio dos dados, e o que faltou foi só a marca de citação na frase: o relatório avisa e mostra o documento e a página onde o número está, e a avaliação aprova com ressalva. Foi o caso da pergunta 5, nas três rodadas reais em que a frase da Brasal saiu sem citação. A ressalva não garante que o número foi atribuído à empresa certa, só que ele existe no que o agente leu. Por isso o aviso continua no relatório, com a página para conferir.
+
+Pelo mesmo motivo, o item da análise que cita um valor que a conferência em código marcou com erro ganha um aviso: na Light, a frase da administração com o EBITDA de R$ 1.180 milhões aparece com o alerta do sinal trocado.
 
 ## 22. O analista recebe o que já foi achado, e só aponta o que é novo
 

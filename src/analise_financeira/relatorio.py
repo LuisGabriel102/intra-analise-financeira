@@ -334,8 +334,11 @@ def qualitativa(r: ResultadoDocumento) -> list[str]:
 def pergunta(r: RespostaPergunta) -> list[str]:
     md = [f"### {r.numero}. {texto(r.pergunta)}" if r.numero else f"### {texto(r.pergunta)}", "", texto(r.texto), ""]
     if r.numeros_sem_fonte:
-        md += [f"{ALERTA} Números sem trecho citado nesta resposta: {', '.join(texto(x) for x in r.numeros_sem_fonte)}. "
-               "Confira no PDF antes de usar.", ""]
+        md += [f"{ALERTA} Números que não estão em nenhum dado consultado pelo agente: "
+               f"{', '.join(texto(x) for x in r.numeros_sem_fonte)}. Podem estar errados: confira no PDF.", ""]
+    if r.numeros_sem_citacao:
+        md += [f"{ALERTA} Números sem citação nesta resposta: {', '.join(texto(x) for x in r.numeros_sem_citacao)}. "
+               "Eles estão nos dados que o agente consultou, mas a frase saiu sem a citação.", ""]
     if not r.completa:
         md += [f"{ALERTA} O agente não terminou a resposta (limite de rodadas ou de tamanho).", ""]
     if r.fontes:

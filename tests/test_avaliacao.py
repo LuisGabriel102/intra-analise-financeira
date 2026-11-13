@@ -126,7 +126,36 @@ def test_perguntas_conferem_o_paragrafo_de_cada_empresa_e_negacao_nao_conta():
     assert not r["ok"] and r["faltam"] == ["Brasal: juros", "Millet: cambi"]
 
 
-def test_resposta_com_numero_sem_trecho_reprova():
+def test_secao_da_empresa_com_titulo_e_lista():
+    """Formato da resposta 4 do commit c79aae7: título sozinho e a lista embaixo."""
+    from analise_financeira.avaliacao import paragrafo_da_empresa
+
+    texto = ("Crédito e juros aparecem nas três.\n\n"
+             "**Brasal:**\n- **Crédito:** principal risco.\n- **Juros:** oscilações de taxas.\n\n"
+             "**Light:**\n- **Câmbio:** nota 34.2.2.\n\n- **Juros:** Selic.\n\n"
+             "Nota final que fala de todas.")
+    empresas = ["Brasal", "Light", "Millet"]
+    assert paragrafo_da_empresa(texto, "Brasal", empresas) == (
+        "**Brasal:**\n- **Crédito:** principal risco.\n- **Juros:** oscilações de taxas.")
+    assert paragrafo_da_empresa(texto, "Light", empresas) == "**Light:**\n- **Câmbio:** nota 34.2.2.\n- **Juros:** Selic."
+    assert paragrafo_da_empresa(texto, "Brasal") .endswith("oscilações de taxas.")  # sem a lista de empresas também
+
+    esperado = {"4": {"deve_conter": [["credito"]], "por_empresa": {"Brasal": [["juros"], ["credito"]],
+                                                                     "Light": [["cambi"], ["juros", "selic"]]}}}
+    r = avaliar_perguntas([RespostaPergunta(numero=4, pergunta="?", texto=texto, fontes=[_fonte()],
+                                            uso=Uso(modelo="m"))], esperado, empresas)[0]
+    assert r["ok"], r["faltam"]
+
+
+def test_numero_sem_citacao_mas_nos_dados_e_ressalva():
+    esperado = {"5": {"deve_conter": [["nenhuma"]]}}
+    r = avaliar_perguntas([RespostaPergunta(numero=5, pergunta="?", texto="Nenhuma. O restante de 38,9% sai em julho.",
+                                            fontes=[_fonte()], numeros_sem_citacao=["38,9% (Brasal.pdf, p. 28)"],
+                                            uso=Uso(modelo="m"))], esperado)[0]
+    assert r["ok"] and r["numeros_sem_citacao"] == ["38,9% (Brasal.pdf, p. 28)"]
+
+
+def test_numero_fora_dos_dados_consultados_reprova():
     esperado = {"5": {"deve_conter": [["nenhuma"]]}}
     r = avaliar_perguntas([RespostaPergunta(numero=5, pergunta="?", texto="Nenhuma. O restante de 38,9% sai em julho.",
                                             fontes=[_fonte()], numeros_sem_fonte=["38,9%"], uso=Uso(modelo="m"))],

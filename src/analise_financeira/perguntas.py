@@ -367,6 +367,31 @@ def numeros_da_resposta_sem_fonte(texto: str, fontes: list[Fonte], base: Base, p
     return list(dict.fromkeys(numeros_sem_fonte(texto, fontes_texto)))
 
 
+def separar_sem_citacao(numeros: list[str], resultados: list[dict], base: Base) -> tuple[list[str], list[str]]:
+    """Divide os números sem trecho citado em dois grupos.
+
+    O primeiro não está em nenhum resultado das ferramentas da conversa: o agente pode ter inventado.
+    O segundo está num resultado, mas a frase saiu sem a citação: veio dos dados, e falta só o rastreio.
+    Esse ganha o documento e a página do resultado onde está, para o leitor conferir.
+    """
+    fora, sem_citacao = [], []
+    for numero in numeros:
+        achado = None
+        for r in resultados:
+            documento, paginas = ler_fonte(r.get("source", ""))
+            texto = "\n".join(b.get("text", "") for b in r.get("content", []))
+            escala = next((base.escalas.get(documento, {}).get(p) for p in paginas
+                           if base.escalas.get(documento, {}).get(p)), "mil")
+            if not numeros_sem_fonte(numero, [(texto, escala)]):
+                achado = f"{documento}, p. {', '.join(map(str, paginas))}" if paginas else documento
+                break
+        if achado:
+            sem_citacao.append(f"{numero} ({achado})")
+        else:
+            fora.append(numero)
+    return fora, sem_citacao
+
+
 def responder(pergunta: str, base: Base, cliente: ClienteLLM, numero: int | None = None) -> RespostaPergunta:
     empresas = ", ".join(f"{base.numeros[k].empresa or k} ({base.documentos[k]})" for k in base.empresas)
     sistema = SISTEMA.format(empresas=empresas, guidance=DEFINICAO_GUIDANCE)
@@ -381,10 +406,11 @@ def responder(pergunta: str, base: Base, cliente: ClienteLLM, numero: int | None
                                  executar=executar_e_guardar, etapa="pergunta",
                                  documento=f"p{numero}" if numero else "livre")
     texto, fontes = ler_final(conversa.final.blocos, resultados)
+    fora, sem_citacao = separar_sem_citacao(numeros_da_resposta_sem_fonte(texto, fontes, base, pergunta), resultados, base)
     usadas = [f"{u['nome']}({', '.join(str(v) for v in u['entrada'].values())})" for u in conversa.ferramentas_usadas]
     return RespostaPergunta(
         numero=numero, pergunta=pergunta, texto=texto or "(o agente não escreveu resposta)", fontes=fontes,
-        numeros_sem_fonte=numeros_da_resposta_sem_fonte(texto, fontes, base, pergunta), ferramentas=usadas,
+        numeros_sem_fonte=fora, numeros_sem_citacao=sem_citacao, ferramentas=usadas,
         completa=conversa.completa and conversa.final.parada == "end_turn", rodadas=len(conversa.rodadas),
         uso=_uso(conversa),
     )
