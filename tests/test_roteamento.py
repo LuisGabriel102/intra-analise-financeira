@@ -3,12 +3,19 @@
 import pytest
 
 from analise_financeira.pdf import ler_pdf
-from analise_financeira.roteamento import rotear
+from analise_financeira.roteamento import LIMITE_ANALISE, TABELAS, rotear
+
+NOMES = ("Brasal", "Millet", "Light")
 
 
 @pytest.fixture(scope="module")
-def rotas():
-    return {nome: rotear(ler_pdf(f"dados/pdfs/{nome}.pdf")) for nome in ("Brasal", "Millet", "Light")}
+def documentos():
+    return {nome: ler_pdf(f"dados/pdfs/{nome}.pdf") for nome in NOMES}
+
+
+@pytest.fixture(scope="module")
+def rotas(documentos):
+    return {nome: rotear(doc) for nome, doc in documentos.items()}
 
 
 @pytest.mark.parametrize(
@@ -42,6 +49,22 @@ def test_extracao_leva_poucas_paginas_e_as_certas(rotas):
 
 
 def test_analise_pega_continuidade_riscos_e_eventos(rotas):
-    assert {25, 111} <= set(rotas["Light"].analise)      # nota 1.1 e parecer do auditor
-    assert {12, 49, 51} <= set(rotas["Brasal"].analise)  # contexto, riscos, evento subsequente
-    assert {11, 27, 43} <= set(rotas["Millet"].analise)  # contexto, aquisição, eventos
+    # Light: relatório inteiro, contexto, continuidade, segmento, ativos à venda, risco, eventos, parecer
+    assert set(range(1, 16)) | {17, 25, 28, 45, 46, 101, 107, 111, 112} <= set(rotas["Light"].analise)
+    assert {1, 3, 12, 28, 46, 49, 51} <= set(rotas["Brasal"].analise)   # parecer, contexto, créditos, riscos, STF
+    assert {11, 27, 28, 29, 43} <= set(rotas["Millet"].analise)         # contexto, Alibra no ano cheio, eventos
+
+
+@pytest.mark.parametrize("nome", NOMES)
+def test_analise_cabe_no_orcamento_e_nao_le_tabelas(documentos, rotas, nome):
+    r = rotas[nome]
+    assert sum(len(documentos[nome].pagina(n).texto) for n in r.analise) <= LIMITE_ANALISE
+    assert not [n for n in r.analise if r.tipos[n] in TABELAS]
+
+
+def test_nao_auditado_nas_tabelas_nao_puxa_pagina_sozinho(rotas):
+    # Brasal: "(não auditado)" é rótulo de coluna em quase todas as notas; não é assunto da página.
+    from analise_financeira.roteamento import prioridade_na_analise
+
+    r = rotas["Brasal"]
+    assert prioridade_na_analise(r.tipos[26], r.assuntos[26]) == 3

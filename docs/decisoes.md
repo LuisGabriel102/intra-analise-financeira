@@ -45,3 +45,31 @@ Os alertas de regra (V3 a V16) são conferidos em Python, com os dois valores e 
 ## 11. Escala da página e escala do documento
 
 Nas notas explicativas, o aviso "(Em milhares de reais)" costuma aparecer só na primeira página. A página que não avisa usa a escala mais comum do documento. Usar a escala da última página que avisou seria pior: uma tabela em milhões no meio das notas contaminaria todas as páginas seguintes. O erro apareceu na primeira rodada real (a dívida líquida da Light saía em reais, e não em milhares) e virou teste.
+
+## 12. As páginas do analista: prioridade e orçamento
+
+O analista não lê o PDF inteiro. O roteamento dá uma prioridade a cada página: primeiro o relatório da administração; depois o parecer do auditor, o contexto operacional, a continuidade, os eventos subsequentes, as aquisições, as vendas de ativos e os segmentos; depois os riscos e as cláusulas de dívida; o resto das notas só entra se couber. O orçamento é de 90 mil caracteres por documento, então o custo não cresce com o tamanho do PDF: a Brasal e a Millet vão quase inteiras, e a Light vai em 32 das 124 páginas. Na mesma prioridade, entra antes a página que fala mais do assunto, porque uma menção de passagem pesa menos que a nota inteira. Um caso real mudou a regra: na Brasal, "(não auditado)" é o rótulo das colunas de 2021 em quase todas as notas, e não um assunto; por isso pesa pouco e não puxa a página sozinho. As tabelas ficam de fora, porque os números já vêm da extração.
+
+## 13. O analista escreve com as palavras dele, e o código confere
+
+Na análise qualitativa, a IA precisa escrever frases, e não copiar números. Por isso o código confere duas coisas em cada frase. A primeira é o trecho: toda frase vem com a citação da API, e a frase sem trecho aparece marcada no relatório. A segunda são os números: cada número da frase precisa estar no trecho citado ou no resumo de números já conferidos pela solução, com 1% de folga para arredondamento ("R$ 5,7 bilhões" bate com "5.672.203" em milhares). O número que não bate fica marcado como "sem fonte conferida". Três regras de leitura vão no pedido, porque são os erros mais prováveis: guidance é meta explícita, e plano sem meta é perspectiva; problema de um cliente não é problema da empresa (na Light, a recuperação judicial citada é da SuperVia); texto padrão do parecer não é fato da empresa. Se há relatório da administração quem decide é o código, pelo roteamento, e não a IA.
+
+## 14. O agente de perguntas usa ferramentas, e a fonte vem da API
+
+A autonomia de agente fica nas perguntas livres, como diz a decisão 1. O agente tem três ferramentas: os indicadores conferidos, a análise qualitativa e uma busca nas páginas dos PDFs. Ele decide o que chamar, e pode chamar várias de uma vez. As ferramentas devolvem o resultado como "resultado de busca" da API, com a citação ligada. Assim, cada frase da resposta final volta com o documento, as páginas e o trecho exato, sem a IA escrever a fonte. Os números chegam prontos, com o rótulo "calculado pela solução" quando for o caso: o agente compara, mas não faz conta. A conversa tem limite de 8 rodadas, e o raciocínio da IA volta inteiro para a API a cada rodada, como a API exige no uso de ferramentas. Cada rodada é gravada à parte, então o replay refaz a conversa inteira sem chamar a API.
+
+## 15. Cache automático nas perguntas
+
+Cada rodada do agente reenvia a conversa anterior inteira. Com o cache automático da API, o começo da conversa é lido do cache a US$ 0,20 por milhão de tokens, em vez de US$ 4. Se a plataforma não aceitar o cache automático, a conversa segue sem ele, só mais cara. O mesmo vale para o limite de taxa: o cliente tenta de novo até 6 vezes, e o que já deu certo fica gravado, então rodar de novo continua de onde parou.
+
+## 16. Busca por palavra, sem banco de vetores
+
+São 3 documentos e 217 páginas com texto. A busca BM25, escrita em poucas linhas e sem biblioteca, acha "covenants", "risco de liquidez" e "continuidade operacional" na página certa, e dá para explicar por que uma página ganhou. Um caso real mostrou um ajuste necessário: buscando "recuperação judicial", a melhor página era uma nota da Brasal sobre recuperação de créditos e decisão judicial. Contando também os pares de palavras vizinhas, as primeiras passaram a ser as p. 48 e 49 da Light, onde está o caso da SuperVia. Em produção, com milhares de documentos, o lugar disso é o Azure AI Search, com busca por palavra, por vetor e reranqueamento.
+
+## 17. O relatório é montado em código
+
+A IA não escreve o relatório. A tabela, os números, os alertas e o resumo executivo saem dos dados conferidos, então o relatório não tem como inventar um número. O texto da IA só entra onde ela já trabalhou com citação: a análise qualitativa e as respostas, sempre com a página ao lado. Cada célula da tabela tem um selo: informado e conferido, calculado pela solução, com alerta, ou não encontrado. Todo texto que veio do PDF ou da IA passa por escape, porque texto de PDF dentro de HTML é uma porta para injeção.
+
+## 18. A avaliação também confere a análise e as respostas
+
+A extração é avaliada número a número contra o gabarito. A análise qualitativa e as 5 respostas não têm um valor exato, então a checagem é aproximada, por palavras: o tom certo, o guidance "não encontrado", os fatos que precisam aparecer (como a compra da Alibra no meio de 2021) e o erro que não pode aparecer (a recuperação judicial da cliente atribuída à Light). É grosseira de propósito: pega o erro grande, e não dá nota de redação. Nas armadilhas, uma observação da IA só conta se falar do assunto da armadilha, e não só por cair na mesma página.

@@ -323,7 +323,8 @@
     9,
     20,
     23
-   ]
+   ],
+   "campo": "ebitda"
   },
   {
    "regra": "V9",
@@ -332,7 +333,8 @@
    "mensagem": "Com EBITDA de R$ -1.179,6 mi, dívida líquida ÷ EBITDA não tem sentido. O múltiplo informado (3,32x) usa outra definição de EBITDA.",
    "paginas": [
     10
-   ]
+   ],
+   "campo": "alavancagem"
   },
   {
    "regra": "V10",
@@ -342,7 +344,8 @@
    "paginas": [
     10,
     20
-   ]
+   ],
+   "campo": "lucro_liquido"
   },
   {
    "regra": "V11",
@@ -351,7 +354,8 @@
    "mensagem": "O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto.",
    "paginas": [
     10
-   ]
+   ],
+   "campo": "alavancagem"
   },
   {
    "regra": "V16",
@@ -360,7 +364,8 @@
    "mensagem": "Cabeçalho com 2021 repetido no lugar de 2022: '2022 | 2021 | 2021 | 2021'. Confira de qual ano é cada coluna.",
    "paginas": [
     21
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "V16",
@@ -369,7 +374,8 @@
    "mensagem": "Cabeçalho com ano malformado (20212): '31.12.20212 | 31.12.2021'.",
    "paginas": [
     65
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "V16",
@@ -378,7 +384,8 @@
    "mensagem": "Cabeçalho só com 2021, numa demonstração de 2022: '31.12.2021 | 31.12.2021'. Confira se a tabela é do ano certo.",
    "paginas": [
     98
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "V16",
@@ -387,7 +394,8 @@
    "mensagem": "Cabeçalho só com 2021, numa demonstração de 2022: '31.12.2021 | 31.12.2021 | 31.12.2021'. Confira se a tabela é do ano certo.",
    "paginas": [
     98
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "V16",
@@ -396,7 +404,8 @@
    "mensagem": "Cabeçalho só com 2021, numa demonstração de 2022: '31.12.2021 | 31.12.2021 | 31.12.2021'. Confira se a tabela é do ano certo.",
    "paginas": [
     99
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -405,7 +414,8 @@
    "mensagem": "O texto sobre a alavancagem atribui os dois múltiplos ao ano de 2021: O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O parágrafo trata da posição em 31/12/2022, por isso usei 3,32x como atual e 3,48x como anterior. Essa atribuição deve ser confirmada.",
    "paginas": [
     10
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -414,7 +424,8 @@
    "mensagem": "O EBITDA da distribuidora é incoerente. O texto diz que o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1.179 milhões apurados em 2021. O valor de 2022 aparece maior que o de 2021, embora o texto fale em redução. Os números parecem trocados.",
    "paginas": [
     8
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -424,7 +435,8 @@
    "paginas": [
     10,
     20
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -433,7 +445,8 @@
    "mensagem": "A unidade de energia da Light Energia é inconsistente. A tabela está em MWm, mas o texto diz que o volume de venda no ACL foi de 459 MWh, +0,9% se comparado a 2021 e a compra no ACL foi de 35 MWh.",
    "paginas": [
     8
-   ]
+   ],
+   "campo": null
   }
  ]
 }

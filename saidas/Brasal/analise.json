@@ -1,0 +1,603 @@
+{
+ "documento": "Brasal.pdf",
+ "paginas_enviadas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  42,
+  43,
+  44,
+  45,
+  46,
+  48,
+  49,
+  50,
+  51
+ ],
+ "tem_relatorio_administracao": false,
+ "paginas_administracao": [],
+ "motivos": [
+  {
+   "texto": "Segundo as notas explicativas, o lucro caiu principalmente pela base forte de 2021. Naquele ano, a controlada registrou um crédito de PIS e COFINS de uma ação judicial ganha: A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes do trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a tese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719. Em 2022 esse efeito quase sumiu: Créditos extemporâneos (i) | - | - | 231 | 105.633.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes\ndo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a\ntese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,"
+    },
+    {
+     "pagina": 46,
+     "trecho": "Créditos extemporâneos (i) | - | - | 231 | 105.633"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo as notas explicativas, o resultado financeiro também caiu muito. A atualização monetária daquele crédito encolheu: Variação monetária ativa (i) | 9.392 | 67.851. O ajuste a valor presente do incentivo também: Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453. No total, 29.541 | 116.653.",
+   "evidencias": [
+    {
+     "pagina": 45,
+     "trecho": "Variação monetária ativa (i) | 9.392 | 67.851"
+    },
+    {
+     "pagina": 45,
+     "trecho": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453"
+    },
+    {
+     "pagina": 45,
+     "trecho": "29.541 | 116.653"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "As notas explicativas mostram que a receita subiu nas duas linhas principais, fabricação própria e revenda: Venda de produtos | 1.036.873 | 859.621 Revenda de mercadorias | 952.648 | 768.413. A subvenção de ICMS também ajudou a receita líquida: (+ ) ICMS – Subvenção | 62.281 | 38.038. As notas não explicam se a alta veio de preço ou de volume.",
+   "evidencias": [
+    {
+     "pagina": 43,
+     "trecho": "Venda de produtos | 1.036.873 | 859.621\nRevenda de mercadorias | 952.648 | 768.413"
+    },
+    {
+     "pagina": 43,
+     "trecho": "(+ ) ICMS – Subvenção | 62.281 | 38.038"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo as notas explicativas, as despesas comerciais subiram e pressionaram o resultado. O destaque foi marketing: Marketing | (48.260) | (35.897). O total foi de (122.239) | (99.850). As despesas logísticas também subiram: (71.313) | (60.026).",
+   "evidencias": [
+    {
+     "pagina": 44,
+     "trecho": "Marketing | (48.260) | (35.897)"
+    },
+    {
+     "pagina": 44,
+     "trecho": "(122.239) | (99.850)"
+    },
+    {
+     "pagina": 44,
+     "trecho": "(71.313) | (60.026)"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Para o caixa, as notas explicativas mostram que boa parte do crédito de PIS e COFINS foi compensada em 2022: compensação no exercício de 2022 de aproximadamente 61,1%. O saldo a recuperar caiu: PIS e COFINS (excluisão ICMS da base) (i) | - | - | 65.713 | 126.262. Ligar essa compensação à alta do caixa operacional é inferência minha, e o documento não diz isso.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de"
+    },
+    {
+     "pagina": 28,
+     "trecho": "PIS e COFINS (excluisão ICMS da base) (i) | - | - | 65.713 | 126.262"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo as notas explicativas, houve dois efeitos pontuais no outro resultado operacional. Uma perda pesou: Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623). Um ganho ajudou: Lucro na venda de permanente | - | - | 10.712 | 3.408.",
+   "evidencias": [
+    {
+     "pagina": 46,
+     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)"
+    },
+    {
+     "pagina": 46,
+     "trecho": "Lucro na venda de permanente | - | - | 10.712 | 3.408"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "riscos": [
+  {
+   "texto": "A compensação dos créditos fiscais andou mais devagar que o plano. O motivo citado foi uma retração no crescimento esperado para o 4º. Semestre de 2022, ficando abaixo um pouco das metas estabelecidas.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "de PIS e COFINS, em função de uma retração no crescimento esperado para o 4º.\nSemestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A operação depende de contratos com prazo definido com os donos das marcas: A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF.",
+   "evidencias": [
+    {
+     "pagina": 12,
+     "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a\nCervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF,"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O incentivo fiscal tem condições a cumprir: A Controlada condiciona-se ao cumprimento de obrigações como manutenção de empregos e regularidade fiscal.",
+   "evidencias": [
+    {
+     "pagina": 12,
+     "trecho": "o ICMS apurado das saídas de produtos de fabricação própria. A Controlada condiciona-se ao\ncumprimento de obrigações como manutenção de empregos e regularidade fiscal, além do"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O crédito a clientes é o principal risco citado: O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes. Os títulos vencidos subiram: 15.668 | 12.185. A perda também subiu: perda com créditos no exercício de 2022 no valor de R$ 3.604 (R$1.631 em 31 de dezembro de 2021).",
+   "evidencias": [
+    {
+     "pagina": 49,
+     "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes."
+    },
+    {
+     "pagina": 27,
+     "trecho": "15.668 | 12.185"
+    },
+    {
+     "pagina": 27,
+     "trecho": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$\n3.604 (R$1.631 em 31 de dezembro de 2021)."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O preço da matéria-prima oscila, sobretudo o do açúcar, e a empresa usa futuros: Para mitigar os riscos de preços causados pelas oscilações do mercado dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe de uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities.",
+   "evidencias": [
+    {
+     "pagina": 17,
+     "trecho": "localização atuais. Para mitigar os riscos de preços causados pelas oscilações do mercado\ndos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe\nde uma política de uso de operações com futuros para minimizar a exposição líquida de\nestoque de commodities."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Há mútuos com partes ligadas ao controlador: Mútuos diversos – Participações S.A | - | - | 20.542 | 50.285. Os juros são de 100% a 103,5%% CDI, com datas de vencimento até 2023.",
+   "evidencias": [
+    {
+     "pagina": 30,
+     "trecho": "Mútuos diversos – Participações S.A | - | - | 20.542 | 50.285"
+    },
+    {
+     "pagina": 30,
+     "trecho": "Financeira (IOF) e juros a taxa de 100% a 103,5%% CDI, com datas de vencimento até 2023."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "guidance": [
+  {
+   "texto": "A empresa projeta concluir a compensação dos créditos fiscais com prazo definido: o restante de 38,9% deverá acontecer até julho de 2023.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de\n38,9% deverá acontecer até julho de 2023."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "guidance_status": "encontrado",
+ "perspectivas": [
+  {
+   "texto": "A empresa vai acompanhar seus processos depois da decisão do STF sobre coisa julgada: manterá o monitoramento permanente de todos os seus processos, considerando a referida decisão.",
+   "evidencias": [
+    {
+     "pagina": 51,
+     "trecho": "impactos para estas demonstrações financeiras. No entanto manterá o monitoramento\npermanente de todos os seus processos, considerando a referida decisão."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O lucro não distribuído foi para reserva, sujeita à assembleia: O lucro excedente não distribuído foi destinado à constituição da reserva de rentençao de lucro, a qual será enviada para aprovação da Assembleia Geral Ordinária (AGO).",
+   "evidencias": [
+    {
+     "pagina": 42,
+     "trecho": "O lucro excedente não distribuído foi destinado à constituição da reserva de rentençao de lucro, a\nqual será enviada para aprovação da Assembleia Geral Ordinária (AGO), em conformidade com as"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A empresa ainda avalia efeitos da nova norma sobre seus empréstimos: Atualmente, a Companhia avalia o impacto que as alterações terão na prática atual e se os contratos de empréstimo existentes podem exigir renegociação.",
+   "evidencias": [
+    {
+     "pagina": 23,
+     "trecho": "ser aplicadas retrospectivamente. Atualmente, a Companhia avalia o impacto que as\nalterações terão na prática atual e se os contratos de empréstimo existentes podem exigir\nrenegociação."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "eventos": [
+  {
+   "texto": "O capital foi aumentado com reservas: Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado um aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000.",
+   "evidencias": [
+    {
+     "pagina": 42,
+     "trecho": "Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado um\naumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A holding pagou dividendos relevantes: Dividendos pagos no exercício | (206.000) | -. Ela também recebeu lucros da controlada: Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099.",
+   "evidencias": [
+    {
+     "pagina": 42,
+     "trecho": "Dividendos pagos no exercício | (206.000) | -"
+    },
+    {
+     "pagina": 32,
+     "trecho": "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Houve baixa grande de vasilhames e garrafeiras no imobilizado: Vasilhames e garrafeiras | 78.808 | 14.021 | (41.987) | - | 50.842.",
+   "evidencias": [
+    {
+     "pagina": 34,
+     "trecho": "Vasilhames e garrafeiras | 78.808 | 14.021 | (41.987) | - | 50.842"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O investimento na Leão perdeu valor contábil: Leão Alimentos e Bebidas Ltda. (i) | - | - | 13.910 | 22.834.",
+   "evidencias": [
+    {
+     "pagina": 31,
+     "trecho": "Leão Alimentos e Bebidas Ltda. (i) | - | - | 13.910 | 22.834"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Evento subsequente: decisão do STF sobre coisa julgada em tributos. A Administração em conjunto com os assessores jurídicos da Companhia não identificou impactos para estas demonstrações financeiras.",
+   "evidencias": [
+    {
+     "pagina": 51,
+     "trecho": "A Administração em conjunto com os assessores jurídicos da Companhia não identificou\nimpactos para estas demonstrações financeiras. No entanto manterá o monitoramento"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "comparabilidade": [
+  {
+   "texto": "O ano anterior não foi auditado: As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31 de dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por outro auditor independente.",
+   "evidencias": [
+    {
+     "pagina": 3,
+     "trecho": "As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31\nde dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por\noutro auditor independente."
+    }
+   ],
+   "fontes": [
+    "auditor"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O ano de 2021 tem um ganho não recorrente grande, o crédito de PIS e COFINS. Ele foi registrado em contra partida às rubricas de outras receitas (despesas) operacionais, líquidas e resultado financeiro, líquido, nos montantes de R$ 100.875 e 67.844 respectivamente.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "registrados nas rubricas de tributos a recuperar em contra partida às rubricas de outras\nreceitas (despesas) operacionais, líquidas e resultado financeiro, líquido, nos montantes\nde R$ 100.875 e 67.844 respectivamente."
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O ajuste a valor presente do incentivo governamental foi grande em 2021 e pequeno em 2022: Ajuste a valor presente referente às liberações | (770) | (36.453).",
+   "evidencias": [
+    {
+     "pagina": 37,
+     "trecho": "Ajuste a valor presente referente às liberações | (770) | (36.453)"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O ano de 2022 tem um ganho pontual com venda de ativos: Lucro na venda de permanente | - | - | 10.712 | 3.408.",
+   "evidencias": [
+    {
+     "pagina": 46,
+     "trecho": "Lucro na venda de permanente | - | - | 10.712 | 3.408"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "tom": "nao_aplicavel",
+ "justificativa_tom": {
+  "texto": "Não há texto da administração comentando o resultado. O índice traz só o parecer, Demonstrações financeiras individuais e consolidadas auditadas e Notas explicativas às demonstrações financeiras individuais e consolidadas.",
+  "evidencias": [
+   {
+    "pagina": 2,
+    "trecho": "Demonstrações financeiras individuais e consolidadas auditadas"
+   },
+   {
+    "pagina": 2,
+    "trecho": "Notas explicativas às demonstrações financeiras individuais e consolidadas .................................... 11"
+   }
+  ],
+  "fontes": [
+   "outros"
+  ],
+  "conferido": true,
+  "numeros_sem_fonte": []
+ },
+ "observacoes": [
+  {
+   "texto": "A equivalência patrimonial de 2022 diverge entre tabelas. Uma traz Brasal Refrigerantes S/A | 100,00% | 411.101 | 177.244 | 411.099 | 177.244. A movimentação mostra 157.810.",
+   "evidencias": [
+    {
+     "pagina": 32,
+     "trecho": "Brasal Refrigerantes S/A | 100,00% | 411.101 | 177.244 | 411.099 | 177.244"
+    },
+    {
+     "pagina": 32,
+     "trecho": "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "As provisões judiciais por natureza não batem entre o resumo e a movimentação. O resumo traz Ações tributárias | 337 | 35 Ações trabalhistas | 2.485 | 1.036. A movimentação traz Tributárias | 35 | 719 | (130) | 608 Trabalhistas | 1.036 | 2.423 | (959) | 2.214.",
+   "evidencias": [
+    {
+     "pagina": 40,
+     "trecho": "Ações tributárias | 337 | 35\nAções trabalhistas | 2.485 | 1.036"
+    },
+    {
+     "pagina": 40,
+     "trecho": "Tributárias | 35 | 719 | (130) | 608\nTrabalhistas | 1.036 | 2.423 | (959) | 2.214"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O número de ações é incoerente. O aumento de capital foi feito sem emissão de novas ações, mas o total passa de 3.256.699 ações ordinárias para 1.374.240 ações ordinárias.",
+   "evidencias": [
+    {
+     "pagina": 42,
+     "trecho": "aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem"
+    },
+    {
+     "pagina": 42,
+     "trecho": "31 de dezembro de 2021 era de R$94.000 divididos em 3.256.699 ações ordinárias,"
+    },
+    {
+     "pagina": 42,
+     "trecho": "integralizado ao valor de R$154.000 correspondente ao total de 1.374.240 ações ordinárias,"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O resumo da controlada, uma fabricante de bebidas, usa um rótulo errado: Custos dos imóveis vendidos | (839;903) | (672.960).",
+   "evidencias": [
+    {
+     "pagina": 25,
+     "trecho": "Custos dos imóveis vendidos | (839;903) | (672.960)"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A análise de sensibilidade traz o ano errado: Cenário Provável para os 12 meses de 2020 (Cenário I). Além disso, os cenários \"adversos\" da dívida reduzem a taxa e a despesa, em vez de aumentá-las: Taxa sujeita à variação | 12,40% | 9,30% | 6,20% Despesa financeira projetada | (424) | (318) | (212).",
+   "evidencias": [
+    {
+     "pagina": 49,
+     "trecho": "de 2022, definimos o Cenário Provável para os 12 meses de 2020 (Cenário I). A partir do Cenário"
+    },
+    {
+     "pagina": 50,
+     "trecho": "Taxa sujeita à variação | 12,40% | 9,30% | 6,20%\nDespesa financeira projetada | (424) | (318) | (212)"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Os percentuais de participação nas investidas divergem entre notas. Uma traz Leão Alimentos e Bebidas Ltda. | Coligada | 2,24% | 2,24% Trop Frutas do Brasil Ltda. | Coligada | 1,82% | 1,82%. Outra traz Leão Alimentos e Bebidas Ltda. (i) | 2,25% | 13.910 | 22.834 Trop Frutas do Brasil Ltda. (ii) | 1,83% | 3.464 | 4.132.",
+   "evidencias": [
+    {
+     "pagina": 24,
+     "trecho": "Leão Alimentos e Bebidas Ltda. | Coligada | 2,24% | 2,24%\nTrop Frutas do Brasil Ltda. | Coligada | 1,82% | 1,82%"
+    },
+    {
+     "pagina": 31,
+     "trecho": "Leão Alimentos e Bebidas Ltda. (i) | 2,25% | 13.910 | 22.834\nTrop Frutas do Brasil Ltda. (ii) | 1,83% | 3.464 | 4.132"
+    }
+   ],
+   "fontes": [
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "nao_encontrados": [
+  "justificativa_tom"
+ ],
+ "completa": true,
+ "uso": {
+  "modelo": "claude-opus-5-5",
+  "tokens_entrada": 70048,
+  "tokens_saida": 7225,
+  "custo_usd": 0.424692,
+  "segundos": 59.75,
+  "gravada": true,
+  "tokens_cache_lidos": 0
+ }
+}

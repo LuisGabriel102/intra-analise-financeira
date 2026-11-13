@@ -44,9 +44,29 @@ ASSUNTOS = {
     "contexto": r"contexto operacional",
     "nao_auditado": r"n[ãa]o (?:foram |foi )?auditad",
     "perspectivas": r"perspectivas?|guidance|pr[óo]ximos? (?:anos?|exerc[íi]cios?)",
+    "ressalva": r"incerteza significativa|par[áa]grafo de [êe]nfase|base para opini[ãa]o com ressalva|opini[ãa]o adversa",
+    "covenants": r"covenants?|vencimento antecipado|\brating|rebaixamento|descumprimento",
+    "venda_de_ativos": r"mantidos? para venda|aliena[çc][ãa]o d[aoe] (?:participa|ativo|investimento|controlad)|desinvestimento",
+    "reestruturacao": r"reestrutura[çc]",
+    "mudanca_contabil": r"mudan[çc]as? (?:de|na|nas) (?:pol[íi]ticas?|pr[áa]ticas?|estimativas?) cont[áa]be?is|reapresenta[çc]",
 }
 
+# Análise qualitativa: prioridade de cada assunto (menor = mais importante).
+PRIORIDADE = {
+    # 1: o que muda a leitura do resultado
+    "ressalva": 1, "eventos_subsequentes": 1, "contexto": 1, "aquisicao": 1, "venda_de_ativos": 1,
+    "reestruturacao": 1, "segmento": 1,
+    # 2: riscos e dívida
+    "riscos": 2, "covenants": 2, "mudanca_contabil": 2,
+    # 3: aparecem demais para pesar sozinhos: texto padrão do parecer, rótulo "(não auditado)" nas tabelas
+    "contingencias": 3, "perspectivas": 3, "continuidade": 3, "nao_auditado": 3,
+}
+# Orçamento do analista, em caracteres por documento (uns 50 a 70 mil tokens).
+# Documento pequeno vai quase inteiro; documento grande vai pelas prioridades.
+LIMITE_ANALISE = 90_000
+
 DEMONSTRACOES = {"dre", "balanco", "dfc", "dmpl"}
+TABELAS = DEMONSTRACOES | {"abrangente", "dva"}  # o analista não lê tabelas: os números vêm da extração
 
 
 @dataclass
@@ -103,10 +123,45 @@ def rotear(documento: Documento) -> Rotas:
             rotas.extracao.append(n)
         elif tipo in {"notas", "outros"} and assuntos & {"divida_liquida", "gestao_capital", "ebitda"}:
             rotas.extracao.append(n)  # páginas de nota sem cabeçalho caem em "outros"
-        # Analista: o texto da administração, o auditor e as notas de contexto e risco.
-        if tipo in {"relatorio_adm", "auditor"}:
-            rotas.analise.append(n)
-        elif assuntos & {"continuidade", "eventos_subsequentes", "riscos", "contingencias",
-                         "aquisicao", "contexto", "segmento", "perspectivas"}:
-            rotas.analise.append(n)
+    rotas.analise = _paginas_da_analise(documento, rotas)
     return rotas
+
+
+def prioridade_na_analise(tipo: str, assuntos: set[str]) -> int | None:
+    """0 = relatório da administração; 1 a 3 = pelos assuntos; 4 = outras notas; None = fica de fora."""
+    if tipo in TABELAS:
+        return None
+    if tipo == "relatorio_adm":
+        return 0
+    niveis = [PRIORIDADE[a] for a in assuntos if a in PRIORIDADE]
+    if tipo == "auditor":
+        niveis.append(1)  # o parecer: opinião, ênfase, ressalva
+    if niveis:
+        return min(niveis)
+    return 4 if tipo in {"notas", "outros"} else None
+
+
+def _paginas_da_analise(documento: Documento, rotas: Rotas) -> list[int]:
+    """Analista: o texto da administração e, por prioridade, as notas que mudam a leitura do resultado.
+
+    As demonstrações (tabelas) ficam de fora: os números já vêm da extração.
+    Na mesma prioridade, vem antes a página que fala mais dos assuntos importantes
+    (uma menção de passagem pesa menos que a nota inteira sobre o assunto).
+    Para no orçamento de caracteres, para o custo não crescer com o tamanho do PDF.
+    """
+    candidatas = []
+    for n, tipo in rotas.tipos.items():
+        nivel = prioridade_na_analise(tipo, rotas.assuntos[n])
+        if nivel is not None and documento.pagina(n).linhas:  # página escaneada, sem texto, não vai
+            texto = documento.pagina(n).texto.lower()
+            peso = sum(min(len(re.findall(ASSUNTOS[a], texto)), 5)
+                       for a in rotas.assuntos[n] if PRIORIDADE.get(a, 9) <= 2)
+            candidatas.append((nivel, -peso, n))
+    escolhidas, total = [], 0
+    for _, _, n in sorted(candidatas):
+        tamanho = len(documento.pagina(n).texto)
+        if total + tamanho > LIMITE_ANALISE:
+            continue
+        escolhidas.append(n)
+        total += tamanho
+    return sorted(escolhidas)

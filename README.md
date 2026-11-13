@@ -9,9 +9,11 @@ Lê demonstrações financeiras em PDF, extrai os indicadores com a página e o 
 ```bash
 python -m venv .venv
 .venv/Scripts/python -m pip install -e ".[dev]"     # no Linux/Mac: .venv/bin/python
-.venv/Scripts/python -m analise_financeira extrair --replay   # usa as respostas gravadas: sem chave e sem custo
-.venv/Scripts/python -m analise_financeira avaliar            # compara com o gabarito
+.venv/Scripts/python -m analise_financeira analisar --replay   # tudo, com as respostas gravadas: sem chave e sem custo
+.venv/Scripts/python -m analise_financeira avaliar             # compara com o gabarito
 .venv/Scripts/python -m pytest -q
 ```
 
-Para chamar a IA de verdade, copie `.env.example` para `.env`, preencha a `ANTHROPIC_API_KEY` e rode `extrair` sem o `--replay`.
+O comando `analisar` faz a extração, a análise qualitativa, as 5 perguntas do desafio e o relatório (`saidas/relatorio.md`). Para uma pergunta livre: `python -m analise_financeira perguntar "Qual empresa tem mais caixa?"`.
+
+Para chamar a IA de verdade, copie `.env.example` para `.env`, preencha a `ANTHROPIC_API_KEY` e rode sem o `--replay`.

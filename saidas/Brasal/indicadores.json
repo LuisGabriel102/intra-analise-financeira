@@ -251,7 +251,8 @@
     7,
     8,
     11
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -260,7 +261,8 @@
    "mensagem": "O valor de empréstimos_total_atual (3.417) vem da tabela de instrumentos financeiros da nota 25. Não é uma linha de total do balanço, que separa o circulante (Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902) do não circulante (Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576).",
    "paginas": [
     7
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -270,7 +272,8 @@
    "paginas": [
     7,
     11
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -280,7 +283,8 @@
    "paginas": [
     6,
     11
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -290,7 +294,8 @@
    "paginas": [
     7,
     48
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -300,7 +305,8 @@
    "paginas": [
     8,
     11
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -309,7 +315,8 @@
    "mensagem": "O título da linha de investimentos diz \"aplicado\", mas os valores do consolidado de 2021 e da controladora são positivos: Caixa líquido aplicado nas atividades de investimentos | 236.478 | 88.754 | (15.764) | 13.161.",
    "paginas": [
     11
-   ]
+   ],
+   "campo": null
   }
  ]
 }

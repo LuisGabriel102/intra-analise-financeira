@@ -1,0 +1,23 @@
+{
+ "blocos": [
+  {
+   "id": "toolu_01EpewMEbGfPitnqhy9tBoP1",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "empresa": "todas"
+   },
+   "name": "indicadores",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 4,
+ "tokens_saida": 51,
+ "tokens_cache": 0,
+ "segundos": 1.48,
+ "gravada": false,
+ "tokens_cache_escrita": 1754,
+ "parada": "tool_use"
+}

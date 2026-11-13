@@ -298,7 +298,8 @@
    "paginas": [
     7,
     9
-   ]
+   ],
+   "campo": "lucro_liquido"
   },
   {
    "regra": "V13",
@@ -308,7 +309,8 @@
    "paginas": [
     6,
     42
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "V15",
@@ -317,7 +319,8 @@
    "mensagem": "Aprovação em 14/03/2022, antes do fim do exercício (31/12/2022). Provável ano errado.",
    "paginas": [
     12
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "V16",
@@ -326,7 +329,8 @@
    "mensagem": "Cabeçalho com 2021 repetido no lugar de 2022: '31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021'. Confira de qual ano é cada coluna.",
    "paginas": [
     42
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -335,7 +339,8 @@
    "mensagem": "Na DFC, o texto da linha do caixa operacional está quebrado. O valor 24.799 aparece separado dos demais (Caixa liquido gerado pelas (consumido nas) | 24.799 / (317) | (860) | (14.293)). Atribuí 24.799 ao consolidado de 2022 e (14.293) ao consolidado de 2021 pela ordem das colunas. Vale conferir no PDF original. As linhas de investimento e de financiamento têm o mesmo deslocamento.",
    "paginas": [
     10
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -345,7 +350,8 @@
    "paginas": [
     7,
     9
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -355,7 +361,8 @@
    "paginas": [
     6,
     42
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -365,7 +372,8 @@
    "paginas": [
     6,
     10
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -375,7 +383,8 @@
    "paginas": [
     7,
     10
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -384,7 +393,8 @@
    "mensagem": "Na nota 22.3, o cabeçalho repete o ano nas colunas da controladora: 31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021. O total de ativos financeiros consolidado de 2022 também parece incoerente com os itens listados: Total | 358 | 871 | 10.352 | 78.755.",
    "paginas": [
     42
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -393,7 +403,8 @@
    "mensagem": "Os empréstimos de 2021 aparecem com valores diferentes na mesma nota: Total dos empréstimos com terceiros | 24.176 | 25.072 e Empréstimos e Financiamentos | - | - | 24.176 | 25.075.",
    "paginas": [
     42
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -402,7 +413,8 @@
    "mensagem": "O único índice de endividamento informado não usa EBITDA, por isso não o usei como alavancagem: Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11.",
    "paginas": [
     42
-   ]
+   ],
+   "campo": null
   },
   {
    "regra": "IA",
@@ -411,7 +423,8 @@
    "mensagem": "O lucro dos controladores não aparece com esse nome. Usei a segunda linha \"Lucro líquido do exercício\", que vem depois da dedução da Participação acionistas de minoritários.",
    "paginas": [
     7
-   ]
+   ],
+   "campo": null
   }
  ]
 }

@@ -86,6 +86,14 @@ _PRIORIDADE_FONTE = {**{t: 0 for t in DEMONSTRACOES}, "notas": 1, "outros": 1, "
 
 
 def montar_conteudo(documento: Documento, paginas: list[int], rotas: Rotas) -> list[dict]:
+    """As páginas citáveis e, no fim, o pedido com a lista de campos."""
+    conteudo = paginas_citaveis(documento, paginas, rotas)
+    lista = "\n".join(f"- {nome}: {descricao}" for nome, descricao in CAMPOS.items())
+    conteudo.append({"type": "text", "text": PEDIDO.format(lista=lista, nao=NAO_ENCONTRADO)})
+    return conteudo
+
+
+def paginas_citaveis(documento: Documento, paginas: list[int], rotas: Rotas) -> list[dict]:
     """Uma página por documento; uma linha da página por bloco citável."""
     conteudo = []
     for n in paginas:
@@ -98,8 +106,6 @@ def montar_conteudo(documento: Documento, paginas: list[int], rotas: Rotas) -> l
             "context": f"Tipo da página: {rotas.tipos.get(n, 'outros')}. Escala das tabelas: {escala}.",
             "citations": {"enabled": True},
         })
-    lista = "\n".join(f"- {nome}: {descricao}" for nome, descricao in CAMPOS.items())
-    conteudo.append({"type": "text", "text": PEDIDO.format(lista=lista, nao=NAO_ENCONTRADO)})
     return conteudo
 
 
@@ -120,7 +126,7 @@ def montar_linhas(blocos: list[dict]) -> list[tuple[str, list[dict]]]:
     return linhas
 
 
-def _evidencias(citacoes: list[dict], documento: Documento, paginas: list[int]) -> list[Evidencia]:
+def recortar_evidencias(citacoes: list[dict], documento: Documento, paginas: list[int]) -> list[Evidencia]:
     """Troca cada citação pelas linhas do PDF que ela aponta."""
     evidencias = []
     for c in citacoes:
@@ -166,7 +172,7 @@ def ler_resposta(resposta: Resposta, documento: Documento, paginas: list[int], r
             continue
         nome, valor = (s.strip() for s in texto.split(":", 1))
         nome = nome.strip("*`- ").lower()
-        evidencias = _evidencias(citacoes, documento, paginas)
+        evidencias = recortar_evidencias(citacoes, documento, paginas)
         if nome == "observacao":
             observacoes.append(Ocorrencia(texto=valor, evidencias=evidencias, conferido=bool(evidencias)))
         elif nome in CAMPOS:

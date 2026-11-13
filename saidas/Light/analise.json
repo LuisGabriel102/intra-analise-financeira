@@ -1,0 +1,674 @@
+{
+ "documento": "Light.pdf",
+ "paginas_enviadas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  25,
+  26,
+  28,
+  34,
+  37,
+  45,
+  46,
+  58,
+  60,
+  101,
+  107,
+  109,
+  111,
+  112,
+  118
+ ],
+ "tem_relatorio_administracao": true,
+ "paginas_administracao": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "motivos": [
+  {
+   "texto": "Segundo a administração, o prejuízo veio sobretudo da Distribuição. Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões abaixo em relação ao ano anterior. Essa retração ocorreu, principalmente, no segmento de Distribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devolução de créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, que totalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões.",
+   "evidencias": [
+    {
+     "pagina": 10,
+     "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões\nabaixo em relação ao ano anterior. Essa retração ocorreu, principalmente, no segmento de\nDistribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devolução\nde créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, que\ntotalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no\nvalor de -R$1.634 milhões."
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo a administração, o EBITDA caiu por causa de provisões. Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001 milhões se comparado a 2021. Essa retração foi devida, principalmente, a provisões de -R$2.513 milhões no período, sendo referentes, em especial, ao reconhecimento de provisão para devolução de créditos de PIS/COFINS aos consumidores, conforme Lei 14.385/22 (-R$1.081 milhões), revisões nas metodologias e estimativas de PECLD (-R$855 milhões) e de provisões para contingências JEC e Cível (-R$379 milhões).",
+   "evidencias": [
+    {
+     "pagina": 9,
+     "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001\nmilhões se comparado a 2021. Essa retração foi devida, principalmente, a provisões de -\nR$2.513 milhões no período, sendo referentes, em especial, ao reconhecimento de provisão"
+    },
+    {
+     "pagina": 10,
+     "trecho": "para devolução de créditos de PIS/COFINS aos consumidores, conforme Lei 14.385/22 (-\nR$1.081 milhões), revisões nas metodologias e estimativas de PECLD (-R$855 milhões) e de\nprovisões para contingências JEC e Cível (-R$379 milhões)."
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo a administração, a receita caiu por estornos, pela falta de bandeiras e pela CVA. A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA",
+   "evidencias": [
+    {
+     "pagina": 9,
+     "trecho": "A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022\nR$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos\nestornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e\npela variação negativa na conta CVA, que é uma compensação para cobertura dos custos\ncom a Parcela A."
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo a administração, a inadimplência piorou. O índice de arrecadação total média móvel 12 meses em dezembro/22 atingiu 96,0%, 1,4 p.p. abaixo da apresentada em dezembro/21 (97,4%). O resultado verificado decorreu da piora do indicador para os segmentos Grandes Clientes Privados e Poder Público. A PECLD subiu refletindo a abertura da curva de inadimplência verificada ao longo de 2022.",
+   "evidencias": [
+    {
+     "pagina": 7,
+     "trecho": "O índice de arrecadação total média móvel 12 meses em dezembro/22 atingiu 96,0%, 1,4\np.p. abaixo da apresentada em dezembro/21 (97,4%). O resultado verificado decorreu da\npiora do indicador para os segmentos Grandes Clientes Privados e Poder Público."
+    },
+    {
+     "pagina": 7,
+     "trecho": "3,3% | refletindo a abertura da curva de inadimplência\nverificada ao longo de 2022."
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Segundo a administração, o mercado faturado encolheu. Em 2022, o mercado faturado total apresentou uma queda de 0,4% em relação ao mesmo período do ano anterior. Essa retração é decorrente, em especial, do menor consumo médio de residências, com a retomada de atividades externas após o período mais crítico da Pandemia, e da atividade do setor siderúrgico, que passa por um momento de menor demanda global.",
+   "evidencias": [
+    {
+     "pagina": 5,
+     "trecho": "Em 2022, o mercado faturado total apresentou uma queda de 0,4% em relação ao mesmo\nperíodo do ano anterior. Essa retração é decorrente, em especial, do menor consumo médio\nde residências, com a retomada de atividades externas após o período mais crítico da\nPandemia, e da atividade do setor siderúrgico, que passa por um momento de menor\ndemanda global. Por outro lado, o crescimento da classe de concessionárias é consequência"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Efeito positivo na geração, segundo a administração. A Light Energia teve resultado líquido de R$146 milhões, 42,0% acima do apurado em 2021. O motivo foi a melhora do cenário hidrológico ao longo do ano de 2022, que levou ao aumento do GSF e à queda do PLD, reduzindo os custos com compra de energia.",
+   "evidencias": [
+    {
+     "pagina": 9,
+     "trecho": "registrada em 2021. EBITDA CVM foi de R$628 milhões e o resultado líquido foi de R$146\nmilhões, 42,0% acima do apurado em 2021."
+    },
+    {
+     "pagina": 9,
+     "trecho": "Essa variação pode ser explicada pela melhora do cenário hidrológico ao longo do ano de\n2022, que levou ao aumento do GSF e à queda do PLD, reduzindo os custos com compra de\nenergia. A Light mostrou grande eficiência na estratégia de proteção do resultado aos riscos"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "riscos": [
+  {
+   "texto": "Há incerteza sobre a continuidade operacional, reconhecida pela administração nas notas. Ela indica a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional do Grupo Light e da Light SESA, controlada da Companhia. O auditor destaca o mesmo ponto. Nossa opinião não está ressalvada em relação a esse assunto.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da\nAdministração da Companhia, a existência de incerteza significativa que pode levantar dúvida\nsignificativa quanto à capacidade de continuidade operacional do Grupo Light e da Light SESA,\ncontrolada da Companhia."
+    },
+    {
+     "pagina": 111,
+     "trecho": "Companhia. Nossa opinião não está ressalvada em relação a esse assunto."
+    }
+   ],
+   "fontes": [
+    "outros",
+    "auditor"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A situação financeira é frágil. As notas citam (i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos; (iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional. O capital de giro também ficou negativo: capital circulante líquido negativo de R$871.574.",
+   "evidencias": [
+    {
+     "pagina": 26,
+     "trecho": "(i) elevado nível de endividamento;\n(ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;\n(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência;\n(iv) dificuldade de atuação em Áreas de Severa Restrição Operacional."
+    },
+    {
+     "pagina": 25,
+     "trecho": "2021), capital circulante líquido negativo de R$871.574 (capital circulante líquido positivo de"
+    }
+   ],
+   "fontes": [
+    "outros",
+    "notas"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A liquidez é limitada. A companhia não possui linhas de créditos contratadas e disponíveis para utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a estrutura de capital da Companhia.",
+   "evidencias": [
+    {
+     "pagina": 26,
+     "trecho": "A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis\npara utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a\nestrutura de capital da Companhia."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A dívida pode vencer antes do prazo. O vencimento antecipado pode ocorrer, no caso de: (i) não atendimento a pelo menos um dos indicadores financeiros (\"covenants financeiros\") em dois trimestres consecutivos ou quatro trimestres intercalados; ou (ii) não cumprimento de determinados covenants não financeiros, como por exemplo, cláusulas de atendimento de nível mínimo de classificação de crédito avaliado por agências de rating. Os ratings estão baixos, como Fitch | CCC(bra) | CCC+. As notas citam ainda os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podem implicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos credores em efetuar novos empréstimos e financiamentos para o Grupo Light.",
+   "evidencias": [
+    {
+     "pagina": 26,
+     "trecho": "de dívidas. O vencimento antecipado pode ocorrer, no caso de:\n(i) | não atendimento a pelo menos um dos indicadores financeiros (“covenants financeiros”) em\ndois trimestres consecutivos ou quatro trimestres intercalados; ou\n(ii) | não cumprimento de determinados covenants não financeiros, como por exemplo, cláusulas\nde atendimento de nível mínimo de classificação de crédito avaliado por agências de rating."
+    },
+    {
+     "pagina": 26,
+     "trecho": "Fitch | CCC(bra) | CCC+ | 02.02.2023 | CCC(bra) | CCC+ | 02.02.2023"
+    },
+    {
+     "pagina": 28,
+     "trecho": "que os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podem\nimplicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos\ncredores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização de"
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A concessão vence em breve e a renovação foge do controle da gestão. A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da necessidade de negociação dos termos e condições da nova concessão, que não estão sob controle da Administração do Grupo Light.",
+   "evidencias": [
+    {
+     "pagina": 26,
+     "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em\njunho de 2026. A Administração da Companhia entende que determinados cenários para o futuro\ndo Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da\nnecessidade de negociação dos termos e condições da nova concessão, que não estão sob controle\nda Administração do Grupo Light."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "As perdas superam o nível coberto pela tarifa. A Companhia está 4,98 p.p. acima do percentual de repasse regulatório na tarifa, de 21,53%, conforme parâmetros definidos pela Aneel na Revisão Tarifária Periódica ocorrida em março/22. Os juros altos pesam. aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022",
+   "evidencias": [
+    {
+     "pagina": 6,
+     "trecho": "A Companhia está 4,98 p.p. acima do percentual de repasse regulatório na tarifa, de 21,53%,\nconforme parâmetros definidos pela Aneel na Revisão Tarifária Periódica ocorrida em\nmarço/22."
+    },
+    {
+     "pagina": 26,
+     "trecho": "(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm",
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "guidance": [
+  {
+   "texto": "O balanço social traz uma meta para 2023 de reduzir reclamações de consumidores na empresa, no Procon e na Justiça: Reduzir 10% | Reduzir 10% | Reduzir 10%.",
+   "evidencias": [
+    {
+     "pagina": 15,
+     "trecho": "162.913 | 2.982 | Reduzir 10% | Reduzir 10% | Reduzir 10%"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O balanço social traz uma meta de acidentes de trabalho para 2023: Número total de acidentes de trabalho | 56 | 0.",
+   "evidencias": [
+    {
+     "pagina": 15,
+     "trecho": "Número total de acidentes de trabalho | 56 | 0"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "guidance_status": "encontrado",
+ "perspectivas": [
+  {
+   "texto": "A gestão quer antecipar a renovação da concessão. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Ministério de Minas e Energia em busca da renovação antecipada em bases que garantam a sustentabilidade da concessão e do nosso negócio.",
+   "evidencias": [
+    {
+     "pagina": 2,
+     "trecho": "Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o\nMinistério de Minas e Energia em busca da renovação antecipada em bases que garantam a\nsustentabilidade da concessão e do nosso negócio. A renovação precisa levar em"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O foco é preservar caixa e cortar investimentos não essenciais. Concentramos | nossos | investimentos | naqueles | estritamente | necessários | para | a sustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar o fluxo de caixa nos próximos 36 meses, período que será crucial para o Grupo.",
+   "evidencias": [
+    {
+     "pagina": 3,
+     "trecho": "Concentramos | nossos | investimentos | naqueles | estritamente | necessários | para | a\nsustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar o\nfluxo de caixa nos próximos 36 meses, período que será crucial para o Grupo. Tudo isso,"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O plano de capital combina várias frentes. Entre elas, a utilização de recursos oriundos da venda de ativos, a extensão de prazos de pagamento junto a fornecedores e credores e a utilização de recursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do Grupo Light.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "utilização de recursos oriundos da venda de ativos, cuja venda possui elementos que não estão"
+    },
+    {
+     "pagina": 28,
+     "trecho": "extensão de prazos de pagamento junto a fornecedores e credores, cuja extensão não está sob o"
+    },
+    {
+     "pagina": 28,
+     "trecho": "credores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização de\nrecursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do"
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A empresa vai atuar na via regulatória e na via judicial. Busca o reconhecimento adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado e a reversão da destinação integral dos créditos de PIS/COFINS.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "contrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimento\nadequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no"
+    },
+    {
+     "pagina": 28,
+     "trecho": "âmbito jurídico/legal para reversão da destinação integral dos créditos de PIS/COFINS, como os"
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A empresa quer vender participações minoritárias. A saída da Amazônia Energia está alinhado com a estratégia de alienação de participações minoritárias da Companhia.",
+   "evidencias": [
+    {
+     "pagina": 46,
+     "trecho": "participação na da Norte Energia S.A. (“NESA\"). Esse desinvestimento está alinhado com a estratégia\nde alienação de participações minoritárias da Companhia."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A diretoria diz estar comprometida com o turnaround da companhia no curto prazo e a retomada do nosso protagonismo histórico no longo prazo.",
+   "evidencias": [
+    {
+     "pagina": 2,
+     "trecho": "desafios, comprometida com o turnaround da companhia no curto prazo e a retomada do\nnosso protagonismo histórico no longo prazo."
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "eventos": [
+  {
+   "texto": "Houve troca de gestão e reestruturação interna. O novo CEO diz: Assumi, em agosto de 2022, a liderança da Light. Também intensificamos o processo de reestruturação interna da Light, com o objetivo de torná-la mais eficiente.",
+   "evidencias": [
+    {
+     "pagina": 2,
+     "trecho": "Assumi, em agosto de 2022, a liderança da Light, uma empresa essencial para o setor elétrico"
+    },
+    {
+     "pagina": 3,
+     "trecho": "Nos últimos meses, intensificamos o processo de reestruturação interna da Light, com o\nobjetivo de torná-la mais eficiente. | Aceleramos a modernização da companhia com a"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Uma nova lei passou a exigir a devolução de créditos tributários. Em 27 de junho de 2022, foi promulgada a Lei nº 14.385/22, a qual altera a Lei nº 9.427, de 26 de dezembro de 1996, para disciplinar o repasse de valores de tributos recolhidos a maior pelas distribuidoras.",
+   "evidencias": [
+    {
+     "pagina": 28,
+     "trecho": "Em 27 de junho de 2022, foi promulgada a Lei nº 14.385/22, a qual altera a Lei nº 9.427, de 26 de\ndezembro de 1996, para disciplinar o repasse de valores de tributos recolhidos a maior pelas"
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A venda de duas controladas em conjunto foi concluída. Em 23 de junho de 2022, a alienação das controladas em conjunto Guanhães Energia e Lightger S.A. foi concluída pelos valores de R$97.011 e R$103.743, respectivamente.",
+   "evidencias": [
+    {
+     "pagina": 46,
+     "trecho": "contrato de compra e venda com Brasal. Em 23 de junho de 2022, a alienação das controladas em\nconjunto Guanhães Energia e Lightger S.A. foi concluída pelos valores de R$97.011 e R$103.743,\nrespectivamente."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A Amazônia Energia passou a ativo mantido para venda, com perda de valor. A administração reclassificou o investimento como um ativo não circulante mantido para venda mensurado ao seu valor justo, que resultou em um valor inferior ao valor contábil em R$94.453.",
+   "evidencias": [
+    {
+     "pagina": 46,
+     "trecho": "Administração reclassificou o investimento como um ativo não circulante mantido para venda\nmensurado ao seu valor justo, que resultou em um valor inferior ao valor contábil em R$94.453."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Evento subsequente, o reajuste tarifário de 2023. Em 15 de março de 2023, foi aprovado pela ANEEL o processo de reajuste das tarifas da Companhia. O resultado representa um reajuste tarifário médio para o consumidor de 7,0%. Ele inclui o repasse aos consumidores de créditos tributários da exclusão do ICMS da base do PIS/Cofins, no valor de R$1.777.129, em cumprimento à Lei nº 14.385/22.",
+   "evidencias": [
+    {
+     "pagina": 107,
+     "trecho": "Em 15 de março de 2023, foi aprovado pela ANEEL o processo de reajuste das tarifas da Companhia.\nO resultado representa um reajuste tarifário médio para o consumidor de 7,0%, e engloba todas as"
+    },
+    {
+     "pagina": 107,
+     "trecho": "meses. Neste reajuste está incluído o repasse aos consumidores de créditos tributários da exclusão\ndo ICMS da base do PIS/Cofins, no valor de R$1.777.129, em cumprimento à Lei nº 14.385/22. As"
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Evento subsequente, a compra do restante da Axxiom. Em 21 de dezembro de 2022, a Light S.A. assinou um Contrato de Compra e Venda de Ações e Outras Avenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentes a Companhia Energética de Minas Gerais (\"CEMIG\"). A operação foi realizada por R$1,00 (um real) onde o Grupo Light S.A. terá 100% das ações da Axxiom. A empresa tem expectativa para conclusão da operação no segundo trimestre de 2023.",
+   "evidencias": [
+    {
+     "pagina": 107,
+     "trecho": "Em 21 de dezembro de 2022, a Light S.A. assinou um Contrato de Compra e Venda de Ações e Outras\nAvenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentes\na Companhia Energética de Minas Gerais (“CEMIG”). A operação foi realizada por R$1,00 (um real)\nonde o Grupo Light S.A. terá 100% das ações da Axxiom. Em 25 de janeiro de 2023, o Conselho de"
+    },
+    {
+     "pagina": 107,
+     "trecho": "finalizada, existem algumas condições precedentes a serem cumpridas e a Companhia tem\nexpectativa para conclusão da operação no segundo trimestre de 2023."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "comparabilidade": [
+  {
+   "texto": "Provisões relevantes e não recorrentes distorcem a comparação com 2021. São provisões de -R$2.513 milhões no período, que incluem revisões nas metodologias e estimativas de PECLD (-R$855 milhões).",
+   "evidencias": [
+    {
+     "pagina": 9,
+     "trecho": "milhões se comparado a 2021. Essa retração foi devida, principalmente, a provisões de -\nR$2.513 milhões no período, sendo referentes, em especial, ao reconhecimento de provisão"
+    },
+    {
+     "pagina": 10,
+     "trecho": "R$1.081 milhões), revisões nas metodologias e estimativas de PECLD (-R$855 milhões) e de"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "A PECLD de 2021 é comparada com um índice ajustado. O indicador de 2022 ficou 2,7 p.p. acima do índice ajustado em dezembro/21. O gráfico separa a PECLD não-recorrente.",
+   "evidencias": [
+    {
+     "pagina": 7,
+     "trecho": "2,7 p.p. acima do índice ajustado em dezembro/21,"
+    },
+    {
+     "pagina": 7,
+     "trecho": "PECLD não-recorrente | PECLD/ROB"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O imposto da distribuição mudou de sinal entre os anos. Em 2022 houve impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões. Em 2021, a linha de imposto da distribuição foi positiva: Imposto de renda e contribuição social | 679.408.",
+   "evidencias": [
+    {
+     "pagina": 10,
+     "trecho": "totalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no\nvalor de -R$1.634 milhões."
+    },
+    {
+     "pagina": 45,
+     "trecho": "Imposto de renda e contribuição social | 679.408 | (39.863) | (52.844) | (1.867) | - | 584.834"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm",
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "As tarifas mudaram no meio do ano. Em 15 de março de 2022, a Aneel aprovou o resultado da Revisão Tarifária Periódica de 2022 da Light SESA. O efeito foi um reajuste médio das contas de energia elétrica da Light SESA de 14,68%.",
+   "evidencias": [
+    {
+     "pagina": 4,
+     "trecho": "Em 15 de março de 2022, a Aneel aprovou o resultado da Revisão Tarifária Periódica de 2022\nda Light SESA."
+    },
+    {
+     "pagina": 4,
+     "trecho": "O efeito conjunto desse processo resultará um reajuste médio das contas de energia elétrica\nda Light SESA de 14,68%, conforme detalhado no gráfico abaixo. Os clientes de baixa tensão"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O perímetro mudou com a venda de Guanhães e Lightger em junho de 2022. Mudou também com a reclassificação da Amazônia Energia, que Em dezembro de 2022, o a participação na Amazônia Energia foi classificada como ativo mantido para venda. Além disso, Em dezembro de 2022, a Companhia realizou a provisão para perda de 100% desse investimento., referente à UHE Itaocara.",
+   "evidencias": [
+    {
+     "pagina": 58,
+     "trecho": "(c) Em dezembro de 2022, o a participação na Amazônia Energia foi classificada como ativo mantido para venda, conforme Nota 5."
+    },
+    {
+     "pagina": 58,
+     "trecho": "(d) Em dezembro de 2022, a Companhia realizou a provisão para perda de 100% desse investimento."
+    }
+   ],
+   "fontes": [
+    "outros"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "tom": "negativo",
+ "justificativa_tom": {
+  "texto": "A gestão reconhece que o desequilíbrio que já existia na estrutura de capital da Light SESA se agravou ainda mais. Ela também aponta a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA. Esse peso supera o elogio aos indicadores de qualidade.",
+  "evidencias": [
+   {
+    "pagina": 2,
+    "trecho": "Nesse cenário, o desequilíbrio que já existia na estrutura de capital da Light SESA se agravou\nainda mais. A Companhia vem trabalhando na busca de alternativas que garantam a"
+   },
+   {
+    "pagina": 3,
+    "trecho": "ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de\nincerteza significativa que pode levantar dúvida significativa quanto à capacidade de\ncontinuidade operacional da Light e da Light SESA, controlada da Companhia."
+   }
+  ],
+  "fontes": [
+   "relatorio_adm"
+  ],
+  "conferido": true,
+  "numeros_sem_fonte": []
+ },
+ "observacoes": [
+  {
+   "texto": "O EBITDA da distribuidora tem um erro de sinal ou de ano. O texto diz o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1.179 milhões apurados em 2021. Um valor positivo de 2022 não pode ser uma redução sobre um valor menor de 2021. Provavelmente falta um sinal de menos.",
+   "evidencias": [
+    {
+     "pagina": 8,
+     "trecho": "Em 2022, o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996\nmilhões em relação aos R$1.179 milhões apurados em 2021. Essa retração foi devida,"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O EBITDA consolidado parece ter perdido o sinal de menos. O relatório diz Em 2022, o EBITDA CVM foi de R$1.180 milhões. A conferência da solução, porém, calcula -R$ 1.179,6 milhões, com margem de -8,9%. Isso também combina com a redução citada e com o prejuízo operacional.",
+   "evidencias": [
+    {
+     "pagina": 9,
+     "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "O ano do covenant está errado. O texto diz que o indicador encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O primeiro ano deveria ser 2022.",
+   "evidencias": [
+    {
+     "pagina": 10,
+     "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  },
+  {
+   "texto": "Há troca de unidade na Light Energia. A tabela está em Compra e Venda de Energia (MWm)*. O texto, porém, diz que o volume de venda no ACL foi de 459 MWh, ou seja, MWh no lugar de MWm.",
+   "evidencias": [
+    {
+     "pagina": 8,
+     "trecho": "Compra e Venda de Energia (MWm)* | 2022 | 2021"
+    },
+    {
+     "pagina": 8,
+     "trecho": "Em 2022, o volume de venda no ACL foi de 459 MWh, +0,9% se comparado a 2021 e a"
+    }
+   ],
+   "fontes": [
+    "relatorio_adm"
+   ],
+   "conferido": true,
+   "numeros_sem_fonte": []
+  }
+ ],
+ "nao_encontrados": [],
+ "completa": true,
+ "uso": {
+  "modelo": "claude-opus-5-5",
+  "tokens_entrada": 61071,
+  "tokens_saida": 9185,
+  "custo_usd": 0.427984,
+  "segundos": 73.94,
+  "gravada": true,
+  "tokens_cache_lidos": 0
+ }
+}

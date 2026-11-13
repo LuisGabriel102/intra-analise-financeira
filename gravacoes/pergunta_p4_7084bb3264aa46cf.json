@@ -1,0 +1,29 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQStgoKEAgTGAI4AUIIdGhpbmtpbmcSDEBKRtZeusR/SYbtMRoMTIaHxCJlZc+dNYpTIjCJjFv4g36D6DXcTuopbJW6R/QbWpW9TpdJu53KdNF9p1g7ZqYwzGDtY7klbXmGJo4q0wlC57upmZBi+iEkydFSBmBlvqdYrVcW5T9tApjU9s8870HsbfAWda7Tt2oMlq/96XVzVr873ZHGDi0GNbTLt+w98ijvD4npxdz4pBLbRJSAkW4h2eDY3DOUBfd3blmseTXqN61OOdBIOv40Xh7NRp99n534HOcfgUErnMoTwFPrw012iEPJIjUT7P5fEBDs7/zqfcvnMMoc/OiA4lmO+M/TCFHUMQiW2BT2n6F8dVZ8onBPh7bk9IYpmRWNZGBM8wRs9iXd36YJXkahuZn3IwGX0ezidZUAbUoWNyR/a3V4aqXNYspN1d4QHyqwXeZB8WMB0ghm/NY7uPBK6+oFytFukAC9Orvi5KUTR7KTLFD7UCjHIA4OLgb58pVVy+HZPcHhuV4YJ9S6LoOucQOp5pakfNgQtMtHX+aSn8SvLLTQGCu8EnS9+oPnNihbhwysoBjNDOuL3Dv1G3RR3t5hWE2y+Cbmxvj6riBiA3QBt1cS6xWIiDiJUFyP0QfOqPipfBEmR4nPyoGffD+QLoyun6MwgpNRb9D/4b3xMofcHu9+kTDsMq+zzQicvuF3IDVchYQrGVO6V+A3cM5d//jNcvXoDOLW1t5eC1RMtSSQtuYFhSOqt8d9zbO/lHpNT2YI5Y3u67HQqo0cIbSUA+aWh03hvf0/nIl+Jf8mMiAPodXn3iHYkDoLyx5lgezrag1Qowu7O/bbe/0ZsxgCKmkl18CUqF311Z5/qV//K12zAeqquZwiisEs3+Syue3eU1zDwLB1B0UbChGLnj+rMvEWtKqPv3CECUXiIUyRyfB0uUeOYuyJGp1wuAALQeOqGJVo1/K3Rg2vUj8WAjIC1EzhIfjvA3/GkUuNN0+ZyiUl4XS1tL0KpbZajQtY5NE/pw6Dk3MO/DWGmPCjqhFnRSu9zCQdzdw3M89Uky4cdynau+R6bNt1jOq6e77yQ/lP6hEK0xQAaQgyjSEbNADefe/cZ+48d1c/RCNGMOrOEn/EVbAqy3smZ4nCoKOmnx9lSp2veQ5BgfdHZ2okkJ59EL2NntB3nxi8qclEBdlBnfrs+71ZdWrLzCY6KLfF/EQO6kh/OEscNYUj0sdl3tFJRwbpN3m/poS2Dy7Gwm2l5SWnUef6XpHXsh6imB/XHeK+6x8SxdGyy/fe3WCMMAcBEZx4DskLQtgpoxtZ4X/w+Vu1h/2A2aMSbBL6xgmrpYTYu2Eei4cKuPfwZ0GCpQiWvybNAX/5a2v6IsjJaOTkvNNZANcDS0mpt1HepmSLlvDelPfkfLNy7W/eWA1Cyo0jwP3IXp5JxdLH55jkfEv1R9wPCf/ROhL14jK8zMh1sr8p1g6HJPYjWBbAaPMi88CmqBmUkmll6FkIhJaTNpJDKUOFac7owkHt68fV7niZZq9K+F0FsI7BbI1YbzmGkZn9rge/EFCGntylchq6thRKTsitC3jTIBbqaNrj9rE81miTj1fJdbJx60ZEIxL7GSD1mKUX0Rbw3OH4HiCIk7CTtJoq2SlYj3ce6h4cE/oeGs75yaY9wIavnTg/isgJXKCU6UBJZiuY0CWJqVVVjbb/Y0zL53uG+pgsz9vt/qWcIpFTgxFDPcXOplZpA9N3Y/y5H/FldyWmZ7cXaQgY9RY63q2MzcqhGpaKIBgB",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_017KZtt4BTvoJ6hmGiwftUKC",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "risco de taxa de juros risco de liquidez risco de crédito",
+    "empresa": "todas"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 358,
+ "tokens_cache": 0,
+ "segundos": 4.85,
+ "gravada": false,
+ "tokens_cache_escrita": 9934,
+ "parada": "tool_use"
+}

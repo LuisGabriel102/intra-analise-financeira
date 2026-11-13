@@ -111,31 +111,69 @@
    20,
    20
   ],
+  "qualitativo": {
+   "documento": "Brasal.pdf",
+   "checagens": [
+    {
+     "o_que": "tom",
+     "ok": true,
+     "detalhe": "nao_aplicavel (esperado: nao_aplicavel ou neutro)"
+    },
+    {
+     "o_que": "relatório da administração",
+     "ok": true,
+     "detalhe": "não"
+    },
+    {
+     "o_que": "guidance",
+     "ok": false,
+     "detalhe": "encontrado"
+    },
+    {
+     "o_que": "2021 não auditado (B1)",
+     "ok": true,
+     "detalhe": "O ano anterior não foi auditado: As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31 de dezemb"
+    },
+    {
+     "o_que": "créditos tributários não recorrentes em 2021 (B3)",
+     "ok": true,
+     "detalhe": "Segundo as notas explicativas, o lucro caiu principalmente pela base forte de 2021. Naquele ano, a controlada registrou um crédito de PIS e "
+    }
+   ],
+   "itens": 31,
+   "com_trecho": 31,
+   "com_numero_sem_fonte": 0
+  },
   "armadilhas": [
    {
     "id": "B1",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "O período comparativo (2021) não foi auditado (p. 3, 6, 7, 8, 11). As variações contra 2021 usam números não auditados."
    },
    {
     "id": "B2",
     "detectada": true,
-    "por": "IA"
+    "por": "IA",
+    "mensagem": "A linha de depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15"
    },
    {
     "id": "B6",
-    "detectada": false,
-    "por": null
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "A equivalência patrimonial de 2022 diverge entre tabelas. Uma traz Brasal Refrigerantes S/A | 100,00% | 411.101 | 177.244 | 411.099 | 177.244. A movimentação mo"
    },
    {
     "id": "B7",
     "detectada": false,
-    "por": null
+    "por": null,
+    "mensagem": null
    },
    {
     "id": "B8",
-    "detectada": false,
-    "por": null
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "As provisões judiciais por natureza não batem entre o resumo e a movimentação. O resumo traz Ações tributárias | 337 | 35 Ações trabalhistas | 2.485 | 1.036. A "
    }
   ]
  },
@@ -269,36 +307,75 @@
    25,
    25
   ],
+  "qualitativo": {
+   "documento": "Millet.pdf",
+   "checagens": [
+    {
+     "o_que": "tom",
+     "ok": true,
+     "detalhe": "nao_aplicavel (esperado: neutro ou nao_aplicavel)"
+    },
+    {
+     "o_que": "relatório da administração",
+     "ok": true,
+     "detalhe": "não"
+    },
+    {
+     "o_que": "guidance",
+     "ok": true,
+     "detalhe": "nao_encontrado"
+    },
+    {
+     "o_que": "Alibra só de junho a dezembro em 2021 (M6)",
+     "ok": true,
+     "detalhe": "O ano de 2021 inclui a Alibra só a partir de junho. O resultado da investida em 2021 é parcial: Resultado do Período (jun-dez) | 7.330. A re"
+    },
+    {
+     "o_que": "repasse de preço dos derivados lácteos",
+     "ok": true,
+     "detalhe": "A empresa repassou ao preço de venda a alta de custos. As notas citam a continuidade de aumento no custo de matérias primas principalmente d"
+    }
+   ],
+   "itens": 31,
+   "com_trecho": 31,
+   "com_numero_sem_fonte": 1
+  },
   "armadilhas": [
    {
     "id": "M1",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "Patrimônio líquido (balanço × notas), em R$ mil: valores diferentes no mesmo documento: 185.321 (p. [6]); 167.233 (p. [42])."
    },
    {
     "id": "M2",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "Lucro líquido (DRE × DMPL), em R$ mil: valores diferentes no mesmo documento: 18.891 (p. [7]); 19.021 (p. [9])."
    },
    {
     "id": "M3",
     "detectada": true,
-    "por": "IA"
+    "por": "IA",
+    "mensagem": "A equivalência patrimonial tem tratamento incoerente entre DRE e DFC. Na DRE consolidada ela é receita positiva: Resultado de equivalência patrimonial | 7 | 28."
    },
    {
     "id": "M4",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "Cabeçalho com 2021 repetido no lugar de 2022: '31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021'. Confira de qual ano é cada coluna."
    },
    {
     "id": "M5",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "Aprovação em 14/03/2022, antes do fim do exercício (31/12/2022). Provável ano errado."
    },
    {
     "id": "M8",
-    "detectada": false,
-    "por": null
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "A DRE resumida da Alibra mostra lucro antes dos impostos negativo, mas lucro líquido positivo: Lucro antes dos impostos | (65.750) | 15.412 contra Lucro líquido"
    }
   ]
  },
@@ -456,26 +533,73 @@
    31,
    31
   ],
+  "qualitativo": {
+   "documento": "Light.pdf",
+   "checagens": [
+    {
+     "o_que": "tom",
+     "ok": true,
+     "detalhe": "negativo (esperado: negativo)"
+    },
+    {
+     "o_que": "relatório da administração",
+     "ok": true,
+     "detalhe": "sim"
+    },
+    {
+     "o_que": "guidance",
+     "ok": false,
+     "detalhe": "encontrado"
+    },
+    {
+     "o_que": "incerteza sobre a continuidade operacional",
+     "ok": true,
+     "detalhe": "Há incerteza sobre a continuidade operacional, reconhecida pela administração nas notas. Ela indica a existência de incerteza significativa "
+    },
+    {
+     "o_que": "provisões (PIS/COFINS, PECLD, contingências) no prejuízo",
+     "ok": true,
+     "detalhe": "Segundo a administração, o prejuízo veio sobretudo da Distribuição. Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R"
+    },
+    {
+     "o_que": "renovação da concessão",
+     "ok": true,
+     "detalhe": "A gestão quer antecipar a renovação da concessão. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Ministé"
+    },
+    {
+     "o_que": "não errar: recuperação judicial atribuída à Light, e não à cliente SuperVia (L7)",
+     "ok": true,
+     "detalhe": "ok"
+    }
+   ],
+   "itens": 35,
+   "com_trecho": 35,
+   "com_numero_sem_fonte": 0
+  },
   "armadilhas": [
    {
     "id": "L1",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "EBITDA informado de R$ 1.180,0 mi, mas EBIT + depreciação dá R$ -1.179,6 mi: o mesmo valor com o sinal trocado. Provável sinal de menos perdido no texto."
    },
    {
     "id": "L2",
     "detectada": true,
-    "por": "IA"
+    "por": "IA",
+    "mensagem": "O EBITDA da distribuidora é incoerente. O texto diz que o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1"
    },
    {
     "id": "L3",
     "detectada": true,
-    "por": "código"
+    "por": "código",
+    "mensagem": "O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto."
    },
    {
     "id": "L10",
     "detectada": false,
-    "por": null
+    "por": null,
+    "mensagem": null
    }
   ]
  }

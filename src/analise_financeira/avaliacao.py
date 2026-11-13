@@ -11,16 +11,22 @@ coluna "inventou".
 
 Mede também quantas das 15 armadilhas principais viraram alerta: pela regra em
 código ou pela observação da IA (que vem com citação, mas não é conferida em código).
+
+Quando a análise qualitativa e as perguntas já rodaram, faz uma checagem aproximada,
+por palavras: o tom certo, o guidance "não encontrado", os fatos que precisam aparecer
+e as respostas com os termos esperados. É grosseira de propósito: pega o erro grande
+(tom errado, Alibra esquecida, recuperação judicial da cliente atribuída à Light).
 """
 
 from __future__ import annotations
 
 import json
+import unicodedata
 from datetime import date
 from pathlib import Path
 
-from analise_financeira.esquemas import Campo, Extracao
-from analise_financeira.indicadores import DocumentoAnalisado
+from analise_financeira.esquemas import AnaliseQualitativa, Campo, Extracao, Item, RespostaPergunta
+from analise_financeira.indicadores import AlertaSaida, DocumentoAnalisado
 from analise_financeira.numeros import em_reais, ler_numero
 
 
@@ -86,16 +92,84 @@ def avaliar_documento(extracao: Extracao, esperado: dict) -> dict:
             "evidencia_conferida": (conferidos, len(encontrados))}
 
 
-def armadilhas_detectadas(analise: DocumentoAnalisado, esperadas: list[dict]) -> list[dict]:
-    """Para cada armadilha esperada: foi detectada? por código ou pela IA?"""
+def armadilhas_detectadas(analise: DocumentoAnalisado, esperadas: list[dict],
+                          extras: list[AlertaSaida] | None = None) -> list[dict]:
+    """Para cada armadilha esperada: foi detectada? por código ou pela IA?
+
+    extras: observações da IA na análise qualitativa, que também valem como alerta da IA.
+    Uma observação da IA conta quando cai numa das páginas da armadilha e, se o gabarito
+    trouxer "termos_ia", quando fala de um deles. A mensagem vai junto, para conferência.
+    """
+    alertas = [*analise.alertas, *(extras or [])]
     resultado = []
     for esperada in esperadas:
         paginas = set(esperada["paginas"])
-        achou = [a for a in analise.alertas if paginas & set(a.paginas)
-                 and (a.regra == esperada["regra"] or (esperada["regra"] == "IA" and a.origem == "ia"))]
+        termos = [_sem_acento(t) for t in esperada.get("termos_ia", [])]
+
+        def conta(a: AlertaSaida, paginas=paginas, termos=termos, esperada=esperada) -> bool:
+            if not paginas & set(a.paginas):
+                return False
+            if a.origem == "codigo":
+                return a.regra == esperada["regra"]
+            if esperada["regra"] != "IA" and not termos:
+                return False
+            return not termos or any(t in _sem_acento(a.mensagem) for t in termos)
+
+        achou = sorted((a for a in alertas if conta(a)), key=lambda a: -len(paginas & set(a.paginas)))
+        por_codigo = [a for a in achou if a.origem == "codigo"]
+        escolhido = (por_codigo or achou or [None])[0]
         resultado.append({"id": esperada["id"], "detectada": bool(achou),
-                          "por": ("código" if any(a.origem == "codigo" for a in achou) else "IA") if achou else None})
+                          "por": ("código" if por_codigo else "IA") if achou else None,
+                          "mensagem": escolhido.mensagem[:160] if escolhido else None})
     return resultado
+
+
+def _sem_acento(texto: str) -> str:
+    return unicodedata.normalize("NFKD", texto.lower()).encode("ascii", "ignore").decode()
+
+
+def _itens(q: AnaliseQualitativa, secoes: list[str] | None = None) -> list[Item]:
+    nomes = secoes or ["motivos", "riscos", "guidance", "perspectivas", "eventos", "comparabilidade", "observacoes"]
+    return [i for nome in nomes for i in getattr(q, nome)]
+
+
+def avaliar_qualitativa(q: AnaliseQualitativa, esperado: dict) -> dict:
+    """Checagem aproximada da análise qualitativa: tom, guidance, fatos que precisam aparecer e o que não pode."""
+    checagens = [
+        {"o_que": "tom", "ok": q.tom in esperado["tom"],
+         "detalhe": f"{q.tom} (esperado: {' ou '.join(esperado['tom'])})"},
+        {"o_que": "relatório da administração", "ok": q.tem_relatorio_administracao == esperado["tem_relatorio_administracao"],
+         "detalhe": "sim" if q.tem_relatorio_administracao else "não"},
+        {"o_que": "guidance", "ok": q.guidance_status == esperado["guidance"], "detalhe": q.guidance_status},
+    ]
+    for m in esperado.get("deve_mencionar", []):
+        achou = [i for i in _itens(q, m["secoes"]) if any(t in _sem_acento(i.texto) for t in m["termos"])]
+        checagens.append({"o_que": m["o_que"], "ok": bool(achou),
+                          "detalhe": achou[0].texto[:140] if achou else "não mencionado"})
+    for m in esperado.get("nao_deve", []):
+        ruins = [i for i in _itens(q) if any(t in _sem_acento(i.texto) for t in m["termos"])
+                 and not any(x in _sem_acento(i.texto) for x in m["exceto"])]
+        checagens.append({"o_que": f"não errar: {m['o_que']}", "ok": not ruins,
+                          "detalhe": ruins[0].texto[:140] if ruins else "ok"})
+    itens = _itens(q)
+    return {"documento": q.documento, "checagens": checagens, "itens": len(itens),
+            "com_trecho": sum(1 for i in itens if i.conferido),
+            "com_numero_sem_fonte": sum(1 for i in itens if i.numeros_sem_fonte)}
+
+
+def avaliar_perguntas(respostas: list[RespostaPergunta], esperado: dict) -> list[dict]:
+    """Cada resposta tem os termos esperados? Tem fonte? Terminou?"""
+    linhas = []
+    for r in sorted(respostas, key=lambda x: x.numero or 99):
+        e = esperado.get(str(r.numero))
+        if not e:
+            continue
+        texto = _sem_acento(r.texto)
+        faltam = [" ou ".join(alternativas) for alternativas in e["deve_conter"]
+                  if not any(a in texto for a in alternativas)]
+        linhas.append({"numero": r.numero, "ok": not faltam and bool(r.fontes) and r.completa, "faltam": faltam,
+                       "fontes": len(r.fontes), "completa": r.completa})
+    return linhas
 
 
 def _pct(a: int, b: int) -> str:
@@ -112,10 +186,18 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
         pasta = Path(pasta_saidas) / Path(doc).stem
         extracao = Extracao.model_validate_json((pasta / "extracao.json").read_text(encoding="utf-8"))
         r = avaliar_documento(extracao, esperado)
+        qualitativa = None
+        if (pasta / "analise.json").exists():
+            qualitativa = AnaliseQualitativa.model_validate_json((pasta / "analise.json").read_text(encoding="utf-8"))
+            if doc in dados.get("_qualitativo", {}):
+                r["qualitativo"] = avaliar_qualitativa(qualitativa, dados["_qualitativo"][doc])
         analise_json = pasta / "indicadores.json"
         if analise_json.exists() and esperado.get("alertas_esperados"):
             analise = DocumentoAnalisado.model_validate_json(analise_json.read_text(encoding="utf-8"))
-            r["armadilhas"] = armadilhas_detectadas(analise, esperado["alertas_esperados"])
+            extras = [AlertaSaida(regra="IA", severidade="aviso", origem="ia", mensagem=o.texto,
+                                  paginas=sorted({e.pagina for e in o.evidencias}))
+                      for o in (qualitativa.observacoes if qualitativa else [])]
+            r["armadilhas"] = armadilhas_detectadas(analise, esperado["alertas_esperados"], extras)
         resultados.append((extracao, r))
 
     modelo = resultados[0][0].uso.modelo if resultados else "-"
@@ -140,12 +222,35 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
         por_codigo = sum(1 for a in detectadas if a["por"] == "código")
         md += ["", f"**Armadilhas principais detectadas: {len(detectadas)} de {len(armadilhas)}** "
                f"({por_codigo} conferidas em código e {len(detectadas) - por_codigo} apontadas pela IA, com citação).", ""]
-        md += [f"- {a['id']}: " + (f"detectada ({a['por']})" if a["detectada"] else "não detectada") for a in armadilhas]
-    md += ["", "Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. "
-           "Serve para achar erro, e não para prometer acerto em produção.", "", "## Campos com erro", ""]
+        md += [f"- {a['id']}: " + (f"detectada ({a['por']}): {a['mensagem']}" if a["detectada"] else "não detectada")
+               for a in armadilhas]
+    md += ["", "## Campos com erro", ""]
     erros = [f"- {r['documento']} · `{linha['campo']}`: esperado {linha['esperado']}, obtido {linha['obtido']}"
              for _, r in resultados for linha in r["linhas"] if not linha["ok"]]
     md += erros or ["Nenhum."]
+    qualitativos = [r["qualitativo"] for _, r in resultados if "qualitativo" in r]
+    if qualitativos:
+        certas = sum(c["ok"] for q in qualitativos for c in q["checagens"])
+        total_q = sum(len(q["checagens"]) for q in qualitativos)
+        itens = sum(q["itens"] for q in qualitativos)
+        md += ["", f"## Análise qualitativa (checagem aproximada, por palavras): {certas} de {total_q}", "",
+               f"Itens com trecho citado: {_pct(sum(q['com_trecho'] for q in qualitativos), itens)}. "
+               f"Itens com número que não está no trecho: {sum(q['com_numero_sem_fonte'] for q in qualitativos)}.", ""]
+        for q in qualitativos:
+            md += [f"- {q['documento']} · {c['o_que']}: {'ok' if c['ok'] else 'FALHOU'} ({c['detalhe']})"
+                   for c in q["checagens"]]
+    arquivo_perguntas = Path(pasta_saidas) / "perguntas.json"
+    if arquivo_perguntas.exists() and "_perguntas" in dados:
+        respostas = [RespostaPergunta.model_validate(x)
+                     for x in json.loads(arquivo_perguntas.read_text(encoding="utf-8"))]
+        linhas = avaliar_perguntas(respostas, dados["_perguntas"])
+        md += ["", f"## Perguntas (checagem aproximada, por palavras): {sum(x['ok'] for x in linhas)} de {len(linhas)}", ""]
+        md += [f"- Pergunta {x['numero']}: " + ("ok" if x["ok"] else "FALHOU") + f" ({x['fontes']} fontes"
+               + (f"; faltou: {'; '.join(x['faltam'])}" if x["faltam"] else "")
+               + ("" if x["completa"] else "; resposta incompleta") + ")" for x in linhas]
+
+    md += ["", "Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. "
+           "Serve para achar erro, e não para prometer acerto em produção."]
 
     destino = Path(pasta_resultados)
     destino.mkdir(parents=True, exist_ok=True)

@@ -1172,6 +1172,7 @@
   "tokens_saida": 4188,
   "custo_usd": 0.181976,
   "segundos": 33.35,
-  "gravada": true
+  "gravada": true,
+  "tokens_cache_lidos": 0
  }
 }

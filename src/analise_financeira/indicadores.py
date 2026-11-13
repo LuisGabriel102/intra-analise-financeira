@@ -51,6 +51,7 @@ class AlertaSaida(BaseModel):
     origem: Literal["codigo", "ia"]     # "codigo": conferido em Python; "ia": apontado pela IA, com citação
     mensagem: str
     paginas: list[int] = []
+    campo: str | None = None            # o indicador do alerta (receita_liquida, ebitda...), quando há um
 
 
 class DocumentoAnalisado(BaseModel):
@@ -193,11 +194,24 @@ def _capex(ext: Extracao) -> Indicador:
 # ------------------------------------------------------------------ alertas
 
 
-def _de_regra(alerta: validacao.Alerta | None, paginas: list[int]) -> list[AlertaSaida]:
+def _de_regra(alerta: validacao.Alerta | None, paginas: list[int], campo: str | None = None) -> list[AlertaSaida]:
     if alerta is None:
         return []
     return [AlertaSaida(regra=alerta.regra, severidade=alerta.severidade, origem="codigo", mensagem=alerta.mensagem,
-                        paginas=paginas)]
+                        paginas=paginas, campo=campo)]
+
+
+# Campo da extração -> indicador da tabela (para marcar a célula do alerta no relatório).
+_INDICADOR_DO_CAMPO = {
+    "receita_liquida": "receita_liquida", "ebitda": "ebitda", "margem_ebitda": "margem_ebitda",
+    "lucro_liquido": "lucro_liquido", "lucro_controladores": "lucro_controladores",
+    "divida_liquida": "divida_liquida", "alavancagem": "alavancagem", "fco": "fluxo_caixa_operacional",
+    "investimentos_informados": "capex", "capex_imobilizado": "capex", "capex_intangivel": "capex",
+}
+
+
+def indicador_do_campo(nome: str) -> str | None:
+    return _INDICADOR_DO_CAMPO.get(re.sub(r"_(atual|anterior)$", "", nome))
 
 
 _ESCALA = {"R$ mil": "mil", "R$ milhões": "milhões", "R$ bilhões": "bilhões", "R$ ": ""}
@@ -231,28 +245,28 @@ def _alertas(ext: Extracao, doc: Documento, rotas: Rotas, ebitda_calc: float | N
     if p("ebitda_atual") and ebitda_calc is not None:
         alertas += _de_regra(validacao.conferir_ebitda(p("ebitda_atual").valor_reais, p("ebit_atual").valor_reais,
                                                        p("depreciacao_atual").valor_reais),
-                             _paginas(p("ebitda_atual"), p("ebit_atual"), p("depreciacao_atual")))
+                             _paginas(p("ebitda_atual"), p("ebit_atual"), p("depreciacao_atual")), "ebitda")
     # V8: dívida líquida informada contra a calculada
     if p("divida_liquida_atual") and divida_calc is not None:
         emp, cx = p("emprestimos_total_atual"), p("caixa_atual")
         alertas += _de_regra(validacao.conferir_divida_liquida(
             p("divida_liquida_atual").valor_reais, emp.valor_reais, cx.valor_reais,
             _reais(p("aplicacoes_financeiras_atual")) or 0.0, _reais(p("derivativos_divida_atual")) or 0.0),
-            _paginas(p("divida_liquida_atual"), emp, cx))
+            _paginas(p("divida_liquida_atual"), emp, cx), "divida_liquida")
     # V9: alavancagem informada contra dívida líquida ÷ EBITDA
     divida_ref = _reais(p("divida_liquida_atual")) if p("divida_liquida_atual") else divida_calc
     if p("alavancagem_atual") and divida_ref is not None and ebitda_calc is not None:
         alertas += _de_regra(validacao.conferir_alavancagem(p("alavancagem_atual").numero, divida_ref, ebitda_calc),
-                             _paginas(p("alavancagem_atual")))
+                             _paginas(p("alavancagem_atual")), "alavancagem")
     # V10: o mesmo campo em escalas diferentes (relatório em milhões x tabela em mil)
-    for campo in ext.campos.values():
+    for nome, campo in ext.campos.items():
         if campo.status != "encontrado" or len(campo.ocorrencias) < 2 or campo.principal.valor_reais is None:
             continue
         for outra in campo.ocorrencias:
             if outra is campo.principal or outra.valor_reais is None or outra.unidade not in _ESCALA:
                 continue
             alertas += _de_regra(validacao.conferir_escala(outra.numero, _ESCALA[outra.unidade], campo.principal.valor_reais),
-                                 _paginas(campo.principal, outra))
+                                 _paginas(campo.principal, outra), indicador_do_campo(nome))
     # V11: ano do texto contra o período do valor
     for nome, campo in ext.campos.items():
         o = campo.principal
@@ -260,7 +274,8 @@ def _alertas(ext: Extracao, doc: Documento, rotas: Rotas, ebitda_calc: float | N
         if o is None or ano is None or o.fonte != "relatorio_adm":
             continue
         for e in o.evidencias:
-            alertas += _de_regra(validacao.conferir_ano_no_texto(e.trecho.replace("\n", " "), o.texto, ano), [e.pagina])
+            alertas += _de_regra(validacao.conferir_ano_no_texto(e.trecho.replace("\n", " "), o.texto, ano), [e.pagina],
+                                 indicador_do_campo(nome))
     # V13: o mesmo número em duas demonstrações
     for nome, (a, b) in {"Lucro líquido (DRE × DMPL)": ("lucro_liquido_atual", "lucro_liquido_dmpl_atual"),
                          "Caixa (balanço × DFC)": ("caixa_atual", "caixa_final_dfc_atual"),
@@ -268,7 +283,8 @@ def _alertas(ext: Extracao, doc: Documento, rotas: Rotas, ebitda_calc: float | N
         oa, ob = p(a), p(b)
         if oa and ob and oa.valor_reais is not None and ob.valor_reais is not None:
             ocorr = [(oa.valor_reais / MIL, f"p. {_paginas(oa)}"), (ob.valor_reais / MIL, f"p. {_paginas(ob)}")]
-            alertas += _de_regra(validacao.conferir_ocorrencias(f"{nome}, em R$ mil", ocorr), _paginas(oa, ob))
+            alertas += _de_regra(validacao.conferir_ocorrencias(f"{nome}, em R$ mil", ocorr), _paginas(oa, ob),
+                                 indicador_do_campo(a))
     # V14: período comparativo não auditado. Vale o aviso no parecer do auditor e nas
     # colunas "(não auditado)" das demonstrações; menção solta nas notas não entra.
     nao_auditado = []

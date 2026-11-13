@@ -32,11 +32,12 @@ class Campo(BaseModel):
 
 class Uso(BaseModel):
     modelo: str
-    tokens_entrada: int = 0
+    tokens_entrada: int = 0  # inclui os lidos e os gravados no cache
     tokens_saida: int = 0
-    custo_usd: float = 0.0
+    custo_usd: float = 0.0   # quanto a chamada custou quando foi feita (no replay, esta execução não paga nada)
     segundos: float = 0.0
-    gravada: bool = False  # True quando veio de gravacoes/, sem chamar a API
+    gravada: bool = False    # True quando veio de gravacoes/, sem chamar a API
+    tokens_cache_lidos: int = 0
 
 
 class Extracao(BaseModel):
@@ -44,4 +45,59 @@ class Extracao(BaseModel):
     paginas_enviadas: list[int]
     campos: dict[str, Campo]
     observacoes: list[Ocorrencia] = []  # incoerências que a própria IA notou, com citação
+    uso: Uso
+
+
+# ------------------------------------------------------------------ análise qualitativa
+
+
+class Item(BaseModel):
+    """Uma afirmação da análise qualitativa, com os trechos do PDF que a sustentam."""
+
+    texto: str                         # escrito pela IA, com as palavras dela
+    evidencias: list[Evidencia] = []   # recortados pela API (citação), conferidos pelo código
+    fontes: list[str] = []             # tipo das páginas citadas: relatorio_adm, notas, auditor, outros
+    conferido: bool = False            # tem pelo menos um trecho citado e conferido
+    numeros_sem_fonte: list[str] = []  # números do texto que não estão nos trechos nem nos números da solução
+
+
+class AnaliseQualitativa(BaseModel):
+    documento: str
+    paginas_enviadas: list[int]
+    tem_relatorio_administracao: bool   # decidido pelo código: há páginas de relatório da administração
+    paginas_administracao: list[int] = []
+    motivos: list[Item] = []
+    riscos: list[Item] = []
+    guidance: list[Item] = []
+    guidance_status: Literal["encontrado", "nao_encontrado", "sem_resposta"] = "sem_resposta"
+    perspectivas: list[Item] = []
+    eventos: list[Item] = []
+    comparabilidade: list[Item] = []
+    tom: Literal["positivo", "neutro", "negativo", "nao_aplicavel"] | None = None
+    justificativa_tom: Item | None = None
+    observacoes: list[Item] = []        # incoerências que a IA notou, com citação
+    nao_encontrados: list[str] = []     # campos que a IA declarou "não encontrado"
+    completa: bool = True               # False se a resposta foi cortada no limite de tamanho
+    uso: Uso
+
+
+# ------------------------------------------------------------------ perguntas
+
+
+class Fonte(BaseModel):
+    documento: str           # "Light.pdf"
+    paginas: list[int]
+    titulo: str              # o título do resultado citado
+    trecho: str              # o texto citado, literal (cited_text)
+    calculado: bool = False  # o trecho é um número calculado pela solução, e não texto do PDF
+
+
+class RespostaPergunta(BaseModel):
+    numero: int | None = None    # 1 a 5 nas perguntas obrigatórias
+    pergunta: str
+    texto: str                   # a resposta, com as marcas [1], [2] que levam às fontes
+    fontes: list[Fonte] = []
+    ferramentas: list[str] = []  # as ferramentas que o agente usou, na ordem
+    completa: bool = True        # False se o agente parou no limite de rodadas
+    rodadas: int = 0
     uso: Uso
