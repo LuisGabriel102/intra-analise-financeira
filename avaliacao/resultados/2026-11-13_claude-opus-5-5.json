@@ -1,0 +1,401 @@
+[
+ {
+  "documento": "Brasal.pdf",
+  "contagem": {
+   "valores": 12,
+   "valor_ok": 12,
+   "pagina_ok": 12,
+   "nao_enc": 4,
+   "nao_enc_ok": 4,
+   "inventou": 0
+  },
+  "linhas": [
+   {
+    "campo": "receita_liquida_atual",
+    "esperado": "1.325.059",
+    "obtido": "1.325.059",
+    "ok": true
+   },
+   {
+    "campo": "receita_liquida_anterior",
+    "esperado": "1.061.410",
+    "obtido": "1.061.410",
+    "ok": true
+   },
+   {
+    "campo": "ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "margem_ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_atual",
+    "esperado": "174.602",
+    "obtido": "174.602",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_anterior",
+    "esperado": "275.560",
+    "obtido": "275.560",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "fco_atual",
+    "esperado": "258.248",
+    "obtido": "258.248",
+    "ok": true
+   },
+   {
+    "campo": "fco_anterior",
+    "esperado": "121.462",
+    "obtido": "121.462",
+    "ok": true
+   },
+   {
+    "campo": "ebit_atual",
+    "esperado": "192.840",
+    "obtido": "192.840",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_atual",
+    "esperado": "29.014",
+    "obtido": "29.014",
+    "ok": true
+   },
+   {
+    "campo": "capex_imobilizado_atual",
+    "esperado": "(45.761)",
+    "obtido": "(45.761)",
+    "ok": true
+   },
+   {
+    "campo": "caixa_atual",
+    "esperado": "96.453",
+    "obtido": "96.453",
+    "ok": true
+   },
+   {
+    "campo": "aplicacoes_financeiras_atual",
+    "esperado": "78.569",
+    "obtido": "78.569",
+    "ok": true
+   },
+   {
+    "campo": "emprestimos_total_atual",
+    "esperado": "3.417",
+    "obtido": "3.417",
+    "ok": true
+   }
+  ],
+  "evidencia_conferida": [
+   20,
+   20
+  ]
+ },
+ {
+  "documento": "Millet.pdf",
+  "contagem": {
+   "valores": 16,
+   "valor_ok": 16,
+   "pagina_ok": 16,
+   "nao_enc": 3,
+   "nao_enc_ok": 3,
+   "inventou": 0
+  },
+  "linhas": [
+   {
+    "campo": "receita_liquida_atual",
+    "esperado": "462.127",
+    "obtido": "462.127",
+    "ok": true
+   },
+   {
+    "campo": "receita_liquida_anterior",
+    "esperado": "199.259",
+    "obtido": "199.259",
+    "ok": true
+   },
+   {
+    "campo": "ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "margem_ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_atual",
+    "esperado": "18.891",
+    "obtido": "18.891",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_anterior",
+    "esperado": "6.470",
+    "obtido": "6.470",
+    "ok": true
+   },
+   {
+    "campo": "lucro_controladores_atual",
+    "esperado": "14.743",
+    "obtido": "14.743",
+    "ok": true
+   },
+   {
+    "campo": "lucro_controladores_anterior",
+    "esperado": "5.371",
+    "obtido": "5.371",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_atual",
+    "esperado": "13.520",
+    "obtido": "13.520",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_anterior",
+    "esperado": "16.877",
+    "obtido": "16.877",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "fco_atual",
+    "esperado": "24.799",
+    "obtido": "24.799",
+    "ok": true
+   },
+   {
+    "campo": "fco_anterior",
+    "esperado": "(14.293)",
+    "obtido": "(14.293)",
+    "ok": true
+   },
+   {
+    "campo": "ebit_atual",
+    "esperado": "25.298",
+    "obtido": "25.298",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_atual",
+    "esperado": "18.248",
+    "obtido": "18.248",
+    "ok": true
+   },
+   {
+    "campo": "capex_imobilizado_atual",
+    "esperado": "(6.263)",
+    "obtido": "(6.263)",
+    "ok": true
+   },
+   {
+    "campo": "capex_intangivel_atual",
+    "esperado": "(11.469)",
+    "obtido": "(11.469)",
+    "ok": true
+   },
+   {
+    "campo": "caixa_atual",
+    "esperado": "10.656",
+    "obtido": "10.656",
+    "ok": true
+   },
+   {
+    "campo": "emprestimos_total_atual",
+    "esperado": "24.176",
+    "obtido": "24.176",
+    "ok": true
+   }
+  ],
+  "evidencia_conferida": [
+   25,
+   25
+  ]
+ },
+ {
+  "documento": "Light.pdf",
+  "contagem": {
+   "valores": 22,
+   "valor_ok": 18,
+   "pagina_ok": 22,
+   "nao_enc": 1,
+   "nao_enc_ok": 1,
+   "inventou": 0
+  },
+  "linhas": [
+   {
+    "campo": "receita_liquida_atual",
+    "esperado": "13.253.286",
+    "obtido": "13.253.286",
+    "ok": true
+   },
+   {
+    "campo": "receita_liquida_anterior",
+    "esperado": "14.897.920",
+    "obtido": "14.897.920",
+    "ok": true
+   },
+   {
+    "campo": "ebitda_atual",
+    "esperado": "R$1.180 milhões",
+    "obtido": "R$1.180 milhões",
+    "ok": true
+   },
+   {
+    "campo": "margem_ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_atual",
+    "esperado": "(5.672.203)",
+    "obtido": "(5.672.203)",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_anterior",
+    "esperado": "397.945",
+    "obtido": "397.945",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_atual",
+    "esperado": "9.032.236",
+    "obtido": "9.032.236",
+    "ok": false
+   },
+   {
+    "campo": "divida_liquida_anterior",
+    "esperado": "7.352.919",
+    "obtido": "7.352.919",
+    "ok": false
+   },
+   {
+    "campo": "alavancagem_atual",
+    "esperado": "3,32x",
+    "obtido": "3,32x",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_anterior",
+    "esperado": "3,48x",
+    "obtido": "3,48x",
+    "ok": true
+   },
+   {
+    "campo": "fco_atual",
+    "esperado": "200.763",
+    "obtido": "200.763",
+    "ok": true
+   },
+   {
+    "campo": "fco_anterior",
+    "esperado": "(42.045)",
+    "obtido": "(42.045)",
+    "ok": true
+   },
+   {
+    "campo": "ebit_atual",
+    "esperado": "(1.910.411)",
+    "obtido": "(1.910.411)",
+    "ok": true
+   },
+   {
+    "campo": "ebit_anterior",
+    "esperado": "1.143.301",
+    "obtido": "1.143.301",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_atual",
+    "esperado": "730.767",
+    "obtido": "730.767",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_anterior",
+    "esperado": "678.110",
+    "obtido": "678.110",
+    "ok": true
+   },
+   {
+    "campo": "capex_imobilizado_atual",
+    "esperado": "(307.759)",
+    "obtido": "(307.759)",
+    "ok": true
+   },
+   {
+    "campo": "capex_intangivel_atual",
+    "esperado": "(1.162.533)",
+    "obtido": "(1.162.533)",
+    "ok": true
+   },
+   {
+    "campo": "investimentos_informados_atual",
+    "esperado": "R$1.506 milhões",
+    "obtido": "R$1.506 milhões",
+    "ok": true
+   },
+   {
+    "campo": "caixa_atual",
+    "esperado": "43.886",
+    "obtido": "43.886",
+    "ok": true
+   },
+   {
+    "campo": "aplicacoes_financeiras_atual",
+    "esperado": "2.039.665",
+    "obtido": "2.039.665",
+    "ok": true
+   },
+   {
+    "campo": "emprestimos_total_atual",
+    "esperado": "10.688.690",
+    "obtido": "10.688.690",
+    "ok": false
+   },
+   {
+    "campo": "derivativos_divida_atual",
+    "esperado": "427.097",
+    "obtido": "427.097",
+    "ok": false
+   }
+  ],
+  "evidencia_conferida": [
+   31,
+   31
+  ]
+ }
+]

@@ -5,7 +5,10 @@ description = "Lê demonstrações financeiras em PDF, extrai os indicadores com
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "anthropic>=2.8",
     "pydantic>=2.7",
+    "pymupdf>=1.24",
+    "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]

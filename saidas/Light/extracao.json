@@ -1,0 +1,1177 @@
+{
+ "documento": "Light.pdf",
+ "paginas_enviadas": [
+  8,
+  9,
+  10,
+  18,
+  19,
+  20,
+  22,
+  23,
+  66,
+  70,
+  105
+ ],
+ "campos": {
+  "empresa": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "LIGHT S.A.",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 18,
+      "trecho": "LIGHT S.A."
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "LIGHT S.A.",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 18,
+       "trecho": "LIGHT S.A."
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "periodo_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "2022",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "2022 | 2021 | 2022 | 2021"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "2022",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "2022 | 2021 | 2022 | 2021"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "periodo_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "2021",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "2022 | 2021 | 2022 | 2021"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "2021",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "2022 | 2021 | 2022 | 2021"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebitda_definicao": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "EBITDA CVM",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "relatorio_adm",
+    "evidencias": [
+     {
+      "pagina": 9,
+      "trecho": "EBITDA CVM"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "EBITDA CVM",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 9,
+       "trecho": "EBITDA CVM"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "alavancagem_definicao": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "EBITDA ajustado para fins de covenants",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "relatorio_adm",
+    "evidencias": [
+     {
+      "pagina": 10,
+      "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "EBITDA ajustado para fins de covenants",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "receita_liquida_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "13.253.286",
+    "numero": 13253286.0,
+    "unidade": "R$ mil",
+    "valor_reais": 13253286000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "13.253.286",
+     "numero": 13253286.0,
+     "unidade": "R$ mil",
+     "valor_reais": 13253286000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebitda_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "R$1.180 milhões",
+    "numero": 1180.0,
+    "unidade": "R$ milhões",
+    "valor_reais": 1180000000.0,
+    "fonte": "relatorio_adm",
+    "evidencias": [
+     {
+      "pagina": 9,
+      "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "R$1.180 milhões",
+     "numero": 1180.0,
+     "unidade": "R$ milhões",
+     "valor_reais": 1180000000.0,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 9,
+       "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "lucro_liquido_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(5.672.203)",
+    "numero": -5672203.0,
+    "unidade": "R$ mil",
+    "valor_reais": -5672203000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(5.672.203)",
+     "numero": -5672203.0,
+     "unidade": "R$ mil",
+     "valor_reais": -5672203000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+      }
+     ],
+     "conferido": true
+    },
+    {
+     "texto": "-R$5.673 milhões",
+     "numero": -5673.0,
+     "unidade": "R$ milhões",
+     "valor_reais": -5673000000.0,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "lucro_controladores_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "divida_liquida_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "9.032.236",
+    "numero": 9032236.0,
+    "unidade": "",
+    "valor_reais": 9032236.0,
+    "fonte": "outros",
+    "evidencias": [
+     {
+      "pagina": 105,
+      "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "R$9.032 milhões",
+     "numero": 9032.0,
+     "unidade": "R$ milhões",
+     "valor_reais": 9032000000.0,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões,"
+      }
+     ],
+     "conferido": true
+    },
+    {
+     "texto": "9.032.236",
+     "numero": 9032236.0,
+     "unidade": "",
+     "valor_reais": 9032236.0,
+     "fonte": "outros",
+     "evidencias": [
+      {
+       "pagina": 105,
+       "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "alavancagem_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "3,32x",
+    "numero": 3.32,
+    "unidade": "x",
+    "valor_reais": null,
+    "fonte": "relatorio_adm",
+    "evidencias": [
+     {
+      "pagina": 10,
+      "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "3,32x",
+     "numero": 3.32,
+     "unidade": "x",
+     "valor_reais": null,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "fco_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "200.763",
+    "numero": 200763.0,
+    "unidade": "R$ mil",
+    "valor_reais": 200763000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "200.763",
+     "numero": 200763.0,
+     "unidade": "R$ mil",
+     "valor_reais": 200763000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebit_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(1.910.411)",
+    "numero": -1910411.0,
+    "unidade": "R$ mil",
+    "valor_reais": -1910411000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(1.910.411)",
+     "numero": -1910411.0,
+     "unidade": "R$ mil",
+     "valor_reais": -1910411000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "depreciacao_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "730.767",
+    "numero": 730767.0,
+    "unidade": "R$ mil",
+    "valor_reais": 730767000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "730.767",
+     "numero": 730767.0,
+     "unidade": "R$ mil",
+     "valor_reais": 730767000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "receita_liquida_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "14.897.920",
+    "numero": 14897920.0,
+    "unidade": "R$ mil",
+    "valor_reais": 14897920000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "14.897.920",
+     "numero": 14897920.0,
+     "unidade": "R$ mil",
+     "valor_reais": 14897920000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebitda_anterior": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "lucro_liquido_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "397.945",
+    "numero": 397945.0,
+    "unidade": "R$ mil",
+    "valor_reais": 397945000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "397.945",
+     "numero": 397945.0,
+     "unidade": "R$ mil",
+     "valor_reais": 397945000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "lucro_controladores_anterior": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "divida_liquida_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "7.352.919",
+    "numero": 7352919.0,
+    "unidade": "",
+    "valor_reais": 7352919.0,
+    "fonte": "outros",
+    "evidencias": [
+     {
+      "pagina": 105,
+      "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "R$7.353 milhões",
+     "numero": 7353.0,
+     "unidade": "R$ milhões",
+     "valor_reais": 7353000000.0,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "aumento de 23% em comparação a 2021, de R$7.353 milhões."
+      }
+     ],
+     "conferido": true
+    },
+    {
+     "texto": "7.352.919",
+     "numero": 7352919.0,
+     "unidade": "",
+     "valor_reais": 7352919.0,
+     "fonte": "outros",
+     "evidencias": [
+      {
+       "pagina": 105,
+       "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "alavancagem_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "3,48x",
+    "numero": 3.48,
+    "unidade": "x",
+    "valor_reais": null,
+    "fonte": "relatorio_adm",
+    "evidencias": [
+     {
+      "pagina": 10,
+      "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "3,48x",
+     "numero": 3.48,
+     "unidade": "x",
+     "valor_reais": null,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "fco_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(42.045)",
+    "numero": -42045.0,
+    "unidade": "R$ mil",
+    "valor_reais": -42045000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(42.045)",
+     "numero": -42045.0,
+     "unidade": "R$ mil",
+     "valor_reais": -42045000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebit_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "1.143.301",
+    "numero": 1143301.0,
+    "unidade": "R$ mil",
+    "valor_reais": 1143301000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 20,
+      "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "1.143.301",
+     "numero": 1143301.0,
+     "unidade": "R$ mil",
+     "valor_reais": 1143301000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 20,
+       "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "depreciacao_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "678.110",
+    "numero": 678110.0,
+    "unidade": "R$ mil",
+    "valor_reais": 678110000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "678.110",
+     "numero": 678110.0,
+     "unidade": "R$ mil",
+     "valor_reais": 678110000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "margem_ebitda_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "investimentos_informados_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "R$1.506 milhões",
+    "numero": 1506.0,
+    "unidade": "R$ milhões",
+    "valor_reais": 1506000000.0,
+    "fonte": "relatorio_adm",
+    "evidencias": [
+     {
+      "pagina": 10,
+      "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "R$1.506 milhões",
+     "numero": 1506.0,
+     "unidade": "R$ milhões",
+     "valor_reais": 1506000000.0,
+     "fonte": "relatorio_adm",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "capex_imobilizado_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(307.759)",
+    "numero": -307759.0,
+    "unidade": "R$ mil",
+    "valor_reais": -307759000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Aquisições de bens do ativo imobilizado | - | - | (307.759) | (219.601)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(307.759)",
+     "numero": -307759.0,
+     "unidade": "R$ mil",
+     "valor_reais": -307759000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Aquisições de bens do ativo imobilizado | - | - | (307.759) | (219.601)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "capex_intangivel_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(1.162.533)",
+    "numero": -1162533.0,
+    "unidade": "R$ mil",
+    "valor_reais": -1162533000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Aquisições de bens do ativo intangível e do ativo de contrato | (234) | - | (1.162.533) | (1.029.744)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(1.162.533)",
+     "numero": -1162533.0,
+     "unidade": "R$ mil",
+     "valor_reais": -1162533000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Aquisições de bens do ativo intangível e do ativo de contrato | (234) | - | (1.162.533) | (1.029.744)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "caixa_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "43.886",
+    "numero": 43886.0,
+    "unidade": "R$ mil",
+    "valor_reais": 43886000.0,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 18,
+      "trecho": "Caixa e equivalentes de caixa | 6 | 2.693 | 9 | 43.886 | 396.777"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "43.886",
+     "numero": 43886.0,
+     "unidade": "R$ mil",
+     "valor_reais": 43886000.0,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 18,
+       "trecho": "Caixa e equivalentes de caixa | 6 | 2.693 | 9 | 43.886 | 396.777"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "aplicacoes_financeiras_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "2.039.665",
+    "numero": 2039665.0,
+    "unidade": "R$ mil",
+    "valor_reais": 2039665000.0,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 18,
+      "trecho": "Títulos e valores mobiliários | 7 | 720.172 | 62.647 | 2.039.665 | 3.208.196"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "2.039.665",
+     "numero": 2039665.0,
+     "unidade": "R$ mil",
+     "valor_reais": 2039665000.0,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 18,
+       "trecho": "Títulos e valores mobiliários | 7 | 720.172 | 62.647 | 2.039.665 | 3.208.196"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "emprestimos_total_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "10.688.690",
+    "numero": 10688690.0,
+    "unidade": "",
+    "valor_reais": 10688690.0,
+    "fonte": "outros",
+    "evidencias": [
+     {
+      "pagina": 105,
+      "trecho": "Dívida de financiamentos, empréstimos e debêntures | 10.688.690 | 11.144.326"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "10.688.690",
+     "numero": 10688690.0,
+     "unidade": "",
+     "valor_reais": 10688690.0,
+     "fonte": "outros",
+     "evidencias": [
+      {
+       "pagina": 105,
+       "trecho": "Dívida de financiamentos, empréstimos e debêntures | 10.688.690 | 11.144.326"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "derivativos_divida_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "427.097",
+    "numero": 427097.0,
+    "unidade": "",
+    "valor_reais": 427097.0,
+    "fonte": "outros",
+    "evidencias": [
+     {
+      "pagina": 105,
+      "trecho": "Instrumentos financeiros derivativos swaps | 427.097 | (186.434)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "427.097",
+     "numero": 427097.0,
+     "unidade": "",
+     "valor_reais": 427097.0,
+     "fonte": "outros",
+     "evidencias": [
+      {
+       "pagina": 105,
+       "trecho": "Instrumentos financeiros derivativos swaps | 427.097 | (186.434)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "lucro_liquido_dmpl_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(5.672.203)",
+    "numero": -5672203.0,
+    "unidade": "R$ mil",
+    "valor_reais": -5672203000.0,
+    "fonte": "dmpl",
+    "evidencias": [
+     {
+      "pagina": 22,
+      "trecho": "Prejuízo do exercício | - | - | - | - | - | - | - | (5.672.203) | (5.672.203)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(5.672.203)",
+     "numero": -5672203.0,
+     "unidade": "R$ mil",
+     "valor_reais": -5672203000.0,
+     "fonte": "dmpl",
+     "evidencias": [
+      {
+       "pagina": 22,
+       "trecho": "Prejuízo do exercício | - | - | - | - | - | - | - | (5.672.203) | (5.672.203)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "patrimonio_liquido_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "2.844.757",
+    "numero": 2844757.0,
+    "unidade": "R$ mil",
+    "valor_reais": 2844757000.0,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 19,
+      "trecho": "TOTAL DO PATRIMÔNIO LÍQUIDO | 2.844.757 | 8.733.101 | 2.844.757 | 8.733.101"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "2.844.757",
+     "numero": 2844757.0,
+     "unidade": "R$ mil",
+     "valor_reais": 2844757000.0,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 19,
+       "trecho": "TOTAL DO PATRIMÔNIO LÍQUIDO | 2.844.757 | 8.733.101 | 2.844.757 | 8.733.101"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "patrimonio_liquido_notas_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "2.844.757",
+    "numero": 2844757.0,
+    "unidade": "",
+    "valor_reais": 2844757.0,
+    "fonte": "outros",
+    "evidencias": [
+     {
+      "pagina": 105,
+      "trecho": "Patrimônio líquido (B) | 2.844.757 | 8.733.101"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "2.844.757",
+     "numero": 2844757.0,
+     "unidade": "",
+     "valor_reais": 2844757.0,
+     "fonte": "outros",
+     "evidencias": [
+      {
+       "pagina": 105,
+       "trecho": "Patrimônio líquido (B) | 2.844.757 | 8.733.101"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "caixa_final_dfc_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "43.886",
+    "numero": 43886.0,
+    "unidade": "R$ mil",
+    "valor_reais": 43886000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 23,
+      "trecho": "Caixa e equivalentes de caixa no final do exercício | 2.693 | 9 | 43.886 | 396.777"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "43.886",
+     "numero": 43886.0,
+     "unidade": "R$ mil",
+     "valor_reais": 43886000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 23,
+       "trecho": "Caixa e equivalentes de caixa no final do exercício | 2.693 | 9 | 43.886 | 396.777"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  }
+ },
+ "observacoes": [
+  {
+   "texto": "O texto sobre a alavancagem atribui os dois múltiplos ao ano de 2021: O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O parágrafo trata da posição em 31/12/2022, por isso usei 3,32x como atual e 3,48x como anterior. Essa atribuição deve ser confirmada.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 10,
+     "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "O EBITDA da distribuidora é incoerente. O texto diz que o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1.179 milhões apurados em 2021. O valor de 2022 aparece maior que o de 2021, embora o texto fale em redução. Os números parecem trocados.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 8,
+     "trecho": "Em 2022, o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996\nmilhões em relação aos R$1.179 milhões apurados em 2021. Essa retração foi devida,"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "O resultado líquido do relatório da administração (-R$5.673 milhões) não bate com o arredondamento do valor da DRE, que é (5.672.203) em milhares de reais.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 10,
+     "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões"
+    },
+    {
+     "pagina": 20,
+     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "A unidade de energia da Light Energia é inconsistente. A tabela está em MWm, mas o texto diz que o volume de venda no ACL foi de 459 MWh, +0,9% se comparado a 2021 e a compra no ACL foi de 35 MWh.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 8,
+     "trecho": "Compra e Venda de Energia (MWm)* | 2022 | 2021"
+    },
+    {
+     "pagina": 8,
+     "trecho": "Em 2022, o volume de venda no ACL foi de 459 MWh, +0,9% se comparado a 2021 e a\ncompra no ACL foi de 35 MWh, -53,0%. Essa redução no volume de transação ocorreu em"
+    }
+   ],
+   "conferido": true
+  }
+ ],
+ "uso": {
+  "modelo": "claude-opus-5-5",
+  "tokens_entrada": 24554,
+  "tokens_saida": 4188,
+  "custo_usd": 0.181976,
+  "segundos": 33.35,
+  "gravada": true
+ }
+}

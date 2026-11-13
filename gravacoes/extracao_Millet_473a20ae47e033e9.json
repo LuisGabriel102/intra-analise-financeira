@@ -1,0 +1,875 @@
+{
+ "blocos": [
+  {
+   "citations": null,
+   "text": "empresa: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Millet Participações S.A.",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 1,
+     "file_id": null,
+     "start_block_index": 0,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Millet Participações S.A.",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nperiodo_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Nota | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 6,
+     "file_id": null,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "31/12/2022",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nperiodo_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Nota | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 6,
+     "file_id": null,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "31/12/2021",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nebitda_definicao: não encontrado\nalavancagem_definicao: não encontrado\nreceita_liquida_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 7,
+     "file_id": null,
+     "start_block_index": 6,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "462.127",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nebitda_atual: não encontrado\nlucro_liquido_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 33,
+     "file_id": null,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "18.891",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nlucro_controladores_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)Lucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 35,
+     "file_id": null,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "14.743",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ndivida_liquida_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(=) Dívida líquida (a) | 13.520 | 16.877",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 22,
+     "file_id": null,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "13.520",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nalavancagem_atual: não encontrado\nfco_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Caixa liquido gerado pelas (consumido nas) | 24.799",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 32,
+     "file_id": null,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "24.799",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nebit_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado antes do resultado14.750 | 5.374 | 25.298 | 4.482financeiro",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 21,
+     "file_id": null,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "25.298",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ndepreciacao_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 12,
+     "file_id": null,
+     "start_block_index": 11,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "18.248",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nreceita_liquida_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 7,
+     "file_id": null,
+     "start_block_index": 6,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "199.259",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nebitda_anterior: não encontrado\nlucro_liquido_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 33,
+     "file_id": null,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "6.470",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nlucro_controladores_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)Lucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 35,
+     "file_id": null,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "5.371",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ndivida_liquida_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(=) Dívida líquida (a) | 13.520 | 16.877",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 22,
+     "file_id": null,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "16.877",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nalavancagem_anterior: não encontrado\nfco_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(317) | (860) | (14.293)",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 33,
+     "file_id": null,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(14.293)",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nebit_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado antes do resultado14.750 | 5.374 | 25.298 | 4.482financeiro",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 21,
+     "file_id": null,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "4.482",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ndepreciacao_anterior: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 12,
+     "file_id": null,
+     "start_block_index": 11,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "2.975",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nmargem_ebitda_atual: não encontrado\ninvestimentos_informados_atual: não encontrado\ncapex_imobilizado_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Aquisição de imobilizado | - | - | (6.263) | (3.803)",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 39,
+     "file_id": null,
+     "start_block_index": 38,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(6.263)",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ncapex_intangivel_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Aquisição de intangível | - | - | (11.469) | (12)",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 40,
+     "file_id": null,
+     "start_block_index": 39,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(11.469)",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ncaixa_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 9,
+     "file_id": null,
+     "start_block_index": 8,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "10.656",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\naplicacoes_financeiras_atual: não encontrado\nemprestimos_total_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total dos empréstimos com terceiros | 24.176 | 25.072",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 20,
+     "file_id": null,
+     "start_block_index": 19,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "24.176",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\nderivativos_divida_atual: não encontrado\nlucro_liquido_dmpl_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro líquido do exercício | - | - | - | - | 14.743 | 14.743 | 4.278 | 19.021",
+     "document_index": 2,
+     "document_title": "Millet.pdf, página 9",
+     "end_block_index": 26,
+     "file_id": null,
+     "start_block_index": 25,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "19.021",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\npatrimonio_liquido_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Patrimônio líquido consolidado | 163.931 | 152.689 | 185.321 | 171.106",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 53,
+     "file_id": null,
+     "start_block_index": 52,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "185.321",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\npatrimonio_liquido_notas_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total do patrimônio líquido (b) | 167.233 | 152.689",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 23,
+     "file_id": null,
+     "start_block_index": 22,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "167.233",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\ncaixa_final_dfc_atual: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Saldo final de caixa e equivalentes de caixa | 354 | 871 | 10.655 | 8.195",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 56,
+     "file_id": null,
+     "start_block_index": 55,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "10.655",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "\n\nobservacao: Na DFC, o texto da linha do caixa operacional está quebrado. O valor 24.799 aparece separado dos demais (",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Caixa liquido gerado pelas (consumido nas) | 24.799",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 32,
+     "file_id": null,
+     "start_block_index": 31,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Caixa liquido gerado pelas (consumido nas) | 24.799",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": " / ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(317) | (860) | (14.293)",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 33,
+     "file_id": null,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(317) | (860) | (14.293)",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": "). Atribuí 24.799 ao consolidado de 2022 e (14.293) ao consolidado de 2021 pela ordem das colunas. Vale conferir no PDF original. As linhas de investimento e de financiamento têm o mesmo deslocamento.\nobservacao: O lucro líquido total na DMPL difere da DRE. A DMPL mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro líquido do exercício | - | - | - | - | 14.743 | 14.743 | 4.278 | 19.021",
+     "document_index": 2,
+     "document_title": "Millet.pdf, página 9",
+     "end_block_index": 26,
+     "file_id": null,
+     "start_block_index": 25,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Lucro líquido do exercício | - | - | - | - | 14.743 | 14.743 | 4.278 | 19.021",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ". A DRE mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 33,
+     "file_id": null,
+     "start_block_index": 32,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 34,
+     "file_id": null,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".\nobservacao: O patrimônio líquido da nota de gestão de capital não bate com o balanço. A nota traz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total do patrimônio líquido (b) | 167.233 | 152.689",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 23,
+     "file_id": null,
+     "start_block_index": 22,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Total do patrimônio líquido (b) | 167.233 | 152.689",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ". O balanço traz ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Patrimônio líquido | 163.931 | 152.689 | 163.931 | 152.689",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 51,
+     "file_id": null,
+     "start_block_index": 50,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Patrimônio líquido | 163.931 | 152.689 | 163.931 | 152.689",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Patrimônio líquido consolidado | 163.931 | 152.689 | 185.321 | 171.106",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 53,
+     "file_id": null,
+     "start_block_index": 52,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Patrimônio líquido consolidado | 163.931 | 152.689 | 185.321 | 171.106",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ". A nota se apresenta como consolidado, mas o valor de 2021 coincide com o PL da controladora.\nobservacao: O caixa final da DFC difere do balanço por 1. A DFC mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Saldo final de caixa e equivalentes de caixa | 354 | 871 | 10.655 | 8.195",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 56,
+     "file_id": null,
+     "start_block_index": 55,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Saldo final de caixa e equivalentes de caixa | 354 | 871 | 10.655 | 8.195",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ". O balanço mostra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195",
+     "document_index": 0,
+     "document_title": "Millet.pdf, página 6",
+     "end_block_index": 9,
+     "file_id": null,
+     "start_block_index": 8,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".\nobservacao: A equivalência patrimonial tem tratamento incoerente entre DRE e DFC. Na DRE consolidada ela é receita positiva: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado de equivalência patrimonial | 7 | 28.355 | 6.231 | 4.115 | -",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 16,
+     "file_id": null,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Resultado de equivalência patrimonial | 7 | 28.355 | 6.231 | 4.115 | -",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ". Na DFC o consolidado soma o mesmo valor positivo, e a controladora usa valor diferente da DRE: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado de equivalência patrimonial | (27.247) | (6.231) | 4.115 | -",
+     "document_index": 3,
+     "document_title": "Millet.pdf, página 10",
+     "end_block_index": 10,
+     "file_id": null,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Resultado de equivalência patrimonial | (27.247) | (6.231) | 4.115 | -",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".\nobservacao: Na nota 22.3, o cabeçalho repete o ano nas colunas da controladora: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 30,
+     "file_id": null,
+     "start_block_index": 29,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ". O total de ativos financeiros consolidado de 2022 também parece incoerente com os itens listados: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total | 358 | 871 | 10.352 | 78.755",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 35,
+     "file_id": null,
+     "start_block_index": 34,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Total | 358 | 871 | 10.352 | 78.755",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".\nobservacao: Os empréstimos de 2021 aparecem com valores diferentes na mesma nota: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Total dos empréstimos com terceiros | 24.176 | 25.072",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 20,
+     "file_id": null,
+     "start_block_index": 19,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Total dos empréstimos com terceiros | 24.176 | 25.072",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Empréstimos e Financiamentos | - | - | 24.176 | 25.075",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 39,
+     "file_id": null,
+     "start_block_index": 38,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Empréstimos e Financiamentos | - | - | 24.176 | 25.075",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".\nobservacao: O único índice de endividamento informado não usa EBITDA, por isso não o usei como alavancagem: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11",
+     "document_index": 4,
+     "document_title": "Millet.pdf, página 42",
+     "end_block_index": 24,
+     "file_id": null,
+     "start_block_index": 23,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Relação dívida liquida sobre capital ajustado (a)/(b) | 0,08 | 0,11",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".\nobservacao: O lucro dos controladores não aparece com esse nome. Usei a segunda linha \"Lucro líquido do exercício\", que vem depois da dedução da ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)",
+     "document_index": 1,
+     "document_title": "Millet.pdf, página 7",
+     "end_block_index": 34,
+     "file_id": null,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Participação acionistas de minoritários",
+   "type": "text"
+  },
+  {
+   "citations": null,
+   "text": ".",
+   "type": "text"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 12181,
+ "tokens_saida": 5089,
+ "tokens_cache": 0,
+ "segundos": 41.08,
+ "gravada": false
+}

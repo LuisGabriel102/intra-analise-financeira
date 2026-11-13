@@ -10,9 +10,9 @@ O caminho é o mesmo para todo documento: ler o PDF, achar as páginas certas, e
 
 A IA nunca faz conta. Margem, variação, EBITDA calculado, dívida líquida e alavancagem saem de `calculos.py`, e as conferências saem de `validacao.py`. Um modelo de linguagem erra conta e sinal de um jeito que parece certo, e código é auditável e testável. Foi conferindo em código que apareceu o EBITDA da Light publicado sem o sinal de menos.
 
-## 3. A prova de cada número vem da API de citações (em teste em 13/11/2026)
+## 3. A prova de cada número vem da API de citações
 
-A IA responde "campo: valor" e cita o documento, seguindo o padrão da documentação oficial da Anthropic. Quem recorta o trecho do PDF é a API, e não a IA, então o trecho não tem como ser inventado. O código confere se o número está no trecho, com o mesmo sinal. Há dois motivos a mais. A saída estruturada não pode ser usada junto com as citações (a API recusa), e ela também não existe no Claude do Microsoft Foundry hospedado no Azure, enquanto as citações existem. Uma ressalva: a citação prova que o número está na linha citada, mas não que é a coluna certa. Isso fica com as regras cruzadas e com o gabarito.
+A IA responde "campo: valor" e cita o documento, seguindo o padrão da documentação oficial da Anthropic. Cada página vai como um documento, e cada linha da página é um bloco que pode ser citado, então a citação aponta a linha exata da tabela. Num teste com 4 páginas da Light, em 13/11/2026, os 10 campos voltaram com a página e a linha certas, o "não encontrado" veio certo, e a chamada custou US$ 0,07 em 12 segundos. Quem recorta o trecho do PDF é a API, e não a IA, então o trecho não tem como ser inventado. O código confere se o número está no trecho, com o mesmo sinal. Há dois motivos a mais. A saída estruturada não pode ser usada junto com as citações (a API recusa), e ela também não existe no Claude do Microsoft Foundry hospedado no Azure, enquanto as citações existem. Uma ressalva: a citação prova que o número está na linha citada, mas não que é a coluna certa. Isso fica com as regras cruzadas e com o gabarito.
 
 ## 4. Sem framework de agentes
 
@@ -33,3 +33,7 @@ A variação é (atual − anterior) ÷ |anterior|. Assim, um prejuízo que aume
 ## 8. Nenhuma regra feita para uma empresa
 
 As regras valem para qualquer demonstração brasileira. Os casos dos três PDFs entram nos testes, e não no código.
+
+## 9. Respostas da IA gravadas
+
+Toda resposta real da IA fica gravada em `gravacoes/`, com a pergunta inteira como chave. A mesma pergunta não é paga duas vezes, e o modo `--replay` roda a solução inteira só com as gravações, sem chave e sem custo. É assim que o avaliador consegue rodar tudo, e é assim que os testes nunca chamam a IA de verdade.

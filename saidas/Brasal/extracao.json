@@ -1,0 +1,862 @@
+{
+ "documento": "Brasal.pdf",
+ "paginas_enviadas": [
+  6,
+  7,
+  8,
+  10,
+  11,
+  48
+ ],
+ "campos": {
+  "empresa": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "Brasal Brasília Holding S.A.",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 6,
+      "trecho": "Brasal Brasília Holding S.A."
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "Brasal Brasília Holding S.A.",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 6,
+       "trecho": "Brasal Brasília Holding S.A."
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "periodo_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "31/12/2022",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 6,
+      "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "31/12/2022",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 6,
+       "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "periodo_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "31/12/2021",
+    "numero": null,
+    "unidade": "",
+    "valor_reais": null,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 6,
+      "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "31/12/2021",
+     "numero": null,
+     "unidade": "",
+     "valor_reais": null,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 6,
+       "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebitda_definicao": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "alavancagem_definicao": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "receita_liquida_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "1.325.059",
+    "numero": 1325059.0,
+    "unidade": "R$ mil",
+    "valor_reais": 1325059000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 8,
+      "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "1.325.059",
+     "numero": 1325059.0,
+     "unidade": "R$ mil",
+     "valor_reais": 1325059000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 8,
+       "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebitda_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "lucro_liquido_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "174.602",
+    "numero": 174602.0,
+    "unidade": "R$ mil",
+    "valor_reais": 174602000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 8,
+      "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "174.602",
+     "numero": 174602.0,
+     "unidade": "R$ mil",
+     "valor_reais": 174602000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 8,
+       "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "lucro_controladores_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "divida_liquida_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "alavancagem_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "fco_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "258.248",
+    "numero": 258248.0,
+    "unidade": "R$ mil",
+    "valor_reais": 258248000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 11,
+      "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "258.248",
+     "numero": 258248.0,
+     "unidade": "R$ mil",
+     "valor_reais": 258248000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 11,
+       "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebit_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "192.840",
+    "numero": 192840.0,
+    "unidade": "R$ mil",
+    "valor_reais": 192840000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 8,
+      "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "192.840",
+     "numero": 192840.0,
+     "unidade": "R$ mil",
+     "valor_reais": 192840000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 8,
+       "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "depreciacao_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "29.014",
+    "numero": 29014.0,
+    "unidade": "R$ mil",
+    "valor_reais": 29014000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 11,
+      "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "29.014",
+     "numero": 29014.0,
+     "unidade": "R$ mil",
+     "valor_reais": 29014000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 11,
+       "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "receita_liquida_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "1.061.410",
+    "numero": 1061410.0,
+    "unidade": "R$ mil",
+    "valor_reais": 1061410000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 8,
+      "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "1.061.410",
+     "numero": 1061410.0,
+     "unidade": "R$ mil",
+     "valor_reais": 1061410000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 8,
+       "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebitda_anterior": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "lucro_liquido_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "275.560",
+    "numero": 275560.0,
+    "unidade": "R$ mil",
+    "valor_reais": 275560000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 8,
+      "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "275.560",
+     "numero": 275560.0,
+     "unidade": "R$ mil",
+     "valor_reais": 275560000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 8,
+       "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "lucro_controladores_anterior": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "divida_liquida_anterior": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "alavancagem_anterior": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "fco_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "121.462",
+    "numero": 121462.0,
+    "unidade": "R$ mil",
+    "valor_reais": 121462000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 11,
+      "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "121.462",
+     "numero": 121462.0,
+     "unidade": "R$ mil",
+     "valor_reais": 121462000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 11,
+       "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "ebit_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "238.224",
+    "numero": 238224.0,
+    "unidade": "R$ mil",
+    "valor_reais": 238224000.0,
+    "fonte": "dre",
+    "evidencias": [
+     {
+      "pagina": 8,
+      "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "238.224",
+     "numero": 238224.0,
+     "unidade": "R$ mil",
+     "valor_reais": 238224000.0,
+     "fonte": "dre",
+     "evidencias": [
+      {
+       "pagina": 8,
+       "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "depreciacao_anterior": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "22.837",
+    "numero": 22837.0,
+    "unidade": "R$ mil",
+    "valor_reais": 22837000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 11,
+      "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "22.837",
+     "numero": 22837.0,
+     "unidade": "R$ mil",
+     "valor_reais": 22837000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 11,
+       "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "margem_ebitda_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "investimentos_informados_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "capex_imobilizado_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "(45.761)",
+    "numero": -45761.0,
+    "unidade": "R$ mil",
+    "valor_reais": -45761000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 11,
+      "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "(45.761)",
+     "numero": -45761.0,
+     "unidade": "R$ mil",
+     "valor_reais": -45761000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 11,
+       "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "capex_intangivel_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "caixa_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "96.453",
+    "numero": 96453.0,
+    "unidade": "R$ mil",
+    "valor_reais": 96453000.0,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 6,
+      "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "96.453",
+     "numero": 96453.0,
+     "unidade": "R$ mil",
+     "valor_reais": 96453000.0,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 6,
+       "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "aplicacoes_financeiras_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "78.569",
+    "numero": 78569.0,
+    "unidade": "R$ mil",
+    "valor_reais": 78569000.0,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 6,
+      "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "78.569",
+     "numero": 78569.0,
+     "unidade": "R$ mil",
+     "valor_reais": 78569000.0,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 6,
+       "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "emprestimos_total_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "3.417",
+    "numero": 3417.0,
+    "unidade": "R$ mil",
+    "valor_reais": 3417000.0,
+    "fonte": "notas",
+    "evidencias": [
+     {
+      "pagina": 48,
+      "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "3.417",
+     "numero": 3417.0,
+     "unidade": "R$ mil",
+     "valor_reais": 3417000.0,
+     "fonte": "notas",
+     "evidencias": [
+      {
+       "pagina": 48,
+       "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "derivativos_divida_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "lucro_liquido_dmpl_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "174.602",
+    "numero": 174602.0,
+    "unidade": "R$ mil",
+    "valor_reais": 174602000.0,
+    "fonte": "dmpl",
+    "evidencias": [
+     {
+      "pagina": 10,
+      "trecho": "Lucro líquido do exercício | - | - | - | - | - | 174.602 | 174.602"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "174.602",
+     "numero": 174602.0,
+     "unidade": "R$ mil",
+     "valor_reais": 174602000.0,
+     "fonte": "dmpl",
+     "evidencias": [
+      {
+       "pagina": 10,
+       "trecho": "Lucro líquido do exercício | - | - | - | - | - | 174.602 | 174.602"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "patrimonio_liquido_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "366.334",
+    "numero": 366334.0,
+    "unidade": "R$ mil",
+    "valor_reais": 366334000.0,
+    "fonte": "balanco",
+    "evidencias": [
+     {
+      "pagina": 7,
+      "trecho": "366.334 | 456.836 | 366.334 | 456.836"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "366.334",
+     "numero": 366334.0,
+     "unidade": "R$ mil",
+     "valor_reais": 366334000.0,
+     "fonte": "balanco",
+     "evidencias": [
+      {
+       "pagina": 7,
+       "trecho": "366.334 | 456.836 | 366.334 | 456.836"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  },
+  "patrimonio_liquido_notas_atual": {
+   "status": "nao_encontrado",
+   "principal": null,
+   "ocorrencias": []
+  },
+  "caixa_final_dfc_atual": {
+   "status": "encontrado",
+   "principal": {
+    "texto": "96.453",
+    "numero": 96453.0,
+    "unidade": "R$ mil",
+    "valor_reais": 96453000.0,
+    "fonte": "dfc",
+    "evidencias": [
+     {
+      "pagina": 11,
+      "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166"
+     }
+    ],
+    "conferido": true
+   },
+   "ocorrencias": [
+    {
+     "texto": "96.453",
+     "numero": 96453.0,
+     "unidade": "R$ mil",
+     "valor_reais": 96453000.0,
+     "fonte": "dfc",
+     "evidencias": [
+      {
+       "pagina": 11,
+       "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166"
+      }
+     ],
+     "conferido": true
+    }
+   ]
+  }
+ },
+ "observacoes": [
+  {
+   "texto": "O valor de empréstimos_total_atual (3.417) vem da tabela de instrumentos financeiros da nota 25. Não é uma linha de total do balanço, que separa o circulante (Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902) do não circulante (Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576).",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 7,
+     "trecho": "Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902"
+    },
+    {
+     "pagina": 7,
+     "trecho": "Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "O período comparativo de 2021 está marcado como não auditado no balanço (Passivo | (não auditado) | (não auditado)) e na DFC (Fluxo de caixa das atividades operacionais: | (não auditado) | (não auditado)).",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 7,
+     "trecho": "Passivo | (não auditado) | (não auditado)"
+    },
+    {
+     "pagina": 11,
+     "trecho": "Fluxo de caixa das atividades operacionais: | (não auditado) | (não auditado)"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "Na controladora, o caixa no fim de 2021 aparece na DFC como No fim do exercício | 3.714 | 1.145. No balanço, o mesmo saldo é Caixa e equivalentes de caixa | 4 | 3.714 | 1.146.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 11,
+     "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166"
+    },
+    {
+     "pagina": 6,
+     "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "O balanço remete o capital social à Capital social | 25. Porém, a nota 25 trata de outro assunto: 25. Gestão de riscos dos instrumentos financeiros.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 7,
+     "trecho": "Capital social | 25 | 154.000 | 94.000 | 154.000 | 94.000"
+    },
+    {
+     "pagina": 48,
+     "trecho": "25. Gestão de riscos dos instrumentos financeiros"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "A linha de depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275). Na DFC aparece Depreciações e amortizações | 507 | 465 | 29.014 | 22.837. A controladora de 2021 também diverge (316 na DRE e 465 na DFC).",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 8,
+     "trecho": "#Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275)"
+    },
+    {
+     "pagina": 11,
+     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+    }
+   ],
+   "conferido": true
+  },
+  {
+   "texto": "O título da linha de investimentos diz \"aplicado\", mas os valores do consolidado de 2021 e da controladora são positivos: Caixa líquido aplicado nas atividades de investimentos | 236.478 | 88.754 | (15.764) | 13.161.",
+   "numero": null,
+   "unidade": "",
+   "valor_reais": null,
+   "fonte": "",
+   "evidencias": [
+    {
+     "pagina": 11,
+     "trecho": "Caixa líquido aplicado nas atividades de investimentos | 236.478 | 88.754 | (15.764) | 13.161"
+    }
+   ],
+   "conferido": true
+  }
+ ],
+ "uso": {
+  "modelo": "claude-opus-5-5",
+  "tokens_entrada": 12260,
+  "tokens_saida": 3668,
+  "custo_usd": 0.1224,
+  "segundos": 28.9,
+  "gravada": true
+ }
+}
