@@ -1,0 +1,41 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQSiwkKEAgTGAI4AUIIdGhpbmtpbmcSDLYMJPfMUkP94uQqBBoMw9eo5FsGBPSAQYhyIjCsIaGyJ8U4wT4aRhPtVtJSa0DBV6qQvzV/fr7QDmjLjfPMLWoitU4xwOFYFSim85gqqAjLUKelYn1/RFobJ5/xD4c9kPQtuhIhDmkdbJwWAZ6g7B6JFj5xPQ89WI+N7zi5TLT5pso2VNU+OfP7Y+LBi2ILLUKp3InMKOgqrGeErg9Nc1DNVT1MIM88bBy+Z1ITtrriRAt6VOV5ZXZWcY+HEt/cA+cm0eAzfRd3XEWT+0Pm9UcThnppI4S9hRIKekCsUnFmep2AwcdSsL6mvWhwna8tWLQaE/Ev1qvj9Wf2ijLblrD/gkPReIp3MvCuMDq3VU6XRfangFGd4T5qpu38juqi1VIStklGrv7o8sMg6yzKw2hu4JzlFOmMw/yoAlKOT/JSsOETLS+PQFC7CAIgcXyyQxnz3It2ZoHV6DegXhmTa0cWMGJEaRgRgtCTr/ayCiJumdUovQeF+MS5BlSGwoMGJPsDUwwqRE618sCwAiDoT2+2TvNsMK0P1c4t4QpbT+Vl7wobkj1lHd0zI3aK5H/aCOuXc0I1ze1bjdR1Pr7dA9t3yxlEXYGr6RB9ZhztShpdOaBz1BwRab9rNlXDINxmcHA/VMB3N71oj87v0fTc0q19Jmdujfdd2/Pu2/kJk699k0+FcS1ZjH6HcnlzzsaItbW4Y/KBzEi9q4I4Y8aTZDjTK/D09OYo12q/NP3puatJ+jvBPFo1OcJbDgoof3Ayi/Ig/jmxq/W9abV21rmn5Mn1JfpFz/Ip6yacJw9+TJl+l6Q/h6GuKkl7C1OFwuYFDhDp+/Au4h3K3iFSt3/AvQa0XM1c3JMTysR0bLPXJFGsdlQ1k4n7wzrvB/7GksoNcVChrV1ho/U71i6HG4XHYivIMjIpaJ+pq1YeuhMkLSoxp5slEoFCVgIzzHfRxLUSIafmaEuMt3CUCRcRFTfVFJ3wcNGbv4dJHm4y0Mx5C+q8NwZOTqlCMfeqrpqsbvtJhvAbAJ4I3cfCcaHBGz2Vh6uTQC1mtSVaoep12Ghegxi2jRzExP+NFfXcL82tPDEPqEuit7AOKtxKb/TiLib9V0gUO75daWn/ithsG5pOK9iCqv5DqUKmpO8bt+Dtco3rIr8TFcEH6FgfU8d3PPDo08MAWv9TOcXQCmFf8tHsFRmWtuxGGtloieknYBrMDqWskc4r3l2y+zkt9VlA4IV0+oyDF/YirAGjS7mN6cxY6ZDvQewLd55kNPpfE+7LRSvxu+uqg+DbMY65C6FdmmuEfgixd1s44boxyCHjFdb81LkN2G4L9g1orv83MOywGDux4+XZhr1aYokbbDct2dmRfNfTiv21wMq1wjNoX63e/dgO0m3D8QUgfY/FYURSR5p9f+3gZxivIqGhse99Ux/xn1ZBY1cnK1ECHUEaa1QNRK0epiwKHptu1KbKba5UwuOBHPCxcqCx1AcbIjiePCjtLlxZkuTCdUgqtcMcs8v8MkC/yV0p/cdAJRgB",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_01M1ZhLHZigLGBrEzSbjst7d",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "aumento da receita vendas volume preço",
+    "empresa": "Brasal"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01P9W7BWTRp3xtafiZQ16HeM",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "aumento da receita vendas Alibra performance",
+    "empresa": "Millet"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 336,
+ "tokens_cache": 0,
+ "segundos": 3.45,
+ "gravada": false,
+ "tokens_cache_escrita": 28018,
+ "parada": "tool_use"
+}

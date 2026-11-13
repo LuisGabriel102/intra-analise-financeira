@@ -12,7 +12,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+# O servidor MCP é opcional: a análise roda sem ele. Os testes do servidor precisam dele.
+mcp = ["mcp>=2.3,<3"]
+dev = ["pytest>=8", "mcp>=2.3,<3"]
 
 [build-system]
 requires = ["hatchling"]

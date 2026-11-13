@@ -11,10 +11,10 @@ Todo texto que veio do PDF ou da IA passa por um escape: "<" e ">" viram entidad
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 
-from analise_financeira.esquemas import AnaliseQualitativa, Extracao, Item, RespostaPergunta
+from analise_financeira.esquemas import AchadoSeguranca, AnaliseQualitativa, Extracao, Item, RespostaPergunta
 from analise_financeira.formato import milhoes, multiplo, numero_br, percentual
 from analise_financeira.indicadores import AlertaSaida, Dado, DocumentoAnalisado, Indicador
 from analise_financeira.numeros import ESCALAS, achar_numeros
@@ -31,6 +31,7 @@ class ResultadoDocumento:
     extracao: Extracao
     numeros: DocumentoAnalisado
     qualitativa: AnaliseQualitativa | None = None
+    seguranca: list[AchadoSeguranca] = field(default_factory=list)  # a varredura do PDF antes da IA
 
     @property
     def chave(self) -> str:
@@ -288,6 +289,8 @@ def _item(i: Item, suspeitos: list[Suspeito] | None = None) -> str:
     tipos = ", ".join(FONTE.get(f, f) for f in i.fontes)
     onde = f"{tipos}, {_paginas([e.pagina for e in i.evidencias])}" if i.evidencias else ""
     linha = f"- {texto(i.texto)}" + (f" ({onde})" if onde else "")
+    if any(e.origem == "codigo" for e in i.evidencias):
+        linha += " · trecho achado pelo código (a API devolveu a citação vazia)"
     if not i.conferido:
         linha += f" {ALERTA} sem trecho citado"
     if i.numeros_sem_fonte:
@@ -372,6 +375,8 @@ def alertas(resultados: list[ResultadoDocumento]) -> list[str]:
                if not repete_achado(o.texto, paginas := [e.pagina for e in o.evidencias], conhecidos)]
     md += [f"- **{texto(r.chave)}** ({_paginas(p) or 'sem página'}): {texto(m)}" for r, m, p in ia] or ["- Nenhuma."]
 
+    md += ["", *seguranca(resultados)]
+
     md += ["", "### Informações não encontradas", "",
            f"O que o documento não informa. Quando a solução consegue calcular, o valor aparece à parte na tabela, com {CALCULADO}.", ""]
     for r in resultados:
@@ -386,6 +391,25 @@ def alertas(resultados: list[ResultadoDocumento]) -> list[str]:
         if q is not None and not q.tem_relatorio_administracao:
             faltam.append("relatório da administração")
         md.append(f"- **{texto(r.chave)}:** " + (", ".join(faltam) if faltam else "nada") + ".")
+    return md
+
+
+GRAVIDADE = {"alta": 0, "baixa": 1, "info": 2}
+
+
+def seguranca(resultados: list[ResultadoDocumento]) -> list[str]:
+    """O que a varredura de segurança achou nos PDFs, do mais grave para o menos grave."""
+    md = ["### Segurança dos PDFs", "",
+          "A varredura roda antes da IA. Texto escondido (da cor do fundo, coberto, minúsculo ou fora da página) com "
+          "frase de comando, número de valor ou mais de 20 letras sai do que vai para a IA. Texto escondido curto e sem "
+          "número fica, com aviso baixo. Frase de comando visível fica no texto, com aviso alto.", ""]
+    achados = sorted(((r, a) for r in resultados for a in r.seguranca),
+                     key=lambda x: (GRAVIDADE[x[1].gravidade], x[0].chave, x[1].pagina or 0))
+    if not achados:
+        return [*md, "Nenhum achado."]
+    md += ["| Empresa | Página | Gravidade | Tirado antes da IA | O que foi achado |", "|---|---|---|---|---|"]
+    md += [f"| {celula(r.chave)} | {f'p. {a.pagina}' if a.pagina else 'arquivo'} | {a.gravidade} | "
+           f"{'sim' if a.removido else 'não'} | {celula(a.detalhe)} |" for r, a in achados]
     return md
 
 

@@ -131,3 +131,11 @@ def test_resposta_com_numero_sem_trecho_ganha_aviso():
                          numeros_sem_fonte=["38,9%"], uso=Uso(modelo="m"))
     md = "\n".join(pergunta(r))
     assert "⚠️ Números sem trecho citado nesta resposta: 38,9%." in md
+
+
+def test_item_com_trecho_achado_pelo_codigo_fica_marcado():
+    achado = Item(texto="A companhia não tem linhas de crédito.", conferido=True, fontes=["notas"],
+                  evidencias=[Evidencia(pagina=26, trecho="não possui linhas de crédito", origem="codigo")])
+    linha = _item(achado)
+    assert "trecho achado pelo código" in linha and "⚠️" not in linha
+    assert "achado pelo código" not in _item(achado.model_copy(update={"evidencias": [Evidencia(pagina=26, trecho="t")]}))

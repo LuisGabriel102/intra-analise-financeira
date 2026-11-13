@@ -13,7 +13,8 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920",
+     "origem": "api"
     }
    ]
   },
@@ -25,7 +26,8 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920",
+     "origem": "api"
     }
    ]
   },
@@ -46,7 +48,8 @@
    "fontes": [
     {
      "pagina": 9,
-     "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+     "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001",
+     "origem": "api"
     }
    ]
   },
@@ -61,11 +64,13 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+     "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301",
+     "origem": "api"
     },
     {
      "pagina": 23,
-     "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+     "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110",
+     "origem": "api"
     }
    ]
   },
@@ -77,11 +82,13 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301"
+     "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS | (5.681.153) | 397.043 | (1.910.411) | 1.143.301",
+     "origem": "api"
     },
     {
      "pagina": 23,
-     "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110"
+     "trecho": "Depreciação e amortização | 32 | - | - | 730.767 | 678.110",
+     "origem": "api"
     }
    ]
   },
@@ -102,7 +109,8 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920"
+     "trecho": "RECEITA LÍQUIDA | 31 | - | - | 13.253.286 | 14.897.920",
+     "origem": "api"
     }
    ]
   },
@@ -120,7 +128,8 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945",
+     "origem": "api"
     }
    ]
   },
@@ -132,7 +141,8 @@
    "fontes": [
     {
      "pagina": 20,
-     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945"
+     "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO | (5.672.203) | 397.945 | (5.672.203) | 397.945",
+     "origem": "api"
     }
    ]
   },
@@ -164,7 +174,8 @@
    "fontes": [
     {
      "pagina": 105,
-     "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+     "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919",
+     "origem": "api"
     }
    ]
   },
@@ -176,7 +187,8 @@
    "fontes": [
     {
      "pagina": 105,
-     "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919"
+     "trecho": "Dívida líquida (A) | 9.032.236 | 7.352.919",
+     "origem": "api"
     }
    ]
   },
@@ -190,19 +202,23 @@
    "fontes": [
     {
      "pagina": 105,
-     "trecho": "Dívida de financiamentos, empréstimos e debêntures | 10.688.690 | 11.144.326"
+     "trecho": "Dívida de financiamentos, empréstimos e debêntures | 10.688.690 | 11.144.326",
+     "origem": "api"
     },
     {
      "pagina": 105,
-     "trecho": "Instrumentos financeiros derivativos swaps | 427.097 | (186.434)"
+     "trecho": "Instrumentos financeiros derivativos swaps | 427.097 | (186.434)",
+     "origem": "api"
     },
     {
      "pagina": 18,
-     "trecho": "Caixa e equivalentes de caixa | 6 | 2.693 | 9 | 43.886 | 396.777"
+     "trecho": "Caixa e equivalentes de caixa | 6 | 2.693 | 9 | 43.886 | 396.777",
+     "origem": "api"
     },
     {
      "pagina": 18,
-     "trecho": "Títulos e valores mobiliários | 7 | 720.172 | 62.647 | 2.039.665 | 3.208.196"
+     "trecho": "Títulos e valores mobiliários | 7 | 720.172 | 62.647 | 2.039.665 | 3.208.196",
+     "origem": "api"
     }
    ]
   },
@@ -220,7 +236,8 @@
    "fontes": [
     {
      "pagina": 10,
-     "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+     "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou\n2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants",
+     "origem": "api"
     }
    ]
   },
@@ -232,7 +249,8 @@
    "fontes": [
     {
      "pagina": 10,
-     "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+     "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants",
+     "origem": "api"
     }
    ]
   },
@@ -253,7 +271,8 @@
    "fontes": [
     {
      "pagina": 23,
-     "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+     "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)",
+     "origem": "api"
     }
    ]
   },
@@ -265,7 +284,8 @@
    "fontes": [
     {
      "pagina": 23,
-     "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)"
+     "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais | 697.508 | 171.062 | 200.763 | (42.045)",
+     "origem": "api"
     }
    ]
   },
@@ -286,7 +306,8 @@
    "fontes": [
     {
      "pagina": 10,
-     "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se"
+     "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se",
+     "origem": "api"
     }
    ]
   },
@@ -301,11 +322,13 @@
    "fontes": [
     {
      "pagina": 23,
-     "trecho": "Aquisições de bens do ativo imobilizado | - | - | (307.759) | (219.601)"
+     "trecho": "Aquisições de bens do ativo imobilizado | - | - | (307.759) | (219.601)",
+     "origem": "api"
     },
     {
      "pagina": 23,
-     "trecho": "Aquisições de bens do ativo intangível e do ativo de contrato | (234) | - | (1.162.533) | (1.029.744)"
+     "trecho": "Aquisições de bens do ativo intangível e do ativo de contrato | (234) | - | (1.162.533) | (1.029.744)",
+     "origem": "api"
     }
    ]
   },

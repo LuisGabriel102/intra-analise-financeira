@@ -9,6 +9,9 @@ Este módulo junta as palavras que estão na mesma altura numa linha só e põe
 Cada linha vira um bloco que a IA pode citar. Assim, a citação aponta a linha
 exata da tabela, e não a página inteira.
 
+Antes de juntar as palavras, a varredura de segurança (seguranca.py) tira o texto escondido
+que tenta manipular a IA, e anota o que achou em `Documento.seguranca`.
+
 Ferramenta: PyMuPDF. É rápido, local e abre o PDF criptografado da Brasal.
 Em produção, o lugar dele é do Azure Document Intelligence (veja o README).
 """
@@ -21,7 +24,9 @@ from pathlib import Path
 
 import pymupdf
 
+from analise_financeira.esquemas import AchadoSeguranca
 from analise_financeira.numeros import detectar_escala
+from analise_financeira.seguranca import comandos_visiveis, varrer_documento, varrer_pagina
 
 LIMITE_MB = 50
 LIMITE_PAGINAS = 500
@@ -46,6 +51,7 @@ class Documento:
     nome: str                       # "Light.pdf"
     paginas: list[Pagina] = field(default_factory=list)
     escala_padrao: str = ""         # a escala mais comum entre as páginas que avisam a escala
+    seguranca: list[AchadoSeguranca] = field(default_factory=list)  # o que a varredura achou
 
     def pagina(self, numero: int) -> Pagina:
         return self.paginas[numero - 1]
@@ -84,8 +90,19 @@ def _pagina_impressa(linhas: list[str]) -> int | None:
     return None
 
 
-def ler_pdf(caminho: str | Path) -> Documento:
-    """Lê o PDF inteiro. Recusa arquivo grande demais, com página demais ou com senha."""
+def _fora_das_areas(palavras: list[tuple], areas: list[pymupdf.Rect]) -> list[tuple]:
+    """As palavras cujo centro não está em nenhuma das áreas tiradas pela varredura."""
+    if not areas:
+        return palavras
+    return [p for p in palavras if not any(a.contains(pymupdf.Point((p[0] + p[2]) / 2, (p[1] + p[3]) / 2))
+                                           for a in areas)]
+
+
+def ler_pdf(caminho: str | Path, *, varrer: bool = True) -> Documento:
+    """Lê o PDF inteiro. Recusa arquivo grande demais, com página demais ou com senha.
+
+    varrer=False lê sem a varredura de segurança: só serve para os testes compararem as duas leituras.
+    """
     caminho = Path(caminho)
     if caminho.stat().st_size > LIMITE_MB * 1_000_000:
         raise ValueError(f"{caminho.name}: maior que {LIMITE_MB} MB")
@@ -95,8 +112,16 @@ def ler_pdf(caminho: str | Path) -> Documento:
             raise ValueError(f"{caminho.name}: o PDF pede senha")
         if pdf.page_count > LIMITE_PAGINAS:
             raise ValueError(f"{caminho.name}: mais de {LIMITE_PAGINAS} páginas")
+        if varrer:
+            documento.seguranca += varrer_documento(pdf, caminho.name)
         for indice, pagina in enumerate(pdf, start=1):
-            linhas = _juntar_em_linhas(pagina.get_text("words"))
+            palavras = pagina.get_text("words")
+            if varrer:
+                varredura = varrer_pagina(pagina, caminho.name)
+                palavras = _fora_das_areas(palavras, varredura.remover)
+            linhas = _juntar_em_linhas(palavras)
+            if varrer:
+                documento.seguranca += varredura.achados + comandos_visiveis(linhas, caminho.name, indice)
             tem_imagem = bool(pagina.get_images())
             documento.paginas.append(Pagina(
                 numero=indice,

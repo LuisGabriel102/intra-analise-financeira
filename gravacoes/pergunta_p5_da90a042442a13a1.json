@@ -1,0 +1,29 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQSkQcKEAgTGAI4AUIIdGhpbmtpbmcSDMf0pn7crxR/6OJzfBoMA8f4zCYfWxOgrdTVIjB20TIJd5sJ963WufAFEf/NbqiV8IbZqzQ/L0eYzIMNX/7jGz3wqCbik4Ha6M5BDCQqrgaGRq27P8Kw/D9q+dcHVcQQema3Tl8vMTpFFzuthuW/tg7ucHlIeH417iAs0fK6FW2shqYNL7JVDYL2qDfduvyZBF3MQcDhos64Kkr9jVD1Rr967AO32ivx0Z/2585/9NXzzn9A+G6hsUq0FXAVVKb8eDTyIjJ4au7T9h3Qawq5yA9ftWkee4WnpvMxbq5Z1InRepSvnD3KKUVcHeU3sWRZ4fl1/bCkLlvr5fEZR0tIm0jeToA1cw89fI+P8jbTb8OP0eH+E65u1S9+wlxfHUWWeoSOdzgptmTgWQIVaN9FMsEwgz/H71FeyqYe+YWwAovs9CFvoYNo97plkPkrRcCwvchWNYYJub0IWRLDYu2ob4ctuD/x9E2cbexygS4RRYaBO/w58DG+X4lDCq41MB4I/fz1Zzw7g5UXu4sYlyunUkUYl+WrOaHHAn1IreX1c5ih8t1u9NnwH5srjkmH78hDjULyueBWq+BEn7khLo0Te6HyX94ZRhyriWRTsptHZUQ13vAQTS1/GP7wUjDfE2D7dpqFb4zwmjQAg+tJHWnFPyAS/10JQwj/v81HAISjHcph9dlDQ+RTt20Ti+W1ylMooEZ/Jz9TjKK9RTQeH0uGLj6XKa0RHX6LmA8VUNy9/UEbVL1ODAUAY544YuwdDsDd2fa4plRMmSIZAzpVexM6yQwFdZK0Uz7PA6m7iSDFgi7l7kR/B7qwXzxqOU/xcvDp5gVV08Z/8h/YIYNie4Ih0OSA8WCmsXPmCLW4k4MKDMpRjZDVZWH2howBxpZMJQYJ6ZQUl/Xt6I4Ck9sHoLj7Ip5YR61hqRwOwr7Rlgoh5YM98n8eNdpmPGrLkc3hcGHGzeGe0zf3IJWMeU8ozBIX7G9WJtvUEjPfQJNbb2gWzTTbyHbBdJhuL9I7bPMxbJAn29WhIdpAlq1RPsStotBTsAT0jZ0CcxahaE4YBdrom4a/UV0CwdzCjjLynqZjAwETc18G75Y758wqpBeBF76FAMsdwg8I/CMGAWyHGZ7WsNZ0vpLZbgoDM6Iu5lNZsf2/0wMHkUt+5DGKK3G9Biyl1wRBZa7QbTlcyxsMHpIUGAE=",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_0164HgMKxHVRLDFDJyQdb5XF",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "projeção 2023 expectativa receita EBITDA investimentos",
+    "empresa": "todas"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 176,
+ "tokens_cache": 0,
+ "segundos": 2.12,
+ "gravada": false,
+ "tokens_cache_escrita": 9978,
+ "parada": "tool_use"
+}

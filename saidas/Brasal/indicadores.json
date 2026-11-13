@@ -13,7 +13,8 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+     "origem": "api"
     }
    ]
   },
@@ -25,7 +26,8 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+     "origem": "api"
     }
    ]
   },
@@ -50,11 +52,13 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+     "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras",
+     "origem": "api"
     },
     {
      "pagina": 11,
-     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+     "origem": "api"
     }
    ]
   },
@@ -66,11 +70,13 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+     "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras",
+     "origem": "api"
     },
     {
      "pagina": 11,
-     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+     "origem": "api"
     }
    ]
   },
@@ -91,7 +97,8 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+     "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+     "origem": "api"
     }
    ]
   },
@@ -109,7 +116,8 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+     "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560",
+     "origem": "api"
     }
    ]
   },
@@ -121,7 +129,8 @@
    "fontes": [
     {
      "pagina": 8,
-     "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+     "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560",
+     "origem": "api"
     }
    ]
   },
@@ -157,15 +166,18 @@
    "fontes": [
     {
      "pagina": 48,
-     "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417"
+     "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417",
+     "origem": "api"
     },
     {
      "pagina": 6,
-     "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+     "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166",
+     "origem": "api"
     },
     {
      "pagina": 6,
-     "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766"
+     "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766",
+     "origem": "api"
     }
    ]
   },
@@ -194,7 +206,8 @@
    "fontes": [
     {
      "pagina": 11,
-     "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+     "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462",
+     "origem": "api"
     }
    ]
   },
@@ -206,7 +219,8 @@
    "fontes": [
     {
      "pagina": 11,
-     "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+     "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462",
+     "origem": "api"
     }
    ]
   },
@@ -231,7 +245,8 @@
    "fontes": [
     {
      "pagina": 11,
-     "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)"
+     "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)",
+     "origem": "api"
     }
    ]
   },

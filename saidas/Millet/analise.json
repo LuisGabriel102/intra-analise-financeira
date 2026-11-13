@@ -42,11 +42,13 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (“Alibra”),"
+     "trecho": "Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (“Alibra”),",
+     "origem": "api"
     },
     {
      "pagina": 28,
-     "trecho": "Resultado do Período (jun-dez) | 7.330 | 6.231 | - | - | 6.231"
+     "trecho": "Resultado do Período (jun-dez) | 7.330 | 6.231 | - | - | 6.231",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -60,7 +62,8 @@
    "evidencias": [
     {
      "pagina": 11,
-     "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que\nera previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de\nvenda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem"
+     "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que\nera previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de\nvenda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -74,15 +77,18 @@
    "evidencias": [
     {
      "pagina": 38,
-     "trecho": "Fretes sobre vendas | - | (20.129) | (7.555)\nMarketing | - | (4.449) | (832)"
+     "trecho": "Fretes sobre vendas | - | (20.129) | (7.555)\nMarketing | - | (4.449) | (832)",
+     "origem": "api"
     },
     {
      "pagina": 38,
-     "trecho": "Marketing | - | (4.449) | (832)"
+     "trecho": "Marketing | - | (4.449) | (832)",
+     "origem": "api"
     },
     {
      "pagina": 38,
-     "trecho": "Despesas com vendas | - | - | (51.142) | (21.370)"
+     "trecho": "Despesas com vendas | - | - | (51.142) | (21.370)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -96,7 +102,8 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)"
+     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -110,7 +117,8 @@
    "evidencias": [
     {
      "pagina": 25,
-     "trecho": "Adições (reversões) no exercício | (1.021) | 473"
+     "trecho": "Adições (reversões) no exercício | (1.021) | 473",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -124,7 +132,8 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectiva\nobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e\nreceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos\npara R$3.103 e R$167, respectivamente."
+     "trecho": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectiva\nobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e\nreceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos\npara R$3.103 e R$167, respectivamente.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -140,15 +149,18 @@
    "evidencias": [
     {
      "pagina": 40,
-     "trecho": "Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma\ncontraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações\ncontratuais."
+     "trecho": "Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma\ncontraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações\ncontratuais.",
+     "origem": "api"
     },
     {
      "pagina": 25,
-     "trecho": "Acima de 361 dias | 7.628 | 6.727"
+     "trecho": "Acima de 361 dias | 7.628 | 6.727",
+     "origem": "api"
     },
     {
      "pagina": 25,
-     "trecho": "A Companhia não mantém qualquer garantia para os títulos em atraso."
+     "trecho": "A Companhia não mantém qualquer garantia para os títulos em atraso.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -162,11 +174,13 @@
    "evidencias": [
     {
      "pagina": 41,
-     "trecho": "Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações\nassociadas com seus passivos financeiros que são liquidados com pagamentos à vista ou com outro ativo"
+     "trecho": "Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações\nassociadas com seus passivos financeiros que são liquidados com pagamentos à vista ou com outro ativo",
+     "origem": "api"
     },
     {
      "pagina": 41,
-     "trecho": "Total | 73.154 | 73.154 | 64.377 | 8.658 | 118"
+     "trecho": "Total | 73.154 | 73.154 | 64.377 | 8.658 | 118",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -180,15 +194,18 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "é dividido em uma parcela fixa, no valor de R$ 138.843.004,78, e uma parcela a prazo, no valor de até R$\n40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do\ncontrato, e representou 22,6% do preço pago."
+     "trecho": "é dividido em uma parcela fixa, no valor de R$ 138.843.004,78, e uma parcela a prazo, no valor de até R$\n40.506.995,22. A parcela à prazo deverá ser paga no aniversário de segundo ano da data de fechamento do\ncontrato, e representou 22,6% do preço pago.",
+     "origem": "api"
     },
     {
      "pagina": 27,
-     "trecho": "corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do\npagamento."
+     "trecho": "corrigidas monetariamente pela taxa SELIC entre a data de fechamento do SPA e a data efetiva do\npagamento.",
+     "origem": "api"
     },
     {
      "pagina": 25,
-     "trecho": "Total | 355 | 871 | 10.656 | 8.194"
+     "trecho": "Total | 355 | 871 | 10.656 | 8.194",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -202,11 +219,13 @@
    "evidencias": [
     {
      "pagina": 41,
-     "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por\nconta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado."
+     "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por\nconta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado.",
+     "origem": "api"
     },
     {
      "pagina": 41,
-     "trecho": "Empréstimos e Financiamentos (Taxas Pré-fixadas) | 24.176 | 25.075"
+     "trecho": "Empréstimos e Financiamentos (Taxas Pré-fixadas) | 24.176 | 25.075",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -220,11 +239,13 @@
    "evidencias": [
     {
      "pagina": 41,
-     "trecho": "Risco de taxa de câmbio: está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa\nfinanceira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira."
+     "trecho": "Risco de taxa de câmbio: está atrelado a possibilidade de alteração nas taxas de câmbio, afetando a despesa\nfinanceira (ou receita) e o saldo passivo de contratos que tenham como indexador uma moeda estrangeira.",
+     "origem": "api"
     },
     {
      "pagina": 38,
-     "trecho": "Mercado externo | 50.064 | 21.084"
+     "trecho": "Mercado externo | 50.064 | 21.084",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -238,7 +259,8 @@
    "evidencias": [
     {
      "pagina": 11,
-     "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de"
+     "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no\ncusto de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -252,7 +274,8 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Trabalhistas | 722 | 91\nRisco Previdenciário | 2.562 | 2.264\nTotal | 3.284 | 2.355"
+     "trecho": "Trabalhistas | 722 | 91\nRisco Previdenciário | 2.562 | 2.264\nTotal | 3.284 | 2.355",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -266,7 +289,8 @@
    "evidencias": [
     {
      "pagina": 30,
-     "trecho": "metodologia e premissas utilizadas pela Administração para teste de impairment do ágio considerou o desempenho histórico da Companhia e suas projeções de\ncrescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia."
+     "trecho": "metodologia e premissas utilizadas pela Administração para teste de impairment do ágio considerou o desempenho histórico da Companhia e suas projeções de\ncrescimento até 2025, e taxa de perpetuidade a partir de 2026, descontados à taxa WACC da Companhia.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -280,7 +304,8 @@
    "evidencias": [
     {
      "pagina": 26,
-     "trecho": "Provisão para perdas na realização dos estoques | (198) | -"
+     "trecho": "Provisão para perdas na realização dos estoques | (198) | -",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -298,7 +323,8 @@
    "evidencias": [
     {
      "pagina": 42,
-     "trecho": "emitir novas ações ou vender ativos para reduzir, por exemplo, o nível de endividamento. A Companhia vem\nacumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo\nprojetados com a necessidade de capital de giro necessária para os próximos anos. A gestão de capital da"
+     "trecho": "emitir novas ações ou vender ativos para reduzir, por exemplo, o nível de endividamento. A Companhia vem\nacumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo\nprojetados com a necessidade de capital de giro necessária para os próximos anos. A gestão de capital da",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -312,7 +338,8 @@
    "evidencias": [
     {
      "pagina": 31,
-     "trecho": "Em 31 de dezembro de 2022, o saldo de imobilizado em andamento se refere basicamente a ampliações que vem sendo efetuadas na unidade de Marechal Cândido\nRondon/PR, referentes: “Projeto Melhoria Úmida” (R$ 3.801), “Restaurante” (R$ 2.107), “Melhorias no Aglomerador” (R$ 888) e outros projetos (R$ 1.367)."
+     "trecho": "Em 31 de dezembro de 2022, o saldo de imobilizado em andamento se refere basicamente a ampliações que vem sendo efetuadas na unidade de Marechal Cândido\nRondon/PR, referentes: “Projeto Melhoria Úmida” (R$ 3.801), “Restaurante” (R$ 2.107), “Melhorias no Aglomerador” (R$ 888) e outros projetos (R$ 1.367).",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -326,11 +353,13 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "✓ A Empresa possui um portfólio diversificado (mais de 500 SKUs), além de ter uma base com mais\nde mil clientes;"
+     "trecho": "✓ A Empresa possui um portfólio diversificado (mais de 500 SKUs), além de ter uma base com mais\nde mil clientes;",
+     "origem": "api"
     },
     {
      "pagina": 27,
-     "trecho": "✓ Aquisição de um participante bem inserido no mercado, proporcionando acesso imediato a uma\nrelevante fatia de mercado."
+     "trecho": "✓ Aquisição de um participante bem inserido no mercado, proporcionando acesso imediato a uma\nrelevante fatia de mercado.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -344,7 +373,8 @@
    "evidencias": [
     {
      "pagina": 11,
-     "trecho": "A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas\ndemonstrações financeiras."
+     "trecho": "A Companhia continuará monitorando os efeitos da crise e os impactos nas suas operações e nas\ndemonstrações financeiras.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -360,11 +390,13 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de"
+     "trecho": "Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de",
+     "origem": "api"
     },
     {
      "pagina": 27,
-     "trecho": "pelo valor total de aquisição de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo"
+     "trecho": "pelo valor total de aquisição de R$ 179.350, sendo R$ 138.843 no momento da aquisição e R$ 40.507 a prazo",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -378,11 +410,13 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos\nassumidos relacionado à aquisição da Alibra Ingredientes LTDA, para fins contábeis e fiscais, à luz do CPC"
+     "trecho": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos\nassumidos relacionado à aquisição da Alibra Ingredientes LTDA, para fins contábeis e fiscais, à luz do CPC",
+     "origem": "api"
     },
     {
      "pagina": 28,
-     "trecho": "Após emissão do relatório citado acima, os valores de Good-Will e Mais-Valia foram alocados, conforme\nmensuração do valor justo. O Good-Will refere-se ao valor pago a mais sobre o valor justo do Patrimônio"
+     "trecho": "Após emissão do relatório citado acima, os valores de Good-Will e Mais-Valia foram alocados, conforme\nmensuração do valor justo. O Good-Will refere-se ao valor pago a mais sobre o valor justo do Patrimônio",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -396,7 +430,8 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "Ajuste de preço de aquisição | - | 6.640 | - | - | 6.640"
+     "trecho": "Ajuste de preço de aquisição | - | 6.640 | - | - | 6.640",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -410,7 +445,8 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusão\ndos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditos\ntributários, que perfaziam o montante total de R$ 5.385 (em 31 de dezembro de 2021), incluindo R$ 2.282 de\natualização monetária e juros, foram reduzidos para R$ 3.270 e R$1.157, respectivamente."
+     "trecho": "Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusão\ndos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditos\ntributários, que perfaziam o montante total de R$ 5.385 (em 31 de dezembro de 2021), incluindo R$ 2.282 de\natualização monetária e juros, foram reduzidos para R$ 3.270 e R$1.157, respectivamente.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -424,11 +460,13 @@
    "evidencias": [
     {
      "pagina": 29,
-     "trecho": "(a) No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio no\nvalor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392 (R$ 6.284 líquido de"
+     "trecho": "(a) No exercício findo em 31 de dezembro de 2022, a Alibra provisionou Juros sobre Capital Próprio no\nvalor de R$ 8.697 (R$5.112 em 2021) dos quais a Millet tem direito a R$ 7.392 (R$ 6.284 líquido de",
+     "origem": "api"
     },
     {
      "pagina": 29,
-     "trecho": "Saldo em 31 de dezembro de 2022 | 9.931"
+     "trecho": "Saldo em 31 de dezembro de 2022 | 9.931",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -442,7 +480,8 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Provisão no período | 929 | 416"
+     "trecho": "Provisão no período | 929 | 416",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -456,7 +495,8 @@
    "evidencias": [
     {
      "pagina": 43,
-     "trecho": "Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administração\nda Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras."
+     "trecho": "Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administração\nda Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -472,11 +512,13 @@
    "evidencias": [
     {
      "pagina": 38,
-     "trecho": "Receita operacional liquida | 462.127 | 199.259"
+     "trecho": "Receita operacional liquida | 462.127 | 199.259",
+     "origem": "api"
     },
     {
      "pagina": 29,
-     "trecho": "Receita operacional líquida | 462.127 | 318.317"
+     "trecho": "Receita operacional líquida | 462.127 | 318.317",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -490,7 +532,8 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)"
+     "trecho": "Amortização da Mais-Valia | - | - | (13.295) | (13.295)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -504,7 +547,8 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectiva\nobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e\nreceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos\npara R$3.103 e R$167, respectivamente."
+     "trecho": "Consequentemente, as reclassificações efetuadas a título de reconhecimento do crédito a respectiva\nobrigação contratual que foram contabilizados nas linhas de outras receitas e/ou despesas operacionais e\nreceitas/despesas financeiras, respectivamente pelos montantes de R$3.103 e R$2.282, foram reduzidos\npara R$3.103 e R$167, respectivamente.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -518,7 +562,8 @@
    "evidencias": [
     {
      "pagina": 38,
-     "trecho": "PCLD | - | (1.021) | 473"
+     "trecho": "PCLD | - | (1.021) | 473",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -534,11 +579,13 @@
   "evidencias": [
    {
     "pagina": 11,
-    "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que"
+    "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que",
+    "origem": "api"
    },
    {
     "pagina": 11,
-    "trecho": "venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem\nantes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da"
+    "trecho": "venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem\nantes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da",
+    "origem": "api"
    }
   ],
   "fontes": [
@@ -553,7 +600,8 @@
    "evidencias": [
     {
      "pagina": 29,
-     "trecho": "Lucro bruto | 98.338 | 70.682\nDespesas operacionais | (63.419) | (53.655)\nResultado financeiro | (2.331) | (1.615)\nLucro antes dos impostos | (65.750) | 15.412\nImpostos sobre o lucro | (4.070) | 1.820\nLucro líquido do exercício | 28.518 | 17.241"
+     "trecho": "Lucro bruto | 98.338 | 70.682\nDespesas operacionais | (63.419) | (53.655)\nResultado financeiro | (2.331) | (1.615)\nLucro antes dos impostos | (65.750) | 15.412\nImpostos sobre o lucro | (4.070) | 1.820\nLucro líquido do exercício | 28.518 | 17.241",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -567,11 +615,13 @@
    "evidencias": [
     {
      "pagina": 30,
-     "trecho": "Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda., cujas participações societárias foram adquiridas em 2014 e 2015. O ágio decorrente"
+     "trecho": "Em 31 de julho de 2015, a Companhia incorporou a Genkor Ingredientes Ltda., cujas participações societárias foram adquiridas em 2014 e 2015. O ágio decorrente",
+     "origem": "api"
     },
     {
      "pagina": 11,
-     "trecho": "A foi constituída em 14 de novembro de 2018 sob a denominação Metheora Empreendimentos e Participações"
+     "trecho": "A foi constituída em 14 de novembro de 2018 sob a denominação Metheora Empreendimentos e Participações",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -585,15 +635,18 @@
    "evidencias": [
     {
      "pagina": 16,
-     "trecho": "de valor. Os testes anuais de perda no valor recuperável são realizados no final do mês de março. A fim de"
+     "trecho": "de valor. Os testes anuais de perda no valor recuperável são realizados no final do mês de março. A fim de",
+     "origem": "api"
     },
     {
      "pagina": 16,
-     "trecho": "Em 31 de dezembro de 2022, a Companhia realizou a avaliação do valor recuperável dos ativos de longo"
+     "trecho": "Em 31 de dezembro de 2022, a Companhia realizou a avaliação do valor recuperável dos ativos de longo",
+     "origem": "api"
     },
     {
      "pagina": 30,
-     "trecho": "Consequentemente, o teste de impairment deste ágio utilizou está UGC (Alibra) e a metodologia do valor em uso. O resultado do teste de impairment realizado em\n31 de dezembro de 2021 não indicou necessidade de provisão para perdas por impairment."
+     "trecho": "Consequentemente, o teste de impairment deste ágio utilizou está UGC (Alibra) e a metodologia do valor em uso. O resultado do teste de impairment realizado em\n31 de dezembro de 2021 não indicou necessidade de provisão para perdas por impairment.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -607,11 +660,13 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Provisão no período | 929 | 416"
+     "trecho": "Provisão no período | 929 | 416",
+     "origem": "api"
     },
     {
      "pagina": 38,
-     "trecho": "Provisões para contingencias | - | (948) | (416)"
+     "trecho": "Provisões para contingencias | - | (948) | (416)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -625,11 +680,13 @@
    "evidencias": [
     {
      "pagina": 36,
-     "trecho": "Provisão para contingências | 1.116 | 6.825"
+     "trecho": "Provisão para contingências | 1.116 | 6.825",
+     "origem": "api"
     },
     {
      "pagina": 36,
-     "trecho": "Total | 3.284 | 2.355"
+     "trecho": "Total | 3.284 | 2.355",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -643,11 +700,13 @@
    "evidencias": [
     {
      "pagina": 41,
-     "trecho": "O quadro a seguir demonstra os riscos de liquidez por faixa de vencimento e refletem o fluxo financeiro da\nCompanhia e suas controladas em 31 de dezembro de 2021:"
+     "trecho": "O quadro a seguir demonstra os riscos de liquidez por faixa de vencimento e refletem o fluxo financeiro da\nCompanhia e suas controladas em 31 de dezembro de 2021:",
+     "origem": "api"
     },
     {
      "pagina": 41,
-     "trecho": "2022 | contábil | projetado | meses | meses | meses"
+     "trecho": "2022 | contábil | projetado | meses | meses | meses",
+     "origem": "api"
     }
    ],
    "fontes": [

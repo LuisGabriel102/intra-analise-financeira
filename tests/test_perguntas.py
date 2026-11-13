@@ -243,3 +243,29 @@ def test_o_sistema_do_agente_usa_a_mesma_definicao_de_guidance(tmp_path, base):
     sistema = sistema if isinstance(sistema, str) else " ".join(b["text"] for b in sistema)
     assert DEFINICAO_GUIDANCE in sistema and "{" not in sistema
     assert r.numeros_sem_fonte == []  # R$1.180 milhões está no trecho citado
+
+
+def test_contexto_da_citacao_vem_do_resultado_de_busca_certo():
+    """O search_result_index conta os resultados do pedido inteiro: o contexto é a linha de antes e a de depois."""
+    resultados = [
+        {"type": "search_result", "source": "Light.pdf#p9", "title": "a", "content": [{"type": "text", "text": "x"}]},
+        {"type": "search_result", "source": "Brasal.pdf#p28", "title": "b", "content": [
+            {"type": "text", "text": "Foi realizado o acompanhamento,"},
+            {"type": "text", "text": "compensação de aproximadamente 61,1%, sendo que o restante de"},
+            {"type": "text", "text": "38,9% deverá acontecer até julho de 2023."}]},
+    ]
+    citacao = cita("Brasal.pdf#p28", "b", "compensação de aproximadamente 61,1%, sendo que o restante de", 1, 1)
+    texto, fontes = ler_final([{"type": "text", "text": "Restam 38,9% até julho", "citations": [citacao]}], resultados)
+    assert texto == "Restam 38,9% até julho[1]" and "38,9%" in fontes[0].contexto and "realizado" in fontes[0].contexto
+    errada = dict(citacao, start_block_index=0, end_block_index=1)  # recorte que não bate com o texto citado
+    assert ler_final([{"type": "text", "text": "t", "citations": [errada]}], resultados)[1][0].contexto == ""
+    sem_lista = ler_final([{"type": "text", "text": "t", "citations": [citacao]}])[1][0]
+    assert sem_lista.contexto == ""
+
+
+def test_numero_da_linha_vizinha_nao_vira_aviso_na_resposta(base):
+    fonte = Fonte(documento="Brasal.pdf", paginas=[28], titulo="b", trecho="sendo que o restante de",
+                  contexto="61,1%, sendo que o restante de\n38,9% deverá acontecer até julho de 2023.")
+    assert numeros_da_resposta_sem_fonte("Restam 38,9% até julho.[1]", [fonte], base) == []
+    assert numeros_da_resposta_sem_fonte("Restam 38,9% até julho.[1]", [fonte.model_copy(update={"contexto": ""})],
+                                         base) == ["38,9%"]

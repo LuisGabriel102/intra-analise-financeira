@@ -193,3 +193,48 @@ def test_replay_registra_custo_zero_e_guarda_o_original(tmp_path, documento, rot
     nova, gravada = (json.loads(linha) for linha in traces.read_text(encoding="utf-8").splitlines())
     assert nova["custo_usd"] > 0 and not nova["gravada"]
     assert gravada["custo_usd"] == 0 and gravada["custo_original_usd"] == nova["custo_usd"]
+
+
+# ------------------------------------------------------------------ citação vazia: o código acha o trecho literal
+
+
+def _doc_com_paginas(*paginas: list[str]):
+    from analise_financeira.pdf import Documento, Pagina
+
+    return Documento(nome="X.pdf", paginas=[Pagina(numero=i, linhas=linhas) for i, linhas in enumerate(paginas, 1)])
+
+
+def test_localizar_trecho_acha_a_frase_literal_sem_contar_espacos_nem_aspas():
+    from analise_financeira.extrator import localizar_trecho
+
+    doc = _doc_com_paginas(["Cabeçalho", "A administração reclassificou de", "“Investimentos” para “Ativo mantido",
+                            "para venda”, com perda de R$94.453.", "Rodapé"])
+    achado = localizar_trecho('reclassificou de "Investimentos" para "Ativo mantido para venda"', doc, [1])
+    assert [(e.pagina, e.origem) for e in achado] == [(1, "codigo")]
+    assert achado[0].trecho.splitlines() == doc.pagina(1).linhas[1:4]
+    assert localizar_trecho("curto demais", doc, [1]) == []
+    assert localizar_trecho("um texto que não está em página nenhuma do documento", doc, [1]) == []
+
+
+def test_localizar_trecho_acha_a_frase_que_vira_a_pagina_pulando_rodape_e_cabecalho():
+    from analise_financeira.extrator import localizar_trecho
+
+    doc = _doc_com_paginas(["Essa retração foi devida a provisões de -", "R$2.513 milhões, em especial ao reconhecimento", "9"],
+                           ["RELATÓRIO DA ADMINISTRAÇÃO – 2022", "de provisão para devolução de PIS/COFINS.", "Outra linha"])
+    achado = localizar_trecho("Essa retração foi devida a provisões de -R$2.513 milhões, em especial ao reconhecimento "
+                              "de provisão para devolução de PIS/COFINS", doc, [1, 2])
+    assert [(e.pagina, e.trecho) for e in achado] == [
+        (1, "Essa retração foi devida a provisões de -\nR$2.513 milhões, em especial ao reconhecimento"),
+        (2, "de provisão para devolução de PIS/COFINS.")]
+
+
+def test_bloco_com_citacao_vazia_vira_busca_literal_e_bloco_sem_citacao_nao():
+    from analise_financeira.extrator import montar_linhas, recortar_evidencias
+
+    doc = _doc_com_paginas(["A Companhia não possui linhas de crédito contratadas e disponíveis."])
+    blocos = [{"type": "text", "text": "risco: A liquidez é limitada. ", "citations": None},
+              {"type": "text", "text": "A Companhia não possui linhas de crédito contratadas", "citations": []},
+              {"type": "text", "text": "\nrisco: Sem citação nenhuma, e um texto longo o bastante.", "citations": None}]
+    (primeira, cits1), (segunda, cits2) = montar_linhas(blocos)
+    assert [e.origem for e in recortar_evidencias(cits1, doc, [1])] == ["codigo"]
+    assert cits2 == []  # o texto do próprio modelo, sem moldura de citação, não vira busca

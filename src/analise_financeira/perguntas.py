@@ -21,7 +21,15 @@ from dataclasses import dataclass, field
 
 from analise_financeira.analista import DEFINICAO_GUIDANCE, numeros_sem_fonte
 from analise_financeira.busca import IndiceBM25
-from analise_financeira.esquemas import AnaliseQualitativa, Evidencia, Fonte, Item, RespostaPergunta, Uso
+from analise_financeira.esquemas import (
+    AchadoSeguranca,
+    AnaliseQualitativa,
+    Evidencia,
+    Fonte,
+    Item,
+    RespostaPergunta,
+    Uso,
+)
 from analise_financeira.formato import milhoes, percentual
 from analise_financeira.indicadores import AlertaSaida, Dado, DocumentoAnalisado, Indicador
 from analise_financeira.llm import ClienteLLM, Conversa, SemGravacao
@@ -73,6 +81,7 @@ class Base:
     qualitativa: dict[str, AnaliseQualitativa]
     indice: IndiceBM25                            # as páginas de todos os PDFs
     escalas: dict[str, dict[int, str]] = field(default_factory=dict)  # "Light.pdf" -> {página: "mil"}
+    seguranca: dict[str, list[AchadoSeguranca]] = field(default_factory=dict)  # "Light" -> achados da varredura
 
     @property
     def empresas(self) -> list[str]:
@@ -279,8 +288,28 @@ def executor(base: Base):
 # ------------------------------------------------------------------ resposta
 
 
-def ler_final(blocos: list[dict]) -> tuple[str, list[Fonte]]:
-    """O texto final com as marcas [n] depois de cada trecho citado, e a lista de fontes."""
+def _contexto(citacao: dict, resultados: list[dict] | None) -> str:
+    """O trecho citado com a linha de antes e a de depois, do mesmo resultado de busca.
+
+    A API conta os resultados de busca do pedido inteiro, em ordem (search_result_index), e os blocos
+    de cada um (start_block_index até end_block_index, sem incluir o fim). Se o recorte não bater
+    com o texto citado, não há contexto: melhor nenhum do que um errado.
+    """
+    indice = citacao.get("search_result_index")
+    if not resultados or not isinstance(indice, int) or not 0 <= indice < len(resultados):
+        return ""
+    linhas = [b.get("text", "") for b in resultados[indice].get("content", [])]
+    inicio, fim = citacao.get("start_block_index", 0), citacao.get("end_block_index", 0)
+    if re.sub(r"\s", "", "".join(linhas[inicio:fim])) != re.sub(r"\s", "", citacao.get("cited_text", "")):
+        return ""
+    return "\n".join(linhas[max(0, inicio - 1):fim + 1])
+
+
+def ler_final(blocos: list[dict], resultados: list[dict] | None = None) -> tuple[str, list[Fonte]]:
+    """O texto final com as marcas [n] depois de cada trecho citado, e a lista de fontes.
+
+    resultados: os resultados de busca da conversa, na ordem em que entraram no pedido (para o contexto).
+    """
     partes: list[str] = []
     fontes: list[Fonte] = []
     numero_da_fonte: dict[tuple[str, str], int] = {}
@@ -296,7 +325,8 @@ def ler_final(blocos: list[dict]) -> tuple[str, list[Fonte]]:
                 documento, paginas = ler_fonte(c.get("source", ""))
                 trecho = c.get("cited_text", "").strip()
                 fontes.append(Fonte(documento=documento, paginas=paginas, titulo=c.get("title") or "", trecho=trecho,
-                                    calculado="calculad" in trecho.lower() and not trecho.startswith("Trecho do PDF")))
+                                    calculado="calculad" in trecho.lower() and not trecho.startswith("Trecho do PDF"),
+                                    contexto=_contexto(c, resultados)))
                 numero_da_fonte[chave] = len(fontes)
             marcas.append(numero_da_fonte[chave])
         if marcas:
@@ -332,7 +362,7 @@ def numeros_da_resposta_sem_fonte(texto: str, fontes: list[Fonte], base: Base, p
         paginas = base.escalas.get(f.documento, {})
         return next((paginas[p] for p in f.paginas if paginas.get(p)), "mil")
 
-    fontes_texto = [(f.trecho, escala(f)) for f in fontes] + [(pergunta, "")]
+    fontes_texto = [(f.contexto or f.trecho, escala(f)) for f in fontes] + [(pergunta, "")]
     texto = _REFERENCIA.sub("", re.sub(r"\[\d+\]", "", texto))  # marcas [1] e "p. 49", "nota 26" não são dados
     return list(dict.fromkeys(numeros_sem_fonte(texto, fontes_texto)))
 
@@ -340,10 +370,17 @@ def numeros_da_resposta_sem_fonte(texto: str, fontes: list[Fonte], base: Base, p
 def responder(pergunta: str, base: Base, cliente: ClienteLLM, numero: int | None = None) -> RespostaPergunta:
     empresas = ", ".join(f"{base.numeros[k].empresa or k} ({base.documentos[k]})" for k in base.empresas)
     sistema = SISTEMA.format(empresas=empresas, guidance=DEFINICAO_GUIDANCE)
+    executar, resultados = executor(base), []
+
+    def executar_e_guardar(nome: str, entrada: dict) -> list[dict]:
+        saida = executar(nome, entrada)  # na ordem em que a conversa monta o pedido, também no replay
+        resultados.extend(b for b in saida if b.get("type") == "search_result")
+        return saida
+
     conversa = cliente.conversar(pergunta, sistema=sistema, ferramentas=ferramentas(base),
-                                 executar=executor(base), etapa="pergunta",
+                                 executar=executar_e_guardar, etapa="pergunta",
                                  documento=f"p{numero}" if numero else "livre")
-    texto, fontes = ler_final(conversa.final.blocos)
+    texto, fontes = ler_final(conversa.final.blocos, resultados)
     usadas = [f"{u['nome']}({', '.join(str(v) for v in u['entrada'].values())})" for u in conversa.ferramentas_usadas]
     return RespostaPergunta(
         numero=numero, pergunta=pergunta, texto=texto or "(o agente não escreveu resposta)", fontes=fontes,

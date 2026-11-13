@@ -142,6 +142,7 @@
    ],
    "itens": 36,
    "com_trecho": 36,
+   "com_trecho_achado_pelo_codigo": 0,
    "com_numero_sem_fonte": 0
   },
   "armadilhas": [
@@ -338,6 +339,7 @@
    ],
    "itens": 36,
    "com_trecho": 36,
+   "com_trecho_achado_pelo_codigo": 0,
    "com_numero_sem_fonte": 0
   },
   "armadilhas": [
@@ -573,8 +575,9 @@
     }
    ],
    "itens": 41,
-   "com_trecho": 29,
-   "com_numero_sem_fonte": 13
+   "com_trecho": 41,
+   "com_trecho_achado_pelo_codigo": 19,
+   "com_numero_sem_fonte": 1
   },
   "armadilhas": [
    {
@@ -597,9 +600,9 @@
    },
    {
     "id": "L10",
-    "detectada": false,
-    "por": null,
-    "mensagem": null
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "O lucro da Lightcom aparece em queda na tabela, mas o texto fala em alta. O texto diz o Resultado líquido foi de R$87 milhões, 15,5% acima do apurado em 2021. A"
    }
   ]
  }

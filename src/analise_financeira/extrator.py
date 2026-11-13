@@ -115,6 +115,10 @@ def montar_linhas(blocos: list[dict]) -> list[tuple[str, list[dict]]]:
     texto, citacoes = "", []
     for bloco in blocos:
         cits = bloco.get("citations") or []
+        if bloco.get("citations") == [] and len(re.sub(r"\s", "", bloco.get("text", ""))) >= MINIMO_LITERAL:
+            # A API marcou o bloco como citação, mas devolveu a lista vazia (e às vezes o texto cortado).
+            # O código procura esse texto, literal, nas páginas enviadas (veja localizar_trecho).
+            cits = [{"type": "texto_literal", "cited_text": bloco["text"]}]
         for i, parte in enumerate(bloco.get("text", "").split("\n")):
             if i > 0:
                 linhas.append((texto, citacoes))
@@ -126,10 +130,74 @@ def montar_linhas(blocos: list[dict]) -> list[tuple[str, list[dict]]]:
     return linhas
 
 
+MINIMO_LITERAL = 20  # caracteres, sem espaços: menos que isso não prova de qual página o texto veio
+
+
+# Aspas e traços tipográficos viram os simples, um caractere por outro: a IA escreve " e - onde o PDF tem “ ” e –.
+_TIPOGRAFIA = str.maketrans({"“": '"', "”": '"', "„": '"', "″": '"', "‘": "'", "’": "'", "‚": "'", "′": "'",
+                             "–": "-", "—": "-", "−": "-", "‐": "-", "‑": "-"})
+
+
+def _compacta(texto: str) -> str:
+    return re.sub(r"\s", "", texto).translate(_TIPOGRAFIA)
+
+
+def _linhas_do_trecho(compactas: list[str], inicio: int, fim: int) -> tuple[int, int]:
+    """A primeira e a última linha que cobrem [inicio, fim) no texto da página sem espaços."""
+    posicao, primeira, ultima = 0, None, None
+    for i, compacta in enumerate(compactas):
+        if primeira is None and posicao + len(compacta) > inicio:
+            primeira = i
+        if posicao < fim:
+            ultima = i
+        posicao += len(compacta)
+    return primeira or 0, ultima if ultima is not None else len(compactas) - 1
+
+
+def localizar_trecho(texto: str, documento: Documento, paginas: list[int]) -> list[Evidencia]:
+    """O texto, literal (sem contar espaços, quebras de linha e o tipo das aspas), nas páginas enviadas.
+
+    Devolve as linhas que contêm o texto, com origem "codigo". Serve para a citação que a API devolveu
+    vazia: o trecho continua provado, porque está escrito na página, só que achado pelo código. Uma frase
+    pode começar no fim de uma página e terminar na seguinte: aí a evidência tem as duas páginas.
+    """
+    alvo = _compacta(texto)
+    if len(alvo) < MINIMO_LITERAL:
+        return []
+    compactas = {n: [_compacta(linha) for linha in documento.pagina(n).linhas] for n in paginas}
+    for n in paginas:
+        juntas = "".join(compactas[n])
+        inicio = juntas.find(alvo)
+        if inicio >= 0:
+            a, b = _linhas_do_trecho(compactas[n], inicio, inicio + len(alvo))
+            return [Evidencia(pagina=n, trecho="\n".join(documento.pagina(n).linhas[a:b + 1]), origem="codigo")]
+    for n in paginas:  # a frase que vira a página, pulando o rodapé desta e o cabeçalho da próxima
+        if n + 1 not in compactas:
+            continue
+        for rodape in range(3):
+            fim_aqui = len(compactas[n]) - rodape
+            aqui = "".join(compactas[n][:fim_aqui])
+            for cabecalho in range(5):
+                depois = "".join(compactas[n + 1][cabecalho:])
+                inicio = (aqui + depois).find(alvo)
+                if inicio < 0 or inicio >= len(aqui) or inicio + len(alvo) <= len(aqui):
+                    continue
+                a, _ = _linhas_do_trecho(compactas[n][:fim_aqui], inicio, len(aqui))
+                _, b = _linhas_do_trecho(compactas[n + 1][cabecalho:], 0, inicio + len(alvo) - len(aqui))
+                linhas_aqui, linhas_depois = documento.pagina(n).linhas, documento.pagina(n + 1).linhas
+                return [Evidencia(pagina=n, trecho="\n".join(linhas_aqui[a:fim_aqui]), origem="codigo"),
+                        Evidencia(pagina=n + 1, trecho="\n".join(linhas_depois[cabecalho:cabecalho + b + 1]),
+                                  origem="codigo")]
+    return []
+
+
 def recortar_evidencias(citacoes: list[dict], documento: Documento, paginas: list[int]) -> list[Evidencia]:
     """Troca cada citação pelas linhas do PDF que ela aponta."""
     evidencias = []
     for c in citacoes:
+        if c.get("type") == "texto_literal":
+            evidencias += localizar_trecho(c.get("cited_text", ""), documento, paginas)
+            continue
         indice = c.get("document_index")
         if not isinstance(indice, int) or not 0 <= indice < len(paginas):
             continue

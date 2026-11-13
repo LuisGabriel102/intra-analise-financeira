@@ -204,3 +204,18 @@ def test_pedido_leva_os_achados_ja_conhecidos_para_o_analista_nao_repetir(docume
     assert "No máximo 10 linhas para risco e para evento" in pedido
     vazio_de_achados = numeros.model_copy(update={"alertas": []})
     assert achados_conhecidos(vazio_de_achados) == "- nenhum"
+
+
+def test_numero_da_linha_vizinha_da_citada_conta_como_fonte():
+    """A frase do PDF quebra em linhas e a citação pega só uma: o 38,9% está na linha seguinte."""
+    from analise_financeira.analista import com_vizinhas
+    from analise_financeira.esquemas import Evidencia
+
+    linhas = ["Foi realizado o acompanhamento.", "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de",
+              "38,9% deverá acontecer até julho de 2023.", "Outra nota."]
+    doc = Documento(nome="Brasal.pdf", paginas=[Pagina(numero=1, linhas=linhas)])
+    citada = Evidencia(pagina=1, trecho=linhas[1])
+    assert com_vizinhas(citada, doc) == "\n".join(linhas[0:3])
+    texto = "O restante de 38,9% deve ser compensado até julho de 2023, depois de 61,1% em 2022."
+    assert numeros_sem_fonte(texto, [(citada.trecho, "")]) == ["38,9%"]
+    assert numeros_sem_fonte(texto, [(com_vizinhas(citada, doc), "")]) == []

@@ -13,6 +13,7 @@ import argparse
 import os
 import sys
 import time
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -94,7 +95,25 @@ def main() -> int:
     ext.add_argument("--modelo", default=modelo)
 
     comandos.add_parser("avaliar", help="compara as saídas gravadas em saidas/ com o gabarito")
+
+    mc = comandos.add_parser("mcp", help="servidor MCP (stdio) com os dados de saidas/, para o Claude Desktop ou "
+                                         "outro agente; só leitura, sem chamar a IA")
+    mc.add_argument("--raiz", type=Path, default=None,
+                    help="pasta do repositório, com saidas/ e dados/pdfs/ (padrão: a deste pacote)")
     args = parser.parse_args()
+
+    if args.comando == "mcp":  # antes de qualquer print: no stdio, a saída padrão é do protocolo
+        try:
+            from analise_financeira.servidor_mcp import raiz_padrao, rodar
+        except ImportError:
+            print('Erro: falta o pacote mcp. Instale com: python -m pip install -e ".[mcp]"', file=sys.stderr)
+            return 1
+        try:
+            rodar(args.raiz or raiz_padrao())
+        except FileNotFoundError as erro:
+            print(f"Erro: {erro}", file=sys.stderr)
+            return 1
+        return 0
 
     if args.comando == "avaliar":
         from analise_financeira.avaliacao import avaliar

@@ -13,7 +13,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259"
+     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259",
+     "origem": "api"
     }
    ]
   },
@@ -25,7 +26,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259"
+     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259",
+     "origem": "api"
     }
    ]
   },
@@ -50,11 +52,13 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Resultado antes do resultado\n14.750 | 5.374 | 25.298 | 4.482\nfinanceiro"
+     "trecho": "Resultado antes do resultado\n14.750 | 5.374 | 25.298 | 4.482\nfinanceiro",
+     "origem": "api"
     },
     {
      "pagina": 10,
-     "trecho": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975"
+     "trecho": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975",
+     "origem": "api"
     }
    ]
   },
@@ -66,11 +70,13 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Resultado antes do resultado\n14.750 | 5.374 | 25.298 | 4.482\nfinanceiro"
+     "trecho": "Resultado antes do resultado\n14.750 | 5.374 | 25.298 | 4.482\nfinanceiro",
+     "origem": "api"
     },
     {
      "pagina": 10,
-     "trecho": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975"
+     "trecho": "Depreciação e amortização | 13.295 | - | 18.248 | 2.975",
+     "origem": "api"
     }
    ]
   },
@@ -91,7 +97,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259"
+     "trecho": "Receita operacional líquida | 18 | - | - | 462.127 | 199.259",
+     "origem": "api"
     }
    ]
   },
@@ -109,7 +116,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470"
+     "trecho": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470",
+     "origem": "api"
     }
    ]
   },
@@ -121,7 +129,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470"
+     "trecho": "Lucro líquido do exercício | 14.743 | 5.371 | 18.891 | 6.470",
+     "origem": "api"
     }
    ]
   },
@@ -142,7 +151,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)\nLucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371"
+     "trecho": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)\nLucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371",
+     "origem": "api"
     }
    ]
   },
@@ -154,7 +164,8 @@
    "fontes": [
     {
      "pagina": 7,
-     "trecho": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)\nLucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371"
+     "trecho": "Participação acionistas de minoritários | - | - | (4.148) | (1.099)\nLucro líquido do exercício | 14.743 | 5.371 | 14.743 | 5.371",
+     "origem": "api"
     }
    ]
   },
@@ -175,7 +186,8 @@
    "fontes": [
     {
      "pagina": 42,
-     "trecho": "(=) Dívida líquida (a) | 13.520 | 16.877"
+     "trecho": "(=) Dívida líquida (a) | 13.520 | 16.877",
+     "origem": "api"
     }
    ]
   },
@@ -187,7 +199,8 @@
    "fontes": [
     {
      "pagina": 42,
-     "trecho": "(=) Dívida líquida (a) | 13.520 | 16.877"
+     "trecho": "(=) Dívida líquida (a) | 13.520 | 16.877",
+     "origem": "api"
     }
    ]
   },
@@ -201,11 +214,13 @@
    "fontes": [
     {
      "pagina": 42,
-     "trecho": "Total dos empréstimos com terceiros | 24.176 | 25.072"
+     "trecho": "Total dos empréstimos com terceiros | 24.176 | 25.072",
+     "origem": "api"
     },
     {
      "pagina": 6,
-     "trecho": "Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195"
+     "trecho": "Caixa e equivalente de caixa | 3 | 355 | 871 | 10.656 | 8.195",
+     "origem": "api"
     }
    ]
   },
@@ -240,7 +255,8 @@
    "fontes": [
     {
      "pagina": 10,
-     "trecho": "Caixa liquido gerado pelas (consumido nas) | 24.799"
+     "trecho": "Caixa liquido gerado pelas (consumido nas) | 24.799",
+     "origem": "api"
     }
    ]
   },
@@ -252,7 +268,8 @@
    "fontes": [
     {
      "pagina": 10,
-     "trecho": "(317) | (860) | (14.293)"
+     "trecho": "(317) | (860) | (14.293)",
+     "origem": "api"
     }
    ]
   },
@@ -277,11 +294,13 @@
    "fontes": [
     {
      "pagina": 10,
-     "trecho": "Aquisição de imobilizado | - | - | (6.263) | (3.803)"
+     "trecho": "Aquisição de imobilizado | - | - | (6.263) | (3.803)",
+     "origem": "api"
     },
     {
      "pagina": 10,
-     "trecho": "Aquisição de intangível | - | - | (11.469) | (12)"
+     "trecho": "Aquisição de intangível | - | - | (11.469) | (12)",
+     "origem": "api"
     }
    ]
   },

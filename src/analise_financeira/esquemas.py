@@ -10,6 +10,9 @@ from pydantic import BaseModel, Field
 class Evidencia(BaseModel):
     pagina: int = Field(description="Página do PDF, contando a capa como 1")
     trecho: str = Field(description="As linhas do PDF que a API citou, literalmente")
+    # "api": a citação veio da API. "codigo": a API marcou o trecho como citação, mas devolveu a citação
+    # vazia; o código achou o mesmo texto, literal, numa das páginas enviadas.
+    origem: Literal["api", "codigo"] = "api"
 
 
 class Ocorrencia(BaseModel):
@@ -46,6 +49,20 @@ class Extracao(BaseModel):
     campos: dict[str, Campo]
     observacoes: list[Ocorrencia] = []  # incoerências que a própria IA notou, com citação
     uso: Uso
+
+
+# ------------------------------------------------------------------ segurança
+
+
+class AchadoSeguranca(BaseModel):
+    """O que a varredura de segurança achou no PDF antes de mandar o texto para a IA."""
+
+    documento: str
+    pagina: int | None = None    # None quando vale para o arquivo inteiro
+    tipo: Literal["texto_invisivel", "frase_de_comando", "javascript", "abre_programa", "anexo", "criptografado"]
+    gravidade: Literal["alta", "baixa", "info"]
+    removido: bool = False       # o texto foi tirado antes de chegar à IA
+    detalhe: str
 
 
 # ------------------------------------------------------------------ análise qualitativa
@@ -90,6 +107,7 @@ class Fonte(BaseModel):
     titulo: str              # o título do resultado citado
     trecho: str              # o texto citado, literal (cited_text)
     calculado: bool = False  # o trecho é um número calculado pela solução, e não texto do PDF
+    contexto: str = ""       # o trecho com a linha de antes e a de depois, para conferir número de frase quebrada
 
 
 class RespostaPergunta(BaseModel):

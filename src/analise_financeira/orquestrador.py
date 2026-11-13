@@ -59,6 +59,8 @@ def _extrair_um(pdf: Path, documento: Documento, rotas: Rotas, cliente: ClienteL
     _gravar(destino, "rotas.json", json.dumps(
         {"tipos": rotas.tipos, "extracao": rotas.extracao, "analise": rotas.analise}, ensure_ascii=False, indent=1))
     _gravar(destino, "extracao.json", extracao.model_dump_json(indent=1))
+    _gravar(destino, "seguranca.json", json.dumps([a.model_dump(mode="json") for a in documento.seguranca],
+                                                  ensure_ascii=False, indent=1))
     _gravar(destino, "indicadores.json", numeros.model_dump_json(indent=1))
     return extracao, numeros
 
@@ -84,7 +86,8 @@ def processar(pasta_pdfs: str | Path, cliente: ClienteLLM, pasta_saidas: str | P
         extracao, numeros = _extrair_um(pdf, documento, rotas, cliente, saidas)
         qualitativa = analisar(documento, rotas, numeros, cliente)
         _gravar(saidas / pdf.stem, "analise.json", qualitativa.model_dump_json(indent=1))
-        return ResultadoDocumento(arquivo=pdf.name, extracao=extracao, numeros=numeros, qualitativa=qualitativa)
+        return ResultadoDocumento(arquivo=pdf.name, extracao=extracao, numeros=numeros, qualitativa=qualitativa,
+                                  seguranca=documento.seguranca)
 
     with ThreadPoolExecutor(max_workers=3) as execucao:
         resultados = list(execucao.map(um, preparados))
@@ -109,6 +112,7 @@ def montar_base(preparados: list[tuple[Path, Documento, Rotas]], resultados: lis
         indice=indexar([(documento, rotas) for _, documento, rotas in preparados]),
         escalas={documento.nome: {p.numero: documento.escala_de(p.numero) for p in documento.paginas}
                  for _, documento, _ in preparados},
+        seguranca={r.chave: r.seguranca for r in resultados},
     )
 
 
@@ -116,7 +120,7 @@ def carregar_base(pasta_pdfs: str | Path, pasta_saidas: str | Path = "saidas") -
     """Para perguntas livres: relê os PDFs e carrega o que o comando `analisar` gravou em saidas/."""
     preparados = _ler(pasta_pdfs)
     resultados = []
-    for pdf, _, _ in preparados:
+    for pdf, documento, _ in preparados:
         pasta = Path(pasta_saidas) / pdf.stem
         if not (pasta / "analise.json").exists():
             raise FileNotFoundError(f"Falta {pasta / 'analise.json'}. Rode `python -m analise_financeira analisar` antes.")
@@ -125,5 +129,6 @@ def carregar_base(pasta_pdfs: str | Path, pasta_saidas: str | Path = "saidas") -
             extracao=Extracao.model_validate_json((pasta / "extracao.json").read_text(encoding="utf-8")),
             numeros=DocumentoAnalisado.model_validate_json((pasta / "indicadores.json").read_text(encoding="utf-8")),
             qualitativa=AnaliseQualitativa.model_validate_json((pasta / "analise.json").read_text(encoding="utf-8")),
+            seguranca=documento.seguranca,
         ))
     return montar_base(preparados, resultados)

@@ -155,6 +155,7 @@ def avaliar_qualitativa(q: AnaliseQualitativa, esperado: dict) -> dict:
     itens = _itens(q)
     return {"documento": q.documento, "checagens": checagens, "itens": len(itens),
             "com_trecho": sum(1 for i in itens if i.conferido),
+            "com_trecho_achado_pelo_codigo": sum(1 for i in itens if any(e.origem == "codigo" for e in i.evidencias)),
             "com_numero_sem_fonte": sum(1 for i in itens if i.numeros_sem_fonte)}
 
 
@@ -266,7 +267,9 @@ def avaliar(pasta_saidas: str | Path = "saidas", gabarito: str | Path = "avaliac
         total_q = sum(len(q["checagens"]) for q in qualitativos)
         itens = sum(q["itens"] for q in qualitativos)
         md += ["", f"## Análise qualitativa (checagem aproximada, por palavras): {certas} de {total_q}", "",
-               f"Itens com trecho citado: {_pct(sum(q['com_trecho'] for q in qualitativos), itens)}. "
+               f"Itens com trecho citado: {_pct(sum(q['com_trecho'] for q in qualitativos), itens)}"
+               f" ({sum(q.get('com_trecho_achado_pelo_codigo', 0) for q in qualitativos)} com o trecho achado pelo "
+               "código, porque a API devolveu a citação vazia). "
                f"Itens com número que não está no trecho: {sum(q['com_numero_sem_fonte'] for q in qualitativos)}.", ""]
         for q in qualitativos:
             md += [f"- {q['documento']} · {c['o_que']}: {'ok' if c['ok'] else 'FALHOU'} ({c['detalhe']})"

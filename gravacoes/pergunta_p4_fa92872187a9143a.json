@@ -1,0 +1,41 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQSlAkKEAgTGAI4AUIIdGhpbmtpbmcSDNYuSPvdCZzQiIwjixoMpb10OMfM7tBJs9O1IjA7kv2fFPXV2De98ry5R9qeFdintg4Z1/spX/QKy3om5tuiQtPwkNmxCqlXuUCQ+IYqsQjKQpOpZ8W1l5UgMW8/B9GJa8yE2/32+DxRCxw1k3M33yiGwJhbSvlnsQwaVsdojQmhMECdOFMVZU6N+IpUIJBkYwMGV4mQ+d/5jQ/sJvexT5qpbKFqF2k2ghIpC8cL/5djqdr3/pQrmPGgdcVnp0XnhRKgTWF9RcEtNxFCzowOe096za0FJuuetdatQMUM77KnfnWKgd9YfiDEWHBJmoM2gr2clZ1t6iYnH06x2TRkg07RNyKUEFq2XOXg0YPO8LpjOCpLKqY0M1r1ZQq/q++Yn796kz1nXSSZv2uzGiPYgNsnTooZWkd8Jh+0kYEikvIISLOdZEDPd/eBSFJqAFlT2dGKmCeLanCiPDOHsj/KEARRdl2FBZgrz7lrLs+FP7Em8HjWpdAbsyMud36LBvbiDtHEn5SVOgfjA4mrgUmbWE7MyjY+Ww8DnaYm8Pkrpm+bQX6ljUzdb2dq9FYVjadSouVqbBkWXoUuzmJ29GsSrI47IE1uCW6ujC66PUMc2upc99kVOpkr8PNW89uobdi92BVLG0z0gysLtmD5FMYmjkzUU04qNAcmawXSipajU775ovWfQy+wEYmsnOpcjVORKQQ3+B6TC2FPbtUN/waUuUu6cTFU9HVP32ki33L/seCQEODQOXnbTxjqNeMcuFvdo7YAE6QpMRE21vE10ohgJH0dRS4ObicNc66+yj7BO8hADF0t4zXFaCxG6VJTqHAGjTlCdV42yjNNqvYkjsQHcVtLVBiQwa209mB8pxrNaj90BrRD/vGfE/kchZyMzUCKfqPSSa38o69Y7AB0mnIvtv8fzYpeamAn+KTUrxRdBAW20K+gjEzbocVbX/2Kv4wFZwfn01Vp1wfvbaGJzqFC5neZMyjsQJwKmdwr559E8X+vjjeDTmK3CqD14SeYxKEYOSRAnmqzJLfwr9Cdj4NDLzWaVoDXOyTt5Pq47yPMDJNOxRm67UJvHNwXoPVCv2clGiTs6IKd8RY9VG+tzJhA2MIsesT8Am4DxXso5U7GWnRUeJyNAK0ViLTQAJeIOumd+Nou1cEYaCJ7mX9A1rZdpegK8PYQJR4MyM9M4cEi1SVIPS6zkysWvIWzqQ0r2VTfTWLgKpOHH+eWq/f7iK4RRqCsKuWrmI6J9XylxjUJoqQGmoIyAIVeysRlymauSfyL2B+bcgsrzen5uM4cfUTRNWOdvjXaAENbOzoWXLz8fB8IPG0O4ibHExi3tM1ztASVN7QP2zGccbB3WTEB3u5N4e7Ekupy58fVXyNe8mIJL6U5iXg5Ta/C8tzzT1ZxzI42Okcs1HhfakszLPal5cwkXSS2ugorNUvUaV9ieNUteqG6lFcMMh+umuABGmyq94+ZRpMkdt1rPuAR8cB+bJd9l5GchFQAfrcziYZZoRdy+3ka+uYIHjdV9bMay4xfr+HImBgB",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_012GbfriCvc5aZLXx9XVCc2h",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "risco de liquidez",
+    "empresa": "Brasal"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01GTm2zRfYqiAthaiMXy14wU",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "risco de taxa de câmbio moeda estrangeira",
+    "empresa": "todas"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 383,
+ "tokens_cache": 0,
+ "segundos": 3.87,
+ "gravada": false,
+ "tokens_cache_escrita": 16532,
+ "parada": "tool_use"
+}

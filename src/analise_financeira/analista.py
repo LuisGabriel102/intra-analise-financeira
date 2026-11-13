@@ -221,8 +221,21 @@ def numeros_sem_fonte(texto: str, fontes: list[tuple[str, str]]) -> list[str]:
     return faltando
 
 
+def com_vizinhas(evidencia: Evidencia, documento: Documento) -> str:
+    """O trecho com a linha de antes e a de depois, na mesma página.
+
+    Uma frase do PDF quebra em linhas, e a citação às vezes pega só uma delas: "de aproximadamente 61,1%,
+    sendo que o restante de" numa linha e "38,9% deverá acontecer até julho de 2023." na seguinte.
+    """
+    linhas, alvo = documento.pagina(evidencia.pagina).linhas, evidencia.trecho.split("\n")
+    for i in range(len(linhas) - len(alvo) + 1):
+        if linhas[i:i + len(alvo)] == alvo:
+            return "\n".join(linhas[max(0, i - 1):i + len(alvo) + 1])
+    return evidencia.trecho
+
+
 def _item(texto: str, evidencias: list[Evidencia], documento: Documento, rotas: Rotas, contexto: str) -> Item:
-    fontes = [(e.trecho, documento.escala_de(e.pagina)) for e in evidencias] + [(contexto, "milhões")]
+    fontes = [(com_vizinhas(e, documento), documento.escala_de(e.pagina)) for e in evidencias] + [(contexto, "milhões")]
     return Item(
         texto=texto,
         evidencias=evidencias,

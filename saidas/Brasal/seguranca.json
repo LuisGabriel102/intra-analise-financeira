@@ -1,0 +1,18 @@
+[
+ {
+  "documento": "Brasal.pdf",
+  "pagina": null,
+  "tipo": "criptografado",
+  "gravidade": "info",
+  "removido": false,
+  "detalhe": "PDF criptografado (Standard V5 R5 256-bit AES), mas abre sem senha. A leitura é normal."
+ },
+ {
+  "documento": "Brasal.pdf",
+  "pagina": 8,
+  "tipo": "texto_invisivel",
+  "gravidade": "baixa",
+  "removido": false,
+  "detalhe": "Texto invisível curto e sem número (da cor do fundo), provável resto de diagramação. Ficou no texto: \"# # #\""
+ }
+]

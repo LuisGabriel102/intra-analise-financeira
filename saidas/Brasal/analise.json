@@ -53,11 +53,13 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes\ndo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a\ntese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,\nregistrados nas rubricas de tributos a recuperar em contra partida às rubricas de outras\nreceitas (despesas) operacionais, líquidas e resultado financeiro, líquido, nos montantes\nde R$ 100.875 e 67.844 respectivamente."
+     "trecho": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes\ndo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a\ntese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,\nregistrados nas rubricas de tributos a recuperar em contra partida às rubricas de outras\nreceitas (despesas) operacionais, líquidas e resultado financeiro, líquido, nos montantes\nde R$ 100.875 e 67.844 respectivamente.",
+     "origem": "api"
     },
     {
      "pagina": 46,
-     "trecho": "Créditos extemporâneos (i) | - | - | 231 | 105.633"
+     "trecho": "Créditos extemporâneos (i) | - | - | 231 | 105.633",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -71,15 +73,18 @@
    "evidencias": [
     {
      "pagina": 45,
-     "trecho": "Variação monetária ativa (i) | 9.392 | 67.851\nAjuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453"
+     "trecho": "Variação monetária ativa (i) | 9.392 | 67.851\nAjuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+     "origem": "api"
     },
     {
      "pagina": 45,
-     "trecho": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453"
+     "trecho": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+     "origem": "api"
     },
     {
      "pagina": 25,
-     "trecho": "Resultado financeiro líquido | 23.480 | 107.520"
+     "trecho": "Resultado financeiro líquido | 23.480 | 107.520",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -93,11 +98,13 @@
    "evidencias": [
     {
      "pagina": 43,
-     "trecho": "Venda de produtos | 1.036.873 | 859.621\nRevenda de mercadorias | 952.648 | 768.413"
+     "trecho": "Venda de produtos | 1.036.873 | 859.621\nRevenda de mercadorias | 952.648 | 768.413",
+     "origem": "api"
     },
     {
      "pagina": 43,
-     "trecho": "(+ ) ICMS – Subvenção | 62.281 | 38.038"
+     "trecho": "(+ ) ICMS – Subvenção | 62.281 | 38.038",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -111,15 +118,18 @@
    "evidencias": [
     {
      "pagina": 25,
-     "trecho": "Despesas operacionais | (288.807) | (148.665)"
+     "trecho": "Despesas operacionais | (288.807) | (148.665)",
+     "origem": "api"
     },
     {
      "pagina": 44,
-     "trecho": "Marketing | (48.260) | (35.897)"
+     "trecho": "Marketing | (48.260) | (35.897)",
+     "origem": "api"
     },
     {
      "pagina": 44,
-     "trecho": "(71.313) | (60.026)"
+     "trecho": "(71.313) | (60.026)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -133,11 +143,13 @@
    "evidencias": [
     {
      "pagina": 46,
-     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)"
+     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+     "origem": "api"
     },
     {
      "pagina": 46,
-     "trecho": "Lucro na venda de permanente | - | - | 10.712 | 3.408"
+     "trecho": "Lucro na venda de permanente | - | - | 10.712 | 3.408",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -151,11 +163,13 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "Semestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma\ncompensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de"
+     "trecho": "Semestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma\ncompensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de",
+     "origem": "api"
     },
     {
      "pagina": 28,
-     "trecho": "PIS e COFINS (excluisão ICMS da base) (i) | - | - | 65.713 | 126.262"
+     "trecho": "PIS e COFINS (excluisão ICMS da base) (i) | - | - | 65.713 | 126.262",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -171,11 +185,13 @@
    "evidencias": [
     {
      "pagina": 49,
-     "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes."
+     "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.",
+     "origem": "api"
     },
     {
      "pagina": 49,
-     "trecho": "monitoramento dos saldos a receber. Também deve ser destacado que as vendas, pelas\ncaracterísticas dos produtos comercializados e pela dispersão de clientes, não apresentam\nconcentrações relevantes, existindo natural diluição de riscos de realização de contas a receber"
+     "trecho": "monitoramento dos saldos a receber. Também deve ser destacado que as vendas, pelas\ncaracterísticas dos produtos comercializados e pela dispersão de clientes, não apresentam\nconcentrações relevantes, existindo natural diluição de riscos de realização de contas a receber",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -189,11 +205,13 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "15.668 | 12.185"
+     "trecho": "15.668 | 12.185",
+     "origem": "api"
     },
     {
      "pagina": 27,
-     "trecho": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$\n3.604 (R$1.631 em 31 de dezembro de 2021)."
+     "trecho": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$\n3.604 (R$1.631 em 31 de dezembro de 2021).",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -207,11 +225,13 @@
    "evidencias": [
     {
      "pagina": 49,
-     "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de\nmatéria-prima. Para mitigar os riscos, a Companhia monitora permanentemente os preços\nbuscando antecipar-se a movimentos de preços."
+     "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de\nmatéria-prima. Para mitigar os riscos, a Companhia monitora permanentemente os preços\nbuscando antecipar-se a movimentos de preços.",
+     "origem": "api"
     },
     {
      "pagina": 17,
-     "trecho": "dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe\nde uma política de uso de operações com futuros para minimizar a exposição líquida de\nestoque de commodities."
+     "trecho": "dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe\nde uma política de uso de operações com futuros para minimizar a exposição líquida de\nestoque de commodities.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -225,11 +245,13 @@
    "evidencias": [
     {
      "pagina": 49,
-     "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de\ntaxas de juros incidentes sobre seus ativos e passivos financeiros. Visando à mitigação deste tipo"
+     "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de\ntaxas de juros incidentes sobre seus ativos e passivos financeiros. Visando à mitigação deste tipo",
+     "origem": "api"
     },
     {
      "pagina": 50,
-     "trecho": "Aplicações – CDI | 173.676 | 173.676 | 173.676\nTaxa sujeita à variação | 12,40% | 9,30% | 6,20%\nReceita financeira projetada | 21.536 | 16.152 | 10.768"
+     "trecho": "Aplicações – CDI | 173.676 | 173.676 | 173.676\nTaxa sujeita à variação | 12,40% | 9,30% | 6,20%\nReceita financeira projetada | 21.536 | 16.152 | 10.768",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -243,7 +265,8 @@
    "evidencias": [
     {
      "pagina": 12,
-     "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a\nCervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF,"
+     "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a\nCervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF,",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -257,7 +280,8 @@
    "evidencias": [
     {
      "pagina": 12,
-     "trecho": "o ICMS apurado das saídas de produtos de fabricação própria. A Controlada condiciona-se ao\ncumprimento de obrigações como manutenção de empregos e regularidade fiscal, além do\npagamento de 3% sobre a base de cálculo do ICMS apurado aos Fundo da Receita Tributária do"
+     "trecho": "o ICMS apurado das saídas de produtos de fabricação própria. A Controlada condiciona-se ao\ncumprimento de obrigações como manutenção de empregos e regularidade fiscal, além do\npagamento de 3% sobre a base de cálculo do ICMS apurado aos Fundo da Receita Tributária do",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -271,11 +295,13 @@
    "evidencias": [
     {
      "pagina": 30,
-     "trecho": "Mútuos diversos – Participações S.A | - | - | 20.542 | 50.285"
+     "trecho": "Mútuos diversos – Participações S.A | - | - | 20.542 | 50.285",
+     "origem": "api"
     },
     {
      "pagina": 30,
-     "trecho": "Financeira (IOF) e juros a taxa de 100% a 103,5%% CDI, com datas de vencimento até 2023."
+     "trecho": "Financeira (IOF) e juros a taxa de 100% a 103,5%% CDI, com datas de vencimento até 2023.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -289,7 +315,8 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "de PIS e COFINS, em função de uma retração no crescimento esperado para o 4º.\nSemestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma"
+     "trecho": "de PIS e COFINS, em função de uma retração no crescimento esperado para o 4º.\nSemestre de 2022, ficando abaixo um pouco das metas estabelecidas, então ocorreu uma",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -307,7 +334,8 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de\n38,9% deverá acontecer até julho de 2023."
+     "trecho": "compensação no exercício de 2022 de aproximadamente 61,1%, sendo que o restante de\n38,9% deverá acontecer até julho de 2023.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -321,7 +349,8 @@
    "evidencias": [
     {
      "pagina": 48,
-     "trecho": "acumulados e reservas de lucros), baseada em políticas internas e benchmarks. A Companhia\npode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando\naperfeiçoar sua alavancagem financeira e sua gestão de dívida."
+     "trecho": "acumulados e reservas de lucros), baseada em políticas internas e benchmarks. A Companhia\npode alterar sua estrutura de capital, conforme condições econômico-financeiras, visando\naperfeiçoar sua alavancagem financeira e sua gestão de dívida.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -335,7 +364,8 @@
    "evidencias": [
     {
      "pagina": 23,
-     "trecho": "ser aplicadas retrospectivamente. Atualmente, a Companhia avalia o impacto que as\nalterações terão na prática atual e se os contratos de empréstimo existentes podem exigir\nrenegociação."
+     "trecho": "ser aplicadas retrospectivamente. Atualmente, a Companhia avalia o impacto que as\nalterações terão na prática atual e se os contratos de empréstimo existentes podem exigir\nrenegociação.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -349,7 +379,8 @@
    "evidencias": [
     {
      "pagina": 42,
-     "trecho": "O lucro excedente não distribuído foi destinado à constituição da reserva de rentençao de lucro, a\nqual será enviada para aprovação da Assembleia Geral Ordinária (AGO), em conformidade com as"
+     "trecho": "O lucro excedente não distribuído foi destinado à constituição da reserva de rentençao de lucro, a\nqual será enviada para aprovação da Assembleia Geral Ordinária (AGO), em conformidade com as",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -363,7 +394,8 @@
    "evidencias": [
     {
      "pagina": 51,
-     "trecho": "impactos para estas demonstrações financeiras. No entanto manterá o monitoramento\npermanente de todos os seus processos, considerando a referida decisão."
+     "trecho": "impactos para estas demonstrações financeiras. No entanto manterá o monitoramento\npermanente de todos os seus processos, considerando a referida decisão.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -379,7 +411,8 @@
    "evidencias": [
     {
      "pagina": 42,
-     "trecho": "Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado um\naumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem\nemissão de novas ações, ficando o capital social da Companhia totalmente subscrito e"
+     "trecho": "Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado um\naumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem\nemissão de novas ações, ficando o capital social da Companhia totalmente subscrito e",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -393,11 +426,13 @@
    "evidencias": [
     {
      "pagina": 42,
-     "trecho": "Dividendos pagos no exercício | (206.000) | -\nJuros sobre capital próprio | (17.636) | (11.822)"
+     "trecho": "Dividendos pagos no exercício | (206.000) | -\nJuros sobre capital próprio | (17.636) | (11.822)",
+     "origem": "api"
     },
     {
      "pagina": 32,
-     "trecho": "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099"
+     "trecho": "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -411,11 +446,13 @@
    "evidencias": [
     {
      "pagina": 31,
-     "trecho": "Leão Alimentos e Bebidas Ltda. (i) | - | - | 13.910 | 22.834"
+     "trecho": "Leão Alimentos e Bebidas Ltda. (i) | - | - | 13.910 | 22.834",
+     "origem": "api"
     },
     {
      "pagina": 46,
-     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)"
+     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -429,7 +466,8 @@
    "evidencias": [
     {
      "pagina": 34,
-     "trecho": "Vasilhames e garrafeiras | 78.808 | 14.021 | (41.987) | - | 50.842"
+     "trecho": "Vasilhames e garrafeiras | 78.808 | 14.021 | (41.987) | - | 50.842",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -443,11 +481,13 @@
    "evidencias": [
     {
      "pagina": 37,
-     "trecho": "Pagamento de parcelas do Incentivo | (6.020) | -"
+     "trecho": "Pagamento de parcelas do Incentivo | (6.020) | -",
+     "origem": "api"
     },
     {
      "pagina": 37,
-     "trecho": "Resgates CDB ref..as liberações | 6.197 | -"
+     "trecho": "Resgates CDB ref..as liberações | 6.197 | -",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -461,7 +501,8 @@
    "evidencias": [
     {
      "pagina": 12,
-     "trecho": "fechamento do balanço anual. Em 2022 foi reconhecido o total de R$103.940 a título de reserva\nde incentivos fiscais e o saldo da conta em 31 de dezembro de 2022 foi o total de R$143.978\n(R$38.038 em 31 de dezembro de 2021)."
+     "trecho": "fechamento do balanço anual. Em 2022 foi reconhecido o total de R$103.940 a título de reserva\nde incentivos fiscais e o saldo da conta em 31 de dezembro de 2022 foi o total de R$143.978\n(R$38.038 em 31 de dezembro de 2021).",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -475,11 +516,13 @@
    "evidencias": [
     {
      "pagina": 51,
-     "trecho": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo\nTribunal Federal (STF) considerou que uma decisão definitiva, a chamada “coisa julgada”,\nsobre tributos recolhidos de forma continuada, perde seus efeitos caso a corte se pronuncie\nem sentido contrário. Isso porque, de acordo com a legislação e a jurisprudência, uma"
+     "trecho": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo\nTribunal Federal (STF) considerou que uma decisão definitiva, a chamada “coisa julgada”,\nsobre tributos recolhidos de forma continuada, perde seus efeitos caso a corte se pronuncie\nem sentido contrário. Isso porque, de acordo com a legislação e a jurisprudência, uma",
+     "origem": "api"
     },
     {
      "pagina": 51,
-     "trecho": "A Administração em conjunto com os assessores jurídicos da Companhia não identificou\nimpactos para estas demonstrações financeiras. No entanto manterá o monitoramento"
+     "trecho": "A Administração em conjunto com os assessores jurídicos da Companhia não identificou\nimpactos para estas demonstrações financeiras. No entanto manterá o monitoramento",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -495,7 +538,8 @@
    "evidencias": [
     {
      "pagina": 28,
-     "trecho": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes\ndo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a\ntese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,"
+     "trecho": "(i) | A Controlada reconheceu, no 4º trimestre de 2021, créditos de PIS e COFINS decorrentes\ndo trânsito em julgado de decisão favorável à Companhia em ação judicial que discutia a\ntese da exclusão do ICMS na base de cálculo do PIS e da COFINS, no valor de R$ 168.719,",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -509,7 +553,8 @@
    "evidencias": [
     {
      "pagina": 45,
-     "trecho": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453"
+     "trecho": "Ajuste a valor presente Lei nº 11.638 (ii) | 770 | 36.453",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -523,11 +568,13 @@
    "evidencias": [
     {
      "pagina": 46,
-     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)"
+     "trecho": "Resultado de impairment sobre investimentos | - | - | (9.593) | (2.623)",
+     "origem": "api"
     },
     {
      "pagina": 46,
-     "trecho": "Lucro na venda de permanente | - | - | 10.712 | 3.408"
+     "trecho": "Lucro na venda de permanente | - | - | 10.712 | 3.408",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -541,7 +588,8 @@
    "evidencias": [
     {
      "pagina": 3,
-     "trecho": "As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31\nde dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por\noutro auditor independente."
+     "trecho": "As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31\nde dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por\noutro auditor independente.",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -557,11 +605,13 @@
   "evidencias": [
    {
     "pagina": 2,
-    "trecho": "Relatório do auditor independente sobre as demonstrações financeiras individuais e consolidadas .... 1"
+    "trecho": "Relatório do auditor independente sobre as demonstrações financeiras individuais e consolidadas .... 1",
+    "origem": "api"
    },
    {
     "pagina": 2,
-    "trecho": "Demonstrações financeiras individuais e consolidadas auditadas"
+    "trecho": "Demonstrações financeiras individuais e consolidadas auditadas",
+    "origem": "api"
    }
   ],
   "fontes": [
@@ -576,11 +626,13 @@
    "evidencias": [
     {
      "pagina": 40,
-     "trecho": "Ações tributárias | 337 | 35\nAções trabalhistas | 2.485 | 1.036"
+     "trecho": "Ações tributárias | 337 | 35\nAções trabalhistas | 2.485 | 1.036",
+     "origem": "api"
     },
     {
      "pagina": 40,
-     "trecho": "Tributárias | 35 | 719 | (130) | 608\nTrabalhistas | 1.036 | 2.423 | (959) | 2.214"
+     "trecho": "Tributárias | 35 | 719 | (130) | 608\nTrabalhistas | 1.036 | 2.423 | (959) | 2.214",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -594,15 +646,18 @@
    "evidencias": [
     {
      "pagina": 42,
-     "trecho": "31 de dezembro de 2021 era de R$94.000 divididos em 3.256.699 ações ordinárias,"
+     "trecho": "31 de dezembro de 2021 era de R$94.000 divididos em 3.256.699 ações ordinárias,",
+     "origem": "api"
     },
     {
      "pagina": 42,
-     "trecho": "aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem\nemissão de novas ações, ficando o capital social da Companhia totalmente subscrito e"
+     "trecho": "aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem\nemissão de novas ações, ficando o capital social da Companhia totalmente subscrito e",
+     "origem": "api"
     },
     {
      "pagina": 42,
-     "trecho": "integralizado ao valor de R$154.000 correspondente ao total de 1.374.240 ações ordinárias,"
+     "trecho": "integralizado ao valor de R$154.000 correspondente ao total de 1.374.240 ações ordinárias,",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -616,11 +671,13 @@
    "evidencias": [
     {
      "pagina": 27,
-     "trecho": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$\n3.604 (R$1.631 em 31 de dezembro de 2021)."
+     "trecho": "A Companhia calculou e registrou perda com créditos no exercício de 2022 no valor de R$\n3.604 (R$1.631 em 31 de dezembro de 2021).",
+     "origem": "api"
     },
     {
      "pagina": 46,
-     "trecho": "Perda no recebimento de clientes | - | - | - | (1.631)"
+     "trecho": "Perda no recebimento de clientes | - | - | - | (1.631)",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -634,11 +691,13 @@
    "evidencias": [
     {
      "pagina": 50,
-     "trecho": "Taxa sujeita à variação | 12,40% | 9,30% | 6,20%\nDespesa financeira projetada | (424) | (318) | (212)"
+     "trecho": "Taxa sujeita à variação | 12,40% | 9,30% | 6,20%\nDespesa financeira projetada | (424) | (318) | (212)",
+     "origem": "api"
     },
     {
      "pagina": 49,
-     "trecho": "de 2022, definimos o Cenário Provável para os 12 meses de 2020 (Cenário I). A partir do Cenário"
+     "trecho": "de 2022, definimos o Cenário Provável para os 12 meses de 2020 (Cenário I). A partir do Cenário",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -652,11 +711,13 @@
    "evidencias": [
     {
      "pagina": 12,
-     "trecho": "sem correção monetária, incidindo, exclusivamente, juros de 1,2% ao ano (0,1% a.m.)."
+     "trecho": "sem correção monetária, incidindo, exclusivamente, juros de 1,2% ao ano (0,1% a.m.).",
+     "origem": "api"
     },
     {
      "pagina": 37,
-     "trecho": "Incentivo governamental | 0,1% a.m. + 25% var.da UFIR | 513 | 7.555"
+     "trecho": "Incentivo governamental | 0,1% a.m. + 25% var.da UFIR | 513 | 7.555",
+     "origem": "api"
     }
    ],
    "fontes": [
@@ -670,11 +731,13 @@
    "evidencias": [
     {
      "pagina": 24,
-     "trecho": "Leão Alimentos e Bebidas Ltda. | Coligada | 2,24% | 2,24%\nTrop Frutas do Brasil Ltda. | Coligada | 1,82% | 1,82%"
+     "trecho": "Leão Alimentos e Bebidas Ltda. | Coligada | 2,24% | 2,24%\nTrop Frutas do Brasil Ltda. | Coligada | 1,82% | 1,82%",
+     "origem": "api"
     },
     {
      "pagina": 31,
-     "trecho": "Leão Alimentos e Bebidas Ltda. (i) | 2,25% | 13.910 | 22.834\nTrop Frutas do Brasil Ltda. (ii) | 1,83% | 3.464 | 4.132"
+     "trecho": "Leão Alimentos e Bebidas Ltda. (i) | 2,25% | 13.910 | 22.834\nTrop Frutas do Brasil Ltda. (ii) | 1,83% | 3.464 | 4.132",
+     "origem": "api"
     }
    ],
    "fontes": [

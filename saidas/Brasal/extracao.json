@@ -20,7 +20,8 @@
     "evidencias": [
      {
       "pagina": 6,
-      "trecho": "Brasal Brasília Holding S.A."
+      "trecho": "Brasal Brasília Holding S.A.",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -35,7 +36,8 @@
      "evidencias": [
       {
        "pagina": 6,
-       "trecho": "Brasal Brasília Holding S.A."
+       "trecho": "Brasal Brasília Holding S.A.",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -53,7 +55,8 @@
     "evidencias": [
      {
       "pagina": 6,
-      "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+      "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -68,7 +71,8 @@
      "evidencias": [
       {
        "pagina": 6,
-       "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+       "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -86,7 +90,8 @@
     "evidencias": [
      {
       "pagina": 6,
-      "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+      "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -101,7 +106,8 @@
      "evidencias": [
       {
        "pagina": 6,
-       "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021"
+       "trecho": "Notas | 31/12/2022 | 31/12/2021 | 31/12/2022 | 31/12/2021",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -129,7 +135,8 @@
     "evidencias": [
      {
       "pagina": 8,
-      "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+      "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -144,7 +151,8 @@
      "evidencias": [
       {
        "pagina": 8,
-       "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+       "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -167,7 +175,8 @@
     "evidencias": [
      {
       "pagina": 8,
-      "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+      "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -182,7 +191,8 @@
      "evidencias": [
       {
        "pagina": 8,
-       "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+       "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -215,7 +225,8 @@
     "evidencias": [
      {
       "pagina": 11,
-      "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+      "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -230,7 +241,8 @@
      "evidencias": [
       {
        "pagina": 11,
-       "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+       "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -248,7 +260,8 @@
     "evidencias": [
      {
       "pagina": 8,
-      "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+      "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -263,7 +276,8 @@
      "evidencias": [
       {
        "pagina": 8,
-       "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+       "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -281,7 +295,8 @@
     "evidencias": [
      {
       "pagina": 11,
-      "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+      "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -296,7 +311,8 @@
      "evidencias": [
       {
        "pagina": 11,
-       "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+       "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -314,7 +330,8 @@
     "evidencias": [
      {
       "pagina": 8,
-      "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+      "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -329,7 +346,8 @@
      "evidencias": [
       {
        "pagina": 8,
-       "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410"
+       "trecho": "Receita operacional líquida | 21 | - | - | 1.325.059 | 1.061.410",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -352,7 +370,8 @@
     "evidencias": [
      {
       "pagina": 8,
-      "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+      "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -367,7 +386,8 @@
      "evidencias": [
       {
        "pagina": 8,
-       "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560"
+       "trecho": "Lucro líquido do exercício | 174.602 | 275.560 | 174.602 | 275.560",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -400,7 +420,8 @@
     "evidencias": [
      {
       "pagina": 11,
-      "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+      "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -415,7 +436,8 @@
      "evidencias": [
       {
        "pagina": 11,
-       "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462"
+       "trecho": "Caixa líquido gerado pelas atividades operacionais | 887 | (4.545) | 258.248 | 121.462",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -433,7 +455,8 @@
     "evidencias": [
      {
       "pagina": 8,
-      "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+      "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -448,7 +471,8 @@
      "evidencias": [
       {
        "pagina": 8,
-       "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras"
+       "trecho": "Lucro operacional antes das receitas e despesas\n173.736 | 275.244 | 192.840 | 238.224\nfinanceiras",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -466,7 +490,8 @@
     "evidencias": [
      {
       "pagina": 11,
-      "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+      "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -481,7 +506,8 @@
      "evidencias": [
       {
        "pagina": 11,
-       "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+       "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -509,7 +535,8 @@
     "evidencias": [
      {
       "pagina": 11,
-      "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)"
+      "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -524,7 +551,8 @@
      "evidencias": [
       {
        "pagina": 11,
-       "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)"
+       "trecho": "Imobilizado e intangível | - | (1.950) | (45.761) | (53.388)",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -547,7 +575,8 @@
     "evidencias": [
      {
       "pagina": 6,
-      "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+      "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -562,7 +591,8 @@
      "evidencias": [
       {
        "pagina": 6,
-       "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+       "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -580,7 +610,8 @@
     "evidencias": [
      {
       "pagina": 6,
-      "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766"
+      "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -595,7 +626,8 @@
      "evidencias": [
       {
        "pagina": 6,
-       "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766"
+       "trecho": "Aplicações financeiras | 5 | - | - | 78.569 | 95.766",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -613,7 +645,8 @@
     "evidencias": [
      {
       "pagina": 48,
-      "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417"
+      "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -628,7 +661,8 @@
      "evidencias": [
       {
        "pagina": 48,
-       "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417"
+       "trecho": "Empréstimos e financiamentos | - | - | 3.417 | 3.417",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -651,7 +685,8 @@
     "evidencias": [
      {
       "pagina": 10,
-      "trecho": "Lucro líquido do exercício | - | - | - | - | - | 174.602 | 174.602"
+      "trecho": "Lucro líquido do exercício | - | - | - | - | - | 174.602 | 174.602",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -666,7 +701,8 @@
      "evidencias": [
       {
        "pagina": 10,
-       "trecho": "Lucro líquido do exercício | - | - | - | - | - | 174.602 | 174.602"
+       "trecho": "Lucro líquido do exercício | - | - | - | - | - | 174.602 | 174.602",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -684,7 +720,8 @@
     "evidencias": [
      {
       "pagina": 7,
-      "trecho": "366.334 | 456.836 | 366.334 | 456.836"
+      "trecho": "366.334 | 456.836 | 366.334 | 456.836",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -699,7 +736,8 @@
      "evidencias": [
       {
        "pagina": 7,
-       "trecho": "366.334 | 456.836 | 366.334 | 456.836"
+       "trecho": "366.334 | 456.836 | 366.334 | 456.836",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -722,7 +760,8 @@
     "evidencias": [
      {
       "pagina": 11,
-      "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166"
+      "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166",
+      "origem": "api"
      }
     ],
     "conferido": true
@@ -737,7 +776,8 @@
      "evidencias": [
       {
        "pagina": 11,
-       "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166"
+       "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166",
+       "origem": "api"
       }
      ],
      "conferido": true
@@ -755,11 +795,13 @@
    "evidencias": [
     {
      "pagina": 7,
-     "trecho": "Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902"
+     "trecho": "Empréstimos e financiamentos | 16 | - | - | 1.849 | 1.902",
+     "origem": "api"
     },
     {
      "pagina": 7,
-     "trecho": "Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576"
+     "trecho": "Empréstimos e financiamentos | 16 | - | 226 | 1.568 | 4.576",
+     "origem": "api"
     }
    ],
    "conferido": true
@@ -773,11 +815,13 @@
    "evidencias": [
     {
      "pagina": 7,
-     "trecho": "Passivo | (não auditado) | (não auditado)"
+     "trecho": "Passivo | (não auditado) | (não auditado)",
+     "origem": "api"
     },
     {
      "pagina": 11,
-     "trecho": "Fluxo de caixa das atividades operacionais: | (não auditado) | (não auditado)"
+     "trecho": "Fluxo de caixa das atividades operacionais: | (não auditado) | (não auditado)",
+     "origem": "api"
     }
    ],
    "conferido": true
@@ -791,11 +835,13 @@
    "evidencias": [
     {
      "pagina": 11,
-     "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166"
+     "trecho": "No fim do exercício | 3.714 | 1.145 | 96.453 | 62.166",
+     "origem": "api"
     },
     {
      "pagina": 6,
-     "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166"
+     "trecho": "Caixa e equivalentes de caixa | 4 | 3.714 | 1.146 | 96.453 | 62.166",
+     "origem": "api"
     }
    ],
    "conferido": true
@@ -809,11 +855,13 @@
    "evidencias": [
     {
      "pagina": 7,
-     "trecho": "Capital social | 25 | 154.000 | 94.000 | 154.000 | 94.000"
+     "trecho": "Capital social | 25 | 154.000 | 94.000 | 154.000 | 94.000",
+     "origem": "api"
     },
     {
      "pagina": 48,
-     "trecho": "25. Gestão de riscos dos instrumentos financeiros"
+     "trecho": "25. Gestão de riscos dos instrumentos financeiros",
+     "origem": "api"
     }
    ],
    "conferido": true
@@ -827,11 +875,13 @@
    "evidencias": [
     {
      "pagina": 8,
-     "trecho": "#Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275)"
+     "trecho": "#Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15.275)",
+     "origem": "api"
     },
     {
      "pagina": 11,
-     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837"
+     "trecho": "Depreciações e amortizações | 507 | 465 | 29.014 | 22.837",
+     "origem": "api"
     }
    ],
    "conferido": true
@@ -845,7 +895,8 @@
    "evidencias": [
     {
      "pagina": 11,
-     "trecho": "Caixa líquido aplicado nas atividades de investimentos | 236.478 | 88.754 | (15.764) | 13.161"
+     "trecho": "Caixa líquido aplicado nas atividades de investimentos | 236.478 | 88.754 | (15.764) | 13.161",
+     "origem": "api"
     }
    ],
    "conferido": true
