@@ -7,14 +7,16 @@ requires-python = ">=3.12"
 dependencies = [
     "anthropic>=2.8",
     "pydantic>=2.7",
-    "pymupdf>=1.24",
+    "pymupdf>=1.26,<3",  # o replay foi conferido com as versões 1.26.7, 1.28.2, 2.0 e 2.1
     "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
 # O servidor MCP é opcional: a análise roda sem ele. Os testes do servidor precisam dele.
 mcp = ["mcp>=2.3,<3"]
-dev = ["pytest>=8", "mcp>=2.3,<3"]
+# A comparação do tom com ML tradicional (comando tom) usa o scikit-learn.
+ml = ["scikit-learn>=1.5"]
+dev = ["pytest>=8", "mcp>=2.3,<3", "scikit-learn>=1.5"]
 
 [build-system]
 requires = ["hatchling"]

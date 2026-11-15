@@ -5,6 +5,7 @@
     python -m analise_financeira perguntar "Qual empresa tem mais caixa?"   # pergunta livre
     python -m analise_financeira extrair [--replay]  # só a extração dos indicadores
     python -m analise_financeira avaliar             # compara as saídas com o gabarito
+    python -m analise_financeira tom [--replay]      # tom frase a frase: ML tradicional comparado com a IA
 """
 
 from __future__ import annotations
@@ -52,6 +53,22 @@ def _resumo_qualitativa(q) -> str:
             f"{q.uso.tokens_entrada} + {q.uso.tokens_saida} tokens | {_custo(q.uso)}")
 
 
+def _resumo_tom(r) -> str:
+    ia = [r.ia[f.id] for f in r.frases if f.id in r.ia]
+    linhas = [f"{r.documento}: {len(r.frases)} frases do texto da administração | IA: {ia.count('positivo')} positivas, "
+              f"{ia.count('neutro')} neutras e {ia.count('negativo')} negativas | {_custo(r.uso)}"]
+    for chave, nome in (("lexico", "léxico"), ("classico", "TF-IDF e regressão logística"), ("piso", "classe mais comum")):
+        if chave in r.metricas:
+            m = r.metricas[chave]
+            linhas.append(f"    {nome}: concorda {m['acerto']:.0%} com a IA (kappa {m['kappa']:.2f}) | "
+                          f"tom do documento: {r.tom.get(chave) or '?'}")
+    linhas.append(f"    tom do documento: {r.tom.get('ia') or '?'} pela IA frase a frase; "
+                  f"{r.tom_analise or '?'} na análise qualitativa")
+    if r.motivo:
+        linhas.append(f"    sem modelo clássico: {r.motivo}")
+    return "\n".join(linhas)
+
+
 def _cliente(args) -> ClienteLLM:
     return ClienteLLM(modelo=args.modelo, replay=args.replay, chave=os.getenv("ANTHROPIC_API_KEY"))
 
@@ -96,6 +113,12 @@ def main() -> int:
 
     comandos.add_parser("avaliar", help="compara as saídas gravadas em saidas/ com o gabarito")
 
+    tm = comandos.add_parser("tom", help="tom frase a frase do texto da administração: léxico e regressão logística "
+                                         "comparados com a IA")
+    tm.add_argument("pasta", nargs="?", default="dados/pdfs")
+    tm.add_argument("--replay", action="store_true", help="usa só as respostas gravadas, sem chave e sem custo")
+    tm.add_argument("--modelo", default=modelo)
+
     mc = comandos.add_parser("mcp", help="servidor MCP (stdio) com os dados de saidas/, para o Claude Desktop ou "
                                          "outro agente; só leitura, sem chamar a IA")
     mc.add_argument("--raiz", type=Path, default=None,
@@ -125,9 +148,25 @@ def main() -> int:
             return 1
         return 0
 
+    if args.comando == "tom":
+        try:
+            import sklearn  # noqa: F401
+        except ImportError:
+            print('Erro: falta o pacote scikit-learn. Instale com: python -m pip install -e ".[ml]"')
+            return 1
+
     inicio = time.perf_counter()
     try:
-        if args.comando == "extrair":
+        if args.comando == "tom":
+            from analise_financeira.tom import comparar
+
+            resultados, sem_texto, destino = comparar(args.pasta, _cliente(args))
+            for r in resultados:
+                print(_resumo_tom(r))
+            for nome in sem_texto:
+                print(f"{nome}: sem texto da administração (não se aplica)")
+            print(f"Comparação: {destino}")
+        elif args.comando == "extrair":
             from analise_financeira.orquestrador import processar_extracao
 
             for nome, (extracao, analise) in processar_extracao(args.pasta, _cliente(args)).items():

@@ -1,0 +1,13 @@
+# O .env nunca entra na imagem: a chave vai só na hora de rodar (--env-file).
+.env
+.env.*
+!.env.example
+
+.git
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/

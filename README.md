@@ -1,6 +1,6 @@
 # Análise de demonstrações financeiras com IA, com a prova de cada número
 
-A solução lê demonstrações financeiras em PDF e extrai os indicadores com a página e o trecho de onde cada número saiu. Ela confere as contas em Python e analisa o comentário da administração. Também responde perguntas em linguagem natural, citando documento e página, e entrega um relatório para o analista de crédito. Por fim, expõe os dados conferidos por um servidor MCP, para outros agentes.
+A solução lê demonstrações financeiras em PDF e extrai os indicadores com a página e o trecho de onde cada número saiu. Ela confere as contas em Python e analisa o comentário da administração. Também responde perguntas em linguagem natural, citando documento e página, e entrega um relatório para o analista de crédito. Expõe os dados conferidos por um servidor MCP, para outros agentes. E compara o tom que a IA dá a cada frase do texto da administração com um léxico e com um modelo clássico de ML.
 
 O risco central deste problema não é a IA deixar de achar um número. É achar um número errado que parece certo. Por isso a solução separa os papéis: a IA lê e aponta, sempre com citação; o código calcula, confere e sinaliza; nada é corrigido em silêncio.
 
@@ -18,9 +18,9 @@ O caso que resume a solução está na Light. O relatório da administração di
 | As 5 perguntas do desafio, na checagem por palavras e por empresa | 5 de 5; na quinta, dois números saíram sem a marca de citação, e o código avisou com a página |
 | Rodada completa: 3 PDFs e 5 perguntas | US$ 2,80 e cerca de 3 minutos |
 | A mesma rodada com as respostas gravadas | US$ 0 e poucos segundos, sem chave de API |
-| Testes automatizados | 263, e nenhum chama a IA |
+| Testes automatizados | 275, e nenhum chama a IA |
 
-O relatório final está em [`saidas/relatorio.md`](saidas/relatorio.md). A avaliação completa está em [`avaliacao/resultados/`](avaliacao/resultados/). As 25 decisões do projeto, uma por parágrafo, estão em [`docs/decisoes.md`](docs/decisoes.md).
+O relatório final está em [`saidas/relatorio.md`](saidas/relatorio.md). A avaliação completa está em [`avaliacao/resultados/`](avaliacao/resultados/). As 27 decisões do projeto, uma por parágrafo, estão em [`docs/decisoes.md`](docs/decisoes.md).
 
 ## Como rodar
 
@@ -30,8 +30,17 @@ Precisa de Python 3.12 ou mais novo. No Linux e no Mac, troque `.venv/Scripts/py
 python -m venv .venv
 .venv/Scripts/python -m pip install -e ".[dev]"
 .venv/Scripts/python -m analise_financeira analisar --replay   # tudo, com as respostas gravadas: sem chave e sem custo
+.venv/Scripts/python -m analise_financeira tom --replay        # o tom de cada frase: ML tradicional comparado com a IA
 .venv/Scripts/python -m analise_financeira avaliar             # compara com o gabarito
-.venv/Scripts/python -m pytest -q                              # 263 testes, sem chamar a IA
+.venv/Scripts/python -m pytest -q                              # 275 testes, sem chamar a IA
+```
+
+Com Docker, sem instalar Python, os mesmos passos rodam numa imagem:
+
+```bash
+docker build -t analise-financeira .
+docker run --rm analise-financeira                      # replay, comparação de tom e avaliação
+docker run --rm analise-financeira python -m pytest -q  # os testes
 ```
 
 O comando `analisar` faz a leitura e a varredura de segurança dos PDFs, a extração, a conferência, a análise qualitativa, as 5 perguntas e o relatório. Para uma pergunta livre, rode `python -m analise_financeira perguntar "Qual empresa tem mais caixa?"`.
@@ -150,6 +159,14 @@ A avaliação também mostrou a variação entre rodadas. Na primeira rodada rea
 
 Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. A avaliação serve para achar erro e medir mudança, e não para prometer acerto em produção.
 
+### O tom de cada frase: ML tradicional comparado com a IA
+
+O enunciado sugere comparar um método clássico de ML com o LLM, por exemplo no tom. Comparar o tom do documento inteiro não dá: só a Light tem texto da administração, então seria um caso só. Por isso a comparação é frase a frase, nas 170 frases do texto da administração da Light.
+
+A IA dá o tom de cada frase: positivo, neutro ou negativo. Esses rótulos são a referência da comparação, e não a verdade. Contra eles entram dois métodos que não chamam a IA. O primeiro é um léxico de finanças, sem treino: ele conta palavras positivas e negativas, e nenhuma foi escolhida para uma empresa. O segundo é um modelo clássico, TF-IDF com regressão logística, que aprende com os rótulos da IA. A nota dele vem de validação cruzada em 5 partes: cada frase é prevista por um modelo que não a viu no treino.
+
+Para cada método, o comando `tom` mede a concordância com a IA, o F1 médio e o kappa, que desconta o acerto por acaso. Mede também o tom que cada um daria ao documento, o custo e o tempo. O resultado está em [`saidas/tom.md`](saidas/tom.md) (decisão 26).
+
 ## 5. Custo e tempo
 
 Os números abaixo são medidos, e não estimados. Cada chamada à IA grava tokens, custo e tempo em `saidas/traces.jsonl`, com os nomes de atributo das convenções de IA generativa do OpenTelemetry. Preços do Claude Opus 5.5: US$ 4 por milhão de tokens de entrada e US$ 20 por milhão de saída.
@@ -176,6 +193,8 @@ Nos 3 PDFs reais, a leitura com e sem a varredura é idêntica, linha por linha,
 
 A varredura é a primeira barreira, e não a única. Os pedidos dizem que o texto do documento é dado, e não instrução. Todo número passa pela conferência em código, então um valor injetado que chegasse à IA bateria de frente com as demonstrações. O relatório passa todo texto do PDF e da IA por escape, para não injetar HTML. O PDF com senha, com mais de 500 páginas ou maior que 50 MB é recusado. O servidor MCP só lê, não aceita caminho de arquivo e valida toda entrada por esquema.
 
+**Docker.** A imagem não leva o `.env`: o `.dockerignore` deixa o arquivo de fora, e a chave só entra na hora de rodar, com `--env-file`. A imagem roda com um usuário sem privilégios (decisão 27).
+
 ## 7. Limitações
 
 A amostra é pequena. São 3 documentos, e o gabarito foi montado com eles. O roteamento por título funcionou para estes formatos, mas outros formatos de demonstração podem pedir ajustes.
@@ -188,7 +207,9 @@ A IA varia entre rodadas. A mesma pergunta pode sair com mais ou menos detalhe, 
 
 Documentos escaneados não são lidos. A leitura detecta a página que precisa de OCR, mas não faz o OCR. Duas armadilhas da Brasal ficaram de fora, porque exigem cruzar tabelas de notas diferentes, e nenhuma regra faz isso hoje.
 
-Ficaram para depois: a comparação de modelos (Opus, Sonnet e Haiku, com a mesma avaliação), um classificador de tom por léxico para comparar com a IA, o relatório em HTML e o Docker.
+A comparação de tom usa as frases de um documento só, o único com texto da administração. Ela serve para comparar métodos, e não para prometer acerto em outros documentos. O léxico não entende negação nem contexto.
+
+Ficaram para depois: a comparação de modelos (Opus, Sonnet e Haiku, com a mesma avaliação) e o relatório em HTML.
 
 ## 8. Caminho para produção no Azure
 
@@ -244,6 +265,8 @@ Para usar no Claude Desktop, instale o extra e acrescente o servidor ao `claude_
 }
 ```
 
+Com Docker, o mesmo servidor roda na imagem: troque o `command` por `"docker"` e os `args` por `["run", "-i", "--rm", "analise-financeira", "python", "-m", "analise_financeira", "mcp"]`.
+
 Depois de reiniciar o Claude Desktop, pergunte, por exemplo: "Qual a alavancagem da Light? Cite a página e os alertas." ou "Quais inconsistências a Millet tem nas demonstrações?".
 
 ## Estrutura do repositório
@@ -261,7 +284,9 @@ Depois de reiniciar o Claude Desktop, pergunte, por exemplo: "Qual a alavancagem
 | `llm.py` | cliente da API: gravação, replay, cache e traces |
 | `orquestrador.py`, `__main__.py` | o fluxo e os comandos |
 | `avaliacao.py`, `avaliacao/gabarito.json` | a avaliação contra o gabarito |
-| `tests/` | 263 testes; nenhum chama a IA |
+| `tom.py` | o tom de cada frase: léxico e modelo clássico de ML comparados com a IA |
+| `Dockerfile`, `.dockerignore` | a imagem, sem o `.env` |
+| `tests/` | 275 testes; nenhum chama a IA |
 | `gravacoes/` | as respostas reais da IA, para o replay |
 | `saidas/` | o resultado da última rodada: JSONs, relatório e traces |
-| `docs/decisoes.md` | as 25 decisões, com o porquê |
+| `docs/decisoes.md` | as 27 decisões, com o porquê |

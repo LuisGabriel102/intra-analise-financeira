@@ -1,0 +1,16 @@
+{
+ "blocos": [
+  {
+   "text": "1: negativo\n2: negativo\n3: negativo\n4: negativo\n5: negativo\n6: negativo\n7: negativo\n8: neutro\n9: neutro\n10: neutro\n11: neutro\n12: neutro\n13: negativo\n14: positivo\n15: neutro\n16: positivo\n17: neutro\n18: positivo\n19: neutro\n20: neutro\n21: positivo\n22: neutro\n23: neutro\n24: neutro\n25: neutro\n26: positivo\n27: neutro\n28: neutro\n29: neutro\n30: neutro\n31: negativo\n32: negativo\n33: neutro\n34: neutro\n35: neutro\n36: neutro\n37: neutro\n38: neutro\n39: positivo\n40: neutro\n41: neutro\n42: neutro\n43: neutro\n44: neutro\n45: neutro\n46: neutro\n47: negativo\n48: negativo\n49: positivo\n50: neutro\n51: negativo\n52: neutro\n53: negativo\n54: negativo\n55: neutro\n56: positivo\n57: positivo\n58: positivo\n59: neutro\n60: positivo\n61: neutro\n62: neutro\n63: neutro\n64: positivo\n65: positivo\n66: positivo\n67: neutro\n68: positivo\n69: neutro\n70: neutro\n71: neutro\n72: negativo\n73: neutro\n74: neutro\n75: neutro\n76: neutro\n77: neutro\n78: neutro\n79: negativo\n80: positivo\n81: positivo\n82: positivo\n83: negativo\n84: negativo\n85: negativo\n86: positivo\n87: negativo\n88: negativo\n89: negativo\n90: negativo\n91: negativo\n92: negativo\n93: negativo\n94: negativo\n95: negativo\n96: positivo\n97: neutro\n98: positivo\n99: neutro\n100: neutro\n101: neutro\n102: neutro\n103: neutro\n104: neutro\n105: neutro\n106: neutro\n107: neutro\n108: neutro\n109: neutro\n110: neutro\n111: neutro\n112: neutro\n113: neutro\n114: neutro\n115: neutro\n116: neutro\n117: neutro\n118: neutro\n119: neutro\n120: neutro\n121: neutro\n122: neutro\n123: neutro\n124: positivo\n125: neutro\n126: neutro\n127: neutro\n128: neutro\n129: neutro\n130: neutro\n131: neutro\n132: neutro\n133: neutro\n134: positivo\n135: positivo\n136: neutro\n137: neutro\n138: neutro\n139: neutro\n140: neutro\n141: neutro\n142: neutro\n143: neutro\n144: neutro\n145: neutro\n146: neutro\n147: neutro\n148: neutro\n149: neutro\n150: neutro\n151: neutro\n152: neutro\n153: neutro\n154: neutro\n155: neutro\n156: neutro\n157: neutro\n158: neutro\n159: neutro\n160: neutro\n161: neutro\n162: neutro\n163: neutro\n164: neutro\n165: neutro\n166: neutro\n167: neutro\n168: neutro\n169: neutro\n170: neutro",
+   "type": "text"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 12378,
+ "tokens_saida": 2306,
+ "tokens_cache": 0,
+ "segundos": 18.25,
+ "gravada": false,
+ "tokens_cache_escrita": 0,
+ "parada": "end_turn"
+}
