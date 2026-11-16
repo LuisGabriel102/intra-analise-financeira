@@ -225,6 +225,8 @@ A busca é por palavra. "Motivo da variação da receita" não acha a nota da Mi
 
 A IA varia entre rodadas. A mesma pergunta pode sair com mais ou menos detalhe, e uma observação pode aparecer numa rodada e não na outra. As respostas gravadas tornam cada rodada reprodutível, mas não tornam a IA determinística.
 
+A conferência das respostas olha os números, e não a ordem da frase. Na pergunta 2, a IA escreveu que a receita da Light "caiu de R$ 13.253,3 milhões para R$ 14.897,9 milhões no ano anterior". Os dois números estão certos e citados, e a variação de -11,0% vem do código, mas a frase troca a ordem dos anos: o certo é de R$ 14.897,9 milhões em 2021 para R$ 13.253,3 milhões em 2022. O próximo passo é uma regra que confira "de X para Y" contra a ordem dos períodos.
+
 Documentos escaneados não são lidos. A leitura detecta a página que precisa de OCR, mas não faz o OCR. Uma armadilha da Brasal ficou de fora (B7), porque exige cruzar valores de notas diferentes, que usam nomes diferentes para o mesmo crédito. A regra de soma de linhas (V12) ainda não roda sozinha, porque a leitura por texto não diz quais linhas somam qual total.
 
 A comparação de tom usa as 170 frases de um documento só, o único com texto da administração. Com tão poucas frases, o modelo clássico aprende o assunto, e não o tom. A referência é a própria IA, porque nenhuma pessoa rotulou as frases: onde a IA erra, a comparação não vê. O número serve para comparar métodos, e não para prometer acerto em outros documentos. O léxico não entende negação nem contexto.
