@@ -270,6 +270,26 @@
    "campo": null
   },
   {
+   "regra": "V17",
+   "severidade": "erro",
+   "origem": "codigo",
+   "mensagem": "Movimentação (Brasal Refrigerantes S/A): o saldo inicial de 468.290 mais os movimentos dá 391.665, mas o saldo final informado é 411.099 (diferença de 19.434). Algum movimento não é o valor usado no saldo.",
+   "paginas": [
+    32
+   ],
+   "campo": null
+  },
+  {
+   "regra": "V17",
+   "severidade": "erro",
+   "origem": "codigo",
+   "mensagem": "Movimentação (Brasal Refrigerantes S/A): o saldo inicial de 282.190 mais os movimentos dá 456.468, mas o saldo final informado é 468.290 (diferença de 11.822). Algum movimento não é o valor usado no saldo.",
+   "paginas": [
+    32
+   ],
+   "campo": null
+  },
+  {
    "regra": "IA",
    "severidade": "aviso",
    "origem": "ia",

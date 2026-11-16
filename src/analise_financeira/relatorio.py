@@ -370,13 +370,20 @@ def alertas(resultados: list[ResultadoDocumento]) -> list[str]:
         md += [f"- {texto(r.chave)} ({a.regra}, {_paginas(a.paginas)}): {texto(a.mensagem)}" for r, a in info]
 
     md += ["", "### Observações da IA, com citação", "",
-           "Apontadas pela IA durante a leitura, com o trecho citado. Não foram conferidas em código: são pistas para o analista.", ""]
+           "Apontadas pela IA durante a leitura, com o trecho citado. Não foram conferidas em código: são pistas para o analista. "
+           "Quando a IA aponta o mesmo achado de uma regra da tabela acima, a observação diz qual é a regra.", ""]
     ia = [(r, a.mensagem, a.paginas) for r in resultados for a in r.numeros.alertas if a.origem == "ia"]
     for r in resultados:
         conhecidos = [(a.mensagem, a.paginas) for a in r.numeros.alertas if a.severidade != "info"]
         ia += [(r, o.texto, paginas) for o in (r.qualitativa.observacoes if r.qualitativa else [])
                if not repete_achado(o.texto, paginas := [e.pagina for e in o.evidencias], conhecidos)]
-    md += [f"- **{texto(r.chave)}** ({_paginas(p) or 'sem página'}): {texto(m)}" for r, m, p in ia] or ["- Nenhuma."]
+
+    def linha(r: ResultadoDocumento, m: str, p: list[int]) -> str:
+        regra = conferida_em_codigo(m, p, [a for a in r.numeros.alertas if a.origem == "codigo"])
+        marca = f" *(Mesmo achado da regra {regra}, conferida em código na tabela acima.)*" if regra else ""
+        return f"- **{texto(r.chave)}** ({_paginas(p) or 'sem página'}): {texto(m)}{marca}"
+
+    md += [linha(r, m, p) for r, m, p in ia] or ["- Nenhuma."]
 
     md += ["", *seguranca(resultados)]
 
@@ -437,6 +444,22 @@ def repete_achado(observacao: str, paginas: list[int], conhecidos: list[tuple[st
     if not numeros:
         return False
     return any(set(paginas) & set(p) and numeros <= _numeros_do_achado(m) for m, p in conhecidos)
+
+
+def conferida_em_codigo(observacao: str, paginas: list[int], codigo: list[AlertaSaida]) -> str | None:
+    """A observação da IA fala do mesmo achado de um alerta do código? Devolve a regra, ou None.
+
+    É o mesmo achado quando há uma página em comum e todos os números que identificam o
+    alerta aparecem na observação. A observação continua no relatório, porque costuma trazer
+    o trecho citado; só ganha a marca da regra. Alerta sem número (V14, V16) não entra:
+    sem número, não dá para saber se é o mesmo achado.
+    """
+    numeros = _numeros_do_achado(observacao)
+    for a in codigo:
+        do_alerta = _numeros_do_achado(a.mensagem)
+        if do_alerta and set(paginas) & set(a.paginas) and do_alerta <= numeros:
+            return a.regra
+    return None
 
 
 GLOSSARIO = [

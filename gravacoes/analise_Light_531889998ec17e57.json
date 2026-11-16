@@ -1,0 +1,952 @@
+{
+ "blocos": [
+  {
+   "text": "motivo: Segundo a administração, o prejuízo veio sobretudo da Distribuição. Pesaram ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Distribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devoluçãode créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, quetotalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no",
+     "document_index": 9,
+     "document_title": "Light.pdf, página 10",
+     "end_block_index": 10,
+     "start_block_index": 7,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "a provisão de -R$1.081 milhões para devolução de créditos de PIS/COFINS aos consumidores, a atualização financeira desses valores, que totalizaram -R$1.584 milhões, e o impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nmotivo: Segundo a administração, a queda do EBITDA ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "foi devida, principalmente, a provisões de -R$2.513 milhões no período",
+   "type": "text"
+  },
+  {
+   "text": ". Essas provisões incluem PIS/COFINS, a revisão da PECLD (-R$855 milhões) e contingências JEC e Cível (-R$379 milhões).\n\nmotivo: Segundo a administração, a receita caiu por causa de ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "estornos de faturamento de regularizações, do não acionamento das bandeiras tarifárias e da variação negativa na conta CVA",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nmotivo: Segundo a administração, a inadimplência subiu. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "| PECLD/ROB | | O indicador PECLD sobre Receita Operacional Bruta12 meses | 6,0% | (12 meses) encerrado em dezembro/22 foi de 6,0%,2,7 p.p. acima do índice ajustado em dezembro/21,",
+     "document_index": 6,
+     "document_title": "Light.pdf, página 7",
+     "end_block_index": 7,
+     "start_block_index": 4,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "O indicador PECLD sobre Receita Operacional Bruta (12 meses) encerrado em dezembro/22 foi de 6,0%, 2,7 p.p. acima do índice ajustado em dezembro/21, refletindo a abertura da curva de inadimplência verificada ao longo de 2022",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nmotivo: Segundo as notas explicativas, a situação foi agravada pelo ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;",
+     "document_index": 18,
+     "document_title": "Light.pdf, página 26",
+     "end_block_index": 8,
+     "start_block_index": 7,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022",
+   "type": "text"
+  },
+  {
+   "text": ". Por segmento, o resultado financeiro da Distribuição foi de ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado financeiro | (3.199.337) (302.828) | 22.444 | 32.394 | - | (3.447.327)",
+     "document_index": 22,
+     "document_title": "Light.pdf, página 45",
+     "end_block_index": 39,
+     "start_block_index": 38,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(3.199.337)",
+   "type": "text"
+  },
+  {
+   "text": " em 2022, contra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Resultado financeiro | (1.051.225) (290.471) | 5.813 | 5.693 | - | (1.330.190)",
+     "document_index": 22,
+     "document_title": "Light.pdf, página 45",
+     "end_block_index": 48,
+     "start_block_index": 47,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(1.051.225)",
+   "type": "text"
+  },
+  {
+   "text": " em 2021.\n\nmotivo: Segundo a administração, o mercado faturado caiu 0,4%. A queda veio ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "do menor consumo médio de residências, com a retomada de atividades externas após o período mais crítico da Pandemia, e da atividade do setor siderúrgico",
+   "type": "text"
+  },
+  {
+   "text": ". Na geração, o lucro da Light Energia subiu pela ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Essa variação pode ser explicada pela melhora do cenário hidrológico ao longo do ano de2022, que levou ao aumento do GSF e à queda do PLD, reduzindo os custos com compra deenergia. A Light mostrou grande eficiência na estratégia de proteção do resultado aos riscosde mercado (GSF/PLD).",
+     "document_index": 8,
+     "document_title": "Light.pdf, página 9",
+     "end_block_index": 9,
+     "start_block_index": 5,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "melhora do cenário hidrológico ao longo do ano de 2022, que levou ao aumento do GSF e à queda do PLD, reduzindo os custos com compra de energia",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: Há dúvida sobre a continuidade operacional. A administração vê ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional do Grupo Light e da Light SESA",
+   "type": "text"
+  },
+  {
+   "text": ". O auditor destacou o tema, mas ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Companhia. Nossa opinião não está ressalvada em relação a esse assunto.",
+     "document_index": 29,
+     "document_title": "Light.pdf, página 111",
+     "end_block_index": 46,
+     "start_block_index": 45,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "sua opinião não está ressalvada em relação a esse assunto",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: A situação da empresa é frágil. Há ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(i) elevado nível de endividamento;(ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência;(iv) dificuldade de atuação em Áreas de Severa Restrição Operacional.Esta situação foi agravada pelo(a):(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;(ii) efeito da determinação de devolução de cerca de R$2.8 bilhões de créditos decorrentes daexclusão do ICMS das bases de cálculo do PIS e da COFINS, como explicitado em mais detalhesnas Notas Explicativas 1.2, 9.1 e 38.1;(iii) deterioração macroeconômica da área de concessão desde 2015 e mais recentementeagravada pela pandemia de COVID-19.A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveispara utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar aestrutura de capital da Companhia.A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá emjunho de 2026. A Administração da Companhia entende que determinados cenários para o futurodo Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
+     "document_index": 18,
+     "document_title": "Light.pdf, página 26",
+     "end_block_index": 19,
+     "start_block_index": 2,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "(i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos; (iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: A liquidez é apertada. A Companhia ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveispara utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar aestrutura de capital da Companhia.A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá emjunho de 2026. A Administração da Companhia entende que determinados cenários para o futurodo Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
+     "document_index": 18,
+     "document_title": "Light.pdf, página 26",
+     "end_block_index": 19,
+     "start_block_index": 13,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "não possui linhas de créditos contratadas e disponíveis para utilização em 31 de dezembro de 2022",
+   "type": "text"
+  },
+  {
+   "text": ". O capital circulante líquido ficou ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "2021), capital circulante líquido negativo de R$871.574 (capital circulante líquido positivo de",
+     "document_index": 17,
+     "document_title": "Light.pdf, página 25",
+     "end_block_index": 24,
+     "start_block_index": 23,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "negativo de R$871.574",
+   "type": "text"
+  },
+  {
+   "text": " mil.\n\nrisco: Os contratos de dívida têm cláusulas de vencimento antecipado. Elas valem para o ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "não atendimento a pelo menos um dos indicadores financeiros em dois trimestres consecutivos ou quatro trimestres intercalados; ou não cumprimento de determinados covenants não financeiros, como cláusulas de atendimento de nível mínimo de classificação de crédito",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: Os ratings estão baixos. A Fitch dá ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Fitch | CCC(bra) | CCC+ | 02.02.2023 | CCC(bra) | CCC+ | 02.02.2023",
+     "document_index": 18,
+     "document_title": "Light.pdf, página 26",
+     "end_block_index": 28,
+     "start_block_index": 27,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "CCC(bra) | CCC+",
+   "type": "text"
+  },
+  {
+   "text": ". Os ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "que os recentes rebaixamentos dos ratings do Grupo Light pelas agências de ratings, e que podemimplicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição doscredores em efetuar novos empréstimos e financiamentos para o Grupo Light, (vi) utilização derecursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração doGrupo Light, (vii) redução dos investimentos em infraestrutura que não implique em prejuízo naprestação do serviço de distribuição de energia elétrica e indicadores de qualidade exigidos pelocontrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimentoadequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no",
+     "document_index": 19,
+     "document_title": "Light.pdf, página 28",
+     "end_block_index": 20,
+     "start_block_index": 12,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "recentes rebaixamentos dos ratings podem implicar em elevados custos de captação de novas dívidas e até mesmo significar a indisposição dos credores em efetuar novos empréstimos",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: A concessão da Light SESA ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá emjunho de 2026. A Administração da Companhia entende que determinados cenários para o futurodo Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
+     "document_index": 18,
+     "document_title": "Light.pdf, página 26",
+     "end_block_index": 19,
+     "start_block_index": 16,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "vencerá em junho de 2026",
+   "type": "text"
+  },
+  {
+   "text": ". A renovação e os termos da nova concessão ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "não estão sob controle da Administração do Grupo Light",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: Há obrigação de ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(ii) efeito da determinação de devolução de cerca de R$2.8 bilhões de créditos decorrentes daexclusão do ICMS das bases de cálculo do PIS e da COFINS, como explicitado em mais detalhesnas Notas Explicativas 1.2, 9.1 e 38.1;(iii) deterioração macroeconômica da área de concessão desde 2015 e mais recentementeagravada pela pandemia de COVID-19.A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveispara utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar aestrutura de capital da Companhia.A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá emjunho de 2026. A Administração da Companhia entende que determinados cenários para o futurodo Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da",
+     "document_index": 18,
+     "document_title": "Light.pdf, página 26",
+     "end_block_index": 19,
+     "start_block_index": 8,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "devolução de cerca de R$2.8 bilhões de créditos decorrentes da exclusão do ICMS das bases de cálculo do PIS e da COFINS",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: As perdas de energia estão acima do que a tarifa cobre. ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "A Companhia está 4,98 p.p. acima do percentual de repasse regulatório na tarifa, de 21,53%",
+   "type": "text"
+  },
+  {
+   "text": ". A arrecadação também piorou: o índice ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "O índice de arrecadação total média móvel 12 meses em dezembro/22 atingiu 96,0%, 1,4p.p. abaixo da apresentada em dezembro/21 (97,4%). O resultado verificado decorreu dapiora do indicador para os segmentos Grandes Clientes Privados e Poder Público.| PECLD/ROB | | O indicador PECLD sobre Receita Operacional Bruta12 meses | 6,0% | (12 meses) encerrado em dezembro/22 foi de 6,0%,2,7 p.p. acima do índice ajustado em dezembro/21,",
+     "document_index": 6,
+     "document_title": "Light.pdf, página 7",
+     "end_block_index": 7,
+     "start_block_index": 1,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "atingiu 96,0%, 1,4 p.p. abaixo da apresentada em dezembro/21 (97,4%). O resultado verificado decorreu da piora do indicador para os segmentos Grandes Clientes Privados e Poder Público",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: Risco de crédito (nota de riscos). É a ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Decorre da possibilidade da Companhia sofrer perdas decorrentes de inadimplência dos seusconsumidores ou de instituições financeiras depositárias de recursos ou de investimentosfinanceiros. Para mitigar esses riscos, a Companhia utiliza de todas as ferramentas de cobrançapermitidas pelo órgão regulador, tais como corte por inadimplência, negativação de clientesinadimplentes em empresas de proteção ao crédito e cobrança judicial. O risco de crédito das contasa receber encontra-se pulverizado considerando a base de clientes da Companhia. Uma análise deredução ao valor recuperável é efetuada a cada data de reporte usando uma matriz de provisãopara avaliar as perdas de crédito esperadas. A exposição máxima ao risco de crédito em 31 dedezembro de 2022 é o valor contábil de cada classe de ativos financeiros divulgada na Nota 8. OGrupo não possui ou mantém ativos que tenham sido dados em garantia por terceiros.No que tange às instituições financeiras, a Companhia somente realiza operações de baixo risco,avaliadas por agências de rating. A Companhia possui uma política de não manter a carteiraconcentrada em uma determinada instituição financeira. Desta forma, a política tem como princípiocontrolar a concentração da carteira através de limites impostos aos Grupos e acompanhar asinstituições financeiras através do seu patrimônio líquido e de seus ratings.Por meio de sua política a Companhia poderá aplicar os recursos em produtos de renda fixa, pós-fixados indexados ao CDI e Títulos públicos pós-fixados.34.2.5 Risco de liquidezO risco de liquidez evidencia a capacidade financeira em cumprir adequadamente os compromissosassumidos, os fluxos de vencimentos dos recursos captados e de outras obrigações que fazem partedas divulgações. Informações com maior detalhamento sobre os recursos captados sãoapresentadas nas Notas 20 e 21.A Companhia tem obtido recursos a partir da sua atividade comercial, do mercado financeiro e deempresas ligadas, destinando-os principalmente ao seu programa de investimentos e àadministração de seu caixa para capital de giro e compromissos financeiros.Conforme divulgado na Nota 1.1, a Administração da Companhia está acompanhando atentamente",
+     "document_index": 26,
+     "document_title": "Light.pdf, página 101",
+     "end_block_index": 27,
+     "start_block_index": 1,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "possibilidade da Companhia sofrer perdas decorrentes de inadimplência dos seus consumidores ou de instituições financeiras depositárias de recursos",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nrisco: Risco hidrológico e de liquidez (nota de riscos). ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "Um período prolongado de escassez de chuva pode resultar na redução do volume de água dos reservatórios das usinas, acarretar perdas em função do aumento de custos na aquisição de energia",
+   "type": "text"
+  },
+  {
+   "text": ". Na distribuição, isso gera ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "maior necessidade de caixa no curto prazo, que são recuperáveis dentro do arcabouço regulatório vigente",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nguidance: não encontrado\n\nperspectiva: A empresa quer antecipar a renovação da concessão. ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "Nós iniciamos discussões com a Aneel e o Ministério de Minas e Energia em busca da renovação antecipada em bases que garantam a sustentabilidade da concessão e do nosso negócio",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nperspectiva: A administração restringiu os investimentos. Ela concentrou os ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "investimentos naqueles estritamente necessários para a sustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar o fluxo de caixa nos próximos 36 meses",
+   "type": "text"
+  },
+  {
+   "text": ". Não há número para esse plano.\n\nperspectiva: As estratégias para a continuidade incluem ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "utilização de recursos oriundos da venda de ativos, cuja venda possui elementos que não estão",
+     "document_index": 19,
+     "document_title": "Light.pdf, página 28",
+     "end_block_index": 3,
+     "start_block_index": 2,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "venda de ativos",
+   "type": "text"
+  },
+  {
+   "text": ", ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "extensão de prazos de pagamento junto a fornecedores e credores, cuja extensão não está sob o",
+     "document_index": 19,
+     "document_title": "Light.pdf, página 28",
+     "end_block_index": 8,
+     "start_block_index": 7,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "extensão de prazos de pagamento junto a fornecedores e credores",
+   "type": "text"
+  },
+  {
+   "text": ", ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "recursos oriundos de aumento de capital, cujo êxito não está sob o controle da Administração do",
+     "document_index": 19,
+     "document_title": "Light.pdf, página 28",
+     "end_block_index": 16,
+     "start_block_index": 15,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "aumento de capital",
+   "type": "text"
+  },
+  {
+   "text": " e ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Grupo Light, (vii) redução dos investimentos em infraestrutura que não implique em prejuízo na",
+     "document_index": 19,
+     "document_title": "Light.pdf, página 28",
+     "end_block_index": 17,
+     "start_block_index": 16,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "redução dos investimentos em infraestrutura",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nperspectiva: A empresa também vai atuar no campo regulatório e jurídico. No regulatório, busca o ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "contrato de concessão da Light SESA, (viii) atuação no âmbito regulatório para o reconhecimentoadequado das perdas não-técnicas regulatórias e ajustes de redução de mercado, (ix) atuação no",
+     "document_index": 19,
+     "document_title": "Light.pdf, página 28",
+     "end_block_index": 20,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "reconhecimento adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado",
+   "type": "text"
+  },
+  {
+   "text": ". No jurídico, busca a ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "reversão da destinação integral dos créditos de PIS/COFINS",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nperspectiva: A compra de 49% da Axxiom ainda depende de condições. ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "A Companhia tem expectativa para conclusão da operação no segundo trimestre de 2023",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nperspectiva: O Balanço Social traz uma meta para 2023 sobre reclamações de consumidores: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "162.913 | 2.982 | Reduzir 10% | Reduzir 10% | Reduzir 10%",
+     "document_index": 14,
+     "document_title": "Light.pdf, página 15",
+     "end_block_index": 67,
+     "start_block_index": 66,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Reduzir 10% | Reduzir 10% | Reduzir 10%",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: A empresa trocou o CEO. O novo presidente afirma: ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Assumi, em agosto de 2022, a liderança da Light, uma empresa essencial para o setor elétrico",
+     "document_index": 1,
+     "document_title": "Light.pdf, página 2",
+     "end_block_index": 3,
+     "start_block_index": 2,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Assumi, em agosto de 2022, a liderança da Light",
+   "type": "text"
+  },
+  {
+   "text": ". Ele também cita a ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "A Light tem hoje uma diretoria renovada e com a expertise necessária para superar esses",
+     "document_index": 1,
+     "document_title": "Light.pdf, página 2",
+     "end_block_index": 28,
+     "start_block_index": 27,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "diretoria renovada",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "Em 15 de março de 2022, a Aneel aprovou o resultado da Revisão Tarifária Periódica de 2022 da Light SESA",
+   "type": "text"
+  },
+  {
+   "text": ". O efeito foi ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "um reajuste médio das contas de energia elétrica da Light SESA de 14,68%",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "Em 27 de junho de 2022, foi promulgada a Lei nº 14.385/22, a qual altera a Lei nº 9.427, de 26 de dezembro de 1996, para disciplinar o repasse de valores de tributos recolhidos a maior",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: A empresa vendeu participações. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "contrato de compra e venda com Brasal. Em 23 de junho de 2022, a alienação das controladas emconjunto Guanhães Energia e Lightger S.A. foi concluída pelos valores de R$97.011 e R$103.743,respectivamente.Controlada em conjunto Amazônia Energia S.A. (“Amazônia Energia”)Durante o exercício findo em 31 de dezembro de 2022, a Administração da Companhia realizouestudos e negociações visando o desinvestimento na Amazônia Energia, que possui 9,8% de",
+     "document_index": 23,
+     "document_title": "Light.pdf, página 46",
+     "end_block_index": 24,
+     "start_block_index": 18,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Em 23 de junho de 2022, a alienação das controladas em conjunto Guanhães Energia e Lightger S.A. foi concluída pelos valores de R$97.011 e R$103.743, respectivamente",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: A participação na Amazônia Energia virou ativo mantido para venda. Ela foi medida ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "mensurado ao seu valor justo, que resultou em um valor inferior ao valor contábil em R$94.453.",
+     "document_index": 23,
+     "document_title": "Light.pdf, página 46",
+     "end_block_index": 29,
+     "start_block_index": 28,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "ao seu valor justo, que resultou em um valor inferior ao valor contábil em R$94.453",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: Na UHE Itaocara, ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "(d) Em dezembro de 2022, a Companhia realizou a provisão para perda de 100% desse investimento.",
+     "document_index": 24,
+     "document_title": "Light.pdf, página 58",
+     "end_block_index": 22,
+     "start_block_index": 21,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "em dezembro de 2022, a Companhia realizou a provisão para perda de 100% desse investimento",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: A empresa fez uma reestruturação interna. ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "Em 2022, a Companhia efetuou uma reorganização no quadro funcional com o objetivo de otimizar a estrutura hierárquica",
+   "type": "text"
+  },
+  {
+   "text": ". O número de empregados ficou em ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Nº de empregados(as) ao final do período | 4.475 | 5.223",
+     "document_index": 14,
+     "document_title": "Light.pdf, página 15",
+     "end_block_index": 39,
+     "start_block_index": 38,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "4.475 | 5.223",
+   "type": "text"
+  },
+  {
+   "text": " (2022 e 2021).\n\nevento: Evento subsequente: o reajuste tarifário de 2023. O resultado ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "O resultado representa um reajuste tarifário médio para o consumidor de 7,0%, e engloba todas as",
+     "document_index": 27,
+     "document_title": "Light.pdf, página 107",
+     "end_block_index": 13,
+     "start_block_index": 12,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "representa um reajuste tarifário médio para o consumidor de 7,0%",
+   "type": "text"
+  },
+  {
+   "text": ". Ele inclui ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "meses. Neste reajuste está incluído o repasse aos consumidores de créditos tributários da exclusãodo ICMS da base do PIS/Cofins, no valor de R$1.777.129, em cumprimento à Lei nº 14.385/22. Asnovas tarifas entraram em vigor a partir de 15 de março de 2023.Adicionalmente, na mesma ocasião da aprovação do reajuste, foi determinado que as áreas técnicasda ANEEL recebam e tratem os pleitos apresentados pela Companhia relacionados aoreconhecimento adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado.38.2 Contrato de Compra e Venda de Ações da controlada em conjunto AXXIOMEm 21 de dezembro de 2022, a Light S.A. assinou um Contrato de Compra e Venda de Ações e OutrasAvenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentesa Companhia Energética de Minas Gerais (“CEMIG”). A operação foi realizada por R$1,00 (um real)onde o Grupo Light S.A. terá 100% das ações da Axxiom. Em 25 de janeiro de 2023, o Conselho de",
+     "document_index": 27,
+     "document_title": "Light.pdf, página 107",
+     "end_block_index": 28,
+     "start_block_index": 17,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "o repasse aos consumidores de créditos tributários da exclusão do ICMS da base do PIS/Cofins, no valor de R$1.777.129",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: Evento subsequente: a ANEEL abriu espaço aos pleitos da empresa. ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Adicionalmente, na mesma ocasião da aprovação do reajuste, foi determinado que as áreas técnicasda ANEEL recebam e tratem os pleitos apresentados pela Companhia relacionados aoreconhecimento adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado.38.2 Contrato de Compra e Venda de Ações da controlada em conjunto AXXIOMEm 21 de dezembro de 2022, a Light S.A. assinou um Contrato de Compra e Venda de Ações e OutrasAvenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentesa Companhia Energética de Minas Gerais (“CEMIG”). A operação foi realizada por R$1,00 (um real)onde o Grupo Light S.A. terá 100% das ações da Axxiom. Em 25 de janeiro de 2023, o Conselho de",
+     "document_index": 27,
+     "document_title": "Light.pdf, página 107",
+     "end_block_index": 28,
+     "start_block_index": 20,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "Foi determinado que as áreas técnicas da ANEEL recebam e tratem os pleitos apresentados pela Companhia relacionados ao reconhecimento adequado das perdas não-técnicas regulatórias e ajustes de redução de mercado",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nevento: A empresa vai comprar o resto da Axxiom. Ela assinou contrato ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Avenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentesa Companhia Energética de Minas Gerais (“CEMIG”). A operação foi realizada por R$1,00 (um real)onde o Grupo Light S.A. terá 100% das ações da Axxiom. Em 25 de janeiro de 2023, o Conselho de",
+     "document_index": 27,
+     "document_title": "Light.pdf, página 107",
+     "end_block_index": 28,
+     "start_block_index": 25,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentes a Companhia Energética de Minas Gerais (\"CEMIG\"). A operação foi realizada por R$1,00 (um real)",
+   "type": "text"
+  },
+  {
+   "text": ".\n\ncomparabilidade: O resultado de 2022 tem provisões relevantes e não recorrentes. São elas a ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "provisão para devolução de créditos de PIS/COFINS aos consumidores, conforme Lei 14.385/22 (-R$1.081 milhões), revisões nas metodologias e estimativas de PECLD (-R$855 milhões) e de provisões para contingências JEC e Cível (-R$379 milhões)",
+   "type": "text"
+  },
+  {
+   "text": ".\n\ncomparabilidade: O lucro de 2022 inclui um item contábil sem caixa: o ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "totalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no",
+     "document_index": 9,
+     "document_title": "Light.pdf, página 10",
+     "end_block_index": 10,
+     "start_block_index": 9,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões",
+   "type": "text"
+  },
+  {
+   "text": ".\n\ncomparabilidade: A PECLD de 2022 é comparada a um ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "2,7 p.p. acima do índice ajustado em dezembro/21,",
+     "document_index": 6,
+     "document_title": "Light.pdf, página 7",
+     "end_block_index": 7,
+     "start_block_index": 6,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "índice ajustado em dezembro/21",
+   "type": "text"
+  },
+  {
+   "text": ", e o gráfico separa a ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "PECLD não-recorrente | PECLD/ROB",
+     "document_index": 6,
+     "document_title": "Light.pdf, página 7",
+     "end_block_index": 12,
+     "start_block_index": 11,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "PECLD não-recorrente",
+   "type": "text"
+  },
+  {
+   "text": ". Assim, os dois anos não usam a mesma base.\n\ncomparabilidade: A revisão tarifária mudou a base das perdas regulatórias. O novo percentual considera ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "os mercados AS (subterrâneo) e BT (baixa tensão). Para fins de comparabilidade ao indicador definido na revisão tarifária anterior, que levou em consideração apenas o mercado de baixa tensão",
+   "type": "text"
+  },
+  {
+   "text": ".\n\ncomparabilidade: O perímetro mudou. Guanhães e Lightger foram vendidas no meio do ano. A Amazônia Energia saiu dos investimentos por equivalência, com saldo transferido de ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "\"Investimentos\" para \"Ativos não circulantes mantidos para venda\" foi de R$208.648",
+   "type": "text"
+  },
+  {
+   "text": ".\n\ntom: negativo\n\njustificativa_tom: A administração reconhece que ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "o desequilíbrio que já existia na estrutura de capital da Light SESA se agravou ainda mais",
+   "type": "text"
+  },
+  {
+   "text": ". Ela também aponta ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA",
+   "type": "text"
+  },
+  {
+   "text": ". Os destaques positivos ficam na operação, como ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "os melhores valores de DECi e FECi dos últimos 20 anos",
+   "type": "text"
+  },
+  {
+   "text": ".\n\nobservacao: O lucro da Lightcom aparece como alta no texto, mas a tabela mostra queda. O relatório diz que ",
+   "type": "text"
+  },
+  {
+   "citations": [],
+   "text": "o Resultado líquido foi de R$87 milhões, 15,5% acima do apurado em 2021",
+   "type": "text"
+  },
+  {
+   "text": ". Pela tabela por segmento, o resultado da Comercialização foi ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "RESULTADO LÍQUIDO | (5.816.335) | 146.311 | 87.073 (5.726.708) | 5.637.456 | (5.672.203)",
+     "document_index": 22,
+     "document_title": "Light.pdf, página 45",
+     "end_block_index": 42,
+     "start_block_index": 41,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "87.073",
+   "type": "text"
+  },
+  {
+   "text": " em 2022, contra ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "RESULTADO LÍQUIDO | 243.628 | 102.962 | 102.822 | 351.503 | (402.970) | 397.945",
+     "document_index": 22,
+     "document_title": "Light.pdf, página 45",
+     "end_block_index": 51,
+     "start_block_index": 50,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "102.822",
+   "type": "text"
+  },
+  {
+   "text": " em 2021.\n\nobservacao: A Amazônia Energia é classificada de dois jeitos. O perfil corporativo a lista entre as ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Soluções em Eletricidade Ltda. (serviços) e Instituto Light (institucional) – e por controladas",
+     "document_index": 3,
+     "document_title": "Light.pdf, página 4",
+     "end_block_index": 4,
+     "start_block_index": 3,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "controladas em conjunto: Amazônia Energia Participações S.A.",
+   "type": "text"
+  },
+  {
+   "text": ". A nota 15.2 diz que ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Em 31 de dezembro de 2022, a Companhia passou a tratar a controlada Amazônia Energia como um",
+     "document_index": 25,
+     "document_title": "Light.pdf, página 60",
+     "end_block_index": 2,
+     "start_block_index": 1,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "a Companhia passou a tratar a controlada Amazônia Energia",
+   "type": "text"
+  },
+  {
+   "text": ", e a tabela mostra participação de ",
+   "type": "text"
+  },
+  {
+   "citations": [
+    {
+     "cited_text": "Amazônia Energia | 25,5% | 1.190.700 | 337.376 | 1.188.630 | (63.325) | - | -",
+     "document_index": 24,
+     "document_title": "Light.pdf, página 58",
+     "end_block_index": 34,
+     "start_block_index": 33,
+     "type": "content_block_location"
+    }
+   ],
+   "text": "25,5%",
+   "type": "text"
+  },
+  {
+   "text": ".",
+   "type": "text"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 62511,
+ "tokens_saida": 9937,
+ "tokens_cache": 0,
+ "segundos": 84.96,
+ "gravada": false,
+ "tokens_cache_escrita": 0,
+ "parada": "end_turn"
+}

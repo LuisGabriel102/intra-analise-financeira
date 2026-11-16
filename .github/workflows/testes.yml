@@ -1,0 +1,29 @@
+# Roda a cada push e pull request, sem chave e sem custo: tudo com as respostas gravadas.
+name: testes
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar
+        run: python -m pip install -e ".[dev]"
+      - name: Testes
+        run: python -m pytest -q
+      - name: Solução inteira com as respostas gravadas
+        run: |
+          python -m analise_financeira analisar --replay
+          python -m analise_financeira tom --replay
+          python -m analise_financeira avaliar

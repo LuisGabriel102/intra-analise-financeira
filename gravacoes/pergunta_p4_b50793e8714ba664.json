@@ -1,0 +1,53 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQStAoKEAgTGAI4AUIIdGhpbmtpbmcSDApu4evTsqQUTPDBVhoMTNFlxq31r3XYfjGYIjCTklvEoeeof7vs7gTO5KiYOnURb9Lqrg6bJwpgHDa5BWNafRO197o9EfSz7BZPidgq0QkjJUBbVmmYfsWlU5DDXHpjlFIIY3pRhJLt1rk1mBoAsVgGjqYCZZcWDXJBOTtgfL1HohosQtwuoRdZlMDtpX/aFLOQrGRY5ueIBPHxrImadZ7VxTil00rLbZeAuXoVSl5D7D7P63QafccAzQXT16jmZjTawokcC8OOmT1eeGCLchV0Zu1mU/aZncHExsn0ae7OW7KOgJS35DVTlMvlGyqN1U4dKcJtLNrwBaDTvGqt/Newj1oLg/dM+1ElMN9w1rTrTcUJYRSeCTSghMiZ3HtEkR5cNLfwlIXWhpi2rt6thclrRQf5tmwFVEIr6hWT9G/byLMrbi9nqHQM5PQLr/hOojH0uucAQ/NW3uM6UdULjyi7uO1LYlrIgQxNuTV2eOV3UGTk/qJj7kEn3T45LOdNXYJpPDlBG8tgDypOKUQCMOlM8Y7Vh+6/V9jiFBjMaw6MRIhvSjXzuO4j7uIt0t7r3v8BSJogrNJSI3LEj+E1sY/mhgz6baH5vTYRIdHaTlZlt6V+plwWycxCrsobFbEO+55bp1DOmfActqiL6j8oMq5iE3VLMWr/3XNACH6trzP+DhGwsuqDIcAFxvfaXVoaw9E9Msu+L2chMtmDx7pPeqsmBphbz1O04yGSG/4neIYvYmx/UK6/D1mGFd+z/V2kSsi8Qhqaswk9Pz1NJ11+TlmX3HD+5FiXmMlzhtKa4kkNvJpFBFQ1Kg0Tq/T0GneOmzKVJCShT6JjPS50mHjb9VTjm1UYi/42UEPKif04gYTdTHUgtDn8awqlUkhAueOIFqwLvwzmQba90YwTP8hJ5M087lVtfvhts+8+pF3+0OzeVxUj407uVYdlCQuAuihsNZHc2iNIKJuUHdK9KWX2Tg+8J/fWCQZNoNFwEcQribFbuYA5UEdTUrqFLK/4vtm8Wih9z/csUADyXAh3jtk0Hgy+RW8fBpl2C9yLfEpm0d/pAxEGiNnjbkXXrK3adWObC88yL5sziex29Kqi/fSt0XqSdJC9MrUIGUE9BgeqjXf2XYtzd7nDVPFV3fZe89GBXhmPmtWe/31DWYSpv0bevB+sAyyUHcJ6k4yJp1DMp4/I8RKSal2jyNQRvUwB4HWbBiN++Tl01ILk23n0xeLWQ7Mp/qaR9r4noWJZT/iyetTJmE2fPHrJyTdOdd8UpdqKm5g9rjhknaPv7tmNuAiwH32TxpxG3CkIfPP3Y8YYa+KQdiIT522AkEfsZ7p1fSIjzvaMe0TUhZQ/S9bP1+3tPh3yK6ZUEBTq/DfUt2+VpNw/Yweo5CRQTHCMbnr+93KUfrw0vCzXu54AhQqX+6nEOGqvosGzVdzhYAY+QNcu73griRA46kq+bEzyfjUq2Xl77D8bzBLInoDs/qLn/2wWURrnzWzLrfDPOHMG/w+elpzTryfSd9WY1R7gGd77ibdHsaQSxxuy67K6GpxL3Hqt1fjBU8WwozKmB0x/v3nc5oh2YzMz1TRg2tGwW+8HDE/IK6n7Gy2wYQ99kFL1O7qRkcbHIHdDnotBBNz3EBKTo4AYt4TbiEqsq/hid2NKt7MEl/f5EdHTKeF8FN5OGvME3KEenET9/hzq14WM90N3u2G17MvE+LMQL7HXPnGfpyS7kCIEXWUGc37jIl+a59JGYVcYAQ==",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_01KDzg2zT6zjXE9uFauqa9hu",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "risco de taxa de juros risco de câmbio",
+    "empresa": "Light"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01QhkQ1pUeu4hEVY4zhBhhrW",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "risco de liquidez",
+    "empresa": "Brasal"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01FJir7uxBwkFVtcpmm7gUEu",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "provisões para riscos processos judiciais trabalhistas contingências",
+    "empresa": "Light"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 543,
+ "tokens_cache": 0,
+ "segundos": 5.48,
+ "gravada": false,
+ "tokens_cache_escrita": 15852,
+ "parada": "tool_use"
+}

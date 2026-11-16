@@ -109,7 +109,7 @@
    },
    {
     "id": "B6",
-    "regra": "V13",
+    "regra": "V17",
     "paginas": [
      32
     ],
@@ -622,7 +622,7 @@
   }
  },
  "_perguntas": {
-  "_sobre": "Cada item de 'deve_conter' é uma lista de alternativas: a resposta precisa ter pelo menos uma delas. 'por_empresa' faz a mesma conferência só no parágrafo daquela empresa (a linha que começa com o nome dela). Resposta com número sem trecho citado também falha.",
+  "_sobre": "Cada item de 'deve_conter' é uma lista de alternativas: a resposta precisa ter pelo menos uma delas. 'por_empresa' faz a mesma conferência só no parágrafo daquela empresa (a linha que começa com o nome dela). Resposta com número que não está em nada que o agente leu também falha. O número que está nos dados consultados, mas saiu sem a marca de citação, passa com ressalva (decisão 21).",
   "1": {
    "deve_conter": [
     [
