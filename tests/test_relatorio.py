@@ -164,3 +164,16 @@ def test_observacao_da_ia_que_bate_com_regra_do_codigo_ganha_a_marca():
     r.numeros.alertas += [v13, AlertaSaida(regra="IA", severidade="aviso", origem="ia", paginas=[7], mensagem=obs)]
     md = "\n".join(alertas([r]))
     assert "19.021, e a DRE mostra 18.891. *(Mesmo achado da regra V13" in md
+
+
+def test_pagina_acima_de_31_nao_conta_como_numero_do_achado():
+    from analise_financeira.relatorio import conferida_em_codigo
+
+    # Millet: a V13 cita "(p. [42])"; o 42 é página, e não número do achado.
+    v13 = AlertaSaida(regra="V13", severidade="erro", origem="codigo", paginas=[6, 42],
+                      mensagem="Patrimônio líquido (balanço × notas), em R$ mil: valores diferentes no mesmo documento: "
+                               "185.321 (p. [6]); 167.233 (p. [42]).")
+    obs = ("O patrimônio líquido da nota de gestão de capital não bate com o balanço. A nota traz Total do patrimônio "
+           "líquido (b) | 167.233 | 152.689. O balanço traz Patrimônio líquido consolidado | 163.931 | 152.689 | 185.321 | 171.106.")
+    assert conferida_em_codigo(obs, [6, 42], [v13]) == "V13"
+    assert conferida_em_codigo("A nota traz 167.233 (p. 42).", [42], [v13]) is None  # falta o 185.321

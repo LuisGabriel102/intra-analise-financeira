@@ -19,7 +19,7 @@ O caso que resume a solução está na Light. O relatório da administração di
 | Tom de cada frase (170 frases da Light): ML tradicional comparado com a IA | o modelo clássico concorda em 72%, mas chutar "neutro" em tudo já dá 69%; ele acha 12 das 29 frases negativas |
 | Rodada completa: 3 PDFs e 5 perguntas | US$ 2,87 e cerca de 3 minutos |
 | A mesma rodada com as respostas gravadas | US$ 0 e poucos segundos, sem chave de API |
-| Testes automatizados | 289, e nenhum chama a IA |
+| Testes automatizados | 290, e nenhum chama a IA |
 
 O relatório final está em [`saidas/relatorio.md`](saidas/relatorio.md). A avaliação completa está em [`avaliacao/resultados/`](avaliacao/resultados/). As 28 decisões do projeto, uma por parágrafo, estão em [`docs/decisoes.md`](docs/decisoes.md).
 
@@ -33,7 +33,7 @@ python -m venv .venv
 .venv/Scripts/python -m analise_financeira analisar --replay   # tudo, com as respostas gravadas: sem chave e sem custo
 .venv/Scripts/python -m analise_financeira tom --replay        # o tom de cada frase: ML tradicional comparado com a IA
 .venv/Scripts/python -m analise_financeira avaliar             # compara com o gabarito
-.venv/Scripts/python -m pytest -q                              # 289 testes, sem chamar a IA
+.venv/Scripts/python -m pytest -q                              # 290 testes, sem chamar a IA
 ```
 
 A cada push, o GitHub Actions roda os testes e a solução inteira com as respostas gravadas, sem chave (`.github/workflows/testes.yml`).
@@ -309,7 +309,7 @@ Depois de reiniciar o Claude Desktop, pergunte, por exemplo: "Qual a alavancagem
 | `tom.py` | o tom de cada frase: léxico e modelo clássico de ML comparados com a IA |
 | `Dockerfile`, `.dockerignore` | a imagem, sem o `.env` |
 | `.github/workflows/testes.yml` | o CI: testes e a solução inteira com as respostas gravadas, a cada push |
-| `tests/` | 289 testes; nenhum chama a IA |
+| `tests/` | 290 testes; nenhum chama a IA |
 | `gravacoes/` | as respostas reais da IA, para o replay |
 | `saidas/` | o resultado da última rodada: JSONs, relatório e traces |
 | `docs/decisoes.md` | as 28 decisões, com o porquê |

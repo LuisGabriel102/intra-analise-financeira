@@ -423,10 +423,13 @@ def seguranca(resultados: list[ResultadoDocumento]) -> list[str]:
     return md
 
 
+_PAGINAS = re.compile(r"\bp\.\s*\[?\d+(?:\s*[,–-]\s*\d+)*\]?")  # "p. 42", "p. [42]", "p. 3, 6, 7", "p. 6–8"
+
+
 def _numeros_do_achado(t: str) -> set[tuple[str, float]]:
-    """Os números que identificam um achado. Anos e números pequenos (páginas, notas) ficam de fora."""
+    """Os números que identificam um achado. Páginas citadas ("p. 42"), anos e números pequenos (notas) ficam de fora."""
     saida = set()
-    for n in achar_numeros(t):
+    for n in achar_numeros(_PAGINAS.sub(" ", t)):
         if n.unidade in ("%", "x"):
             saida.add((n.unidade, round(abs(n.valor), 6)))
         elif not (n.valor.is_integer() and (abs(n.valor) <= 31 or 1900 <= abs(n.valor) <= 2100)):
