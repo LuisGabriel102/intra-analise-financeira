@@ -16,9 +16,10 @@ O caso que resume a solução está na Light. O relatório da administração di
 | Armadilhas principais detectadas | 13 de 15: 7 por regras em código e 6 pela IA, com citação |
 | Análise qualitativa, na checagem por palavras | 17 de 17, com 113 de 113 itens com trecho do PDF |
 | As 5 perguntas do desafio, na checagem por palavras e por empresa | 5 de 5; na quinta, dois números saíram sem a marca de citação, e o código avisou com a página |
+| Tom de cada frase (170 frases da Light): ML tradicional comparado com a IA | o modelo clássico concorda em 72%, mas chutar "neutro" em tudo já dá 69%; ele acha 12 das 29 frases negativas |
 | Rodada completa: 3 PDFs e 5 perguntas | US$ 2,80 e cerca de 3 minutos |
 | A mesma rodada com as respostas gravadas | US$ 0 e poucos segundos, sem chave de API |
-| Testes automatizados | 275, e nenhum chama a IA |
+| Testes automatizados | 277, e nenhum chama a IA |
 
 O relatório final está em [`saidas/relatorio.md`](saidas/relatorio.md). A avaliação completa está em [`avaliacao/resultados/`](avaliacao/resultados/). As 27 decisões do projeto, uma por parágrafo, estão em [`docs/decisoes.md`](docs/decisoes.md).
 
@@ -32,7 +33,7 @@ python -m venv .venv
 .venv/Scripts/python -m analise_financeira analisar --replay   # tudo, com as respostas gravadas: sem chave e sem custo
 .venv/Scripts/python -m analise_financeira tom --replay        # o tom de cada frase: ML tradicional comparado com a IA
 .venv/Scripts/python -m analise_financeira avaliar             # compara com o gabarito
-.venv/Scripts/python -m pytest -q                              # 275 testes, sem chamar a IA
+.venv/Scripts/python -m pytest -q                              # 277 testes, sem chamar a IA
 ```
 
 Com Docker, sem instalar Python, os mesmos passos rodam numa imagem:
@@ -165,7 +166,22 @@ O enunciado sugere comparar um método clássico de ML com o LLM, por exemplo no
 
 A IA dá o tom de cada frase: positivo, neutro ou negativo. Esses rótulos são a referência da comparação, e não a verdade. Contra eles entram dois métodos que não chamam a IA. O primeiro é um léxico de finanças, sem treino: ele conta palavras positivas e negativas, e nenhuma foi escolhida para uma empresa. O segundo é um modelo clássico, TF-IDF com regressão logística, que aprende com os rótulos da IA. A nota dele vem de validação cruzada em 5 partes: cada frase é prevista por um modelo que não a viu no treino.
 
-Para cada método, o comando `tom` mede a concordância com a IA, o F1 médio e o kappa, que desconta o acerto por acaso. Mede também o tom que cada um daria ao documento, o custo e o tempo. O resultado está em [`saidas/tom.md`](saidas/tom.md) (decisão 26).
+Para cada método, o comando `tom` mede a concordância com a IA, o F1 médio e o kappa, que desconta o acerto por acaso. Mede também quantas frases negativas da IA ele acha, o tom que daria ao documento, o custo e o tempo. O relatório completo está em [`saidas/tom.md`](saidas/tom.md) (decisão 26).
+
+| Método | Concorda com a IA | F1 médio | Kappa | Negativas achadas | Custo |
+|---|---|---|---|---|---|
+| A IA, frase a frase | referência | — | — | 29 | US$ 0,0956 em 18 s |
+| Léxico de finanças, sem treino | 65% | 0,50 | 0,23 | 13 de 29 | US$ 0 |
+| TF-IDF e regressão logística | 72% | 0,49 | 0,31 | 12 de 29 | US$ 0, menos de 1 s |
+| Chutar sempre "neutro" (piso) | 69% | 0,27 | 0,00 | 0 de 29 | US$ 0 |
+
+Com 170 frases, o modelo clássico mal passa do piso. Ele concorda com a IA em 72% das frases, e chutar "neutro" em todas já concorda em 69%. Descontado o acaso, o kappa fica em 0,31, numa escala em que 0 é acaso e 1 é concordância total. O léxico concorda menos, mas acha uma frase negativa a mais. Os dois deixam passar mais da metade das 29 frases negativas, e é a frase negativa que importa para quem empresta dinheiro.
+
+Os erros mostram por quê. O modelo clássico aprendeu o assunto, e não o tom: entre os 6 termos que mais puxam "negativo" estão milhões, faturado, totalizou e receita. Neste relatório, 11 das 29 frases negativas têm a palavra "milhões", contra 13 das 141 outras. Nenhum dos 6 termos de cada lado está no léxico de tom. O léxico, por sua vez, não entende negação. "Não há garantia de que a Companhia terá êxito nas estratégias" saiu positiva, porque ele contou "êxito" e "sucesso" contra uma só palavra negativa, "incerteza". Os dois erram em frases diferentes: juntos, acham 22 das 29, mas também marcam 18 frases que não são negativas para a IA.
+
+O tom do documento mostra a diferença entre contar e ler. Contando frase a frase, a Light sai neutra: são 29 frases negativas e 24 positivas, uma diferença de 2,9% das frases, e a regra só sai do neutro a partir de 10%. A análise qualitativa, que lê o texto inteiro, dá negativo. A contagem dá o mesmo peso a toda frase, e a leitura pesa o que cada uma diz. A regra de 10% não foi ajustada para bater com este documento (decisão 8).
+
+A conclusão é que, neste volume, a IA vale o que custa: rotular as 170 frases custou US$ 0,0956, cerca de US$ 0,0006 por frase. Um modelo clássico só compensa com muito mais frases rotuladas, de muitos documentos, e com validação contra rótulos conferidos por pessoas. Aí ele pode fazer a triagem a custo quase zero, e a IA fica com as frases em que ele tem pouca certeza.
 
 ## 5. Custo e tempo
 
@@ -178,6 +194,8 @@ Os números abaixo são medidos, e não estimados. Cada chamada à IA grava toke
 | **Por documento** | **US$ 0,61** | **US$ 0,59** | **US$ 0,68** |
 
 As 5 perguntas custaram de US$ 0,14 a US$ 0,26 cada, com 2 ou 3 rodadas do agente, e US$ 0,92 no total. A rodada completa, com os 3 documentos e as 5 perguntas, sai por US$ 2,80. Como os documentos rodam em paralelo, leva cerca de 3 minutos. Com as respostas gravadas, a mesma rodada custa zero e leva poucos segundos.
+
+A comparação de tom é uma chamada à parte, fora da rodada completa. Ela custou US$ 0,0956, com 12,4 mil tokens de entrada e 2,3 mil de saída, para rotular as 170 frases em 18 segundos. Com a resposta gravada, `tom --replay` refaz a comparação inteira em poucos segundos.
 
 O cache de prompt foi medido, e não suposto. Nas perguntas, a terceira rodada leu do cache o que a segunda gravou; nas perguntas de duas rodadas, o cache só custou a gravação. Ele continua ligado porque compensa nas conversas mais longas (decisão 15).
 
@@ -207,7 +225,7 @@ A IA varia entre rodadas. A mesma pergunta pode sair com mais ou menos detalhe, 
 
 Documentos escaneados não são lidos. A leitura detecta a página que precisa de OCR, mas não faz o OCR. Duas armadilhas da Brasal ficaram de fora, porque exigem cruzar tabelas de notas diferentes, e nenhuma regra faz isso hoje.
 
-A comparação de tom usa as frases de um documento só, o único com texto da administração. Ela serve para comparar métodos, e não para prometer acerto em outros documentos. O léxico não entende negação nem contexto.
+A comparação de tom usa as 170 frases de um documento só, o único com texto da administração. Com tão poucas frases, o modelo clássico aprende o assunto, e não o tom. A referência é a própria IA, porque nenhuma pessoa rotulou as frases: onde a IA erra, a comparação não vê. O número serve para comparar métodos, e não para prometer acerto em outros documentos. O léxico não entende negação nem contexto.
 
 Ficaram para depois: a comparação de modelos (Opus, Sonnet e Haiku, com a mesma avaliação) e o relatório em HTML.
 
@@ -286,7 +304,7 @@ Depois de reiniciar o Claude Desktop, pergunte, por exemplo: "Qual a alavancagem
 | `avaliacao.py`, `avaliacao/gabarito.json` | a avaliação contra o gabarito |
 | `tom.py` | o tom de cada frase: léxico e modelo clássico de ML comparados com a IA |
 | `Dockerfile`, `.dockerignore` | a imagem, sem o `.env` |
-| `tests/` | 275 testes; nenhum chama a IA |
+| `tests/` | 277 testes; nenhum chama a IA |
 | `gravacoes/` | as respostas reais da IA, para o replay |
 | `saidas/` | o resultado da última rodada: JSONs, relatório e traces |
 | `docs/decisoes.md` | as 27 decisões, com o porquê |

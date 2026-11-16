@@ -10,7 +10,8 @@ administração, então seria um caso só. A comparação é feita frase a frase
 3. Um modelo clássico (TF-IDF com regressão logística) aprende com os rótulos da IA.
    A nota dele vem de validação cruzada: cada frase é prevista por um modelo que não a viu no treino.
 
-Para cada método, mede quanto ele concorda com a IA, o tom que daria ao documento, o custo e o tempo.
+Para cada método, mede quanto ele concorda com a IA, quantas frases negativas da IA ele acha, o tom que
+daria ao documento, o custo e o tempo.
 O scikit-learn é opcional: sem ele, o comando `tom` avisa e para.
 """
 
@@ -248,7 +249,9 @@ def treinar_e_validar(textos: list[str], rotulos: list[str], semente: int = 0) -
     palavras = {}
     for i, rotulo in enumerate(regressao.classes_):
         pesos = regressao.coef_[i] if len(regressao.classes_) > 2 else (regressao.coef_[0] if i == 1 else -regressao.coef_[0])
-        palavras[str(rotulo)] = [str(termos[j]) for j in pesos.argsort()[::-1][:6]]
+        # Empate de peso (termos que sempre aparecem juntos) sai em ordem alfabética, igual em qualquer máquina.
+        ordem = sorted(range(len(termos)), key=lambda j: (-round(float(pesos[j]), 6), str(termos[j])))
+        palavras[str(rotulo)] = [str(termos[j]) for j in ordem[:6]]
     return {"previsto": [str(p) for p in previsto], "piso": [str(p) for p in piso], "partes": partes,
             "segundos": round(segundos, 3), "palavras": palavras}
 
@@ -297,8 +300,8 @@ def analisar_tom(nome: str, documento: Documento, rotas: Rotas, cliente: Cliente
     return resultado
 
 
-def _pct(x: float) -> str:
-    return f"{x * 100:.0f}%"
+def _pct(x: float, casas: int = 0) -> str:
+    return f"{x * 100:.{casas}f}%".replace(".", ",")
 
 
 def _decimal(x: float) -> str:
@@ -318,6 +321,28 @@ def _contagem(rotulos: list[str]) -> str:
     return f"{c['positivo']} positivas, {c['neutro']} neutras e {c['negativo']} negativas"
 
 
+def achou_negativas(m: dict) -> str:
+    """Quantas frases negativas da IA o método também chamou de negativas, lido da matriz de confusão."""
+    i = ROTULOS.index("negativo")
+    linha = m["matriz"][i]
+    return f"{linha[i]} de {sum(linha)}"
+
+
+def termos_de_tom(termos: list[str], prefixos: tuple[str, ...]) -> int:
+    """Quantos termos do modelo clássico têm ao menos uma palavra do léxico daquele lado."""
+    return sum(any(p.startswith(prefixos) for p in t.split()) for t in termos)
+
+
+def por_que_nao_bate(rotulos: list[str]) -> str:
+    """Por que o tom contado frase a frase pode diferir da leitura do texto inteiro. Nada de uma empresa."""
+    c = Counter(rotulos)
+    diferenca = abs(c["negativo"] - c["positivo"]) / len(rotulos)
+    return (f"**Por que os dois tons não batem.** A contagem dá o mesmo peso a toda frase. Aqui são {c['negativo']} "
+            f"negativas e {c['positivo']} positivas em {len(rotulos)}: a diferença é {_pct(diferenca, 1)} das frases. "
+            f"A regra só sai do neutro a partir de {_pct(LIMIAR_DOCUMENTO)}. A leitura do texto inteiro pesa cada frase "
+            "pelo que ela diz. Um fato grave pode decidir o tom sozinho, e muitas frases leves podem não decidir.")
+
+
 def relatorio_tom(resultados: list[TomDocumento], sem_texto: list[str], gerado_em: datetime) -> str:
     from analise_financeira.relatorio import celula, texto
 
@@ -335,32 +360,46 @@ def relatorio_tom(resultados: list[TomDocumento], sem_texto: list[str], gerado_e
             continue
         custo = (f"{_dolar(r.uso.custo_usd)} em {r.uso.segundos:.0f} s, "
                  f"cerca de {_dolar(r.uso.custo_usd / max(len(r.frases), 1), 5)} por frase") if r.uso else "?"
-        linhas = [("IA, frase a frase", "referência", "—", "—", r.tom.get("ia", ""), custo)]
+        linhas = [("IA, frase a frase", "referência", "—", "—", "—", r.tom.get("ia", ""), custo)]
         m = r.metricas["lexico"]
         linhas.append(("Léxico de finanças, sem treino", _pct(m["acerto"]), _decimal(m["f1_medio"]), _decimal(m["kappa"]),
-                       r.tom.get("lexico", ""), "US$ 0, menos de 1 s"))
+                       achou_negativas(m), r.tom.get("lexico", ""), "US$ 0, menos de 1 s"))
         if "classico" in r.metricas:
             m = r.metricas["classico"]
             linhas.append((f"TF-IDF e regressão logística (validação cruzada em {r.partes} partes)", _pct(m["acerto"]),
-                           _decimal(m["f1_medio"]), _decimal(m["kappa"]), r.tom.get("classico", ""),
+                           _decimal(m["f1_medio"]), _decimal(m["kappa"]), achou_negativas(m), r.tom.get("classico", ""),
                            f"US$ 0, {r.segundos_classico * 1000:.0f} ms para treinar e prever"))
             m = r.metricas["piso"]
             linhas.append(("Sempre a classe mais comum (piso)", _pct(m["acerto"]), _decimal(m["f1_medio"]),
-                           _decimal(m["kappa"]), r.tom.get("piso", ""), "US$ 0"))
-        md += ["| Método | Concorda com a IA | F1 médio | Kappa | Tom do documento | Custo e tempo |",
-               "|---|---|---|---|---|---|"]
+                           _decimal(m["kappa"]), achou_negativas(m), r.tom.get("piso", ""), "US$ 0"))
+        md += ["| Método | Concorda com a IA | F1 médio | Kappa | Negativas achadas | Tom do documento | Custo e tempo |",
+               "|---|---|---|---|---|---|---|"]
         md += ["| " + " | ".join(celula(c) for c in linha) + " |" for linha in linhas]
         md += ["", f"Tom do documento inteiro, na análise qualitativa (a IA lendo o texto todo): "
                    f"**{texto(r.tom_analise or 'não disponível')}**.", ""]
+        if r.tom_analise in ROTULOS and r.tom.get("ia") and r.tom["ia"] != r.tom_analise:
+            md += [por_que_nao_bate(ia), ""]
         if r.palavras:
             md += ["Os termos que mais puxam cada rótulo no modelo clássico, treinado com todas as frases:", ""]
             md += [f"- {rotulo}: {', '.join(texto(p) for p in r.palavras.get(rotulo, []))}"
                    for rotulo in ("negativo", "positivo", "neutro") if r.palavras.get(rotulo)]
             md += [""]
+            negativos, positivos = r.palavras.get("negativo", []), r.palavras.get("positivo", [])
+            if negativos and positivos:
+                de_tom = termos_de_tom(negativos, NEGATIVAS) + termos_de_tom(positivos, POSITIVAS)
+                frase = (f"Termos que são palavras de tom do léxico: {termos_de_tom(negativos, NEGATIVAS)} de {len(negativos)} "
+                         f"em negativo e {termos_de_tom(positivos, POSITIVAS)} de {len(positivos)} em positivo.")
+                if de_tom <= (len(negativos) + len(positivos)) / 2:
+                    frase += (f" Com {len(ia)} frases, é sinal de que o modelo aprendeu mais o assunto das frases "
+                              "do que o tom delas.")
+                md += [frase, ""]
         divergencias = [f for f in r.frases if f.id in r.ia and r.lexico[f.id] != r.ia[f.id]]
         divergencias.sort(key=lambda f: (r.ia[f.id] != "negativo", f.id))
         if divergencias:
-            md += ["### Onde o léxico discorda da IA", "", "| Página | IA | Léxico | Clássico | Frase |", "|---|---|---|---|---|"]
+            md += ["### Onde o léxico discorda da IA", "",
+                   (f"O léxico discorda da IA em {len(divergencias)} das {len(ia)} frases. "
+                    f"Aqui vão {min(len(divergencias), 6)}, com as negativas primeiro. Todas estão em saidas/tom.json."), "",
+                   "| Página | IA | Léxico | Clássico | Frase |", "|---|---|---|---|---|"]
             for f in divergencias[:6]:
                 frase = f.texto if len(f.texto) <= 220 else f.texto[:217].rsplit(" ", 1)[0] + "…"
                 md.append(f"| {f.pagina} | {r.ia[f.id]} | {r.lexico[f.id]} | {r.classico.get(f.id, '—')} | {celula(frase)} |")
@@ -370,6 +409,8 @@ def relatorio_tom(resultados: list[TomDocumento], sem_texto: list[str], gerado_e
                f"{', '.join(texto(n) for n in sem_texto)}: não se aplica. A análise qualitativa também diz que o tom não se aplica.", ""]
     md += ["## Como ler", "",
            "- **Concorda com a IA** é a fração de frases com o mesmo rótulo que a IA deu. O **kappa** desconta o acerto por acaso: 0 é acaso, 1 é concordância total.",
+           "- O **piso** chuta sempre o rótulo mais comum. Um método só ajuda se passar dele.",
+           "- **Negativas achadas** conta quantas frases negativas da IA o método também achou. Para quem empresta dinheiro, deixar passar uma frase negativa custa mais do que errar uma neutra.",
            "- O modelo clássico aprende com as frases de um documento só. O número serve para comparar métodos, e não para prometer acerto em outros documentos.",
            "- O léxico não entende negação (\"não houve perdas\") nem contexto (\"aumento\" de receita e \"aumento\" de perdas).",
            "- Em produção, um modelo clássico treinado com rótulos da IA em milhares de frases pode fazer a triagem a custo quase zero, e a IA fica para as frases em que ele tem pouca certeza.",

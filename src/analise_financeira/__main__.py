@@ -54,6 +54,8 @@ def _resumo_qualitativa(q) -> str:
 
 
 def _resumo_tom(r) -> str:
+    from analise_financeira.tom import achou_negativas
+
     ia = [r.ia[f.id] for f in r.frases if f.id in r.ia]
     linhas = [f"{r.documento}: {len(r.frases)} frases do texto da administração | IA: {ia.count('positivo')} positivas, "
               f"{ia.count('neutro')} neutras e {ia.count('negativo')} negativas | {_custo(r.uso)}"]
@@ -61,7 +63,7 @@ def _resumo_tom(r) -> str:
         if chave in r.metricas:
             m = r.metricas[chave]
             linhas.append(f"    {nome}: concorda {m['acerto']:.0%} com a IA (kappa {m['kappa']:.2f}) | "
-                          f"tom do documento: {r.tom.get(chave) or '?'}")
+                          f"achou {achou_negativas(m)} negativas | tom do documento: {r.tom.get(chave) or '?'}")
     linhas.append(f"    tom do documento: {r.tom.get('ia') or '?'} pela IA frase a frase; "
                   f"{r.tom_analise or '?'} na análise qualitativa")
     if r.motivo:

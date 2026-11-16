@@ -9,11 +9,17 @@ from analise_financeira.llm import ClienteLLM, SemGravacao
 from analise_financeira.pdf import Documento, Pagina, ler_pdf
 from analise_financeira.roteamento import Rotas, rotear
 from analise_financeira.tom import (
+    NEGATIVAS,
+    Frase,
+    TomDocumento,
+    achou_negativas,
     contar_lexico,
     dividir_frases,
     frases_da_administracao,
     ler_rotulos,
+    relatorio_tom,
     rotulo_lexico,
+    termos_de_tom,
     tom_do_documento,
 )
 from falsos import SdkFalso
@@ -90,6 +96,33 @@ def test_tom_do_documento():
     assert tom_do_documento([]) == ""
 
 
+def test_negativas_achadas_e_termos_de_tom():
+    assert achou_negativas({"matriz": [[6, 18, 0], [16, 91, 10], [2, 14, 13]]}) == "13 de 29"  # linha de baixo: negativas da IA
+    assert achou_negativas({"matriz": [[0, 2, 0], [0, 15, 0], [0, 3, 0]]}) == "0 de 3"
+    assert termos_de_tom(["milhoes", "queda receita", "risco"], NEGATIVAS) == 2
+    assert termos_de_tom(["receita", "totalizou milhoes"], NEGATIVAS) == 0
+
+
+def _resultado(tom_analise: str) -> TomDocumento:
+    rotulos = ["negativo"] * 3 + ["positivo"] * 2 + ["neutro"] * 15   # saldo de 5%: neutro na contagem
+    frases = [Frase(i, 2, f"Frase de teste número {i} do texto.") for i in range(20)]
+    matriz = {"acerto": 0.75, "f1_medio": 0.29, "kappa": 0.0, "matriz": [[0, 2, 0], [0, 15, 0], [0, 3, 0]]}
+    return TomDocumento(documento="X.pdf", paginas=[2], frases=frases, ia=dict(enumerate(rotulos)),
+                        lexico={i: "neutro" for i in range(20)}, metricas={"lexico": matriz},
+                        tom={"ia": "neutro", "lexico": "neutro"}, tom_analise=tom_analise)
+
+
+def test_relatorio_explica_quando_os_tons_nao_batem():
+    from datetime import datetime
+
+    md = relatorio_tom([_resultado("negativo")], [], datetime(2026, 11, 15))
+    assert "Por que os dois tons não batem" in md
+    assert "3 negativas e 2 positivas em 20: a diferença é 5,0% das frases" in md and "a partir de 10%" in md
+    assert "| 0 de 3 |" in md                      # coluna de negativas achadas do léxico
+    assert "Por que os dois tons não batem" not in relatorio_tom([_resultado("neutro")], [], datetime(2026, 11, 15))
+    assert "Por que os dois tons não batem" not in relatorio_tom([_resultado("")], [], datetime(2026, 11, 15))
+
+
 # ---- daqui em diante, precisa do scikit-learn (extra "ml", que o "dev" também instala)
 
 def _corpus() -> tuple[list[str], list[str]]:
@@ -164,7 +197,7 @@ def test_comparar_grava_o_relatorio(tmp_path):
     assert sem_texto == ["Brasal.pdf", "Millet.pdf"]
     assert resultados[0].metricas["lexico"]["acerto"] == 1.0
     md = destino.read_text(encoding="utf-8")
-    assert "## Light.pdf" in md and "Concorda com a IA" in md and "não se aplica" in md
+    assert "## Light.pdf" in md and "Concorda com a IA" in md and "Negativas achadas" in md and "não se aplica" in md
     dados = json.loads((tmp_path / "saidas" / "tom.json").read_text(encoding="utf-8"))
     assert dados["documentos"][0]["uso"]["modelo"] == "claude-opus-5-5"
     assert dados["sem_texto_da_administracao"] == ["Brasal.pdf", "Millet.pdf"]
