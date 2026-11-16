@@ -338,6 +338,16 @@
  },
  "alertas": [
   {
+   "regra": "V5",
+   "severidade": "erro",
+   "origem": "codigo",
+   "mensagem": "A variação informada (R$ -3.001,0 mi) só fecha se o valor atual for R$ -1.180,0 mi, e não R$ 1.180,0 mi. Provável sinal de menos perdido no texto.",
+   "paginas": [
+    9
+   ],
+   "campo": "ebitda"
+  },
+  {
    "regra": "V7",
    "severidade": "erro",
    "origem": "codigo",

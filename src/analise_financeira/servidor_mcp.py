@@ -73,7 +73,7 @@ class ValorCalculado(BaseModel):
 
 class Alerta(BaseModel):
     empresa: str
-    regra: str = Field(description="V3 a V16 para as regras conferidas em código; IA para observações da IA")
+    regra: str = Field(description="V3 a V17 para as regras conferidas em código; IA para observações da IA")
     severidade: Literal["erro", "aviso", "info"]
     origem: Literal["conferido em código", "observação da IA na extração", "observação da IA na análise"]
     indicador: str | None = Field(None, description="O indicador a que o alerta se refere, quando há um")

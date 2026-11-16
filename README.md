@@ -13,15 +13,15 @@ O caso que resume a solução está na Light. O relatório da administração di
 | Valores extraídos certos, contra o gabarito | 50 de 50, com a página certa em 50 de 50 |
 | "Não encontrado" certo, quando o documento não informa | 8 de 8, e nenhum número inventado |
 | Evidência conferida: o número está no trecho citado, com o mesmo sinal | 76 de 76 |
-| Armadilhas principais detectadas | 13 de 15: 7 por regras em código e 6 pela IA, com citação |
-| Análise qualitativa, na checagem por palavras | 17 de 17, com 113 de 113 itens com trecho do PDF |
-| As 5 perguntas do desafio, na checagem por palavras e por empresa | 5 de 5; na quinta, dois números saíram sem a marca de citação, e o código avisou com a página |
+| Armadilhas principais detectadas | 14 de 15: 8 por regras em código e 6 pela IA, com citação |
+| Análise qualitativa, na checagem por palavras | 17 de 17, com 109 de 113 itens com trecho do PDF; os 4 sem trecho saem marcados no relatório |
+| As 5 perguntas do desafio, na checagem por palavras e por empresa | 5 de 5; na quinta, um número saiu sem a marca de citação, e o código avisou |
 | Tom de cada frase (170 frases da Light): ML tradicional comparado com a IA | o modelo clássico concorda em 72%, mas chutar "neutro" em tudo já dá 69%; ele acha 12 das 29 frases negativas |
-| Rodada completa: 3 PDFs e 5 perguntas | US$ 2,80 e cerca de 3 minutos |
+| Rodada completa: 3 PDFs e 5 perguntas | US$ 2,87 e cerca de 3 minutos |
 | A mesma rodada com as respostas gravadas | US$ 0 e poucos segundos, sem chave de API |
-| Testes automatizados | 277, e nenhum chama a IA |
+| Testes automatizados | 289, e nenhum chama a IA |
 
-O relatório final está em [`saidas/relatorio.md`](saidas/relatorio.md). A avaliação completa está em [`avaliacao/resultados/`](avaliacao/resultados/). As 27 decisões do projeto, uma por parágrafo, estão em [`docs/decisoes.md`](docs/decisoes.md).
+O relatório final está em [`saidas/relatorio.md`](saidas/relatorio.md). A avaliação completa está em [`avaliacao/resultados/`](avaliacao/resultados/). As 28 decisões do projeto, uma por parágrafo, estão em [`docs/decisoes.md`](docs/decisoes.md).
 
 ## Como rodar
 
@@ -33,8 +33,10 @@ python -m venv .venv
 .venv/Scripts/python -m analise_financeira analisar --replay   # tudo, com as respostas gravadas: sem chave e sem custo
 .venv/Scripts/python -m analise_financeira tom --replay        # o tom de cada frase: ML tradicional comparado com a IA
 .venv/Scripts/python -m analise_financeira avaliar             # compara com o gabarito
-.venv/Scripts/python -m pytest -q                              # 277 testes, sem chamar a IA
+.venv/Scripts/python -m pytest -q                              # 289 testes, sem chamar a IA
 ```
+
+A cada push, o GitHub Actions roda os testes e a solução inteira com as respostas gravadas, sem chave (`.github/workflows/testes.yml`).
 
 Com Docker, sem instalar Python, os mesmos passos rodam numa imagem:
 
@@ -74,7 +76,7 @@ flowchart LR
     PDF[PDFs] --> LER["Leitura e varredura de segurança<br/>(PyMuPDF, código)"]
     LER --> ROT["Roteamento das páginas<br/>(código)"]
     ROT --> EXT["Extrator<br/>(IA, com citação)"]
-    EXT --> VAL["Indicadores e validador<br/>(código: contas e regras V3 a V16)"]
+    EXT --> VAL["Indicadores e validador<br/>(código: contas e regras V3 a V17)"]
     VAL --> ANA["Analista qualitativo<br/>(IA, com citação)"]
     ROT --> ANA
     VAL --> AGE["Agente de perguntas<br/>(IA com 3 ferramentas)"]
@@ -98,7 +100,7 @@ O roteamento classifica cada página pelo título (balanço, DRE, DFC, DMPL, not
 
 O extrator pede à IA cada indicador no formato "campo: valor", citando a linha do PDF. O código lê o número, confere se ele está no trecho citado com o mesmo sinal e guarda o valor em reais.
 
-O validador calcula margem, variação, EBITDA, dívida líquida e alavancagem, e roda as regras de conferência: sinal do EBITDA, ano errado no texto, valores diferentes do mesmo item no documento, cabeçalho de tabela com o ano repetido, data de aprovação antes do fim do exercício, período não auditado, entre outras. Ele só sinaliza; não corrige nada.
+O validador calcula margem, variação, EBITDA, dívida líquida e alavancagem, e roda as regras de conferência: sinal do EBITDA, ano errado no texto, valores diferentes do mesmo item no documento, cabeçalho de tabela com o ano repetido, data de aprovação antes do fim do exercício, período não auditado, variação escrita no texto que não bate com os dois períodos, tabela de movimentação que não fecha, entre outras. Ele só sinaliza; não corrige nada.
 
 O analista qualitativo lê o relatório da administração e as notas, e responde motivos, riscos, guidance, perspectivas, eventos, comparabilidade, tom e observações, cada item com o trecho citado. O código confere o trecho e os números de cada frase.
 
@@ -132,9 +134,9 @@ A segunda é **"não encontrado" em vez de estimativa**. A Brasal e a Millet nã
 
 A terceira é **a IA nunca fazer conta**. Margem, variação, EBITDA calculado, dívida líquida e alavancagem saem de funções Python testadas. O agente de perguntas recebe os números prontos e compara, mas não calcula.
 
-A quarta é **a conferência em código**. São 14 regras (V3 a V16). Foi uma delas que pegou o EBITDA da Light com o sinal trocado, que a IA não tinha notado.
+A quarta é **a conferência em código**. São 15 regras, de V3 a V17, e 14 rodam em todo documento. Foi uma delas, a V7, que pegou o EBITDA da Light com o sinal trocado, que a IA não tinha notado. A V5 confirma o mesmo erro por outro caminho: a "redução de R$3.001 milhões" do texto só fecha se o EBITDA for negativo. As regras de variação (V4, V5 e V6) leem a frase do texto da administração em que o valor aparece e conferem a variação escrita contra os dois períodos. A V3 confere a margem EBITDA informada, mas nenhum dos 3 documentos escreve a margem: ela roda e não tem o que conferir. A V12, soma de linhas contra o total, está escrita e testada, mas ainda não roda sozinha: ela precisa saber quais linhas somam qual total, e a leitura por texto não dá essa estrutura (decisão 28).
 
-A quinta é **o número de cada frase**. A IA escreve a análise e as respostas com as palavras dela. O código confere se cada número da frase está num trecho citado. Se não está, a frase sai marcada no relatório. Nas respostas, o código ainda separa dois casos. O número que não está em nada que o agente leu pode ser invenção, e a resposta reprova na avaliação. O número que está nos dados que o agente consultou, mas saiu sem a marca de citação, ganha um aviso com a página onde está. Foi o que aconteceu na pergunta 5: "61,1%" e "38,9%" saíram sem citação, e o relatório aponta a p. 28 da Brasal (decisão 21).
+A quinta é **o número de cada frase**. A IA escreve a análise e as respostas com as palavras dela. O código confere se cada número da frase está num trecho citado. Se não está, a frase sai marcada no relatório. Nas respostas, o código ainda separa dois casos. O número que não está em nada que o agente leu pode ser invenção, e a resposta reprova na avaliação. O número que está nos dados que o agente consultou, mas saiu sem a marca de citação, ganha um aviso com a página onde está. Foi o que aconteceu na pergunta 5: "49%", da compra da Axxiom pela Light, saiu sem citação. Ele está na análise qualitativa da Light, num item que também saiu sem trecho citado, e por isso o aviso aponta o documento, mas não a página (decisão 21).
 
 A sexta é **mostrar, e não esconder**. O informado e o calculado nunca se misturam. Quando o texto e a tabela divergem, vale a tabela, e o texto vira alerta. Na tabela comparativa, cada célula tem um selo: informado e conferido, calculado, com alerta ou não encontrado.
 
@@ -154,9 +156,9 @@ O comando `avaliar` compara as saídas com o gabarito. Para a extração, a comp
 | Millet | 16 de 16 | 16 de 16 | 3 de 3 | 0 | 25 de 25 |
 | Light | 22 de 22 | 22 de 22 | 1 de 1 | 0 | 31 de 31 |
 
-Das 15 armadilhas, 13 foram detectadas. As regras em código pegaram 7, entre elas o EBITDA da Light com o sinal trocado, o lucro da Millet diferente entre a DRE e a DMPL e a data de aprovação da Millet antes do fim do exercício. A IA apontou 6, com citação, entre elas o EBITDA da distribuidora da Light com os números trocados e o lucro da Lightcom "15,5% acima" quando a tabela mostra queda. Ficaram de fora duas divergências entre notas da Brasal, que exigiriam cruzar tabelas de notas diferentes.
+Das 15 armadilhas, 14 foram detectadas. As regras em código pegaram 8, entre elas o EBITDA da Light com o sinal trocado, o lucro da Millet diferente entre a DRE e a DMPL, a data de aprovação da Millet antes do fim do exercício e a movimentação do investimento da Brasal que não fecha (V17): a diferença, 19.434, é exatamente a distância entre a equivalência da nota (157.810) e a da DRE (177.244). A IA apontou 6, com citação, entre elas o EBITDA da distribuidora da Light com os números trocados e o lucro da Lightcom "15,5% acima" quando a tabela mostra queda. Ficou de fora uma divergência entre notas da Brasal (B7): o crédito de PIS/COFINS de 2021 é 100.875 numa nota e 105.633 na DFC e em outra nota, com nomes diferentes.
 
-A avaliação também mostrou a variação entre rodadas. Na primeira rodada real, a IA apontou uma divergência na equivalência patrimonial da Brasal (B6); na segunda, não. As regras em código pegam sempre o mesmo, e é por isso que o que dá para conferir em código está em código.
+A avaliação também mostrou a variação entre rodadas. Na primeira rodada real, a IA apontou uma divergência na equivalência patrimonial da Brasal (B6); na segunda, não. As regras em código pegam sempre o mesmo, e é por isso que o que dá para conferir em código está em código. Hoje a B6 é pega pela V17, em toda rodada.
 
 Ressalva: são só 3 documentos, e o gabarito foi montado lendo esses mesmos documentos. A avaliação serve para achar erro e medir mudança, e não para prometer acerto em produção.
 
@@ -190,10 +192,10 @@ Os números abaixo são medidos, e não estimados. Cada chamada à IA grava toke
 | Etapa | Brasal (51 p.) | Millet (43 p.) | Light (124 p.) |
 |---|---|---|---|
 | Extração | 6 páginas; 12,3 mil + 3,7 mil tokens; US$ 0,12; 29 s | 5 páginas; 12,2 mil + 5,1 mil tokens; US$ 0,15; 41 s | 11 páginas; 24,6 mil + 4,2 mil tokens; US$ 0,18; 33 s |
-| Análise qualitativa | 43 páginas; 71,1 mil + 9,9 mil tokens; US$ 0,48; 82 s | 32 páginas; 62,5 mil + 9,6 mil tokens; US$ 0,44; 78 s | 32 páginas; 62,4 mil + 12,5 mil tokens; US$ 0,50; 104 s |
-| **Por documento** | **US$ 0,61** | **US$ 0,59** | **US$ 0,68** |
+| Análise qualitativa | 43 páginas; 71,3 mil + 12,7 mil tokens; US$ 0,54; 109 s | 32 páginas; 62,5 mil + 9,6 mil tokens; US$ 0,44; 78 s | 32 páginas; 62,5 mil + 9,9 mil tokens; US$ 0,45; 85 s |
+| **Por documento** | **US$ 0,66** | **US$ 0,59** | **US$ 0,63** |
 
-As 5 perguntas custaram de US$ 0,14 a US$ 0,26 cada, com 2 ou 3 rodadas do agente, e US$ 0,92 no total. A rodada completa, com os 3 documentos e as 5 perguntas, sai por US$ 2,80. Como os documentos rodam em paralelo, leva cerca de 3 minutos. Com as respostas gravadas, a mesma rodada custa zero e leva poucos segundos.
+As 5 perguntas custaram de US$ 0,13 a US$ 0,29 cada, com 2 ou 3 rodadas do agente, e US$ 0,98 no total. A rodada completa, com os 3 documentos e as 5 perguntas, sai por US$ 2,87. Como os documentos rodam em paralelo, leva cerca de 3 minutos. Com as respostas gravadas, a mesma rodada custa zero e leva poucos segundos.
 
 A comparação de tom é uma chamada à parte, fora da rodada completa. Ela custou US$ 0,0956, com 12,4 mil tokens de entrada e 2,3 mil de saída, para rotular as 170 frases em 18 segundos. Com a resposta gravada, `tom --replay` refaz a comparação inteira em poucos segundos.
 
@@ -223,7 +225,7 @@ A busca é por palavra. "Motivo da variação da receita" não acha a nota da Mi
 
 A IA varia entre rodadas. A mesma pergunta pode sair com mais ou menos detalhe, e uma observação pode aparecer numa rodada e não na outra. As respostas gravadas tornam cada rodada reprodutível, mas não tornam a IA determinística.
 
-Documentos escaneados não são lidos. A leitura detecta a página que precisa de OCR, mas não faz o OCR. Duas armadilhas da Brasal ficaram de fora, porque exigem cruzar tabelas de notas diferentes, e nenhuma regra faz isso hoje.
+Documentos escaneados não são lidos. A leitura detecta a página que precisa de OCR, mas não faz o OCR. Uma armadilha da Brasal ficou de fora (B7), porque exige cruzar valores de notas diferentes, que usam nomes diferentes para o mesmo crédito. A regra de soma de linhas (V12) ainda não roda sozinha, porque a leitura por texto não diz quais linhas somam qual total.
 
 A comparação de tom usa as 170 frases de um documento só, o único com texto da administração. Com tão poucas frases, o modelo clássico aprende o assunto, e não o tom. A referência é a própria IA, porque nenhuma pessoa rotulou as frases: onde a IA erra, a comparação não vê. O número serve para comparar métodos, e não para prometer acerto em outros documentos. O léxico não entende negação nem contexto.
 
@@ -247,7 +249,7 @@ A meta de referência é processar milhares de documentos por trimestre, com pic
 
 **Qualidade contínua.** O gabarito cresce com documentos reais revisados por analistas, e a avaliação roda a cada mudança de pedido ou de modelo, antes do deploy. Uma amostra das saídas de produção vai para revisão humana, e os erros achados viram casos novos no gabarito.
 
-**Custo.** Com o Opus 5.5, cada documento custou de US$ 0,59 a US$ 0,68. Para 3.000 documentos por trimestre, isso dá cerca de US$ 1.900 por trimestre, antes das otimizações. O roteamento de modelo e o cache de prompt reduzem esse valor. No Foundry, o preço por token é o mesmo da API da Anthropic, e o modo hospedado em zona de dados dos EUA custa 10% a mais. O lote assíncrono com desconto (Batch API) não está disponível no Foundry, então a fila com concorrência controlada é o caminho para os picos.
+**Custo.** Com o Opus 5.5, cada documento custou de US$ 0,59 a US$ 0,66. Para 3.000 documentos por trimestre, isso dá cerca de US$ 1.900 por trimestre, antes das otimizações. O roteamento de modelo e o cache de prompt reduzem esse valor. No Foundry, o preço por token é o mesmo da API da Anthropic, e o modo hospedado em zona de dados dos EUA custa 10% a mais. O lote assíncrono com desconto (Batch API) não está disponível no Foundry, então a fila com concorrência controlada é o caminho para os picos.
 
 **Segurança.** Chaves e segredos no Azure Key Vault, lidos por identidade gerenciada. Rede privada entre os serviços, com private endpoints. Os PDFs e as saídas ficam na região exigida pela política de dados do banco.
 
@@ -304,7 +306,8 @@ Depois de reiniciar o Claude Desktop, pergunte, por exemplo: "Qual a alavancagem
 | `avaliacao.py`, `avaliacao/gabarito.json` | a avaliação contra o gabarito |
 | `tom.py` | o tom de cada frase: léxico e modelo clássico de ML comparados com a IA |
 | `Dockerfile`, `.dockerignore` | a imagem, sem o `.env` |
-| `tests/` | 277 testes; nenhum chama a IA |
+| `.github/workflows/testes.yml` | o CI: testes e a solução inteira com as respostas gravadas, a cada push |
+| `tests/` | 289 testes; nenhum chama a IA |
 | `gravacoes/` | as respostas reais da IA, para o replay |
 | `saidas/` | o resultado da última rodada: JSONs, relatório e traces |
-| `docs/decisoes.md` | as 27 decisões, com o porquê |
+| `docs/decisoes.md` | as 28 decisões, com o porquê |

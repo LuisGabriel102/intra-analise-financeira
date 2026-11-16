@@ -225,6 +225,24 @@ def conferir_soma(partes: list[float], total: float, tol: float = 1.0) -> Alerta
                   {"soma": soma, "total": total})
 
 
+def conferir_movimentacao(rotulo: str, saldo_inicial: float, movimentos: list[float], saldo_final: float,
+                          tol: float = 1.0) -> Alerta | None:
+    """V17. Numa tabela de movimentação, o saldo inicial mais os movimentos dá o saldo final?
+
+    Pega o número trocado dentro de uma nota: se um movimento não é o valor que a
+    empresa usou, a linha não fecha, e a diferença mostra quanto falta.
+    """
+    calculado = saldo_inicial + sum(movimentos)
+    diferenca = saldo_final - calculado
+    if abs(diferenca) <= tol:
+        return None
+    return Alerta("V17", "erro",
+                  f"Movimentação ({rotulo}): o saldo inicial de {_num(saldo_inicial)} mais os movimentos dá "
+                  f"{_num(calculado)}, mas o saldo final informado é {_num(saldo_final)} "
+                  f"(diferença de {_num(diferenca)}). Algum movimento não é o valor usado no saldo.",
+                  {"saldo_inicial": saldo_inicial, "movimentos": movimentos, "saldo_final": saldo_final})
+
+
 def conferir_ocorrencias(nome: str, ocorrencias: list[tuple[float, str]], tol: float = 1.0,
                          tol_info: float = 0.001) -> Alerta | None:
     """V13. O mesmo número aparece em lugares diferentes (DRE, DMPL, notas). Todos batem?

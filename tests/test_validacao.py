@@ -20,6 +20,7 @@ from analise_financeira.validacao import (
     conferir_ebitda,
     conferir_escala,
     conferir_margem,
+    conferir_movimentacao,
     conferir_ocorrencias,
     conferir_soma,
     conferir_variacao_absoluta,
@@ -186,6 +187,22 @@ def test_B6_equivalencia_da_nota_contra_a_dre():
     assert alerta is not None
 
 
+def test_B6_movimentacao_do_investimento_nao_fecha():
+    # p. 32: 468.290 + 0 − 234.435 + 157.810 + 0 = 391.665, mas o saldo final é 411.099.
+    alerta = conferir_movimentacao("Brasal Refrigerantes S/A", 468_290, [0, -234_435, 157_810, 0], 411_099)
+    assert alerta is not None and alerta.regra == "V17" and alerta.severidade == "erro"
+    assert "19.434" in alerta.mensagem  # = 177.244 (DRE) − 157.810 (nota)
+
+
+def test_B6_com_a_equivalencia_da_dre_a_movimentacao_fecha():
+    assert conferir_movimentacao("Brasal Refrigerantes S/A", 468_290, [0, -234_435, 177_244, 0], 411_099) is None
+    assert conferir_movimentacao("Brasal Refrigerantes S/A", 282_190, [-55_282, -35_422, 276_804, 0], 468_290) is None
+
+
+def test_movimentacao_aceita_arredondamento_de_1():
+    assert conferir_movimentacao("X", 100, [50, -30], 121) is None
+
+
 def test_B7_credito_de_pis_cofins_em_tres_lugares():
     alerta = conferir_ocorrencias("Crédito de PIS/COFINS 2021", [(100_875, "nota 8, p. 28"), (105_633, "DFC, p. 11"),
                                                                  (105_633, "nota 23, p. 46")])
@@ -226,3 +243,67 @@ def test_direcao_sobe(frase):
 @pytest.mark.parametrize("frase", ["uma redução de R$2.996 milhões", "queda de 3%", "11,8% abaixo da registrada"])
 def test_direcao_desce(frase):
     assert direcao_da_frase(frase) == -1
+
+
+# ------------------------------------------------------------ tabela de movimentação (V17)
+
+from analise_financeira.indicadores import linhas_de_movimentacao  # noqa: E402
+
+_P32_BRASAL = [
+    "Movimentação dos investimentos",
+    "Exercício findo em 31 de dezembro de 2022",
+    "Aporte | Distribuição de | Equivalência | Ajuste de exercícios | Saldo",
+    "Controladas | Saldo inicial",
+    "(redução) | lucros e JSCP | patrimonial | anteriores (*) | final",
+    "Brasal Refrigerantes S/A | 468.290 | - | (234.435) | 157.810 | - | 411.099",
+    "Exercício findo em 31 de dezembro de 2021--não auditado",
+]
+
+
+def test_le_a_linha_da_movimentacao_da_brasal():
+    assert linhas_de_movimentacao(_P32_BRASAL) == [
+        ("Brasal Refrigerantes S/A", 468_290, [0, -234_435, 157_810, 0], 411_099)]
+
+
+def test_linha_com_saldo_inicial_e_numeros_nao_e_cabecalho():
+    # Millet p. 25 e p. 10: "Saldo inicial" é uma linha de dados, e não o cabeçalho de uma movimentação.
+    assert linhas_de_movimentacao(["Saldo inicial | (6.844) | (7.317)", "Adições | 100 | 200 | 300"]) == []
+
+
+def test_movimentacao_longe_do_cabecalho_nao_entra():
+    linhas = ["Controladas | Saldo inicial", "a", "b", "c", "X | 1 | 2 | 3"]
+    assert linhas_de_movimentacao(linhas) == []
+
+
+# ------------------------------------------------------------ variação escrita ao lado do valor (V4, V5, V6)
+
+from analise_financeira.indicadores import frase_inteira, variacoes_da_frase  # noqa: E402
+
+
+def test_acha_a_frase_inteira_quando_o_trecho_citado_corta_a_variacao():
+    pagina = "EBITDA CVM\nEm 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001\nmilhões se comparado a 2021. Outra frase."
+    assert frase_inteira(pagina, "R$1.180 milhões") == \
+        "EBITDA CVM Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001 milhões se comparado a 2021."
+
+
+def test_L1_variacao_em_dinheiro_depois_do_valor():
+    frase = "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001 milhões se comparado a 2021."
+    [(pedaco, n)] = variacoes_da_frase(frase, "R$1.180 milhões")
+    assert n.valor == 3_001 and n.unidade == "milhões" and direcao_da_frase(pedaco) == -1
+
+
+def test_valor_anterior_na_mesma_frase_nao_vira_variacao():
+    frase = "A dívida líquida totalizou R$9.032 milhões, aumento de 23% em comparação a 2021, de R$7.353 milhões."
+    [(pedaco, n)] = variacoes_da_frase(frase, "R$9.032 milhões")
+    assert n.unidade == "%" and round(n.valor, 2) == 0.23
+    assert conferir_variacao_percentual(0.23, 9_032 * MI, 7_353 * MI) is None  # 22,8%: bate
+
+
+def test_lucro_da_light_com_a_variacao_que_bate():
+    frase = "apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões abaixo em relação ao ano anterior."
+    [(pedaco, n)] = variacoes_da_frase(frase, "-R$5.673 milhões")
+    assert conferir_variacao_absoluta(-n.valor * MI, -5_673 * MI, 397_945 * MIL) is None
+
+
+def test_frase_sem_direcao_nao_tem_variacao():
+    assert variacoes_da_frase("A receita foi de R$806 milhões em 2022, de R$900 milhões.", "R$806 milhões") == []

@@ -1,0 +1,609 @@
+[
+ {
+  "documento": "Brasal.pdf",
+  "contagem": {
+   "valores": 12,
+   "valor_ok": 12,
+   "pagina_ok": 12,
+   "nao_enc": 4,
+   "nao_enc_ok": 4,
+   "inventou": 0
+  },
+  "linhas": [
+   {
+    "campo": "receita_liquida_atual",
+    "esperado": "1.325.059 = R$ 1,33 bi",
+    "obtido": "1.325.059 (R$ mil) = R$ 1,33 bi",
+    "ok": true
+   },
+   {
+    "campo": "receita_liquida_anterior",
+    "esperado": "1.061.410 = R$ 1,06 bi",
+    "obtido": "1.061.410 (R$ mil) = R$ 1,06 bi",
+    "ok": true
+   },
+   {
+    "campo": "ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "margem_ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_atual",
+    "esperado": "174.602 = R$ 174,60 mi",
+    "obtido": "174.602 (R$ mil) = R$ 174,60 mi",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_anterior",
+    "esperado": "275.560 = R$ 275,56 mi",
+    "obtido": "275.560 (R$ mil) = R$ 275,56 mi",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "fco_atual",
+    "esperado": "258.248 = R$ 258,25 mi",
+    "obtido": "258.248 (R$ mil) = R$ 258,25 mi",
+    "ok": true
+   },
+   {
+    "campo": "fco_anterior",
+    "esperado": "121.462 = R$ 121,46 mi",
+    "obtido": "121.462 (R$ mil) = R$ 121,46 mi",
+    "ok": true
+   },
+   {
+    "campo": "ebit_atual",
+    "esperado": "192.840 = R$ 192,84 mi",
+    "obtido": "192.840 (R$ mil) = R$ 192,84 mi",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_atual",
+    "esperado": "29.014 = R$ 29,01 mi",
+    "obtido": "29.014 (R$ mil) = R$ 29,01 mi",
+    "ok": true
+   },
+   {
+    "campo": "capex_imobilizado_atual",
+    "esperado": "(45.761) = R$ -45,76 mi",
+    "obtido": "(45.761) (R$ mil) = R$ -45,76 mi",
+    "ok": true
+   },
+   {
+    "campo": "caixa_atual",
+    "esperado": "96.453 = R$ 96,45 mi",
+    "obtido": "96.453 (R$ mil) = R$ 96,45 mi",
+    "ok": true
+   },
+   {
+    "campo": "aplicacoes_financeiras_atual",
+    "esperado": "78.569 = R$ 78,57 mi",
+    "obtido": "78.569 (R$ mil) = R$ 78,57 mi",
+    "ok": true
+   },
+   {
+    "campo": "emprestimos_total_atual",
+    "esperado": "3.417 = R$ 3,42 mi",
+    "obtido": "3.417 (R$ mil) = R$ 3,42 mi",
+    "ok": true
+   }
+  ],
+  "evidencia_conferida": [
+   20,
+   20
+  ],
+  "qualitativo": {
+   "documento": "Brasal.pdf",
+   "checagens": [
+    {
+     "o_que": "tom",
+     "ok": true,
+     "detalhe": "nao_aplicavel (esperado: nao_aplicavel ou neutro)"
+    },
+    {
+     "o_que": "relatório da administração",
+     "ok": true,
+     "detalhe": "não"
+    },
+    {
+     "o_que": "guidance",
+     "ok": true,
+     "detalhe": "nao_encontrado"
+    },
+    {
+     "o_que": "2021 não auditado (B1)",
+     "ok": true,
+     "detalhe": "As demonstrações financeiras individuais e consolidadas da Companhia para o exercício findo em 31 de dezembro de 2021, apresentadas para fin"
+    },
+    {
+     "o_que": "créditos tributários não recorrentes em 2021 (B3)",
+     "ok": true,
+     "detalhe": "Segundo as notas explicativas, a principal causa da queda do lucro é a base alta de 2021. A Controlada reconheceu, no 4º trimestre de 2021, "
+    }
+   ],
+   "itens": 38,
+   "com_trecho": 38,
+   "com_trecho_achado_pelo_codigo": 0,
+   "com_numero_sem_fonte": 0
+  },
+  "armadilhas": [
+   {
+    "id": "B1",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "O período comparativo (2021) não foi auditado (p. 3, 6, 7, 8, 11). As variações contra 2021 usam números não auditados."
+   },
+   {
+    "id": "B2",
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "A linha de depreciação e amortização tem valores diferentes na DRE e na DFC. Na DRE aparece #Depreciações e amortizações | 23.d | (507) | (316) | (20.347) | (15"
+   },
+   {
+    "id": "B6",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "Movimentação (Brasal Refrigerantes S/A): o saldo inicial de 468.290 mais os movimentos dá 391.665, mas o saldo final informado é 411.099 (diferença de 19.434). "
+   },
+   {
+    "id": "B7",
+    "detectada": false,
+    "por": null,
+    "mensagem": null
+   },
+   {
+    "id": "B8",
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "Na nota 19, o resumo e a movimentação divergem por tipo de ação, com o mesmo total. No resumo: Ações tributárias | 337 | 35 e Ações trabalhistas | 2.485 | 1.036"
+   }
+  ]
+ },
+ {
+  "documento": "Millet.pdf",
+  "contagem": {
+   "valores": 16,
+   "valor_ok": 16,
+   "pagina_ok": 16,
+   "nao_enc": 3,
+   "nao_enc_ok": 3,
+   "inventou": 0
+  },
+  "linhas": [
+   {
+    "campo": "receita_liquida_atual",
+    "esperado": "462.127 = R$ 462,13 mi",
+    "obtido": "462.127 (R$ mil) = R$ 462,13 mi",
+    "ok": true
+   },
+   {
+    "campo": "receita_liquida_anterior",
+    "esperado": "199.259 = R$ 199,26 mi",
+    "obtido": "199.259 (R$ mil) = R$ 199,26 mi",
+    "ok": true
+   },
+   {
+    "campo": "ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "margem_ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_atual",
+    "esperado": "18.891 = R$ 18,89 mi",
+    "obtido": "18.891 (R$ mil) = R$ 18,89 mi",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_anterior",
+    "esperado": "6.470 = R$ 6,47 mi",
+    "obtido": "6.470 (R$ mil) = R$ 6,47 mi",
+    "ok": true
+   },
+   {
+    "campo": "lucro_controladores_atual",
+    "esperado": "14.743 = R$ 14,74 mi",
+    "obtido": "14.743 (R$ mil) = R$ 14,74 mi",
+    "ok": true
+   },
+   {
+    "campo": "lucro_controladores_anterior",
+    "esperado": "5.371 = R$ 5,37 mi",
+    "obtido": "5.371 (R$ mil) = R$ 5,37 mi",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_atual",
+    "esperado": "13.520 = R$ 13,52 mi",
+    "obtido": "13.520 (R$ mil) = R$ 13,52 mi",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_anterior",
+    "esperado": "16.877 = R$ 16,88 mi",
+    "obtido": "16.877 (R$ mil) = R$ 16,88 mi",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "fco_atual",
+    "esperado": "24.799 = R$ 24,80 mi",
+    "obtido": "24.799 (R$ mil) = R$ 24,80 mi",
+    "ok": true
+   },
+   {
+    "campo": "fco_anterior",
+    "esperado": "(14.293) = R$ -14,29 mi",
+    "obtido": "(14.293) (R$ mil) = R$ -14,29 mi",
+    "ok": true
+   },
+   {
+    "campo": "ebit_atual",
+    "esperado": "25.298 = R$ 25,30 mi",
+    "obtido": "25.298 (R$ mil) = R$ 25,30 mi",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_atual",
+    "esperado": "18.248 = R$ 18,25 mi",
+    "obtido": "18.248 (R$ mil) = R$ 18,25 mi",
+    "ok": true
+   },
+   {
+    "campo": "capex_imobilizado_atual",
+    "esperado": "(6.263) = R$ -6,26 mi",
+    "obtido": "(6.263) (R$ mil) = R$ -6,26 mi",
+    "ok": true
+   },
+   {
+    "campo": "capex_intangivel_atual",
+    "esperado": "(11.469) = R$ -11,47 mi",
+    "obtido": "(11.469) (R$ mil) = R$ -11,47 mi",
+    "ok": true
+   },
+   {
+    "campo": "caixa_atual",
+    "esperado": "10.656 = R$ 10,66 mi",
+    "obtido": "10.656 (R$ mil) = R$ 10,66 mi",
+    "ok": true
+   },
+   {
+    "campo": "emprestimos_total_atual",
+    "esperado": "24.176 = R$ 24,18 mi",
+    "obtido": "24.176 (R$ mil) = R$ 24,18 mi",
+    "ok": true
+   }
+  ],
+  "evidencia_conferida": [
+   25,
+   25
+  ],
+  "qualitativo": {
+   "documento": "Millet.pdf",
+   "checagens": [
+    {
+     "o_que": "tom",
+     "ok": true,
+     "detalhe": "nao_aplicavel (esperado: neutro ou nao_aplicavel)"
+    },
+    {
+     "o_que": "relatório da administração",
+     "ok": true,
+     "detalhe": "não"
+    },
+    {
+     "o_que": "guidance",
+     "ok": true,
+     "detalhe": "nao_encontrado"
+    },
+    {
+     "o_que": "Alibra só de junho a dezembro em 2021 (M6)",
+     "ok": true,
+     "detalhe": "O ano de 2021 tem só cerca de seis meses da Alibra. A receita consolidada de 2021 foi Receita operacional liquida | 462.127 | 199.259. A rec"
+    },
+    {
+     "o_que": "repasse de preço dos derivados lácteos",
+     "ok": true,
+     "detalhe": "Segundo as notas explicativas (nota 1.1), as vendas cumpriram o previsto. Porém o custo dos lácteos subiu e a margem não voltou ao nível de "
+    }
+   ],
+   "itens": 36,
+   "com_trecho": 36,
+   "com_trecho_achado_pelo_codigo": 0,
+   "com_numero_sem_fonte": 0
+  },
+  "armadilhas": [
+   {
+    "id": "M1",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "Patrimônio líquido (balanço × notas), em R$ mil: valores diferentes no mesmo documento: 185.321 (p. [6]); 167.233 (p. [42])."
+   },
+   {
+    "id": "M2",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "Lucro líquido (DRE × DMPL), em R$ mil: valores diferentes no mesmo documento: 18.891 (p. [7]); 19.021 (p. [9])."
+   },
+   {
+    "id": "M3",
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "A equivalência patrimonial tem tratamento incoerente entre DRE e DFC. Na DRE consolidada ela é receita positiva: Resultado de equivalência patrimonial | 7 | 28."
+   },
+   {
+    "id": "M4",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "Cabeçalho com 2021 repetido no lugar de 2022: '31/12/2021 | 31/12/2021 | 31/12/2022 | 31/12/2021'. Confira de qual ano é cada coluna."
+   },
+   {
+    "id": "M5",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "Aprovação em 14/03/2022, antes do fim do exercício (31/12/2022). Provável ano errado."
+   },
+   {
+    "id": "M8",
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "Na tabela resumida da Alibra, o lucro antes dos impostos aparece negativo, embora o lucro bruto e o lucro líquido sejam positivos: Lucro bruto | 98.338 | 70.682"
+   }
+  ]
+ },
+ {
+  "documento": "Light.pdf",
+  "contagem": {
+   "valores": 22,
+   "valor_ok": 22,
+   "pagina_ok": 22,
+   "nao_enc": 1,
+   "nao_enc_ok": 1,
+   "inventou": 0
+  },
+  "linhas": [
+   {
+    "campo": "receita_liquida_atual",
+    "esperado": "13.253.286 = R$ 13,25 bi",
+    "obtido": "13.253.286 (R$ mil) = R$ 13,25 bi",
+    "ok": true
+   },
+   {
+    "campo": "receita_liquida_anterior",
+    "esperado": "14.897.920 = R$ 14,90 bi",
+    "obtido": "14.897.920 (R$ mil) = R$ 14,90 bi",
+    "ok": true
+   },
+   {
+    "campo": "ebitda_atual",
+    "esperado": "R$1.180 milhões = R$ 1,18 bi",
+    "obtido": "R$1.180 milhões (R$ milhões) = R$ 1,18 bi",
+    "ok": true
+   },
+   {
+    "campo": "margem_ebitda_atual",
+    "esperado": "não encontrado",
+    "obtido": "nao_encontrado",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_atual",
+    "esperado": "(5.672.203) = R$ -5,67 bi",
+    "obtido": "(5.672.203) (R$ mil) = R$ -5,67 bi",
+    "ok": true
+   },
+   {
+    "campo": "lucro_liquido_anterior",
+    "esperado": "397.945 = R$ 397,94 mi",
+    "obtido": "397.945 (R$ mil) = R$ 397,94 mi",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_atual",
+    "esperado": "9.032.236 = R$ 9,03 bi",
+    "obtido": "9.032.236 (R$ mil) = R$ 9,03 bi",
+    "ok": true
+   },
+   {
+    "campo": "divida_liquida_anterior",
+    "esperado": "7.352.919 = R$ 7,35 bi",
+    "obtido": "7.352.919 (R$ mil) = R$ 7,35 bi",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_atual",
+    "esperado": "3,32x",
+    "obtido": "3,32x (x)",
+    "ok": true
+   },
+   {
+    "campo": "alavancagem_anterior",
+    "esperado": "3,48x",
+    "obtido": "3,48x (x)",
+    "ok": true
+   },
+   {
+    "campo": "fco_atual",
+    "esperado": "200.763 = R$ 200,76 mi",
+    "obtido": "200.763 (R$ mil) = R$ 200,76 mi",
+    "ok": true
+   },
+   {
+    "campo": "fco_anterior",
+    "esperado": "(42.045) = R$ -42,05 mi",
+    "obtido": "(42.045) (R$ mil) = R$ -42,05 mi",
+    "ok": true
+   },
+   {
+    "campo": "ebit_atual",
+    "esperado": "(1.910.411) = R$ -1,91 bi",
+    "obtido": "(1.910.411) (R$ mil) = R$ -1,91 bi",
+    "ok": true
+   },
+   {
+    "campo": "ebit_anterior",
+    "esperado": "1.143.301 = R$ 1,14 bi",
+    "obtido": "1.143.301 (R$ mil) = R$ 1,14 bi",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_atual",
+    "esperado": "730.767 = R$ 730,77 mi",
+    "obtido": "730.767 (R$ mil) = R$ 730,77 mi",
+    "ok": true
+   },
+   {
+    "campo": "depreciacao_anterior",
+    "esperado": "678.110 = R$ 678,11 mi",
+    "obtido": "678.110 (R$ mil) = R$ 678,11 mi",
+    "ok": true
+   },
+   {
+    "campo": "capex_imobilizado_atual",
+    "esperado": "(307.759) = R$ -307,76 mi",
+    "obtido": "(307.759) (R$ mil) = R$ -307,76 mi",
+    "ok": true
+   },
+   {
+    "campo": "capex_intangivel_atual",
+    "esperado": "(1.162.533) = R$ -1,16 bi",
+    "obtido": "(1.162.533) (R$ mil) = R$ -1,16 bi",
+    "ok": true
+   },
+   {
+    "campo": "investimentos_informados_atual",
+    "esperado": "R$1.506 milhões = R$ 1,51 bi",
+    "obtido": "R$1.506 milhões (R$ milhões) = R$ 1,51 bi",
+    "ok": true
+   },
+   {
+    "campo": "caixa_atual",
+    "esperado": "43.886 = R$ 43,89 mi",
+    "obtido": "43.886 (R$ mil) = R$ 43,89 mi",
+    "ok": true
+   },
+   {
+    "campo": "aplicacoes_financeiras_atual",
+    "esperado": "2.039.665 = R$ 2,04 bi",
+    "obtido": "2.039.665 (R$ mil) = R$ 2,04 bi",
+    "ok": true
+   },
+   {
+    "campo": "emprestimos_total_atual",
+    "esperado": "10.688.690 = R$ 10,69 bi",
+    "obtido": "10.688.690 (R$ mil) = R$ 10,69 bi",
+    "ok": true
+   },
+   {
+    "campo": "derivativos_divida_atual",
+    "esperado": "427.097 = R$ 427,10 mi",
+    "obtido": "427.097 (R$ mil) = R$ 427,10 mi",
+    "ok": true
+   }
+  ],
+  "evidencia_conferida": [
+   31,
+   31
+  ],
+  "qualitativo": {
+   "documento": "Light.pdf",
+   "checagens": [
+    {
+     "o_que": "tom",
+     "ok": true,
+     "detalhe": "negativo (esperado: negativo)"
+    },
+    {
+     "o_que": "relatório da administração",
+     "ok": true,
+     "detalhe": "sim"
+    },
+    {
+     "o_que": "guidance",
+     "ok": true,
+     "detalhe": "nao_encontrado"
+    },
+    {
+     "o_que": "incerteza sobre a continuidade operacional",
+     "ok": true,
+     "detalhe": "Há dúvida sobre a continuidade operacional. A administração vê a existência de incerteza significativa que pode levantar dúvida significativ"
+    },
+    {
+     "o_que": "provisões (PIS/COFINS, PECLD, contingências) no prejuízo",
+     "ok": true,
+     "detalhe": "Segundo a administração, o prejuízo veio sobretudo da Distribuição. Pesaram a provisão de -R$1.081 milhões para devolução de créditos de PIS"
+    },
+    {
+     "o_que": "renovação da concessão",
+     "ok": true,
+     "detalhe": "A empresa quer antecipar a renovação da concessão. Nós iniciamos discussões com a Aneel e o Ministério de Minas e Energia em busca da renova"
+    },
+    {
+     "o_que": "não errar: recuperação judicial atribuída à Light, e não à cliente SuperVia (L7)",
+     "ok": true,
+     "detalhe": "ok"
+    }
+   ],
+   "itens": 39,
+   "com_trecho": 35,
+   "com_trecho_achado_pelo_codigo": 15,
+   "com_numero_sem_fonte": 3
+  },
+  "armadilhas": [
+   {
+    "id": "L1",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "EBITDA informado de R$ 1.180,0 mi, mas EBIT + depreciação dá R$ -1.179,6 mi: o mesmo valor com o sinal trocado. Provável sinal de menos perdido no texto."
+   },
+   {
+    "id": "L2",
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "O EBITDA da distribuidora é incoerente. O texto diz que o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1"
+   },
+   {
+    "id": "L3",
+    "detectada": true,
+    "por": "código",
+    "mensagem": "O texto liga o valor 3,32x ao ano 2021, mas o período é 2022. Provável ano errado no texto."
+   },
+   {
+    "id": "L10",
+    "detectada": true,
+    "por": "IA",
+    "mensagem": "O lucro da Lightcom aparece como alta no texto, mas a tabela mostra queda. O relatório diz que o Resultado líquido foi de R$87 milhões, 15,5% acima do apurado e"
+   }
+  ]
+ }
+]

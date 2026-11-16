@@ -61,7 +61,9 @@ def test_ferramentas_so_leem_e_as_empresas_sao_uma_lista_fechada(servidor):
 def test_listar_empresas(servidor):
     empresas = {e["empresa"]: e for e in resultado(servidor, "listar_empresas")}
     assert {k: e["paginas_no_pdf"] for k, e in empresas.items()} == {"Brasal": 51, "Light": 124, "Millet": 43}
-    assert empresas["Light"]["alertas_de_erro"] == 1 and empresas["Millet"]["alertas_de_erro"] == 2
+    # Light: o sinal trocado do EBITDA, pego por duas regras (V7 e V5). Brasal: a movimentação da p. 32 (V17).
+    assert empresas["Light"]["alertas_de_erro"] == 2 and empresas["Millet"]["alertas_de_erro"] == 2
+    assert empresas["Brasal"]["alertas_de_erro"] == 2
     assert {(a["pagina"], a["tipo"]) for a in empresas["Brasal"]["seguranca"]} == {(None, "criptografado"),
                                                                                   (8, "texto_invisivel")}
 
@@ -75,7 +77,7 @@ def test_indicador_informado_tem_pagina_trecho_e_alertas(servidor):
     ebitda = resultado(servidor, "obter_indicadores", {"empresa": "Light", "indicador": "ebitda"})[0]
     assert ebitda["periodo_atual"]["em_reais"] == "R$ 1.180,0 milhões"
     assert ebitda["calculado_pela_solucao"]["valor"] == "-R$ 1.179,6 milhões"
-    assert [(a["regra"], a["severidade"]) for a in ebitda["alertas"]] == [("V7", "erro")]
+    assert sorted((a["regra"], a["severidade"]) for a in ebitda["alertas"]) == [("V5", "erro"), ("V7", "erro")]
 
 
 def test_o_calculado_nunca_toma_o_lugar_do_informado(servidor):

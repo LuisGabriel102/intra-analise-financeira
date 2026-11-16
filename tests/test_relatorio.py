@@ -145,3 +145,22 @@ def test_item_com_trecho_achado_pelo_codigo_fica_marcado():
     linha = _item(achado)
     assert "trecho achado pelo código" in linha and "⚠️" not in linha
     assert "achado pelo código" not in _item(achado.model_copy(update={"evidencias": [Evidencia(pagina=26, trecho="t")]}))
+
+
+def test_observacao_da_ia_que_bate_com_regra_do_codigo_ganha_a_marca():
+    from analise_financeira.relatorio import conferida_em_codigo
+
+    v13 = AlertaSaida(regra="V13", severidade="erro", origem="codigo", paginas=[7, 9],
+                      mensagem="Lucro líquido (DRE × DMPL), em R$ mil: valores diferentes: 18.891 (p. [7]); 19.021 (p. [9]).")
+    v14 = AlertaSaida(regra="V14", severidade="aviso", origem="codigo", paginas=[7, 11],
+                      mensagem="O período comparativo (2021) não foi auditado (p. 7, 11).")
+    obs = "A DMPL mostra 14.743 | 4.278 | 19.021, e a DRE mostra 18.891."
+    assert conferida_em_codigo(obs, [7, 9], [v14, v13]) == "V13"
+    assert conferida_em_codigo(obs, [20], [v13]) is None            # outra página
+    assert conferida_em_codigo("A DRE mostra 18.891.", [7], [v13]) is None  # falta um número do alerta
+    assert conferida_em_codigo("O ano de 2021 não foi auditado.", [7], [v14]) is None  # alerta sem número: sem marca
+
+    r = _light()
+    r.numeros.alertas += [v13, AlertaSaida(regra="IA", severidade="aviso", origem="ia", paginas=[7], mensagem=obs)]
+    md = "\n".join(alertas([r]))
+    assert "19.021, e a DRE mostra 18.891. *(Mesmo achado da regra V13" in md

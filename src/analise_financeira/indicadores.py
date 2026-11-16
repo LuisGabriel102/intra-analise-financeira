@@ -19,6 +19,7 @@ from pydantic import BaseModel
 
 from analise_financeira import calculos, validacao
 from analise_financeira.esquemas import Evidencia, Extracao, Ocorrencia
+from analise_financeira.numeros import ESCALAS, Numero, achar_numeros, ler_numero
 from analise_financeira.pdf import Documento
 from analise_financeira.roteamento import DEMONSTRACOES, Rotas
 
@@ -217,6 +218,98 @@ def indicador_do_campo(nome: str) -> str | None:
 _ESCALA = {"R$ mil": "mil", "R$ milhões": "milhões", "R$ bilhões": "bilhões", "R$ ": ""}
 _CABECALHO = re.compile(r"^(?:\d{1,2}[./]\d{1,2}[./])?20\d{2,3}(?:\s*\|\s*(?:\d{1,2}[./]\d{1,2}[./])?20\d{2,3})+$")
 _DATA = re.compile(r"\d{1,2} de [a-zç]+ de \d{4}", re.I)
+_SALDO_INICIAL = re.compile(r"\bsaldo\s+inicial\b", re.I)
+
+
+def _celula_numerica(celula: str) -> float | None:
+    """O valor de uma célula que é só um número de tabela ("468.290", "(234.435)" ou "-"); senão, None."""
+    n = ler_numero(celula)
+    if n is None or n.unidade or n.texto != celula.strip():
+        return None
+    return n.valor
+
+
+_FIM_DE_FRASE = re.compile(r"(?<=[.;])\s+")
+_CAMPOS_COM_VARIACAO = ("receita_liquida", "ebitda", "lucro_liquido", "lucro_controladores", "divida_liquida", "fco")
+
+
+def frase_inteira(texto_da_pagina: str, valor: str) -> str | None:
+    """A frase da página em que o valor aparece. O trecho citado guarda só uma linha, e a variação
+    costuma estar na linha seguinte ("R$1.180 milhões, apresentando uma redução R$3.001 milhões...")."""
+    for frase in _FIM_DE_FRASE.split(texto_da_pagina.replace("\n", " ")):
+        if valor in frase:
+            return frase
+    return None
+
+
+def variacoes_da_frase(frase: str, valor: str) -> list[tuple[str, Numero]]:
+    """As variações escritas depois do valor, na mesma frase: [(trecho, número)].
+
+    A frase é cortada nas vírgulas. Uma variação é o primeiro número de um pedaço que diz
+    para que lado foi ("redução", "acima"...). Ano não conta. "aumento de 23% em comparação
+    a 2021, de R$7.353 milhões" dá só 23%: o R$7.353 milhões é o valor anterior, e não a variação.
+    """
+    resto = frase.split(valor, 1)[1] if valor in frase else ""
+    saida = []
+    for pedaco in resto.split(","):
+        if validacao.direcao_da_frase(pedaco) == 0:
+            continue
+        numeros = [n for n in achar_numeros(pedaco)
+                   if not (not n.unidade and n.valor.is_integer() and 1900 <= abs(n.valor) <= 2100)]
+        if numeros:
+            saida.append((pedaco.strip(), numeros[0]))
+    return saida
+
+
+def _alertas_de_variacao(ext: Extracao, doc: Documento, anteriores: dict[str, float]) -> list[AlertaSaida]:
+    """V4, V5 e V6 sobre as variações que o texto da administração escreve ao lado de um valor.
+
+    O valor atual é o do próprio texto; o anterior vem das demonstrações (ou do EBITDA
+    calculado pela solução, quando o documento não informa o EBITDA anterior).
+    """
+    alertas: list[AlertaSaida] = []
+    for campo in _CAMPOS_COM_VARIACAO:
+        extraido = ext.campos.get(f"{campo}_atual")
+        anterior = anteriores.get(campo)
+        if extraido is None or anterior is None:
+            continue
+        for o in extraido.ocorrencias:
+            if o.fonte != "relatorio_adm" or o.valor_reais is None:
+                continue
+            for e in o.evidencias:
+                frase = frase_inteira(doc.pagina(e.pagina).texto, o.texto)
+                for pedaco, n in variacoes_da_frase(frase or "", o.texto):
+                    lado = validacao.direcao_da_frase(pedaco)
+                    if n.unidade == "%":
+                        alerta = validacao.conferir_variacao_percentual(lado * abs(n.valor), o.valor_reais, anterior)
+                    elif n.unidade in ("mil", "milhões", "bilhões"):
+                        alerta = validacao.conferir_variacao_absoluta(lado * abs(n.valor) * ESCALAS[n.unidade],
+                                                                      o.valor_reais, anterior)
+                    else:
+                        continue
+                    alerta = alerta or validacao.conferir_direcao(pedaco, o.valor_reais, anterior)
+                    alertas += _de_regra(alerta, [e.pagina], indicador_do_campo(campo))
+                break  # uma evidência basta: a frase é a mesma
+    return alertas
+
+
+def linhas_de_movimentacao(linhas: list[str], alcance: int = 3) -> list[tuple[str, float, list[float], float]]:
+    """As linhas de uma tabela de movimentação: (rótulo, saldo inicial, movimentos, saldo final).
+
+    O cabeçalho tem "Saldo inicial" e nenhum número. Nas linhas logo abaixo, a que tem
+    rótulo e pelo menos três células numéricas é lida assim: a primeira célula é o saldo
+    inicial, a última é o saldo final, e as do meio são os movimentos.
+    """
+    saida = []
+    for i, linha in enumerate(linhas):
+        if not _SALDO_INICIAL.search(linha) or achar_numeros(linha):
+            continue
+        for seguinte in linhas[i + 1:i + 1 + alcance]:
+            rotulo, *celulas = [c.strip() for c in seguinte.split("|")]
+            valores = [_celula_numerica(c) for c in celulas]
+            if len(valores) >= 3 and None not in valores and rotulo and _celula_numerica(rotulo) is None:
+                saida.append((rotulo, valores[0], valores[1:-1], valores[-1]))
+    return saida
 
 
 def _data_de_aprovacao(texto: str, fim_do_exercicio: date) -> date | None:
@@ -241,6 +334,18 @@ def _alertas(ext: Extracao, doc: Documento, rotas: Rotas, ebitda_calc: float | N
     anterior = _ano(p("periodo_anterior").texto if p("periodo_anterior") else None) or (
         str(int(periodo) - 1) if periodo else None)
 
+    # V3: margem EBITDA informada contra EBITDA ÷ receita (o EBITDA informado; sem ele, o calculado)
+    ebitda_ref = _reais(p("ebitda_atual")) if p("ebitda_atual") else ebitda_calc
+    if p("margem_ebitda_atual") and p("margem_ebitda_atual").numero is not None and ebitda_ref is not None \
+            and _reais(p("receita_liquida_atual")) is not None:
+        alertas += _de_regra(validacao.conferir_margem(p("margem_ebitda_atual").numero, ebitda_ref,
+                                                       _reais(p("receita_liquida_atual"))),
+                             _paginas(p("margem_ebitda_atual"), p("receita_liquida_atual")), "margem_ebitda")
+    # V4, V5 e V6: a variação que o texto escreve ao lado do valor bate com os dois períodos?
+    anteriores = {c: _reais(p(f"{c}_anterior")) for c in _CAMPOS_COM_VARIACAO if _reais(p(f"{c}_anterior")) is not None}
+    if "ebitda" not in anteriores and p("ebit_anterior") and p("depreciacao_anterior"):
+        anteriores["ebitda"] = calculos.ebitda_calculado(p("ebit_anterior").valor_reais, p("depreciacao_anterior").valor_reais)
+    alertas += _alertas_de_variacao(ext, doc, anteriores)
     # V7: EBITDA informado contra EBIT + depreciação
     if p("ebitda_atual") and ebitda_calc is not None:
         alertas += _de_regra(validacao.conferir_ebitda(p("ebitda_atual").valor_reais, p("ebit_atual").valor_reais,
@@ -315,6 +420,10 @@ def _alertas(ext: Extracao, doc: Documento, rotas: Rotas, ebitda_calc: float | N
             for linha in pg.linhas:
                 if _CABECALHO.match(linha.strip()):
                     alertas += _de_regra(validacao.conferir_anos_do_cabecalho(linha, periodo, anterior), [pg.numero])
+    # V17: tabela de movimentação (saldo inicial + movimentos = saldo final)
+    for pg in doc.paginas:
+        for rotulo, inicial, movimentos, final in linhas_de_movimentacao(pg.linhas):
+            alertas += _de_regra(validacao.conferir_movimentacao(rotulo, inicial, movimentos, final), [pg.numero])
     # Observações da IA: entram como aviso, com a citação, marcadas como "apontado pela IA"
     for obs in ext.observacoes:
         alertas.append(AlertaSaida(regra="IA", severidade="aviso", origem="ia", mensagem=obs.texto,

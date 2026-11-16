@@ -1,6 +1,6 @@
 # Tom do texto da administração: ML tradicional comparado com a IA
 
-Gerado em 16/11/2026 10:47. Os rótulos da IA são a referência desta comparação, e não a verdade.
+Gerado em 16/11/2026 10:49. Os rótulos da IA são a referência desta comparação, e não a verdade.
 
 ## Light.pdf
 
@@ -10,7 +10,7 @@ Gerado em 16/11/2026 10:47. Os rótulos da IA são a referência desta comparaç
 |---|---|---|---|---|---|---|
 | IA, frase a frase | referência | — | — | — | neutro | US$ 0,0956 em 18 s, cerca de US$ 0,00056 por frase |
 | Léxico de finanças, sem treino | 65% | 0,50 | 0,23 | 13 de 29 | neutro | US$ 0, menos de 1 s |
-| TF-IDF e regressão logística (validação cruzada em 5 partes) | 72% | 0,49 | 0,31 | 12 de 29 | neutro | US$ 0, 271 ms para treinar e prever |
+| TF-IDF e regressão logística (validação cruzada em 5 partes) | 72% | 0,49 | 0,31 | 12 de 29 | neutro | US$ 0, 226 ms para treinar e prever |
 | Sempre a classe mais comum (piso) | 69% | 0,27 | 0,00 | 0 de 29 | neutro | US$ 0 |
 
 Tom do documento inteiro, na análise qualitativa (a IA lendo o texto todo): **negativo**.

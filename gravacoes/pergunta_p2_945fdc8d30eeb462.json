@@ -1,0 +1,53 @@
+{
+ "blocos": [
+  {
+   "signature": "CAQS9QcKEAgTGAI4AUIIdGhpbmtpbmcSDD+VlIB3pPPwUvbOgRoMfIWeM2rVr6ERJOYsIjD4r/n3K8RIbSwjpY09kG6UDxDWqsCcgX3o3SyHrfamyf6oZnsO1DmoiFw3pTj0VZ0qkgc68VaAvWGPFib9TjpbS1Z9oDFL3ozuzJTMN5ULHIj7R46wkgPGhP1q2hglAVywiZ5PC0aNMlng7fdCwLjXDUaXwsiXJqNBpmMQkXQ8Ldu1JvmYUQWFI87+finopii/knGiCj/yREEDBqFfSw54C5guHURG1YulgVEJZ2AOcxl19QJcj++aWzRlDHjdMtYAwmkcD/rgq0fsRagbQVHJIjHVvWDuCJ6OQLUjw7Vdep9rrJ6KwMz7MA+/W8lA7WitlAJiaqCryZe5RF299Niot18SMIXCX1B6OPuNOIQrmJgnBWzxLgBm9ks1Apj3SK3wCqCTQA2HNWcafM8/BzaEHiLnVZYLBDfwH/E35+uPo25VmdZgA/PkGtW5O4edQchS8DSj550vdPy72d34kD/HTwejYiueiKG9IO2mQ32f6sthaWmvoIrgvqibv/x/DUjSf7uUfJMFu47zlpL8CzkkU5QkbHsX6rTV69Xui+R3WfFrNeh5IKo3TneY5drpxWpxm6hJlgm26OHBm8leu30zx6BZ9dmKt4W9XVcpr/wgx4z0Dm17Cmo9L2qApXMuIRMUhn5YZ1+XFXJZPhlVj0OpwRKuNGx9cQEOSwILl278V6RGM1kMQGlbkSxLz+Woof+Pn7I87z73gTAlj6fQjiu1Sdt6/HtGIGtIHPTe8BG1Nx9hMp2ovEZ6eO9+iXjIzBQNXl6hlVOTPdBML546avg2ocILfmsKk5Br+vvl34raYWfXzcjTcwyq7OrhPX4sbryDCswKfIVQWg3QaraR+TnUQP7xZdTrNd4qKWL9fpi/h1Bu5/aaKKg+csQxERTCX9osrGw0PKdfYTLN95NxCMvo6qhJ7S6DVfeIZLuf2ELw2U1h7CmTDwTPAVR2oOyAAwcgMa5CBYc5CDoAAA9Ae3iaM8Ng8pODI2kyA4wFp/cN84eRfg0jiE+8UNw980Lh24zkga/1Jh1bHmEmBiY5gaFAXC+U8tKMhDOlqV0OYb4onPPGUuJ05EogTvO7QowWGiY22xlDKBdjOYHQW7Bggfe3yqyNFhtV/R7vqSyyLe5OuBEi8Dg7VWibeprTDBsXtquBQpLBOb8YDWSAsoTiQ480NpyMVv6q0o9YyO4fnz9vbUGSjML0upLoo+GoqO1Xsvko/Q0iJReuk4dQATMP1es02xv/qP9XGZy96GEe1z6QFqcEazsr2+1NXH1u4kOCrcpROiv47RgB",
+   "thinking": "",
+   "type": "thinking"
+  },
+  {
+   "id": "toolu_01G21HQLq1o9AUREySXoyJyc",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "receita líquida redução estornos faturamento bandeiras tarifárias CVA",
+    "empresa": "Light"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01MNFjZaLnNccZgr1vNNRKye",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "aumento da receita operacional vendas crescimento volume preço",
+    "empresa": "Brasal"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  },
+  {
+   "id": "toolu_01G3dYGJtPDAZaG3FMdCkEnc",
+   "caller": {
+    "type": "direct"
+   },
+   "input": {
+    "consulta": "aumento da receita vendas Alibra crescimento faturamento",
+    "empresa": "Millet"
+   },
+   "name": "buscar_paginas",
+   "type": "tool_use"
+  }
+ ],
+ "modelo": "claude-opus-5-5",
+ "tokens_entrada": 2,
+ "tokens_saida": 399,
+ "tokens_cache": 0,
+ "segundos": 3.93,
+ "gravada": false,
+ "tokens_cache_escrita": 27856,
+ "parada": "tool_use"
+}
